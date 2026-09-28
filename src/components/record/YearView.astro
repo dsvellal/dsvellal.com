@@ -5,6 +5,7 @@ import NumbersStrip from './NumbersStrip.astro';
 import RecordQuote from './RecordQuote.astro';
 import CapsuleList from './CapsuleList.astro';
 import {
+  atEra,
   capsuleHref,
   capsules,
   eraHref,
@@ -38,7 +39,7 @@ const sameYear = (await eras()).filter(
 );
 const crossLinks = sameYear.map((e) => ({
   href: yearHref(e, layer.year),
-  label: isBeyond(e) ? `Beyond work in ${layer.year}` : `${e.label} in ${layer.year}`,
+  label: isBeyond(e) ? `Social in ${layer.year}` : `${e.label} in ${layer.year}`,
 }));
 const talkCount = (await talks()).filter((t) => t.era === era.slug && t.year === layer.year).length;
 if (talkCount > 0) {
@@ -52,7 +53,7 @@ const crumbs = [
 ];
 ---
 
-<Base title={`${layer.year} at ${era.label}`} description={layer.narrative || `${layer.count} events in ${layer.year} at ${era.label}.`}>
+<Base title={`${layer.year} ${atEra(era)}`} description={layer.narrative || `${layer.count} events in ${layer.year} ${atEra(era)}.`}>
   <header class="wrap head">
     <Breadcrumbs items={crumbs} />
     <h1>{layer.year}</h1>

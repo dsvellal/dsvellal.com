@@ -2,7 +2,7 @@
 import Redirect from '../../components/Redirect.astro';
 import { capsuleHref, capsules, eraHref, eras, monthHref, yearHref } from '../../lib/record';
 
-/** Old /record URLs, kept as redirects to Impact and Beyond work. */
+/** Old /record URLs, kept as redirects to Impact and Social. */
 export async function getStaticPaths() {
   const eraList = await eras();
   const paths: { params: { path: string | undefined }; props: { to: string } }[] = [

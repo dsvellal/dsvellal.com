@@ -1,0 +1,27 @@
+---
+import Redirect from '../../components/Redirect.astro';
+import { talkEraHref, talkHref, talkMonthHref, talks, talkYearHref, yearsOf } from '../../lib/talks';
+
+/** Old /giving-back URLs, kept as redirects to Talks. */
+export async function getStaticPaths() {
+  const all = await talks();
+  const paths: { params: { path: string | undefined }; props: { to: string } }[] = [
+    { params: { path: undefined }, props: { to: '/talks' } },
+  ];
+  for (const era of [...new Set(all.map((t) => t.era))]) {
+    paths.push({ params: { path: era }, props: { to: talkEraHref(era) } });
+    for (const y of yearsOf(all.filter((t) => t.era === era))) {
+      paths.push({ params: { path: `${era}/${y.year}` }, props: { to: talkYearHref(era, y.year) } });
+      for (const m of y.months) {
+        paths.push({ params: { path: `${era}/${y.year}/${m.month}` }, props: { to: talkMonthHref(era, y.year, m.month) } });
+      }
+    }
+  }
+  for (const t of all) paths.push({ params: { path: `t/${t.id}` }, props: { to: talkHref(t) } });
+  return paths;
+}
+
+const { to } = Astro.props as { to: string };
+---
+
+<Redirect to={to} />

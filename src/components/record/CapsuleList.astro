@@ -15,7 +15,7 @@ const types = [...new Set(items.map((c) => c.type))].sort();
 const themes = [...new Set(items.flatMap((c) => c.themes))].sort();
 const listId = `list-${label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
 const linkedTalks = await talksByRecord();
-// Line-tier talk events have no capsule page, so they link to their Giving back talk page instead.
+// Line-tier talk events have no capsule page, so they link to their talk page instead.
 const hrefFor = (c: Capsule) => {
   const own = capsuleHref(c);
   if (own) return own;

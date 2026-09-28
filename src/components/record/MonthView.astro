@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import CapsuleList from './CapsuleList.astro';
-import { capsules, eraHref, isBeyond, monthHref, monthLong, monthShort, newestFirst, section, yearHref, type Era } from '../../lib/record';
+import { atEra, capsules, eraHref, isBeyond, monthHref, monthLong, monthShort, newestFirst, section, yearHref, type Era } from '../../lib/record';
 
 interface Props {
   era: Era;
@@ -25,7 +25,7 @@ const crumbs = [
 ];
 ---
 
-<Base title={`${heading} at ${era.label}`} description={`${items.length} ${items.length === 1 ? 'event' : 'events'} in ${heading} at ${era.label}. ${lead?.title ?? ''}`}>
+<Base title={`${heading} ${atEra(era)}`} description={`${items.length} ${items.length === 1 ? 'event' : 'events'} in ${heading} ${atEra(era)}. ${lead?.title ?? ''}`}>
   <header class="wrap head">
     <Breadcrumbs items={crumbs} />
     <h1>{heading}</h1>

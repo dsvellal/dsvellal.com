@@ -19,7 +19,10 @@ const eraTalks = (await talks()).filter((t) => t.era === era.slug).length;
 const crumbs = isBeyond(era) ? [{ label: home.label }] : [{ label: home.label, href: home.href }, { label: era.label }];
 ---
 
-<Base title={`${era.label}, ${era.years}`} description={`What I delivered at ${era.label}, ${era.years}: ${era.headline}.`}>
+<Base
+  title={`${era.label}, ${era.years}`}
+  description={isBeyond(era) ? `Outside work, ${era.years}: ${era.headline}.` : `What I delivered at ${era.label}, ${era.years}: ${era.headline}.`}
+>
   <header class="wrap head">
     <Breadcrumbs items={crumbs} />
     <h1>{era.label}</h1>

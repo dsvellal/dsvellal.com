@@ -35,7 +35,7 @@ export async function getStaticPaths() {
 const { talk: t, eraLabel, newer, older } = Astro.props as { talk: Talk; eraLabel: string; newer?: Talk; older?: Talk };
 const record = t.record_capsule ? (await capsules()).find((c) => c.id === t.record_capsule) : undefined;
 const crumbs = [
-  { label: 'Giving back', href: '/giving-back' },
+  { label: 'Talks', href: '/talks' },
   { label: eraLabel, href: talkEraHref(t.era) },
   { label: t.year, href: talkYearHref(t.era, t.year) },
   ...(t.month ? [{ label: monthShort(t.month), href: talkMonthHref(t.era, t.year, t.month) }] : []),
@@ -148,9 +148,10 @@ const range = (r: { low: number | null; high: number | null }) =>
       {
         record && (
           <section class="grid part">
-            <h2 class="side">In {section(record).label}</h2>
+            <h2 class="side">Related</h2>
             <p class="main">
               <a href={capsuleOrListHref(record)}>{record.title}</a>
+              <span class="muted"> in {section(record).label}</span>
             </p>
           </section>
         )

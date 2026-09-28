@@ -3,7 +3,7 @@ import EraView from '../../components/record/EraView.astro';
 import { eras } from '../../lib/record';
 
 const era = (await eras()).find((e) => e.lane === 'beyond');
-if (!era) throw new Error('No beyond-work era summary');
+if (!era) throw new Error('No social era summary');
 ---
 
 <EraView era={era} />

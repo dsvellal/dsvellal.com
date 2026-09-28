@@ -63,20 +63,22 @@ export const newestFirst = (list: Capsule[]) => [...list].sort(byNewestDate);
 
 export const isBeyond = (x: { lane: string }) => x.lane === 'beyond';
 export const section = (x: { lane: string }) =>
-  isBeyond(x) ? { label: 'Beyond work', href: '/beyond-work' } : { label: 'Impact', href: '/impact' };
+  isBeyond(x) ? { label: 'Social', href: '/social' } : { label: 'Impact', href: '/impact' };
+/** Where an era sits, for titles: "at IBM India", or "outside work" for the social lane. */
+export const atEra = (era: Era) => (isBeyond(era) ? 'outside work' : `at ${era.label}`);
 
-export const eraHref = (era: Era) => (isBeyond(era) ? '/beyond-work' : `/impact/${era.slug}`);
+export const eraHref = (era: Era) => (isBeyond(era) ? '/social' : `/impact/${era.slug}`);
 export const yearHref = (era: Era, year: string) => `${eraHref(era)}/${year}`;
 export const monthHref = (era: Era, year: string, month: string) => `${yearHref(era, year)}/${month}`;
 
 export function capsuleHref(c: Capsule): string | undefined {
   if (c.tier !== 'public') return undefined;
-  return `${isBeyond(c) ? '/beyond-work' : '/impact'}/c/${c.id}`;
+  return `${isBeyond(c) ? '/social' : '/impact'}/c/${c.id}`;
 }
 
 /** Public capsule page, or the month (or year) page that lists a line-tier capsule. */
 export function capsuleOrListHref(c: Capsule): string {
-  const base = isBeyond(c) ? '/beyond-work' : `/impact/${c.era}`;
+  const base = isBeyond(c) ? '/social' : `/impact/${c.era}`;
   return capsuleHref(c) ?? (c.month ? `${base}/${c.year}/${c.month}` : `${base}/${c.year}`);
 }
 

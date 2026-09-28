@@ -9,10 +9,10 @@ export async function talks(): Promise<Talk[]> {
   return (await getCollection('talks')).map((e) => e.data).sort(byNewest);
 }
 
-export const talkHref = (t: Pick<Talk, 'id'>) => `/giving-back/t/${t.id}`;
-export const talkEraHref = (era: string) => `/giving-back/${era}`;
-export const talkYearHref = (era: string, year: string) => `/giving-back/${era}/${year}`;
-export const talkMonthHref = (era: string, year: string, month: string) => `/giving-back/${era}/${year}/${month}`;
+export const talkHref = (t: Pick<Talk, 'id'>) => `/talks/t/${t.id}`;
+export const talkEraHref = (era: string) => `/talks/${era}`;
+export const talkYearHref = (era: string, year: string) => `/talks/${era}/${year}`;
+export const talkMonthHref = (era: string, year: string, month: string) => `/talks/${era}/${year}/${month}`;
 
 export const talkDate = (t: Talk) => t.date_label ?? formatDate(t.date);
 

@@ -1,0 +1,27 @@
+---
+import Redirect from '../../components/Redirect.astro';
+import { capsuleHref, capsules, eras, monthHref, yearHref } from '../../lib/record';
+
+/** Old /beyond-work URLs, kept as redirects to Social. */
+export async function getStaticPaths() {
+  const era = (await eras()).find((e) => e.lane === 'beyond');
+  const paths: { params: { path: string | undefined }; props: { to: string } }[] = [
+    { params: { path: undefined }, props: { to: '/social' } },
+  ];
+  for (const layer of era?.year_layers ?? []) {
+    paths.push({ params: { path: layer.year }, props: { to: yearHref(era!, layer.year) } });
+    for (const month of layer.months) {
+      paths.push({ params: { path: `${layer.year}/${month}` }, props: { to: monthHref(era!, layer.year, month) } });
+    }
+  }
+  for (const c of await capsules()) {
+    const to = c.lane === 'beyond' ? capsuleHref(c) : undefined;
+    if (to) paths.push({ params: { path: `c/${c.id}` }, props: { to } });
+  }
+  return paths;
+}
+
+const { to } = Astro.props as { to: string };
+---
+
+<Redirect to={to} />
