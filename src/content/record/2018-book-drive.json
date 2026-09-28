@@ -1,0 +1,35 @@
+{
+  "id": "2018-book-drive",
+  "date": "2018",
+  "year": "2018",
+  "month": null,
+  "era": "beyond-work",
+  "company": "Community",
+  "title": "2018 book drive: Rs 75,404",
+  "type": "Community",
+  "themes": [
+    "community"
+  ],
+  "lane": "beyond",
+  "total": 17,
+  "tier": "public",
+  "summary": "Grew the drive again with 12 contributors.",
+  "what_would_have_happened": "Not applicable.",
+  "the_call": "Not applicable.",
+  "what_i_did": "Organized contributions.",
+  "what_changed": "Rs 75,404 raised.",
+  "metrics": [
+    {
+      "value": "Rs 75,404",
+      "label": "raised",
+      "context": ""
+    },
+    {
+      "value": "12",
+      "label": "contributors",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

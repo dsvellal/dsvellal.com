@@ -1,0 +1,38 @@
+{
+  "id": "2024-07-developer-days-india",
+  "date": "2024-07-02",
+  "year": "2024",
+  "month": "07",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Led Developer Days India for 250+ engineers",
+  "type": "Program",
+  "themes": [
+    "teaching",
+    "people"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "I led the team that organized the three-day India edition of the company's worldwide developer event, with industry partners and 250+ participants.",
+  "what_would_have_happened": "The company's developer event had run in Europe and China; engineers in India would have had no edition of their own.",
+  "the_call": "Run it as three days of hands-on workshops and talks, with industry partners.",
+  "what_i_did": "Put out the call for papers, brought in industry partners and led the organizing team through the event.",
+  "what_changed": "250+ engineers took part; the company featured it on its corporate LinkedIn page, and my manager called it very successful.",
+  "metrics": [
+    {
+      "value": "250+",
+      "label": "participants",
+      "context": "3 days"
+    }
+  ],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2024-07-developer-days-india-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: Led Developer Days India for 250+ engineers"
+    }
+  ]
+}

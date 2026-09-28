@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Page not found" description="This page does not exist." noindex>
+  <section class="wrap grid missing">
+    <p class="code figure" aria-hidden="true">404</p>
+    <div class="copy">
+      <h1>This page does not exist.</h1>
+      <p><a href="/">Go to the home page</a></p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .missing {
+    margin-top: clamp(2rem, 8vw, 6rem);
+    row-gap: 2rem;
+  }
+
+  .code,
+  .copy {
+    grid-column: 1 / -1;
+  }
+
+  .code {
+    color: var(--accent);
+    font-size: var(--step-5);
+  }
+
+  h1 {
+    font-size: var(--step-3);
+    font-weight: 800;
+  }
+
+  .copy p {
+    margin-top: 1.5rem;
+    font-weight: 700;
+  }
+</style>

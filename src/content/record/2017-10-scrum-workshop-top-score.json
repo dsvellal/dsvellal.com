@@ -1,0 +1,49 @@
+{
+  "id": "2017-10-scrum-workshop-top-score",
+  "date": "2017-10-12",
+  "year": "2017",
+  "month": "10",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Trained 21 engineers in Scrum at 4.6/5",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "delivery",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "My third Scrum workshop for engineering teams scored 4.6 out of 5 for the presenter and 4.6 for an engaging presentation style.",
+  "what_would_have_happened": "Not applicable: this was a teaching session.",
+  "the_call": "Keep teaching Scrum to other teams alongside my delivery work and keep improving the workshop.",
+  "what_i_did": "Taught the workshop to 21 engineers.",
+  "what_changed": "My highest presenter score so far.",
+  "metrics": [
+    {
+      "value": "21",
+      "label": "attendees",
+      "context": ""
+    },
+    {
+      "value": "4.6 / 5",
+      "label": "presenter score",
+      "context": ""
+    },
+    {
+      "value": "4.6 / 5",
+      "label": "'presentation style was engaging'",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2017-10-scrum-workshop-top-score-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: Trained 21 engineers in Scrum at 4.6/5"
+    }
+  ]
+}

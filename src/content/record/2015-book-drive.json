@@ -1,0 +1,48 @@
+{
+  "id": "2015-book-drive",
+  "date": "2015",
+  "year": "2015",
+  "month": null,
+  "era": "beyond-work",
+  "company": "Community",
+  "title": "2015 book drive: Rs 37,500",
+  "type": "Community",
+  "themes": [
+    "community"
+  ],
+  "lane": "beyond",
+  "total": 16,
+  "tier": "public",
+  "summary": "Raised Rs 37,500 from 9 contributions for books for rural schools.",
+  "what_would_have_happened": "Children in rural schools start the year without enough notebooks and books.",
+  "the_call": "Ask friends and colleagues every year, and send the money straight to a charity that buys and delivers the books.",
+  "what_i_did": "Organized the drive, collected 9 contributions and passed them to Ekal Vidyalaya, which runs one-teacher schools in villages.",
+  "what_changed": "Rs 37,500 for books.",
+  "metrics": [
+    {
+      "value": "Rs 37,500",
+      "label": "raised",
+      "context": ""
+    },
+    {
+      "value": "9",
+      "label": "contributions",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2015-book-drive-1.webp",
+      "kind": "photo",
+      "pending": false,
+      "alt": "Photo: 2015 book drive: Rs 37,500"
+    },
+    {
+      "src": "/record/published/2015-book-drive-2.webp",
+      "kind": "photo",
+      "pending": false,
+      "alt": "Photo: 2015 book drive: Rs 37,500"
+    }
+  ]
+}

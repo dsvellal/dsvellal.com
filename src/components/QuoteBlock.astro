@@ -1,0 +1,63 @@
+---
+import { quote } from '../data/claims';
+
+interface Props {
+  id: string;
+  size?: 'large' | 'regular';
+}
+
+const { id, size = 'regular' } = Astro.props;
+const q = quote(id);
+---
+
+<figure class:list={['quote', size]}>
+  <blockquote>
+    <p>&ldquo;{q.text}&rdquo;</p>
+  </blockquote>
+  <figcaption>
+    {q.name && <span class="name">{q.name}</span>}
+    <span class="role">{q.role}</span>
+    <span class="muted">{q.company}, {q.year}</span>
+    {q.context && <span class="muted">{q.context}</span>}
+  </figcaption>
+</figure>
+
+<style>
+  .quote {
+    margin: 0;
+  }
+
+  blockquote {
+    margin: 0;
+  }
+
+  blockquote p {
+    font-size: var(--step-1);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+
+  .large blockquote p {
+    font-size: var(--step-2);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    font-size: var(--step--1);
+  }
+
+  .role,
+  .name {
+    font-weight: 700;
+  }
+
+  .name + .role {
+    font-weight: 400;
+  }
+</style>

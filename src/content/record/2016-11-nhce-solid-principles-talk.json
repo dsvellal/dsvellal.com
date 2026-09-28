@@ -1,0 +1,18 @@
+{
+  "id": "2016-11-nhce-solid-principles-talk",
+  "date": "2016-11-06",
+  "year": "2016",
+  "month": "11",
+  "era": "beyond-work",
+  "company": "New Horizon College of Engineering",
+  "title": "Seminar on SOLID principles of object-oriented design at New Horizon College of Engineering",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "quality",
+    "community"
+  ],
+  "lane": "beyond",
+  "total": 13,
+  "tier": "line"
+}

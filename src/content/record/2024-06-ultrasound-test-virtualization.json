@@ -1,0 +1,39 @@
+{
+  "id": "2024-06-ultrasound-test-virtualization",
+  "date": "2024-06-12",
+  "year": "2024",
+  "month": "06",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Led a proof of concept to run ultrasound tests on virtual machines",
+  "type": "Project",
+  "themes": [
+    "delivery",
+    "cost",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 20,
+  "tier": "public",
+  "summary": "I led a phase 1 proof of concept in which Software Excellence and the Ultrasound team moved a simulator test suite from physical hardware to virtual machines.",
+  "what_would_have_happened": "Tests would stay tied to scarce physical machines, with little room for automation or parallel runs.",
+  "the_call": "Prove virtualization with a narrow first phase before asking the business for more.",
+  "what_i_did": "Coordinated the people who produced the OS image, the virtual machine setup and the test run, then shared the result with Ultrasound R&D and credited everyone involved.",
+  "what_changed": "Both sanity suites passed on a virtual machine in about 3 minutes; an engineering leader called the work the 'art of possibility'.",
+  "metrics": [
+    {
+      "value": "~3 min",
+      "label": "test run on a virtual machine",
+      "context": "phase 1 proof of concept"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Many thanks to each of the teammates who helped think through the 'art of possibility'.",
+      "role": "Engineering leadership team member",
+      "company": "Philips",
+      "date": "2024-06"
+    }
+  ],
+  "images": []
+}

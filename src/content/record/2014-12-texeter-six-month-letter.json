@@ -1,0 +1,52 @@
+{
+  "id": "2014-12-texeter-six-month-letter",
+  "date": "2014-12-24",
+  "year": "2014",
+  "month": "12",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Thanked for six months of leading TExeter",
+  "type": "Recognition",
+  "themes": [
+    "community",
+    "leadership",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 19,
+  "tier": "public",
+  "summary": "Six months after TExeter began as a meeting-room discussion, the managing director and HR head wrote to thank me for the leadership and guidance that made it a company-wide community.",
+  "what_would_have_happened": "Knowledge sharing stayed informal and inside project teams.",
+  "the_call": "Build a volunteer community with its own brand and events, without waiting for a formal program.",
+  "what_i_did": "Led the TExeter team from the first discussion through its Thursday events and newsletter.",
+  "what_changed": "The letter said TExeter had captured the attention of every employee and influenced many activities across the organization.",
+  "metrics": [
+    {
+      "value": "6 months",
+      "label": "from idea to company-wide community",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "TExeter started off as a meeting room discussion and in six months it has grown into the hearts and minds of the employees of Exeter Software India Pvt. Ltd.",
+      "role": "Managing Director and HR Head, Exeter Software India",
+      "company": "Exeter",
+      "date": "2014-12-24"
+    },
+    {
+      "text": "All these would not have been possible if it were not for your leadership and guidance in making TExeter what it is today, and I sincerely thank you for your contribution towards this effort",
+      "role": "Managing Director and HR Head, Exeter Software India",
+      "company": "Exeter",
+      "date": "2014-12-24"
+    }
+  ],
+  "images": [
+    {
+      "src": "/record/published/2014-12-texeter-six-month-letter-1.webp",
+      "kind": "certificate",
+      "pending": false,
+      "alt": "Certificate: Thanked for six months of leading TExeter"
+    }
+  ]
+}

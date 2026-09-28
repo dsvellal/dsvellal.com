@@ -1,0 +1,17 @@
+{
+  "id": "2019-08-code-quality-workshop",
+  "date": "2019-08-01",
+  "year": "2019",
+  "month": "08",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Ran a half-day TDD and clean code workshop for 25 nominated engineers",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 13,
+  "tier": "line"
+}

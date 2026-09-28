@@ -1,0 +1,25 @@
+{
+  "id": "2026-03-impact-assessment-release",
+  "date": "2026-03",
+  "year": "2026",
+  "month": "03",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Released AI impact assessment",
+  "type": "Project",
+  "themes": [
+    "ai",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "I released the platform's second capability, which shows which requirements a change touches so teams re-verify only what changed.",
+  "what_would_have_happened": "Teams would re-verify every requirement each release, whatever had changed.",
+  "the_call": "Build each capability on the same trace graph, one release at a time.",
+  "what_i_did": "Shipped impact assessment as the second release, then built the third release on top of it.",
+  "what_changed": "Teams could see which requirements a change touched before deciding what to re-verify.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
+}

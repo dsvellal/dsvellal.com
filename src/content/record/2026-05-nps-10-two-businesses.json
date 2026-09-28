@@ -1,0 +1,31 @@
+{
+  "id": "2026-05-nps-10-two-businesses",
+  "date": "2026-05-29",
+  "year": "2026",
+  "month": "05",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Two businesses gave the platform a perfect 10",
+  "type": "Recognition",
+  "themes": [
+    "ai",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 21,
+  "tier": "public",
+  "summary": "Two businesses scored the AI-powered verification and validation compliance work I led 10 out of 10 for NPS; the program leader called each score a bull's eye.",
+  "what_would_have_happened": "Not applicable: a recognition event, not an intervention.",
+  "the_call": "Prove the platform on each business's own data.",
+  "what_i_did": "Led the platform work and set things up in person with another business.",
+  "what_changed": "Two scores of 10, each called a bull's eye by the program leader.",
+  "metrics": [
+    {
+      "value": "10/10",
+      "label": "NPS",
+      "context": "from two businesses"
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

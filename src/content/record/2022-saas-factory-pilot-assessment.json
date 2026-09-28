@@ -1,0 +1,17 @@
+{
+  "id": "2022-saas-factory-pilot-assessment",
+  "date": "2022",
+  "year": "2022",
+  "month": null,
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Ran end-to-end assessments of SaaS factory pilots and built reusable workflows that pilots began to use",
+  "type": "Project",
+  "themes": [
+    "delivery",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 15,
+  "tier": "line"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "2023-book-drive",
+  "date": "2023",
+  "year": "2023",
+  "month": null,
+  "era": "beyond-work",
+  "company": "Community",
+  "title": "2023 book drive: Rs 134,954",
+  "type": "Community",
+  "themes": [
+    "community"
+  ],
+  "lane": "beyond",
+  "total": 18,
+  "tier": "public",
+  "summary": "Raised Rs 134,954 from 14 contributions for books for rural schools. Up from Rs 119,617 the drive before.",
+  "what_would_have_happened": "Children in rural schools start the year without enough notebooks and books.",
+  "the_call": "Ask friends and colleagues every year, and send the money straight to a charity that buys and delivers the books.",
+  "what_i_did": "Organized the drive, collected 14 contributions and passed them to a charitable trust in Mysuru that buys and distributes the books.",
+  "what_changed": "Rs 134,954 for books. Up from Rs 119,617 the drive before.",
+  "metrics": [
+    {
+      "value": "Rs 134,954",
+      "label": "raised",
+      "context": ""
+    },
+    {
+      "value": "14",
+      "label": "contributions",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

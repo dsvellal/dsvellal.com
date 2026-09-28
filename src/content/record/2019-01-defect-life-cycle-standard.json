@@ -1,0 +1,17 @@
+{
+  "id": "2019-01-defect-life-cycle-standard",
+  "date": "2019-01",
+  "year": "2019",
+  "month": "01",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Set one defect life cycle for identity management, with required fields, owners and change-control rules",
+  "type": "Project",
+  "themes": [
+    "quality",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 11,
+  "tier": "line"
+}

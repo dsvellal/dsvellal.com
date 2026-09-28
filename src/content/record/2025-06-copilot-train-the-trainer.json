@@ -1,0 +1,39 @@
+{
+  "id": "2025-06-copilot-train-the-trainer",
+  "date": "2025-06-25",
+  "year": "2025",
+  "month": "06",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Trained trainers so teams could lead their own AI adoption",
+  "type": "Talk",
+  "themes": [
+    "ai",
+    "teaching",
+    "people"
+  ],
+  "lane": "work",
+  "total": 20,
+  "tier": "public",
+  "summary": "With Philips University, I ran a train-the-trainer class for 34 people; the Bangalore team that took it went on to lead its own AI work and use it to speed up releases.",
+  "what_would_have_happened": "AI adoption would depend on me teaching every team myself.",
+  "the_call": "Train people inside the team so they can teach the rest.",
+  "what_i_did": "Ran the class with Philips University and backed the team member who took on the champion role.",
+  "what_changed": "The team built an end-to-end AI use case, from knowledge transfer to test cases, and a senior leader publicly praised its results.",
+  "metrics": [
+    {
+      "value": "34",
+      "label": "trainers trained",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Our team in Bangalore is doing some great things with the application of AI to accelerate their software releases.",
+      "role": "Senior leader",
+      "company": "Philips",
+      "date": "2025-06-25"
+    }
+  ],
+  "images": []
+}

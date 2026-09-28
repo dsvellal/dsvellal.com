@@ -1,0 +1,38 @@
+{
+  "id": "2024-06-solid-principles-series",
+  "date": "2024-06-27",
+  "year": "2024",
+  "month": "06",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Designed and taught a SOLID principles series",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "I designed and taught a talk series on SOLID design principles to build developers' design skills; one talk was rated 8.6 out of 10 from 37 responses.",
+  "what_would_have_happened": "Developers would keep meeting design principles as abstract rules, without worked examples.",
+  "the_call": "Teach one principle per talk, with concrete examples.",
+  "what_i_did": "Designed and delivered the series and collected participant feedback.",
+  "what_changed": "One talk scored 8.6 out of 10 from 37 responses; a participant called it 'INCREDIBLE'.",
+  "metrics": [
+    {
+      "value": "8.6/10",
+      "label": "rating",
+      "context": "37 responses"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "This presentation was INCREDIBLE. Kudos to Datta; it was really clear.",
+      "role": "Participant",
+      "company": "Philips",
+      "date": "2024-06"
+    }
+  ],
+  "images": []
+}

@@ -1,0 +1,49 @@
+{
+  "id": "2019-12-year-end-review-exceeds",
+  "date": "2019-12-31",
+  "year": "2019",
+  "month": "12",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Rated Exceeds in my first year in software excellence",
+  "type": "Review",
+  "themes": [
+    "quality",
+    "teaching",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 21,
+  "tier": "public",
+  "summary": "My 2019 review was rated Exceeds for the speed with which I built a network across the company and scaled up to many workshops with good feedback.",
+  "what_would_have_happened": "Not applicable: a review, not an intervention.",
+  "the_call": "Not applicable.",
+  "what_i_did": "Ran 29 workshops (average effectiveness 8.93/10), met 235 people across about 100 teams and 52 roles, mentored two groups of new joiners and supported the duplicate-code removal.",
+  "what_changed": "My manager rated the year Exceeds.",
+  "metrics": [
+    {
+      "value": "29",
+      "label": "workshops",
+      "context": "average effectiveness 8.93 out of 10"
+    },
+    {
+      "value": "235",
+      "label": "people met",
+      "context": "across about 100 teams and 52 roles"
+    },
+    {
+      "value": "84.5",
+      "label": "average NPS",
+      "context": "of sessions"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Exceeds is related to the speed with which Datta built a network, ramped up to many workshops and preparations and got good feedback.",
+      "role": "Head of Competencies, Software Excellence (manager)",
+      "company": "Philips",
+      "date": "2019-12"
+    }
+  ],
+  "images": []
+}

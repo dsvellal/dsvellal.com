@@ -1,0 +1,56 @@
+{
+  "id": "2017-04-amazon-pay-one-account-check",
+  "date": "2017-04-14",
+  "year": "2017",
+  "month": "04",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Led the fraud check for the Amazon Pay India launch",
+  "type": "Project",
+  "themes": [
+    "fraud-risk",
+    "payments",
+    "delivery",
+    "reliability"
+  ],
+  "lane": "work",
+  "total": 23,
+  "tier": "public",
+  "summary": "I conceived and led the one-account-per-customer fraud check for the Amazon Pay wallet launch in India, from requirements to onboarding, and built it for 1,150 TPS against a 20 TPS requirement.",
+  "what_would_have_happened": "The wallet would have launched without a guard against one person opening many accounts to abuse offers.",
+  "the_call": "Size the check for launch-promotion peaks and abuse traffic, well past the 20 TPS we were asked for.",
+  "what_i_did": "Owned requirements, design, stakeholder communication, code reviews and onboarding for a four-engineer effort, and set up joint integration tests with the partner team.",
+  "what_changed": "Launched on 14 Apr 2017 at 1,150 TPS; the end-to-end test suspended the fraudulent test accounts with the right reason codes, and the fraud and risk director thanked the team.",
+  "metrics": [
+    {
+      "value": "1,150",
+      "label": "TPS supported",
+      "context": "requirement was 20 TPS"
+    },
+    {
+      "value": "~2,500",
+      "label": "requests per day",
+      "context": "at launch"
+    },
+    {
+      "value": "14 Apr 2017",
+      "label": "launch date",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "This is great work. Thanks team and looking forward to more deliveries for our payments business in India.",
+      "role": "Director, fraud and risk technology",
+      "company": "Amazon",
+      "date": "2017-04"
+    },
+    {
+      "text": "Great news !!!. Good job Team. Smooth integration is testimony on good design.",
+      "role": "Engineering manager",
+      "company": "Amazon",
+      "date": "2017-04-12"
+    }
+  ],
+  "images": []
+}

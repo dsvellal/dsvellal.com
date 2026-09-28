@@ -1,0 +1,17 @@
+{
+  "id": "2023-08-codescene-demo-quality-standup",
+  "date": "2023-08",
+  "year": "2023",
+  "month": "08",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Backed a business engineer to lead the quality stand-up demo of code-health and open-source scans in CI/CD",
+  "type": "Project",
+  "themes": [
+    "quality",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 14,
+  "tier": "line"
+}

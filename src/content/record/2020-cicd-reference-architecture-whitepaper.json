@@ -1,0 +1,40 @@
+{
+  "id": "2020-cicd-reference-architecture-whitepaper",
+  "date": "2020",
+  "year": "2020",
+  "month": null,
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Co-authored one CI/CD reference architecture for the company",
+  "type": "Writing",
+  "themes": [
+    "delivery",
+    "quality",
+    "reliability"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "I co-authored the company CI/CD reference architecture whitepaper and its reference pipelines, and worked the architecture community's review comments into later versions so businesses had one baseline to adopt.",
+  "what_would_have_happened": "Each business would have designed its own pipeline from scratch.",
+  "the_call": "Write one reference architecture teams can adopt, and settle objections in the document itself.",
+  "what_i_did": "Wrote sections and review notes, and addressed comments from the strategic architecture community in later versions.",
+  "what_changed": "The whitepaper and reference pipelines became the shared baseline; a co-author thanked me for the review notes.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "Thanks to Datta's notes as well; it was interesting to work on these comments.",
+      "role": "Architect, whitepaper co-author",
+      "company": "Philips",
+      "date": "2020-01-25"
+    }
+  ],
+  "images": [
+    {
+      "src": "/record/published/2020-cicd-reference-architecture-whitepaper-1.webp",
+      "kind": "chat",
+      "pending": false,
+      "alt": "Chat: Co-authored one CI/CD reference architecture for the company"
+    }
+  ]
+}

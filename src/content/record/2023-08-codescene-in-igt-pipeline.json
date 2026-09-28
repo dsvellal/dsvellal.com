@@ -1,0 +1,17 @@
+{
+  "id": "2023-08-codescene-in-igt-pipeline",
+  "date": "2023-08-04",
+  "year": "2023",
+  "month": "08",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Helped a business unit add code-health analysis to its systems pipeline, tracked in its progress dialogue",
+  "type": "Project",
+  "themes": [
+    "quality",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 15,
+  "tier": "line"
+}

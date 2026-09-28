@@ -1,0 +1,43 @@
+{
+  "id": "2014-10-834-enrollment-messaging-poc",
+  "date": "2014-10-01",
+  "year": "2014",
+  "month": "10",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Proving standard enrollment messaging end to end",
+  "type": "Project",
+  "themes": [
+    "delivery",
+    "reliability"
+  ],
+  "lane": "work",
+  "total": 19,
+  "tier": "public",
+  "summary": "I led the proof of concept for sending standard 834 enrollment transactions through an EDI integration platform and demonstrated it to the product and partner teams. A week later, files were processing end to end.",
+  "what_would_have_happened": "Enrollment data to insurers depended on a path that had not been proven with the integration platform.",
+  "the_call": "Prove the integration on real transactions within a fixed time box before committing to it.",
+  "what_i_did": "Ran the work with the India engineers and demonstrated it live. When integration issues hit, I flagged the delay early and proposed a short-term approach that the US product lead agreed to.",
+  "what_changed": "Files processed end to end, with only a batch job and a file transfer left manual. My review credited me with delivering the work within its time box.",
+  "metrics": [
+    {
+      "value": "834",
+      "label": "standard enrollment transactions",
+      "context": "processed end to end"
+    },
+    {
+      "value": "1 week",
+      "label": "from demo to full end-to-end processing",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "So some good news: we're fully processing files end to end now.",
+      "role": "US product lead, Exeter Group",
+      "company": "Exeter",
+      "date": "2014-10-07"
+    }
+  ],
+  "images": []
+}

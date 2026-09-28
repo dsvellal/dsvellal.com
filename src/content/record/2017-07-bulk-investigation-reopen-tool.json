@@ -1,0 +1,37 @@
+{
+  "id": "2017-07-bulk-investigation-reopen-tool",
+  "date": "2017-07",
+  "year": "2017",
+  "month": "07",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Reopened 5,293 stalled fraud investigations after the Amazon Pay launch",
+  "type": "Project",
+  "themes": [
+    "fraud-risk",
+    "payments",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 20,
+  "tier": "public",
+  "summary": "After the Amazon Pay launch, 5,927 investigations had missed their SLA with too few investigators to clear them, and those customers could not create wallets; I designed and built a tool that reopened them for investigators in record time.",
+  "what_would_have_happened": "Thousands of customers stay blocked from creating wallets while an understaffed team works the backlog by hand.",
+  "the_call": "Build a generic bulk tool quickly and let investigators spend their time on the cases themselves.",
+  "what_i_did": "Designed and built a command-line bulk action tool, ran it against all 5,927 tasks and accounted for every failure.",
+  "what_changed": "5,293 investigations went back to investigators, the weekly report recorded the delivery as on time, and the tool was later extended for another use case.",
+  "metrics": [
+    {
+      "value": "5,927",
+      "label": "blocked investigations processed",
+      "context": ""
+    },
+    {
+      "value": "5,293",
+      "label": "reopened for investigators",
+      "context": "the rest were already resolved or invalid"
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

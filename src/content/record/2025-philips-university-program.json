@@ -1,0 +1,56 @@
+{
+  "id": "2025-philips-university-program",
+  "date": "2025-09",
+  "year": "2025",
+  "month": "09",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Led a 33-session learning program with Philips University",
+  "type": "Program",
+  "themes": [
+    "ai",
+    "teaching",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 23,
+  "tier": "public",
+  "summary": "I designed and led a 2025 skill-building program with Philips University: 33 sessions, 492 learners, 8.9 out of 10, and I taught 23 of them.",
+  "what_would_have_happened": "Engineers would pick up AI and delivery practices ad hoc, without a curriculum.",
+  "the_call": "Build a curriculum with the corporate university and run it as a program.",
+  "what_i_did": "Designed the courses, selected external vendors, planned the 2026 curriculum and taught most sessions myself.",
+  "what_changed": "Philips University raised its funding for 2026, business teams set aside travel budget for my workshops, and the 2026 curriculum took AI as its theme.",
+  "metrics": [
+    {
+      "value": "33",
+      "label": "sessions",
+      "context": ""
+    },
+    {
+      "value": "492",
+      "label": "learners",
+      "context": ""
+    },
+    {
+      "value": "8.9/10",
+      "label": "satisfaction",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "He did an amazing job in conducting several PU led trainings, which were very positively rated and received by the participants, also resulting in higher funding from PU.",
+      "role": "Manager",
+      "company": "Philips",
+      "date": "2026"
+    }
+  ],
+  "images": [
+    {
+      "src": "/record/published/2025-philips-university-program-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: Led a 33-session learning program with Philips University"
+    }
+  ]
+}

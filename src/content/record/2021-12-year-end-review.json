@@ -1,0 +1,44 @@
+{
+  "id": "2021-12-year-end-review",
+  "date": "2021-12",
+  "year": "2021",
+  "month": "12",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "2021 review: promoted, with three goals above expectations",
+  "type": "Review",
+  "themes": [
+    "leadership",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "My manager wrote that I was deservedly promoted and was a steadying force while the team moved from a shift-left culture to continuous value delivery.",
+  "what_would_have_happened": "Not applicable: a review, not an intervention.",
+  "the_call": "Keep the software excellence programs delivering and help the team hold steady as it moved from a consulting brand to a contributor brand.",
+  "what_i_did": "Led DevOps and BizDevOps assessment work, supported hiring, and took the software excellence programs beyond India to teams in the US and Brazil.",
+  "what_changed": "Three goals were rated Exceeds Expectations, including changing how teams work and influencing company-level strategy, and my manager called the promotion deserved.",
+  "metrics": [
+    {
+      "value": "3",
+      "label": "goals rated Exceeds Expectations",
+      "context": "2021 year-end review"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Datta has been a pivotal member of the SW CoE team for years and has been deservedly rewarded with a promotion this year.",
+      "role": "Manager, Software Excellence",
+      "company": "Philips",
+      "date": "2022-02"
+    },
+    {
+      "text": "He has also been a steadying force during significant transition of the team.",
+      "role": "Manager, Software Excellence",
+      "company": "Philips",
+      "date": "2022-02"
+    }
+  ],
+  "images": []
+}

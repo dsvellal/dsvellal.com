@@ -1,0 +1,50 @@
+{
+  "id": "2016-05-self-service-xml-feed-migration",
+  "date": "2016-05-25",
+  "year": "2016",
+  "month": "05",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Turned catalog feed migration into a self-service procedure used for 29 providers",
+  "type": "Project",
+  "themes": [
+    "catalog",
+    "delivery",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 19,
+  "tier": "public",
+  "summary": "I built a consistent XML-to-JSON parser, wrote the migration procedure with the support team and took myself out of the approval path; 29 feed providers moved onto it without a developer involved.",
+  "what_would_have_happened": "Inconsistent parser output kept blocking search indexing, and every feed migration waited on a developer.",
+  "the_call": "Fix the parser once, then give the support engineers a procedure they could run without me as approver.",
+  "what_i_did": "Designed and coded the parser and a bulk migrator, walked the support team through the procedure, and built their feedback into the guide.",
+  "what_changed": "29 providers migrated without developer involvement, and support engineers reported shorter, more readable transformation code.",
+  "metrics": [
+    {
+      "value": "29",
+      "label": "feed providers migrated",
+      "context": "self-service, without engineer involvement"
+    },
+    {
+      "value": "~10%",
+      "label": "less transformation code",
+      "context": "about 600 to about 550 lines for one standard, per a support engineer"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "TL;DR The new parser implementation rocks and code is more readable and easy to understand !!",
+      "role": "Application Engineer, catalog support team",
+      "company": "Amazon",
+      "date": "2016-05"
+    },
+    {
+      "text": "The wiki contains most of the steps on clear cut to complete the migration of a standard from old XML to NEW parser and that helped eliminating the Dev hand hold on migration.",
+      "role": "Engineer, catalog support team",
+      "company": "Amazon",
+      "date": "2016-06"
+    }
+  ],
+  "images": []
+}

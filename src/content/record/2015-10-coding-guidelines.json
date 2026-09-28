@@ -1,0 +1,16 @@
+{
+  "id": "2015-10-coding-guidelines",
+  "date": "2015-10-15",
+  "year": "2015",
+  "month": "10",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Published the team's Java, JSP and JavaScript coding standards and asked two engineers to add security rules",
+  "type": "Project",
+  "themes": [
+    "quality"
+  ],
+  "lane": "work",
+  "total": 12,
+  "tier": "line"
+}

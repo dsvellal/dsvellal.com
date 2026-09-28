@@ -1,0 +1,16 @@
+{
+  "id": "2015-01-hotfix-triage",
+  "date": "2015-01-13",
+  "year": "2015",
+  "month": "01",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Triaged a hotfix release's open tickets by owner and fix effort so the delivery head and PMO could set scope",
+  "type": "Project",
+  "themes": [
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 11,
+  "tier": "line"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "2024-02-kubernetes-advisory",
+  "date": "~2024-02-28",
+  "year": "2024",
+  "month": "02",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Advised an identity platform team to use managed Kubernetes for its node upgrade",
+  "type": "Project",
+  "themes": [
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 9,
+  "tier": "line"
+}

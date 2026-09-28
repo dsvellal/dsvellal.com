@@ -1,0 +1,45 @@
+{
+  "id": "2014-08-release-3-3-2-9-hf4",
+  "date": "2014-08-07",
+  "year": "2014",
+  "month": "08",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Leading a 400-fix release to its planned date",
+  "type": "Project",
+  "themes": [
+    "delivery",
+    "quality",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 19,
+  "tier": "public",
+  "summary": "I led the India developers on a release that cleared the bug backlog with over 400 fixes. The India team did almost all of the work from development to QA, and the release shipped on its planned date.",
+  "what_would_have_happened": "Releases without a hard customer date had a record of slipping dates or dropping scope.",
+  "the_call": "Hold the planned date anyway, and use the release to fix the old date-logic problems for good.",
+  "what_i_did": "Led the India developers through the fixes and the date-logic rework, then thanked the team and invited them out to celebrate.",
+  "what_changed": "Over 400 fixes and about 80 non-bugs closed. The US head of development called it a bang up job and said the rework would pay big dividends.",
+  "metrics": [
+    {
+      "value": "400+",
+      "label": "bug fixes in one release",
+      "context": "about 80 more queued items closed as not bugs"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "You all did a bang up job in getting this release out.",
+      "role": "US head of software development, Exeter Group",
+      "company": "Exeter",
+      "date": "2014-08-07"
+    },
+    {
+      "text": "I believe we did over 400 bug fixes, we also eliminated a bunch of items that were in the queue that were not bugs in the end (about 80 of them).",
+      "role": "US head of software development, Exeter Group",
+      "company": "Exeter",
+      "date": "2014-08-07"
+    }
+  ],
+  "images": []
+}

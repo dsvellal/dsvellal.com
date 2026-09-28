@@ -1,0 +1,36 @@
+{
+  "id": "2008-10-expeditor-component-owner",
+  "date": "2008-10",
+  "year": "2008",
+  "month": "10",
+  "era": "ibm-india",
+  "company": "IBM",
+  "title": "Owned components of an IBM client platform through two releases",
+  "type": "Role",
+  "themes": [
+    "delivery",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "I became component owner for the Lotus Expeditor toolkit and drove two releases out with the defect count brought close to zero.",
+  "what_would_have_happened": "Toolkit releases would have shipped carrying open defects and without a clear owner for their components.",
+  "the_call": "Own the components end to end: requirements, features, fixes, docs and forum support.",
+  "what_i_did": "Implemented features, fixed defects, wrote tests and documentation, and answered customer questions in internal and external forums.",
+  "what_changed": "Delivered toolkit v6.2.1 and v6.2.2 with the defect count at virtually zero, and led parts of v6.2.3.",
+  "metrics": [
+    {
+      "value": "2",
+      "label": "releases delivered",
+      "context": "toolkit v6.2.1 and v6.2.2"
+    },
+    {
+      "value": "~0",
+      "label": "defects at release",
+      "context": "resume: 'virtual zero'"
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

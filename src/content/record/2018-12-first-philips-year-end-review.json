@@ -1,0 +1,33 @@
+{
+  "id": "2018-12-first-philips-year-end-review",
+  "date": "2018-12",
+  "year": "2018",
+  "month": "12",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "First Philips review: DevOps strategy and quality drives delivered in four months",
+  "type": "Review",
+  "themes": [
+    "quality",
+    "delivery",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "My first year-end review recorded that within four months I formulated the DevOps architecture strategy for identity management with the team members it needed, presented it to the chief architect and leadership, and ran quality drives that showed early unit-test coverage gains.",
+  "what_would_have_happened": "A new architect would spend the first months on handover and ramp-up before changing anything.",
+  "the_call": "Front-load the architecture and quality work, and finish handover in the same quarter.",
+  "what_i_did": "Formulated the DevOps architecture strategy with the team, presented it to the chief architect and leadership, ran quality drives, completed handover and induction, and identified top talent in the team.",
+  "what_changed": "My director recorded the DevOps strategy and the unit-test coverage improvement as delivered.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "Appreciate his effort in bringing few quality drives already in 2018 to strengthen the quality code delivery. Demonstrated already UT coverage improvement.",
+      "role": "Director, identity management",
+      "company": "Philips",
+      "date": "2018-12"
+    }
+  ],
+  "images": []
+}

@@ -1,0 +1,38 @@
+{
+  "id": "2009-10-bravo-hackdays-and-events",
+  "date": "2009-10",
+  "year": "2009",
+  "month": "10",
+  "era": "ibm-india",
+  "company": "IBM",
+  "title": "Bravo award for running five innovation events in two years",
+  "type": "Recognition",
+  "themes": [
+    "leadership",
+    "community"
+  ],
+  "lane": "work",
+  "total": 19,
+  "tier": "public",
+  "summary": "IBM recognized my passion for innovation and tech vitality after I organized five hackdays and events in my first two years.",
+  "what_would_have_happened": "The lab's innovation events would have relied on fewer volunteers to run them.",
+  "the_call": "Keep organizing events for the lab alongside product delivery.",
+  "what_i_did": "Organized Hackday 6, Hackday 7, the Worldwide Bluehouse Hackday, Lotus Knows and Manyata Fun Day.",
+  "what_changed": "IBM Bravo award, October 2009, naming all five events.",
+  "metrics": [
+    {
+      "value": "5",
+      "label": "IBM events organized",
+      "context": "2008 to 2009"
+    }
+  ],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2009-10-bravo-hackdays-and-events-1.webp",
+      "kind": "certificate",
+      "pending": false,
+      "alt": "Certificate: Bravo award for running five innovation events in two years"
+    }
+  ]
+}

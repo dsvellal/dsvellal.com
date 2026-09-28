@@ -1,0 +1,25 @@
+{
+  "id": "2019-10-duplication-data-for-cto-call",
+  "date": "2019-10-12",
+  "year": "2019",
+  "month": "10",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Compiled measured duplicate-code data for the CTO's extended call",
+  "type": "Program",
+  "themes": [
+    "quality",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "Five weeks into the duplication program I compiled the results of every workshop and session, with before-and-after reports, for the CTO's extended call, so leadership could discuss code quality from measured data.",
+  "what_would_have_happened": "Code quality would have been discussed as opinion at the top table.",
+  "the_call": "Give leadership measured results from the teams' own code.",
+  "what_i_did": "Compiled workshop and session results since 9 September, with before-and-after reports, into a tracking sheet for the call.",
+  "what_changed": "A senior director asked for a mechanism to remove and commit 23% of the duplicate code.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
+}

@@ -1,0 +1,69 @@
+---
+import { splitNumber } from '../../lib/record';
+
+interface Props {
+  items: string[];
+  label?: string;
+}
+const { items, label = 'In numbers' } = Astro.props;
+const parsed = items.map(splitNumber);
+const figures = parsed.filter((n) => n.value);
+const words = parsed.filter((n) => !n.value).map((n) => n.label);
+---
+
+{
+  parsed.length > 0 && (
+    <div class="strip" aria-label={label}>
+      {figures.length > 0 && (
+        <ul class="numbers">
+          {figures.map((n) => (
+            <li>
+              <span class="figure value">{n.value}</span>
+              <span class="text">{n.label}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      {words.length > 0 && <p class="words">{words.join('. ')}.</p>}
+    </div>
+  )
+}
+
+<style>
+  .strip {
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ink);
+  }
+
+  .words {
+    margin-top: 1.5rem;
+    font-weight: 600;
+  }
+
+  .numbers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 12.5rem), 1fr));
+    gap: 2rem var(--gutter);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .numbers li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .value {
+    font-size: var(--step-2);
+    overflow-wrap: anywhere;
+    color: var(--accent);
+  }
+
+  .text {
+    font-size: var(--step--1);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+</style>

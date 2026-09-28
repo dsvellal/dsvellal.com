@@ -1,0 +1,38 @@
+{
+  "id": "2012-02-mvit-j2ee-workshop",
+  "date": "2012-02",
+  "year": "2012",
+  "month": "02",
+  "era": "beyond-work",
+  "company": "Sir MVIT",
+  "title": "Workshop: J2EE and advanced Java",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "community"
+  ],
+  "lane": "beyond",
+  "total": 16,
+  "tier": "public",
+  "summary": "Volunteered an one-day hands-on workshop on j2ee and advanced java for about 80 students at Sir MVIT.",
+  "what_would_have_happened": "Students learn the topic only from the syllabus, without an industry view of how it is used.",
+  "the_call": "Give time outside work to bring working-engineer experience into the classroom.",
+  "what_i_did": "Prepared and delivered the one-day hands-on workshop as a volunteer.",
+  "what_changed": "About 80 students attended.",
+  "metrics": [
+    {
+      "value": "~80",
+      "label": "students",
+      "context": "organizer headcount estimate"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "He has presented the technical sessions (JAVA/J2EE tech Seminar at Sir MVIT, MCA dept in even semester 2012) effectively in terms of reaching the students/staff so that they are ensured for rich continuous learning.",
+      "role": "Professor and head of department",
+      "company": "Sir MVIT",
+      "date": "2014-01-07"
+    }
+  ],
+  "images": []
+}

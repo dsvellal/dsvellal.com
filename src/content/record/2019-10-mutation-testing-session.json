@@ -1,0 +1,17 @@
+{
+  "id": "2019-10-mutation-testing-session",
+  "date": "2019-10-14",
+  "year": "2019",
+  "month": "10",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Introduced mutation testing to a radiation oncology product team",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 9,
+  "tier": "line"
+}

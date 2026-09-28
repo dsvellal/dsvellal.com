@@ -1,0 +1,38 @@
+{
+  "id": "2026-06-analytics-community-series",
+  "date": "2026-06",
+  "year": "2026",
+  "month": "06",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Taught analysts to work with AI in a three-part series",
+  "type": "Talk",
+  "themes": [
+    "ai",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 20,
+  "tier": "public",
+  "summary": "Invited as keynote speaker by the North America analytics community, I taught prompt and context engineering in a three-part series, 82 to 101 people per part.",
+  "what_would_have_happened": "Analysts outside engineering would have no structured way into the company's AI tools.",
+  "the_call": "Teach non-engineers with hands-on exercises built on everyday tasks.",
+  "what_i_did": "Built and taught the sessions with live exercises, and pointed analysts to the company's AI tools.",
+  "what_changed": "The community's lead said my sessions were the top recommended material of the year.",
+  "metrics": [
+    {
+      "value": "82 to 101",
+      "label": "analysts per part",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "These sessions are attended by 100-150 analysts across various organizations, and Datta's sessions have been the top recommended material this year.",
+      "role": "Business Intelligence Lead, North America Analytics",
+      "company": "Philips",
+      "date": "2026"
+    }
+  ],
+  "images": []
+}

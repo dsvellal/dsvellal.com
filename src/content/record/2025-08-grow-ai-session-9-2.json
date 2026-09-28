@@ -1,0 +1,31 @@
+{
+  "id": "2025-08-grow-ai-session-9-2",
+  "date": "2025-08",
+  "year": "2025",
+  "month": "08",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Taught an engineering community to use AI, rated 9.2 out of 10",
+  "type": "Talk",
+  "themes": [
+    "ai",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "I surveyed the Innovation Engineering community before the session, then taught it 'Unlocking the future with AI'; the session was rated 9.2 out of 10.",
+  "what_would_have_happened": "The content would rest on guesses about what engineers already knew about AI.",
+  "the_call": "Ask the audience first, then build the session around their answers.",
+  "what_i_did": "Ran a survey before the session, built the content from the answers and delivered it.",
+  "what_changed": "Participants rated the session 9.2 out of 10.",
+  "metrics": [
+    {
+      "value": "9.2/10",
+      "label": "rating",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

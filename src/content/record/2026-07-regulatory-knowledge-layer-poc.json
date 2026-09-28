@@ -1,0 +1,36 @@
+{
+  "id": "2026-07-regulatory-knowledge-layer-poc",
+  "date": "2026-07",
+  "year": "2026",
+  "month": "07",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Built a regulatory knowledge layer proof of concept",
+  "type": "Project",
+  "themes": [
+    "ai",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "I built a proof of concept that turned 24 regulatory files into 10,985 searchable chunks and a 994-node knowledge graph, and made the case for it to leadership.",
+  "what_would_have_happened": "Regulatory, design, risk and complaint evidence would stay scattered and be gathered by hand for each investigation.",
+  "the_call": "Normalize the evidence once and reuse it for every investigation draft.",
+  "what_i_did": "Built the pipeline, documented the extraction, search and graph tools, and turned the result into a short narrative for leaders.",
+  "what_changed": "In the proof of concept, the corpus regenerated a complete investigation assessment with near-identical coverage to the manual version.",
+  "metrics": [
+    {
+      "value": "10,985",
+      "label": "semantic chunks",
+      "context": ""
+    },
+    {
+      "value": "994",
+      "label": "graph nodes",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

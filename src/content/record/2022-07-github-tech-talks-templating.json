@@ -1,0 +1,17 @@
+{
+  "id": "2022-07-github-tech-talks-templating",
+  "date": "2022-07-28",
+  "year": "2022",
+  "month": "07",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Presented session 3 of the GitHub Tech Talks summer series, on templating in GitHub, for a global audience",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 14,
+  "tier": "line"
+}

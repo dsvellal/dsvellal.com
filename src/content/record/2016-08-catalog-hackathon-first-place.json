@@ -1,0 +1,31 @@
+{
+  "id": "2016-08-catalog-hackathon-first-place",
+  "date": "2016-08-01",
+  "year": "2016",
+  "month": "08",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Won 1st of 45 teams at a global catalog hackathon",
+  "type": "Recognition",
+  "themes": [
+    "catalog",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "Our four-person team won the catalog organization's 2016 hackathon with a way to use customer feedback on product pages to improve catalog data.",
+  "what_would_have_happened": "Customer feedback on product detail pages went unused for catalog quality.",
+  "the_call": "Use feedback customers already give to fix catalog data and route it back to contributors.",
+  "what_i_did": "Built the entry with three colleagues.",
+  "what_changed": "First place among 45 teams from six sites worldwide.",
+  "metrics": [
+    {
+      "value": "1st",
+      "label": "of 45 teams",
+      "context": "teams from Seattle, Cupertino, New York, London, Bengaluru and Chennai"
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

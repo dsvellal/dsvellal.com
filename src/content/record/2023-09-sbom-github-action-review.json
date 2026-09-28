@@ -1,0 +1,17 @@
+{
+  "id": "2023-09-sbom-github-action-review",
+  "date": "2023-09",
+  "year": "2023",
+  "month": "09",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Reviewed the software bill of materials GitHub Action and gave design feedback for its next steps",
+  "type": "Project",
+  "themes": [
+    "quality",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 13,
+  "tier": "line"
+}

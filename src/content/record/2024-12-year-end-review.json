@@ -1,0 +1,49 @@
+{
+  "id": "2024-12-year-end-review",
+  "date": "2024-12",
+  "year": "2024",
+  "month": "12",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "2024 review: turned an indifferent business into a partner",
+  "type": "Review",
+  "themes": [
+    "leadership",
+    "people"
+  ],
+  "lane": "work",
+  "total": 20,
+  "tier": "public",
+  "summary": "My manager rated three goals Exceeds and called my Ultrasound partnership the home run of the year, a relationship built in the face of indifference and turned into trust.",
+  "what_would_have_happened": "Not applicable: a role or recognition event, not an intervention.",
+  "the_call": "Listen to each business before proposing a solution.",
+  "what_i_did": "Held 104 connects with 389 colleagues, re-engaged business leaders who asked for repeat sessions, and worked with HR to raise the hiring bar.",
+  "what_changed": "Three goals rated Exceeds; 28 pieces of feedback from the Software Excellence team and almost every business unit.",
+  "metrics": [
+    {
+      "value": "104",
+      "label": "connects",
+      "context": "389 colleagues"
+    },
+    {
+      "value": "28",
+      "label": "pieces of feedback",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "You created a relationship in the face of indifference towards SWE from the BU and turned it into a trusted relationship.",
+      "role": "Manager, head of worldwide Software Excellence",
+      "company": "Philips",
+      "date": "2025-02"
+    },
+    {
+      "text": "There is feedback that you listen deeply and don't try to force a pre-canned solution onto the BU, but you understand what they really need.",
+      "role": "Manager, head of worldwide Software Excellence",
+      "company": "Philips",
+      "date": "2025-02"
+    }
+  ],
+  "images": []
+}

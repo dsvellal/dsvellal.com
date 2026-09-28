@@ -1,0 +1,32 @@
+{
+  "id": "2022-11-saas-devops-pipeline-alpha",
+  "date": "2022-11-07",
+  "year": "2022",
+  "month": "11",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Helped a SaaS team take its regulated pipeline from architecture to Alpha",
+  "type": "Recognition",
+  "themes": [
+    "delivery",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 20,
+  "tier": "public",
+  "summary": "In a cross-team group, I worked with the SaaS team to take its DevOps pipeline from architecture to a working Alpha, with the design history file and test automation built into the pipeline.",
+  "what_would_have_happened": "In the project lead's words, the SaaS team alone could not have reached a working pipeline in two program increments.",
+  "the_call": "Build the design history file and test automation into the pipeline from the start.",
+  "what_i_did": "Worked closely with the team on the architecture and the Alpha release, and on the evaluation that recommended the best-rated continuous delivery tool.",
+  "what_changed": "A working master template pipeline was released as the Alpha, and the project lead named me among its main contributors.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "Without this fusion team, SaaS team as a single entity would not have been able to achieve the same in a span of 2 PIs.",
+      "role": "Project lead, SaaS",
+      "company": "Philips",
+      "date": "2022-11-07"
+    }
+  ],
+  "images": []
+}

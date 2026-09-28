@@ -1,0 +1,44 @@
+{
+  "id": "2013-11-q3-review-occasionally-exceeds",
+  "date": "2013-11-01",
+  "year": "2013",
+  "month": "11",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "First review: taking ownership and spreading knowledge",
+  "type": "Review",
+  "themes": [
+    "leadership",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "My first Exeter review said I was the first on the team to take ownership across layers, and credited my push to spread knowledge of the product so no single person was a bottleneck.",
+  "what_would_have_happened": "Not applicable: this is a performance review.",
+  "the_call": "Not applicable: this is a performance review.",
+  "what_i_did": "Took functional and technical ownership across layers and spread knowledge of the main areas across more people on the team.",
+  "what_changed": "Rated occasionally exceeds expectations; the reviewers called me a role model for communication.",
+  "metrics": [
+    {
+      "value": "3.15",
+      "label": "indexed score",
+      "context": "rating: occasionally exceeds expectations"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "His communication is very clear and he is the only member in the team who has been taking effort to document all the discussions that he has been a part of.",
+      "role": "Project leads, Exeter Software India",
+      "company": "Exeter",
+      "date": "2013-11-01"
+    },
+    {
+      "text": "Datta has been very professional in his interactions and he has been the first individual in the team to take ownership across layers to drive the implementation.",
+      "role": "Project leads, Exeter Software India",
+      "company": "Exeter",
+      "date": "2013-11-01"
+    }
+  ],
+  "images": []
+}

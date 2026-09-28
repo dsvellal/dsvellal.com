@@ -1,0 +1,16 @@
+{
+  "id": "2026-06-first-triage-sprint-demo",
+  "date": "2026-06",
+  "year": "2026",
+  "month": "06",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Coordinated the defect-triage team to its first sprint demo, on live Ultrasound test data",
+  "type": "Project",
+  "themes": [
+    "ai"
+  ],
+  "lane": "work",
+  "total": 12,
+  "tier": "line"
+}

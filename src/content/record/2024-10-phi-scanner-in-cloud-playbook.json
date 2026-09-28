@@ -1,0 +1,17 @@
+{
+  "id": "2024-10-phi-scanner-in-cloud-playbook",
+  "date": "2024-10-21",
+  "year": "2024",
+  "month": "10",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Built a repository scanner for protected health information, listed in the R&D cloud-migration playbook",
+  "type": "Project",
+  "themes": [
+    "quality",
+    "reliability"
+  ],
+  "lane": "work",
+  "total": 14,
+  "tier": "line"
+}

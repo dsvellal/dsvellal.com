@@ -1,0 +1,36 @@
+{
+  "id": "2011-03-promoted-staff-software-engineer",
+  "date": "2011-03",
+  "year": "2011",
+  "month": "03",
+  "era": "ibm-india",
+  "company": "IBM",
+  "title": "Staff engineer on an industrial condition-monitoring solution",
+  "type": "Role",
+  "themes": [
+    "leadership",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "Promoted to staff software engineer, I built middleware for an industry solution that spots failure symptoms in high-value plant assets, and led the team's invention mining.",
+  "what_would_have_happened": "The new center of excellence would have lacked a single owner for its middleware and team tooling.",
+  "the_call": "Own the middleware component and the team's practices, not just my code.",
+  "what_i_did": "Owned middleware and integration services, ran Scrum for the 2011 deliveries, owned the team's tooling and led sessions that mined inventions from the team's work.",
+  "what_changed": "The team submitted 3 invention disclosures, 5 internal conference abstracts and 2 internship ideas.",
+  "metrics": [
+    {
+      "value": "3",
+      "label": "invention disclosures from the team",
+      "context": "from IP mining sessions I led"
+    },
+    {
+      "value": "5",
+      "label": "internal conference abstracts",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

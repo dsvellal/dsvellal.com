@@ -1,0 +1,16 @@
+{
+  "id": "2024-09-pi-gate-passed",
+  "date": "2024-09-27",
+  "year": "2024",
+  "month": "09",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Supported a product project that passed its program-increment gate with management's go-ahead",
+  "type": "Project",
+  "themes": [
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 12,
+  "tier": "line"
+}

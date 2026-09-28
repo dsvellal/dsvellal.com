@@ -1,0 +1,38 @@
+{
+  "id": "2025-02-copilot-session-4103-views",
+  "date": "2025-02-25",
+  "year": "2025",
+  "month": "02",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Brought AI-assisted coding to Philips University",
+  "type": "Talk",
+  "themes": [
+    "ai",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 19,
+  "tier": "public",
+  "summary": "I created a new Philips University course on coding with GitHub Copilot, covering daily productivity, technical debt and test writing; its announcement was seen by 4,103 people.",
+  "what_would_have_happened": "Engineers would try Copilot on their own, without shared prompts for technical debt and testing.",
+  "the_call": "Teach practical prompts for real work, including technical debt and tests.",
+  "what_i_did": "Built the course, offered it through the corporate learning system and taught it.",
+  "what_changed": "The announcement was seen by 4,103 people, the widest reach of any post in my record.",
+  "metrics": [
+    {
+      "value": "4,103",
+      "label": "people reached by the announcement",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2025-02-copilot-session-4103-views-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: Brought AI-assisted coding to Philips University"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "2026-08-data-context-knowledge-layer-proposal",
+  "date": "2026-08",
+  "year": "2026",
+  "month": "08",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Proposed a shared knowledge layer for AI agents",
+  "type": "Program",
+  "themes": [
+    "ai",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "With a program leader, I proposed a governed, permission-aware layer of engineering context that every AI agent can share, so each tool stops rebuilding its own.",
+  "what_would_have_happened": "Each AI tool would build and govern its own copy of the same context.",
+  "the_call": "Invest once in a shared, governed layer.",
+  "what_i_did": "Co-wrote the proposal with its candidate team, use cases and budget, and started talks with another business about reusing the layer for document generation.",
+  "what_changed": "It fed the 2027 business case.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
+}

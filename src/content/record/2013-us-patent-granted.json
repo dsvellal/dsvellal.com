@@ -1,0 +1,35 @@
+{
+  "id": "2013-us-patent-granted",
+  "date": "~2013",
+  "year": "2013",
+  "month": null,
+  "era": "ibm-india",
+  "company": "IBM",
+  "title": "Granted US patent, cited 27 times",
+  "type": "Credential",
+  "themes": [
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 20,
+  "tier": "public",
+  "summary": "The US patent office granted my patent on determining user availability; it has since been cited by 27 other patents.",
+  "what_would_have_happened": "Not applicable.",
+  "the_call": "Pursue the invention through filing, publication and grant.",
+  "what_i_did": "Invented the method and saw it through from disclosure to grant.",
+  "what_changed": "Granted as US 8,560,487, with 27 patent citations and 8 non-patent citations.",
+  "metrics": [
+    {
+      "value": "27",
+      "label": "patents citing it",
+      "context": ""
+    },
+    {
+      "value": "8",
+      "label": "non-patent citations",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2021-tech-debt-savings-program",
+  "date": "2021",
+  "year": "2021",
+  "month": null,
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Lead coach for a technical-debt program that saved about EUR 2.1M",
+  "type": "Program",
+  "themes": [
+    "cost",
+    "quality",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "I was lead coach for the Software Center of Excellence program on technical debt reduction and resource optimization. It realized about EUR 2.1M in savings in 2021 and identified about EUR 3.45M more.",
+  "what_would_have_happened": "Technical debt kept adding cost with no business case to fund its removal.",
+  "the_call": "Pay debt down in measured steps inside normal delivery, and report the savings in money.",
+  "what_i_did": "Coached teams through the program and its measurement.",
+  "what_changed": "About EUR 2.1M realized in 2021; about EUR 3.45M future opportunity.",
+  "metrics": [
+    {
+      "value": "~EUR 2.1M",
+      "label": "realized savings",
+      "context": "2021"
+    },
+    {
+      "value": "~EUR 3.45M",
+      "label": "further savings identified",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

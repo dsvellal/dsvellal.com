@@ -1,0 +1,31 @@
+{
+  "id": "2015-03-liferay-page-load-under-3s",
+  "date": "2015-03-23",
+  "year": "2015",
+  "month": "03",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Pages under three seconds, with the evidence",
+  "type": "Project",
+  "themes": [
+    "reliability",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "I took on portal page performance, used user caching to bring exchange pages consistently under about three seconds and proved it with repeatable load tests that I reported to the US head of development.",
+  "what_would_have_happened": "Pages stayed slow under load, with results that were hard to reproduce.",
+  "the_call": "Make the result repeatable: same scripts, same data resets, documented runs.",
+  "what_i_did": "Tuned user caching, reran the load tests on clean databases and published the run details and purge scripts.",
+  "what_changed": "Page times held under about three seconds run after run, and the US head of development replied 'Awesome, thanks'.",
+  "metrics": [
+    {
+      "value": "~3 s",
+      "label": "per page, consistently",
+      "context": "load tests with thousands of transactions"
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

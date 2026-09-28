@@ -1,0 +1,44 @@
+{
+  "id": "2019-09-technical-sharing-225",
+  "date": "2019-09",
+  "year": "2019",
+  "month": "09",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Took the duplicate-code tool to 225+ engineers in two time zones",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "I presented the duplicate-code tool twice at the September technical sharing event, once for India and once for teams outside India, to more than 225 people in total.",
+  "what_would_have_happened": "Not applicable: a talk, not an intervention.",
+  "the_call": "Run the session twice so teams in other time zones could join live.",
+  "what_i_did": "Presented the tool and took questions in both sessions.",
+  "what_changed": "225+ attendees; follow-up questions turned into engagements with teams.",
+  "metrics": [
+    {
+      "value": "225+",
+      "label": "attendees",
+      "context": "two sessions"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "In total 225+ attended in both sessions of technical sharing event",
+      "role": "Organizer, Software Center of Excellence",
+      "company": "Philips",
+      "date": "2019-09-27"
+    },
+    {
+      "text": "Thanks to Dattatreya Vellal for accommodating and sharing",
+      "role": "Organizer, Software Center of Excellence",
+      "company": "Philips",
+      "date": "2019-09-27"
+    }
+  ],
+  "images": []
+}

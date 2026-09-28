@@ -1,0 +1,39 @@
+{
+  "id": "2014-02-root-cause-before-revamp",
+  "date": "2014-02-21",
+  "year": "2014",
+  "month": "02",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "A clean-up plan from one reopened defect",
+  "type": "Project",
+  "themes": [
+    "quality",
+    "reliability",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "A portal defect kept getting reopened. I took the developer's root-cause analysis, found the same dead, repeated and tangled code across several portal controllers and proposed a three-phase clean-up to the delivery head.",
+  "what_would_have_happened": "The team kept patching the same defect each time it reopened, while the same patterns sat in other controllers.",
+  "the_call": "Fix the root cause in phases, starting in slack time, without putting the release at risk.",
+  "what_i_did": "Proposed the phases: remove dead code, modularize the controllers, then pull shared logic into one module. I asked the delivery head when phase one could start.",
+  "what_changed": "The fix went into the next hotfix, and the project manager backed the plan: redesign and refactoring both had to happen.",
+  "metrics": [
+    {
+      "value": "3",
+      "label": "phases proposed",
+      "context": "remove dead code, modularize, extract shared modules"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "1000% Yes. Redesign & Refactoring both have to happen.",
+      "role": "Project manager, Exeter Software India",
+      "company": "Exeter",
+      "date": "2014-02-21"
+    }
+  ],
+  "images": []
+}

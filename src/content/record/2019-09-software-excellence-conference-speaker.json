@@ -1,0 +1,17 @@
+{
+  "id": "2019-09-software-excellence-conference-speaker",
+  "date": "2019-09-11",
+  "year": "2019",
+  "month": "09",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Spoke at Bengaluru's Software Excellence Conference on program behavior metrics (70) and BDD live coding (20)",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 14,
+  "tier": "line"
+}

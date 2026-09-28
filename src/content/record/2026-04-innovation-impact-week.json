@@ -1,0 +1,25 @@
+{
+  "id": "2026-04-innovation-impact-week",
+  "date": "2026-04",
+  "year": "2026",
+  "month": "04",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Took the AI work to the company's Innovation Impact Week",
+  "type": "Talk",
+  "themes": [
+    "ai",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "I gave two sessions at the company's Innovation Impact Week, on AI-assisted requirements and on the traceability platform; the platform deep dive led to a request for a walkthrough with the CIO.",
+  "what_would_have_happened": "The platform would stay known mainly to the businesses already using it.",
+  "the_call": "Use a company-wide stage to reach architects, verification and validation teams and quality professionals.",
+  "what_i_did": "Built the requirements session around standards, compliant requirements and prompts, and presented the platform in a deep dive.",
+  "what_changed": "New teams asked for demos and for help judging the platform's fit, and the team was asked to arrange a walkthrough with the CIO.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
+}

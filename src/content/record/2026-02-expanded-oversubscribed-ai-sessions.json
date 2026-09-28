@@ -1,0 +1,31 @@
+{
+  "id": "2026-02-expanded-oversubscribed-ai-sessions",
+  "date": "2026-02",
+  "year": "2026",
+  "month": "02",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Expanded AI courses to meet demand",
+  "type": "Program",
+  "themes": [
+    "ai",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "Three of my AI courses were oversubscribed, so I got each expanded to 30 seats; all three filled again.",
+  "what_would_have_happened": "Engineers who wanted the training would have waited for a later run.",
+  "the_call": "Meet demand now by raising the seat limits on the scheduled sessions.",
+  "what_i_did": "Asked the learning team to raise enrollment limits for all three sessions.",
+  "what_changed": "Each session grew to 30 seats and filled again, confirming continued demand.",
+  "metrics": [
+    {
+      "value": "3 x 30",
+      "label": "seats, all filled",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

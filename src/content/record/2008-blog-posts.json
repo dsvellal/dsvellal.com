@@ -1,0 +1,16 @@
+{
+  "id": "2008-blog-posts",
+  "date": "2008",
+  "year": "2008",
+  "month": null,
+  "era": "beyond-work",
+  "company": "Personal blog",
+  "title": "Wrote 6 personal blog posts in 2008",
+  "type": "Writing",
+  "themes": [
+    "community"
+  ],
+  "lane": "beyond",
+  "total": 9,
+  "tier": "line"
+}

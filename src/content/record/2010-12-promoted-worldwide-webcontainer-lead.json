@@ -1,0 +1,37 @@
+{
+  "id": "2010-12-promoted-worldwide-webcontainer-lead",
+  "date": "2010-12",
+  "year": "2010",
+  "month": "12",
+  "era": "ibm-india",
+  "company": "IBM",
+  "title": "Worldwide lead for an IBM product component, three years in",
+  "type": "Role",
+  "themes": [
+    "leadership",
+    "quality",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "I was promoted and named worldwide contact and lead for the Lotus Expeditor Webcontainer and portlet container.",
+  "what_would_have_happened": "The component would have carried open severity 1 customer defects into its next releases.",
+  "the_call": "Take end-to-end ownership: old versions, new requirements, customer problems and adoption by other products.",
+  "what_i_did": "Led the component worldwide, solved two critical severity 1 customer defects, trained a backup and pushed adoption into other Lotus products.",
+  "what_changed": "Brought open defects to virtually zero, with no severity 1 or 2 issues, ahead of the v6.2.2 and v6.2.3 releases.",
+  "metrics": [
+    {
+      "value": "2",
+      "label": "critical severity 1 customer defects solved",
+      "context": ""
+    },
+    {
+      "value": "0",
+      "label": "open severity 1 or 2 defects",
+      "context": "resume: 'virtual zero'"
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

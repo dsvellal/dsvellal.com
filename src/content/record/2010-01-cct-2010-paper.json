@@ -1,0 +1,17 @@
+{
+  "id": "2010-01-cct-2010-paper",
+  "date": "2010-01",
+  "year": "2010",
+  "month": "01",
+  "era": "ibm-india",
+  "company": "IBM",
+  "title": "Presented the paper \"Visual Project Dependency Management Tool\" at the national conference CCT-2010",
+  "type": "Talk",
+  "themes": [
+    "quality",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 14,
+  "tier": "line"
+}

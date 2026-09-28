@@ -1,0 +1,17 @@
+{
+  "id": "2024-06-sonarqube-in-appengine",
+  "date": "2024-06-12",
+  "year": "2024",
+  "month": "06",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Guided an apps team, with a member of his team, to add static analysis to its CI as a reusable workflow",
+  "type": "Project",
+  "themes": [
+    "quality",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 15,
+  "tier": "line"
+}

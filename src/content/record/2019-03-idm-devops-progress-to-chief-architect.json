@@ -1,0 +1,37 @@
+{
+  "id": "2019-03-idm-devops-progress-to-chief-architect",
+  "date": "2019-03",
+  "year": "2019",
+  "month": "03",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Raised unit-test coverage from 63% to 86% with no extra people",
+  "type": "Project",
+  "themes": [
+    "quality",
+    "delivery",
+    "cost"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "I made unit-test coverage part of the identity management team's normal flow, with automation and static analysis in the pipeline, and reported progress to the chief architect after three months. Over six months coverage went from 63% to 86% with no additional headcount.",
+  "what_would_have_happened": "Coverage was low, and raising it was assumed to need extra testers.",
+  "the_call": "Build coverage into the team's normal flow instead of adding people.",
+  "what_i_did": "Drove automation and static-analysis integration in the team's pipeline, then presented progress, coverage gains and the year's targets to the chief architect.",
+  "what_changed": "The chief architect had no concerns about progress, and over six months unit-test coverage rose from 63% to 86%.",
+  "metrics": [
+    {
+      "value": "63% to 86%",
+      "label": "unit-test coverage",
+      "context": "in 6 months, per the 2019 review"
+    },
+    {
+      "value": "0",
+      "label": "additional people",
+      "context": "to raise coverage"
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

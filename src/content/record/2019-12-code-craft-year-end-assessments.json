@@ -1,0 +1,31 @@
+{
+  "id": "2019-12-code-craft-year-end-assessments",
+  "date": "2019-12",
+  "year": "2019",
+  "month": "12",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Ran open year-end code-quality assessments with product teams",
+  "type": "Program",
+  "themes": [
+    "quality"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "I ran the software craftsmanship year-end assessments with product teams, reviewed their practices with them, reported the results back openly and suggested tools and next steps.",
+  "what_would_have_happened": "Teams had no independent view of their engineering practices.",
+  "the_call": "Assess practices with the team and share every finding with them.",
+  "what_i_did": "Ran the assessments and the report-outs for the Software Center of Excellence, with tool and next-step suggestions.",
+  "what_changed": "A magnetic resonance product team called the assessment open, transparent and informative, and thanked us for guiding them on code quality and processes all year.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "The assessment was very open, transparent & informative and we indeed learnt new tools/technologies in the suggestions that came from SW CoE team directly.",
+      "role": "Product team, magnetic resonance business",
+      "company": "Philips",
+      "date": "2019-12-03"
+    }
+  ],
+  "images": []
+}

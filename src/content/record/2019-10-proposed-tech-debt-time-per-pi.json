@@ -1,0 +1,17 @@
+{
+  "id": "2019-10-proposed-tech-debt-time-per-pi",
+  "date": "2019-10",
+  "year": "2019",
+  "month": "10",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Proposed that teams protect 3 days per program increment for technical debt",
+  "type": "Program",
+  "themes": [
+    "quality",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 11,
+  "tier": "line"
+}

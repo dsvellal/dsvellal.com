@@ -1,0 +1,17 @@
+{
+  "id": "2022-03-test-vendor-selection-analysis",
+  "date": "~2022-03",
+  "year": "2022",
+  "month": "03",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Contributed the analysis that helped a campus-wide initiative pick its outsourced test vendor",
+  "type": "Project",
+  "themes": [
+    "quality",
+    "cost"
+  ],
+  "lane": "work",
+  "total": 14,
+  "tier": "line"
+}

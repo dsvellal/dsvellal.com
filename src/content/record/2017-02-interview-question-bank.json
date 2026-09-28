@@ -1,0 +1,54 @@
+{
+  "id": "2017-02-interview-question-bank",
+  "date": "2017-02",
+  "year": "2017",
+  "month": "02",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Set up the interview question bank behind 14 hiring events",
+  "type": "Hiring",
+  "themes": [
+    "hiring",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "I proposed changes to how the fraud and risk org interviewed engineers, ran a question-writing session across two offices, and built a shared bank of test-case-backed questions used in 14 weekend hiring events.",
+  "what_would_have_happened": "Interviewers kept improvising questions, so the bar varied from panel to panel.",
+  "the_call": "Give every panel the same tested questions and answers, so hiring decisions compare like with like.",
+  "what_i_did": "Organized the question bash with a colleague at the second site, wrote 10 of the first 20 questions, kept the bank in one template and shared it with leaders travelling to interview.",
+  "what_changed": "30-plus questions were used in 14 weekend hiring events and 2 online drives.",
+  "metrics": [
+    {
+      "value": "30+",
+      "label": "curated questions",
+      "context": "10 of the first 20 contributed by me"
+    },
+    {
+      "value": "14",
+      "label": "weekend hiring events",
+      "context": ""
+    },
+    {
+      "value": "2",
+      "label": "online drives",
+      "context": "on HackerEarth"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Very useful.",
+      "role": "Engineering leader",
+      "company": "Amazon",
+      "date": "2017-06"
+    },
+    {
+      "text": "Thanks for diving deep Datta. Appreciate that.",
+      "role": "Senior engineering manager",
+      "company": "Amazon",
+      "date": "2017-02"
+    }
+  ],
+  "images": []
+}

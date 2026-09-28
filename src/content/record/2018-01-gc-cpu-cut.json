@@ -1,0 +1,37 @@
+{
+  "id": "2018-01-gc-cpu-cut",
+  "date": "2018-01",
+  "year": "2018",
+  "month": "01",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Cut garbage collection to 2.4% of CPU on a fraud service",
+  "type": "Project",
+  "themes": [
+    "reliability",
+    "cost",
+    "fraud-risk"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "I profiled a fraud-prevention service, found it spent about 17.7% of CPU on garbage collection, tuned the JVM to bring that to 2.4%, and showed the team the before-and-after evidence.",
+  "what_would_have_happened": "More hosts to handle peak load, with CPU burned on non-business work.",
+  "the_call": "Measure with the profiler before changing code or buying capacity.",
+  "what_i_did": "Read the flame graphs, raised the heap size and moved to the G1 collector, then posted before-and-after charts to the team with notes on how to read them.",
+  "what_changed": "Garbage collection dropped from about 17.7% to about 2.4% of CPU, and supported throughput rose about 20%.",
+  "metrics": [
+    {
+      "value": "~17.7% to ~2.4%",
+      "label": "CPU spent on garbage collection",
+      "context": ""
+    },
+    {
+      "value": "~20%",
+      "label": "more supported TPS",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

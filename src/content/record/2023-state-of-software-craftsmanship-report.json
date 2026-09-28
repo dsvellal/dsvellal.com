@@ -1,0 +1,31 @@
+{
+  "id": "2023-state-of-software-craftsmanship-report",
+  "date": "2023",
+  "year": "2023",
+  "month": null,
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Led a company-wide software craftsmanship report on 138 projects",
+  "type": "Writing",
+  "themes": [
+    "quality",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 21,
+  "tier": "public",
+  "summary": "As lead author of the State of Software Craftsmanship 2023 report, I led the analysis of data from 138 projects, about 80% of the software community, and linked low practice maturity to a higher chance of product faults.",
+  "what_would_have_happened": "Leaders would decide where to invest in quality by opinion, without evidence.",
+  "the_call": "Measure first, then publish the data with clear recommendations for where to invest.",
+  "what_i_did": "Led the analysis and writing with co-authors from the Software Excellence team and turned the findings into recommendations for leaders and practitioners.",
+  "what_changed": "The report was published company-wide and praised publicly by the head of software excellence. It showed that about a third of teams did not use gates to enforce quality.",
+  "metrics": [
+    {
+      "value": "138",
+      "label": "projects analyzed",
+      "context": "about 80% of the software community"
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

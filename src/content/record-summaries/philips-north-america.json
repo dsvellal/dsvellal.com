@@ -1,0 +1,376 @@
+{
+  "slug": "philips-north-america",
+  "label": "Philips North America",
+  "employer": "Philips",
+  "years": "2021 to now",
+  "order": 4,
+  "lane": "work",
+  "events": 102,
+  "capsules": 102,
+  "public": 42,
+  "status": "live",
+  "headline": "Led a 33-session learning program with Philips University",
+  "headline_capsule": "2025-philips-university-program",
+  "year_layers": [
+    {
+      "year": "2021",
+      "narrative": "Promoted to Software Excellence Competency Lead in November and transferred from Bengaluru to Philips North America to lead software excellence programs for North American and Latin American businesses. Three goals were rated Exceeds Expectations, including changing how teams work through those programs, and my manager called me a steadying force through the team's shift to continuous value delivery.",
+      "numbers": [
+        "Transfer to the US",
+        "3 goals Exceeds"
+      ],
+      "top": [
+        "2021-12-year-end-review"
+      ],
+      "quote": {
+        "text": "Datta has been a pivotal member of the SW CoE team for years and has been deservedly rewarded with a promotion this year.",
+        "role": "Manager, Software Excellence",
+        "company": "Philips",
+        "date": "2022-02",
+        "capsule": "2021-12-year-end-review"
+      },
+      "months": [
+        "11",
+        "12"
+      ],
+      "also": [
+        "2021-11-transfer-to-philips-north-america",
+        "2021-12-interviewing-skills-primer"
+      ],
+      "count": 3
+    },
+    {
+      "year": "2022",
+      "narrative": "Owned the craftsmanship assessment program, which raised the average assessment score from 67 to 78. Led InnerSource adoption in business units, where shared GitHub workflows cut the setup of a required security scanner from months to minutes. Helped a SaaS team take its DevOps pipeline to a working Alpha with design history and test automation built in, and led the graduate program's software track.",
+      "numbers": [
+        "Months to minutes for security-scanner setup",
+        "67 to 78 craftsmanship score",
+        "17 feedback responses",
+        "215 reached by GitHub talk"
+      ],
+      "top": [
+        "2022-innersource-adoption-carrier-businesses",
+        "2022-11-saas-devops-pipeline-alpha",
+        "2022-12-anytime-feedback-17-responses",
+        "2022-craftsmanship-assessment-67-to-78",
+        "2022-09-graduate-software-track-ownership"
+      ],
+      "quote": {
+        "text": "This wasn't just a \"task\"; this was a vision, an implementation of the vision, and a successful selling of the vision to teams that needed it to be sold to them for their own success.",
+        "role": "Manager, Software Excellence",
+        "company": "Philips",
+        "date": "2023-02",
+        "capsule": "2022-innersource-adoption-carrier-businesses"
+      },
+      "months": [
+        "03",
+        "07",
+        "09",
+        "10",
+        "11",
+        "12"
+      ],
+      "also": [
+        "2022-10-reusable-ci-workflow-pair-reviews",
+        "2022-12-year-end-review",
+        "2022-saas-factory-pilot-assessment",
+        "2022-07-github-tech-talks-templating",
+        "2022-03-test-vendor-selection-analysis",
+        "2022-11-innersource-issueops-automation",
+        "2022-12-onboarded-graduate-trainee",
+        "2022-09-graduate-trainee-feedback"
+      ],
+      "count": 13
+    },
+    {
+      "year": "2023",
+      "narrative": "From April, supervised nine software competency experts in the Software Center of Excellence. Led the State of Software Craftsmanship report on 138 projects, ran the Back2Basics workshop for about 50 engineers and organized the US developer portal hackathon with the Software Excellence team. All three goals were rated Exceeds Expectations, and feedback from the businesses was 100% positive.",
+      "numbers": [
+        "9 direct reports",
+        "138 projects in the craftsmanship report",
+        "~50 at Back2Basics",
+        "1,569 reached by the hackathon",
+        "24 pieces of feedback"
+      ],
+      "top": [
+        "2023-state-of-software-craftsmanship-report",
+        "2023-04-supervisory-manager-nine-reports",
+        "2023-11-developer-portal-hackathon-usa",
+        "2023-05-back2basics-workshop",
+        "2023-12-year-end-review"
+      ],
+      "quote": {
+        "text": "Feedback from businesses is 100% positive and thanks you for your skill and calm, clear communication.",
+        "role": "Manager, Software Excellence",
+        "company": "Philips",
+        "date": "2024-02",
+        "capsule": "2023-12-year-end-review"
+      },
+      "months": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12"
+      ],
+      "also": [
+        "2023-08-codescene-in-igt-pipeline",
+        "2023-09-cambridge-launch-event-demo",
+        "2023-08-codescene-demo-quality-standup",
+        "2023-09-sbom-github-action-review",
+        "2023-10-pairing-coverity-build",
+        "2023-02-linkedin-recommendation-team-member",
+        "2023-09-thanks-from-software-excellence-leader",
+        "2023-05-software-excellence-awards-tagged",
+        "2023-10-interview-resources-cambridge-team",
+        "2023-03-anytime-feedback-mentoring",
+        "2023-11-data-science-team-chat",
+        "2023-09-five-year-service-milestone"
+      ],
+      "count": 17
+    },
+    {
+      "year": "2024",
+      "narrative": "As Software Excellence Competency Lead managing nine competency experts, turned an indifferent business relationship with Ultrasound into trust and led the proof of concept that first ran its test suites on virtual machines. Led the team that organized Developer Days India for 250+ engineers, held 104 connects with 389 colleagues and brought static analysis and code-health tooling into product pipelines.",
+      "numbers": [
+        "~3 min test run on a VM",
+        "250+ at Developer Days",
+        "104 connects with 389 colleagues",
+        "8.6/10 SOLID talk"
+      ],
+      "top": [
+        "2024-06-ultrasound-test-virtualization",
+        "2024-12-year-end-review",
+        "2024-07-developer-days-india",
+        "2024-06-solid-principles-series"
+      ],
+      "quote": {
+        "text": "Many thanks to each of the teammates who helped think through the 'art of possibility'.",
+        "role": "Engineering leadership team member",
+        "company": "Philips",
+        "date": "2024-06",
+        "capsule": "2024-06-ultrasound-test-virtualization"
+      },
+      "months": [
+        "02",
+        "06",
+        "07",
+        "09",
+        "10",
+        "12"
+      ],
+      "also": [
+        "2024-02-director-interest-code-health",
+        "2024-06-sonarqube-in-appengine",
+        "2024-02-craftsmanship-report-recognized",
+        "2024-10-phi-scanner-in-cloud-playbook",
+        "2024-10-virtualization-innovation-forum",
+        "2024-09-pi-gate-passed",
+        "2024-10-linkedin-influence-without-authority",
+        "2024-02-code-review-working-session",
+        "2024-12-mentoring-recognized",
+        "2024-02-kubernetes-advisory"
+      ],
+      "count": 14
+    },
+    {
+      "year": "2025",
+      "narrative": "Became Software Competency Lead, Innovation Engineering, in April and owned a goal to lead the move from AI experiments to value, rated Exceeds. Led a 33-session Philips University program for 492 learners, built an AI agent that checks requirements against IEC 62304 and brought it onto the company AI platform, and trained trainers so teams could carry AI adoption themselves. One team's AI confidence rose from 4.5 to 7.6 in three days.",
+      "numbers": [
+        "33 sessions and 492 learners",
+        "23 taught personally",
+        "4,103 reached by the Copilot session",
+        "4.5 to 7.6 AI confidence",
+        "NPS 10"
+      ],
+      "top": [
+        "2025-philips-university-program",
+        "2025-06-copilot-train-the-trainer",
+        "2025-12-plymouth-genai-workshop",
+        "2025-02-copilot-session-4103-views",
+        "2025-09-requirements-ai-agent"
+      ],
+      "quote": {
+        "text": "He did an amazing job in conducting several PU led trainings, which were very positively rated and received by the participants, also resulting in higher funding from PU.",
+        "role": "Manager",
+        "company": "Philips",
+        "date": "2026",
+        "capsule": "2025-philips-university-program"
+      },
+      "months": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12"
+      ],
+      "also": [
+        "2025-02-linkedin-recommendation-former-manager",
+        "2025-03-technical-debt-course-nps-83",
+        "2025-10-product-quality-review-nps-10",
+        "2025-11-compliance-check-on-ai-platform",
+        "2025-12-year-end-review",
+        "2025-08-grow-ai-session-9-2",
+        "2025-02-linkedin-recommendation-colleague",
+        "2025-09-agent-to-architecture-board",
+        "2025-05-linkedin-recommendation-engineer-hired",
+        "2025-04-leading-cvd-course",
+        "2025-04-move-to-innovation-engineering",
+        "2025-10-agent-test-scenario-demo",
+        "2025-10-ultrasound-test-log-analysis",
+        "2025-03-google-prompting-essentials",
+        "2025-05-codescene-foundation-certificate",
+        "2025-05-codescene-intermediate-certificate",
+        "2025-05-mastering-technical-debt-certificate",
+        "2025-09-seven-years-reflection"
+      ],
+      "count": 23
+    },
+    {
+      "year": "2026",
+      "narrative": "Guided the team behind the AI-assisted traceability platform from its first milestone in January to production in 14 businesses, with two businesses scoring it 10 out of 10. Won funding for an AI defect-triage project with Ultrasound and coordinated it through its first milestone, taught 27 AI sessions to 1,000+ people and co-wrote the proposal for a shared knowledge layer for AI agents. Was named solution architect for the contextual intelligence layer in the 2027 resource model.",
+      "numbers": [
+        "14 businesses in production",
+        "NPS 10 from two businesses",
+        "~3,000 issues triaged",
+        "27 AI sessions, 1,000+ people, 8.7/10"
+      ],
+      "top": [
+        "2026-01-first-traceability-milestone",
+        "2026-05-nps-10-two-businesses",
+        "2026-09-traceability-platform-14-businesses",
+        "2026-ai-sessions-27",
+        "2026-06-analytics-community-series"
+      ],
+      "quote": {
+        "text": "Datta's communication and collaboration style is very positive and always looking for opportunities. It is simply lovely to collaborate with him. His vision is inspiring.",
+        "role": "Quality Program Manager",
+        "company": "Philips",
+        "date": "2026",
+        "capsule": "2026-09-traceability-platform-14-businesses"
+      },
+      "months": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "also": [
+        "2026-03-test-gap-detection-release",
+        "2026-04-innovation-impact-week",
+        "2026-06-triage-poc-3000-issues",
+        "2026-08-data-context-knowledge-layer-proposal",
+        "2026-anytime-feedback-9-responses",
+        "2026-02-expanded-oversubscribed-ai-sessions",
+        "2026-03-impact-assessment-release",
+        "2026-04-defect-triage-funded",
+        "2026-07-regulatory-knowledge-layer-poc",
+        "2026-02-dora-cvd-course",
+        "2026-03-agent-official-platform-asset",
+        "2026-04-accelerator-funding",
+        "2026-05-first-deterministic-triage-output",
+        "2026-06-knowledge-graph-proposal-approved",
+        "2026-07-triage-milestone-1",
+        "2026-04-first-staging-environment",
+        "2026-05-benefit-risk-poc",
+        "2026-09-design-checklist-feasibility",
+        "2026-03-platform-pilot-new-team",
+        "2026-03-two-accelerator-proposals",
+        "2026-05-defect-triage-project-kickoff",
+        "2026-07-plm-mcp-use-cases",
+        "2026-09-2027-scaling-scenarios",
+        "2026-06-first-triage-sprint-demo",
+        "2026-07-copilot-training",
+        "2026-09-copilot-enrollment-beyond-capacity",
+        "2026-09-named-solution-architect"
+      ],
+      "count": 32
+    }
+  ],
+  "company": {
+    "arc": [
+      {
+        "when": "Nov 2021",
+        "what": "Promoted to Software Excellence Competency Lead and transferred from Philips India to Philips North America to run software excellence programs for North American and Latin American businesses."
+      },
+      {
+        "when": "Apr 2023",
+        "what": "Became supervisory manager of 9 software competency experts in the Software Center of Excellence."
+      },
+      {
+        "when": "Apr 2025",
+        "what": "Moved to Software Competency Lead, Innovation Engineering, to lead AI-enabled transformations in regulated engineering."
+      },
+      {
+        "when": "Sep 2026",
+        "what": "Named solution architect for the contextual intelligence layer in the 2027 resource model."
+      }
+    ],
+    "scope": [
+      "As Software Excellence Competency Lead from Nov 2021, set the software excellence strategy and KPIs for US and Latin American businesses within the global strategy, agreed them with business leaders and senior executives, and reported progress to senior leaders each quarter and cost savings to finance and business leaders.",
+      "From Nov 2021, ran assessment-led programs on software quality, reliability, security and regulatory compliance, from document reviews, stakeholder interviews and data analysis to a plan built with cross-functional leaders, results reported to business heads and a follow-up six to twelve months later.",
+      "From Nov 2021, led InnerSource adoption with US and Latin American businesses, brought engineering teams into the Software Craftsmanship program through change champions, and ran software due diligence on acquired businesses against ISO 13485, ISO 14971 and IEC 62304.",
+      "From Apr 2023, supervised 9 software competency experts, delegating work, setting timelines, recommending hires and running annual performance reviews, and helped run the wider Software Center of Excellence team across 6 nationalities and 12 locations.",
+      "From Apr 2023, raised the hiring bar for US and Latin American teams by mentoring leaders and architects on interviewing and interviewing for senior roles, and built software competency frameworks delivered through Philips University.",
+      "As Software Competency Lead in Innovation Engineering from Apr 2025, led AI-enabled transformations for regulated engineering, including an AI-assisted traceability platform now in production in 14 businesses and a requirements agent that checks requirements against IEC 62304.",
+      "From Apr 2025, built skills across the engineering organization with a 33-session Philips University program for 492 learners and 27 AI sessions for more than 1,000 people in 2026, and in Sep 2026 was named solution architect for the contextual intelligence layer."
+    ],
+    "signatures": [
+      {
+        "title": "Took an AI-assisted traceability platform from pilot to production in 14 businesses",
+        "body": "Set the design, secured funding and guided the team from a first milestone on three teams' release data in January 2026 to production in 14 businesses; two businesses scored the work 10 out of 10.",
+        "capsule": "2026-01-first-traceability-milestone"
+      },
+      {
+        "title": "Built practical, compliant AI skills across the engineering organization",
+        "body": "Designed and led a 33-session Philips University program for 492 learners, taught 27 AI sessions to more than 1,000 people in 2026, and built an agent that checks requirements against IEC 62304.",
+        "capsule": "2025-philips-university-program"
+      },
+      {
+        "title": "Quality programs with measured results",
+        "body": "Owned the craftsmanship assessment program that raised the average score from 67 to 78, led InnerSource adoption that cut security-scanner setup from months to minutes, and led the 138-project State of Software Craftsmanship report.",
+        "capsule": "2022-craftsmanship-assessment-67-to-78"
+      }
+    ],
+    "numbers": [
+      "9 direct reports",
+      "14 businesses in production",
+      "33 Philips University sessions, 492 learners",
+      "27 AI sessions, 1,000+ people",
+      "138 projects analyzed",
+      "250+ at Developer Days India"
+    ],
+    "quotes": [
+      {
+        "text": "You created a relationship in the face of indifference towards SWE from the BU and turned it into a trusted relationship.",
+        "role": "Manager, head of worldwide Software Excellence",
+        "company": "Philips",
+        "date": "2025-02",
+        "capsule": "2024-12-year-end-review"
+      },
+      {
+        "text": "His efforts have led to significant improvements in our DORA metrics for both traditional software and SaaS projects.",
+        "role": "Former head of worldwide Software Excellence",
+        "company": "Philips",
+        "date": "2025-02-20",
+        "capsule": "2025-02-linkedin-recommendation-former-manager"
+      }
+    ],
+    "took": "North America is where I learned to lead AI-enabled transformation in regulated software. Trust comes before tooling: listen to what a business needs, show a working result, then scale it, which is how the traceability platform went from one pilot to 14 businesses. In regulated work AI earns its place only when a person can see, check and own every decision it touches, so I surface the evidence for a person to judge before automating the judgment. Leading a global team taught me that my job is to make that standard easy for others to hold, not to hold it alone.",
+    "took_draft": false
+  }
+}

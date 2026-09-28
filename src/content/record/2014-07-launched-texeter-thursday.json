@@ -1,0 +1,39 @@
+{
+  "id": "2014-07-launched-texeter-thursday",
+  "date": "2014-07-04",
+  "year": "2014",
+  "month": "07",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Bringing every project into one tech community",
+  "type": "Program",
+  "themes": [
+    "community",
+    "teaching",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "With a small team of volunteers, I started TExeter Thursday, a knowledge-sharing series that brought engineers from every project together. Its first event was a technical quiz covering every tech stack.",
+  "what_would_have_happened": "Engineers stayed inside their own projects, with little exchange of technical knowledge.",
+  "the_call": "Make knowledge sharing a regular, fun event that people chose to attend.",
+  "what_i_did": "Launched the Thursday series with the TExeter team and ran the first quiz, with questions from every tech stack so all teams had an equal chance.",
+  "what_changed": "A project team sent a testimonial asking for more sessions and noting that leads, architects and managers joined in. The managing director called it very impressive.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "This was a great initiative from the TExeter team towards constructive team building across projects which of key concern in the agile environment.",
+      "role": "Project team testimonial, Exeter Software India",
+      "company": "Exeter",
+      "date": "2014-07-04"
+    },
+    {
+      "text": "Very impressive!",
+      "role": "Managing Director, Exeter Software India",
+      "company": "Exeter",
+      "date": "2014-07-04"
+    }
+  ],
+  "images": []
+}

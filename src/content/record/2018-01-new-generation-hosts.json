@@ -1,0 +1,17 @@
+{
+  "id": "2018-01-new-generation-hosts",
+  "date": "2018-01",
+  "year": "2018",
+  "month": "01",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Owned a hardware clean-up that moved fraud services to new-generation hosts and saved about $23,800 a year",
+  "type": "Project",
+  "themes": [
+    "cost",
+    "reliability"
+  ],
+  "lane": "work",
+  "total": 15,
+  "tier": "line"
+}

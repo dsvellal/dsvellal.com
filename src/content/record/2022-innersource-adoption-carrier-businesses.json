@@ -1,0 +1,39 @@
+{
+  "id": "2022-innersource-adoption-carrier-businesses",
+  "date": "2022",
+  "year": "2022",
+  "month": null,
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Led InnerSource adoption that cut security-scanner setup from months to minutes",
+  "type": "Program",
+  "themes": [
+    "delivery",
+    "quality",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 22,
+  "tier": "public",
+  "summary": "I guided an IT platform team off one-off pipelines and onto reusable GitHub workflows any product team could adopt, so wiring in the required security scanner became self-service.",
+  "what_would_have_happened": "Each product team would keep spending months wiring the mandatory security scanner into its pipeline by hand.",
+  "the_call": "Set a platform model where the platform team offers self-service workflows and product teams adopt them on their own.",
+  "what_i_did": "Taught the team how platform teams serve product teams, guided it to build reusable workflows into the SaaS factory pipelines, and demonstrated a workflow that connects a project to the scanner in a few clicks.",
+  "what_changed": "What took months now takes minutes. My manager called it a vision that I implemented and sold to the teams, and those teams now build reusable workflows for everyone.",
+  "metrics": [
+    {
+      "value": "months to minutes",
+      "label": "time to wire a project to the required security scanner",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "This wasn't just a \"task\"; this was a vision, an implementation of the vision, and a successful selling of the vision to teams that needed it to be sold to them for their own success.",
+      "role": "Manager, Software Excellence",
+      "company": "Philips",
+      "date": "2023-02"
+    }
+  ],
+  "images": []
+}

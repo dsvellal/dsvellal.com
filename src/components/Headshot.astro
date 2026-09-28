@@ -1,0 +1,56 @@
+---
+import { hasPublicAsset } from '../lib/assets';
+import { profile } from '../data/profile';
+
+const present = hasPublicAsset('headshot.jpg');
+const initials = profile.name
+  .split(' ')
+  .map((part) => part[0])
+  .join('');
+---
+
+<figure class="headshot">
+  {
+    present ? (
+      <img src="/headshot.jpg" alt={`Portrait of ${profile.name}`} width="1000" height="1000" loading="eager" decoding="async" />
+    ) : (
+      <div class="fallback" role="img" aria-label={`${profile.name}, portrait coming soon`}>
+        <span aria-hidden="true">{initials}</span>
+      </div>
+    )
+  }
+</figure>
+
+<style>
+  .headshot {
+    margin: 0;
+    aspect-ratio: 4 / 5;
+    background: var(--ink);
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    filter: grayscale(1) contrast(1.05);
+  }
+
+  .fallback {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: end start;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    border-bottom: 8px solid var(--accent);
+  }
+
+  .fallback span {
+    color: var(--paper);
+    font-size: var(--step-5);
+    font-weight: 800;
+    letter-spacing: -0.06em;
+    line-height: 0.8;
+  }
+</style>

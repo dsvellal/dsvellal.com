@@ -1,0 +1,16 @@
+{
+  "id": "2009-qse-poster",
+  "date": "2009",
+  "year": "2009",
+  "month": null,
+  "era": "ibm-india",
+  "company": "IBM",
+  "title": "Poster at the Quality Software Engineering 2009 India-level event",
+  "type": "Talk",
+  "themes": [
+    "quality"
+  ],
+  "lane": "work",
+  "total": 11,
+  "tier": "line"
+}

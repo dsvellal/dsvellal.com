@@ -1,0 +1,44 @@
+{
+  "id": "2014-11-q3-review-consistently-exceeds",
+  "date": "2014-11-11",
+  "year": "2014",
+  "month": "11",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Rated for bringing the India team into the re-architecture",
+  "type": "Review",
+  "themes": [
+    "leadership",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "My review said I had built enough credibility with the US architecture team for the India team to become stakeholders in re-architecting the product. It also credited the My Accounts migration, the enrollment messaging proof of concept and how I led junior engineers.",
+  "what_would_have_happened": "Not applicable: this is a performance review.",
+  "the_call": "Earn the India team a place in the product's re-architecture through what we delivered.",
+  "what_i_did": "Built credibility with the US architecture team, brought the India team into the re-architecture and helped the team move date-processing logic onto the API layer.",
+  "what_changed": "Rated consistently exceeds expectations; the reviewers wrote that the junior team saw me as a role model.",
+  "metrics": [
+    {
+      "value": "2.91",
+      "label": "indexed score",
+      "context": "rating: consistently exceeds expectations"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Datta continues to build on the excellent foundation that he has laid.",
+      "role": "Project managers, Exeter Software India",
+      "company": "Exeter",
+      "date": "2014-11-11"
+    },
+    {
+      "text": "The junior team, I believe sees him as a role model.",
+      "role": "Project managers, Exeter Software India",
+      "company": "Exeter",
+      "date": "2014-11-11"
+    }
+  ],
+  "images": []
+}

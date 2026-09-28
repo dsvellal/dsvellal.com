@@ -1,0 +1,185 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Figure from '../../components/Figure.astro';
+import QuoteBlock from '../../components/QuoteBlock.astro';
+
+export async function getStaticPaths() {
+  const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+  return work.map((entry, i) => ({
+    params: { slug: entry.id },
+    props: { entry, next: work[(i + 1) % work.length], index: i },
+  }));
+}
+
+const { entry, next, index } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+
+<Base title={d.title} description={d.summary} type="article">
+  <article>
+    <header class="wrap grid case-head">
+      <p class="case-num figure" aria-hidden="true">{String(index + 1).padStart(2, '0')}</p>
+      <div class="case-intro">
+        <p class="label">{d.pillar}</p>
+        <h1>{d.title}</h1>
+        <p class="case-summary">{d.summary}</p>
+        <p class="case-meta muted">{d.employer}, {d.period}</p>
+      </div>
+      <div class="case-fig">
+        <Figure id={d.headlineClaim} size="hero" showContext />
+      </div>
+    </header>
+
+    <div class="wrap grid case-body">
+      <div class="prose case-prose">
+        <Content />
+
+        <h2>Outcome</h2>
+        <ul class="outcomes">
+          {
+            d.outcomes.map((id) => (
+              <li>
+                <Figure id={id} size="medium" showContext />
+              </li>
+            ))
+          }
+        </ul>
+
+        <h2>What I would do again</h2>
+        <p>{d.doAgain}</p>
+      </div>
+
+      {
+        d.quote && (
+          <aside class="case-quote" aria-label="Endorsement">
+            <QuoteBlock id={d.quote} />
+          </aside>
+        )
+      }
+    </div>
+
+    <nav class="wrap next" aria-label="Next case study">
+      <hr class="rule rule--accent" />
+      <p class="label">Next</p>
+      <p class="next-title"><a href={`/work/${next.id}`}>{next.data.title}</a></p>
+    </nav>
+  </article>
+</Base>
+
+<style>
+  .case-head {
+    margin-top: clamp(2rem, 6vw, 5rem);
+    row-gap: 2rem;
+    align-items: end;
+  }
+
+  .case-num {
+    grid-column: 1 / -1;
+    color: var(--accent);
+    font-size: var(--step-4);
+  }
+
+  .case-intro {
+    grid-column: 1 / -1;
+  }
+
+  h1 {
+    margin-top: 0.75rem;
+    font-size: var(--step-4);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 1;
+    max-width: 18ch;
+  }
+
+  .case-summary {
+    max-width: 34rem;
+    margin-top: 1.5rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .case-meta {
+    margin-top: 1rem;
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
+  .case-fig {
+    grid-column: 1 / -1;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--ink);
+  }
+
+  .case-body {
+    margin-top: clamp(3rem, 8vw, 6rem);
+    row-gap: 3rem;
+  }
+
+  .case-prose {
+    grid-column: 1 / -1;
+  }
+
+  .outcomes {
+    display: grid;
+    gap: 2rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .outcomes li {
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .case-quote {
+    grid-column: 1 / -1;
+    padding-top: 1.5rem;
+    border-top: 4px solid var(--ink);
+    align-self: start;
+  }
+
+  .next {
+    margin-top: clamp(4rem, 10vw, 7rem);
+  }
+
+  .next .label {
+    margin-top: 1.5rem;
+  }
+
+  .next-title {
+    margin-top: 0.5rem;
+    font-size: var(--step-2);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  @media (min-width: 48rem) {
+    .case-num {
+      grid-column: 1 / span 2;
+      align-self: start;
+    }
+
+    .case-intro {
+      grid-column: 3 / span 10;
+    }
+
+    .case-fig {
+      grid-column: 3 / span 10;
+    }
+
+    .case-prose {
+      grid-column: 3 / span 6;
+    }
+
+    .case-quote {
+      grid-column: 10 / span 3;
+      position: sticky;
+      top: 2rem;
+    }
+  }
+</style>

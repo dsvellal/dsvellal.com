@@ -1,0 +1,32 @@
+{
+  "id": "2017-10-zeus-team-award",
+  "date": "2017-10",
+  "year": "2017",
+  "month": "10",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Zeus Team Award for the risk-evaluation API",
+  "type": "Recognition",
+  "themes": [
+    "fraud-risk",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 19,
+  "tier": "public",
+  "summary": "The fraud and risk tech org gave me and two other engineers its award for exceptional project delivery, for creating the risk-evaluation API and putting its first use case into production.",
+  "what_would_have_happened": "Not applicable: a recognition event.",
+  "the_call": "Not applicable: a recognition event.",
+  "what_i_did": "Designed the generic risk document the API runs on and worked with the platform team on the first launch.",
+  "what_changed": "The award was signed by the org's tech director, and the first use case routes risky customer contacts automatically.",
+  "metrics": [],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2017-10-zeus-team-award-1.webp",
+      "kind": "certificate",
+      "pending": false,
+      "alt": "Certificate: Zeus Team Award for the risk-evaluation API"
+    }
+  ]
+}

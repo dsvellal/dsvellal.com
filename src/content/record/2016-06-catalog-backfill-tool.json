@@ -1,0 +1,41 @@
+{
+  "id": "2016-06-catalog-backfill-tool",
+  "date": "2016-06-16",
+  "year": "2016",
+  "month": "06",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Built the data pipeline behind the catalog value reports, about 2 billion records",
+  "type": "Project",
+  "themes": [
+    "catalog",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "To measure how much of the catalog came from automated feed parsing, I built a tool that pulled catalog search results, split them and loaded them into the data warehouse, back to 1970 across 12 marketplaces.",
+  "what_would_have_happened": "Value-metrics reports on automated feed parsing would have run on incomplete history, because the warehouse could not ingest hundreds of gigabytes of single-line responses.",
+  "the_call": "Automate the pull, split the data in code and backfill all history, then keep it current with daily jobs.",
+  "what_i_did": "Designed and wrote the query generator, the splitter and uploader, and set up the daily jobs that keep the data current.",
+  "what_changed": "About 2 billion records were backfilled and about 30,000 new items flow in each day, so the reports cover the full history.",
+  "metrics": [
+    {
+      "value": "~2B",
+      "label": "catalog records backfilled",
+      "context": "930M vendor-contribution plus 1.1B create-by-date responses, back to 1970"
+    },
+    {
+      "value": "12",
+      "label": "marketplaces",
+      "context": ""
+    },
+    {
+      "value": "~30,000",
+      "label": "items processed per day",
+      "context": "ongoing daily job"
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2018-03-prime-day-right-sizing",
+  "date": "2018-03-20",
+  "year": "2018",
+  "month": "03",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Sized two fraud services for Prime Day from load tests, $12,344 a year saved",
+  "type": "Project",
+  "themes": [
+    "cost",
+    "reliability",
+    "fraud-risk"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "When the org scaled up for Prime Day, I load-tested two fraud services, set each host count from the results and cut 18 hosts.",
+  "what_would_have_happened": "Both services would be over-provisioned for peak by habit.",
+  "the_call": "Benchmark first, then size.",
+  "what_i_did": "Ran the load tests, worked out the right host count for each service and resized both fleets.",
+  "what_changed": "18 hosts removed and $12,344 a year saved, with capacity checked against peak traffic.",
+  "metrics": [
+    {
+      "value": "$12,344",
+      "label": "per year saved",
+      "context": "$6,446 + $5,898"
+    },
+    {
+      "value": "18",
+      "label": "hosts removed",
+      "context": "9 per service"
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

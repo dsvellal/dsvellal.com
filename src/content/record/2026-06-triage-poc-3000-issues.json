@@ -1,0 +1,31 @@
+{
+  "id": "2026-06-triage-poc-3000-issues",
+  "date": "2026-06",
+  "year": "2026",
+  "month": "06",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Coordinated AI triage of about 3,000 issues",
+  "type": "Project",
+  "themes": [
+    "ai",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "I coordinated engineering, architecture, infrastructure and test experts on an AI defect-triage proof of concept that triaged about 3,000 issues on live Ultrasound data.",
+  "what_would_have_happened": "Test failures would keep being triaged by hand, one record at a time.",
+  "the_call": "Prove triage on live data with people reviewing the AI's decisions, and settle architecture questions before building further.",
+  "what_i_did": "Kept one requirements and reporting baseline for all the teams and co-wrote the architecture discovery questionnaire.",
+  "what_changed": "About 3,000 issues triaged, the first sprint demo delivered and a web app pulling live test data.",
+  "metrics": [
+    {
+      "value": "~3,000",
+      "label": "issues triaged",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

@@ -1,0 +1,25 @@
+{
+  "id": "2025-09-requirements-ai-agent",
+  "date": "2025-09",
+  "year": "2025",
+  "month": "09",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Built an AI agent for regulated requirements",
+  "type": "Project",
+  "themes": [
+    "ai",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 19,
+  "tier": "public",
+  "summary": "I built an AI agent that takes requirements from ambiguous to reviewable and checks them against IEC 62304 and FDA guidance, then presented it to the software technical advisory board.",
+  "what_would_have_happened": "Requirement gaps would surface late in reviews and audits.",
+  "the_call": "Keep a person deciding; let the agent point to evidence.",
+  "what_i_did": "Built the agent and its analysis prompts, and presented it to the software technical advisory board.",
+  "what_changed": "Other teams requested access; it later became an official asset of the company's AI platform.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
+}

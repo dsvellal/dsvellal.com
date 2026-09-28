@@ -1,0 +1,16 @@
+{
+  "id": "2026-05-benefit-risk-poc",
+  "date": "2026-05",
+  "year": "2026",
+  "month": "05",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Completed the Ultrasound benefit-risk AI proof of concept and aligned the business on a broader data layer",
+  "type": "Project",
+  "themes": [
+    "ai"
+  ],
+  "lane": "work",
+  "total": 14,
+  "tier": "line"
+}

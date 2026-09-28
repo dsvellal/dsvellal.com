@@ -1,0 +1,43 @@
+{
+  "id": "2025-03-technical-debt-course-nps-83",
+  "date": "2025-03-05",
+  "year": "2025",
+  "month": "03",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Taught teams to prioritize technical debt with data",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "I taught a two-hour hands-on Philips University workshop on finding and prioritizing technical debt with code-health analysis; its announcement reached 4,131 people and the program scored an NPS of 83.",
+  "what_would_have_happened": "Teams would treat technical debt as one long backlog, with no clear way to pick the high-impact, low-effort fixes.",
+  "the_call": "Show teams the hotspots in a codebase and start with high-impact, low-effort fixes.",
+  "what_i_did": "Ran the hands-on workshop and announced a second session when demand continued.",
+  "what_changed": "The announcement reached 4,131 people and the program scored an NPS of 83.",
+  "metrics": [
+    {
+      "value": "4,131",
+      "label": "people reached",
+      "context": ""
+    },
+    {
+      "value": "83",
+      "label": "program NPS",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2025-03-technical-debt-course-nps-83-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: Taught teams to prioritize technical debt with data"
+    }
+  ]
+}

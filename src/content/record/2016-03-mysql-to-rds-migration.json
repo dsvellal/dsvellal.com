@@ -1,0 +1,17 @@
+{
+  "id": "2016-03-mysql-to-rds-migration",
+  "date": "2016-03-08",
+  "year": "2016",
+  "month": "03",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Moved a feed-history database to AWS RDS and documented a one-day method a UK colleague asked to reuse",
+  "type": "Project",
+  "themes": [
+    "reliability",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 13,
+  "tier": "line"
+}

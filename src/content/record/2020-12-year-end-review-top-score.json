@@ -1,0 +1,39 @@
+{
+  "id": "2020-12-year-end-review-top-score",
+  "date": "2020-12",
+  "year": "2020",
+  "month": "12",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Top score and top results in 2020, with four goals Exceeds",
+  "type": "Review",
+  "themes": [
+    "leadership",
+    "quality",
+    "hiring"
+  ],
+  "lane": "work",
+  "total": 21,
+  "tier": "public",
+  "summary": "My 2020 review, for the year I ran the bar-raiser program, the remote connect program and quality at desk, rated four goals Exceeds. My manager called it the top score and top results of the year.",
+  "what_would_have_happened": "Not applicable: a review, not an intervention.",
+  "the_call": "Not applicable.",
+  "what_i_did": "Ran the bar-raiser hiring program, the remote connect program and the quality-at-desk program.",
+  "what_changed": "Four goals Exceeds and three Meets; my manager asked me to raise the bar again the next year.",
+  "metrics": [
+    {
+      "value": "4",
+      "label": "goals rated Exceeds",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Congratulations on the top score and top results this year! Let's raise the bar again further next year.",
+      "role": "Head of Competencies, Software Excellence (manager)",
+      "company": "Philips",
+      "date": "2020-12"
+    }
+  ],
+  "images": []
+}

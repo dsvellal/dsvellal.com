@@ -1,0 +1,17 @@
+{
+  "id": "2019-12-sig-tech-debt-partnership",
+  "date": "2019-12-04",
+  "year": "2019",
+  "month": "12",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Coordinated the kick-off of Philips' technical-debt measurement work with Software Improvement Group",
+  "type": "Program",
+  "themes": [
+    "quality",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 15,
+  "tier": "line"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "2010-12-first-patent-application-award",
+  "date": "2010-12",
+  "year": "2010",
+  "month": "12",
+  "era": "ibm-india",
+  "company": "IBM",
+  "title": "IBM invention award for my first patent application",
+  "type": "Recognition",
+  "themes": [
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 19,
+  "tier": "public",
+  "summary": "IBM gave me its First Patent Application Invention Achievement Award, signed by its chairman and CEO, for my availability invention.",
+  "what_would_have_happened": "Not applicable.",
+  "the_call": "Not applicable.",
+  "what_i_did": "Invented and filed 'Determining and Conveying User Availability'.",
+  "what_changed": "Invention achievement award, December 2010; the patent was granted in 2013.",
+  "metrics": [],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2010-12-first-patent-application-award-1.webp",
+      "kind": "certificate",
+      "pending": false,
+      "alt": "Certificate: IBM invention award for my first patent application"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "2008-bluehouse-hackday-coordinator",
+  "date": "2008",
+  "year": "2008",
+  "month": null,
+  "era": "ibm-india",
+  "company": "IBM",
+  "title": "Event coordinator for the Worldwide Bluehouse Hackday (Hackday 6)",
+  "type": "Program",
+  "themes": [
+    "leadership",
+    "community"
+  ],
+  "lane": "work",
+  "total": 14,
+  "tier": "line"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "2025-11-compliance-check-on-ai-platform",
+  "date": "2025-11-24",
+  "year": "2025",
+  "month": "11",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Brought compliance checks into the company AI platform",
+  "type": "Project",
+  "themes": [
+    "ai",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "I got my requirements compliance check, against IEC 62304, FDA and INCOSE guidance, built into the company's AI platform as a predefined prompt that any team can use without a license.",
+  "what_would_have_happened": "The check would stay a personal tool that teams had to ask me for.",
+  "the_call": "Put the check on a platform teams already use, with no license needed.",
+  "what_i_did": "Designed the prompt, published step-by-step instructions and offered demos and help extending it to other teams' use cases.",
+  "what_changed": "Available to any team on the platform; a user said it made requirements review much simpler.",
+  "metrics": [],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2025-11-compliance-check-on-ai-platform-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: Brought compliance checks into the company AI platform"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "2026-02-dora-cvd-course",
+  "date": "2026-02-04",
+  "year": "2026",
+  "month": "02",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Taught the Philips University course on DORA and continuous value delivery",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 15,
+  "tier": "line"
+}

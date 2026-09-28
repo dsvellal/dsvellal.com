@@ -1,0 +1,38 @@
+{
+  "id": "2019-07-recognition-code-quality-culture",
+  "date": "2019-07-24",
+  "year": "2019",
+  "month": "07",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Recognized for changing code-quality culture across the campus's businesses",
+  "type": "Recognition",
+  "themes": [
+    "quality",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 19,
+  "tier": "public",
+  "summary": "A Software Center of Excellence leader recognized my code-quality drives and workshops with teams across the campus, and credited them with cultural change across its businesses.",
+  "what_would_have_happened": "Not applicable: a recognition event, not an intervention.",
+  "the_call": "Not applicable.",
+  "what_i_did": "Ran code-quality drives and hands-on workshops with teams across businesses in the first half of 2019.",
+  "what_changed": "Manager recognition, 750 points.",
+  "metrics": [
+    {
+      "value": "750",
+      "label": "recognition points",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Thank you for your good contributions in 'Moving the needle' on Code Quality, resulting in cultural changes across the businesses in PIC.",
+      "role": "Leader, Software Center of Excellence",
+      "company": "Philips",
+      "date": "2019-07-24"
+    }
+  ],
+  "images": []
+}

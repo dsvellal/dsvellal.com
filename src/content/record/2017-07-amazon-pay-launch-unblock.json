@@ -1,0 +1,45 @@
+{
+  "id": "2017-07-amazon-pay-launch-unblock",
+  "date": "2017-07-25",
+  "year": "2017",
+  "month": "07",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Unblocked the Amazon Pay general availability launch in two days",
+  "type": "Project",
+  "themes": [
+    "payments",
+    "fraud-risk",
+    "reliability"
+  ],
+  "lane": "work",
+  "total": 22,
+  "tier": "public",
+  "summary": "The wallet's general availability was blocked because its orders were not recognized as a valid payment instrument; I was called in, found the root cause in two days and agreed a fix at the source with the payments team.",
+  "what_would_have_happened": "The launch slips, or a patch in our fraud service hides a data problem upstream.",
+  "the_call": "Fix the mapping where the data starts, with no code change in our service.",
+  "what_i_did": "Traced retail and digital wallet orders, showed the payment type was being sent wrongly, and worked the fix through with the payments engineers until the logs confirmed it.",
+  "what_changed": "The fix was confirmed and cleared for production on 25 Jul 2017, and a senior engineering manager called the resolution 'simple and right'.",
+  "metrics": [
+    {
+      "value": "2 days",
+      "label": "to root cause and fix",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Thanks Datta for relentlessly pursuing this or the last 2 days and getting to the root cause and the solution.",
+      "role": "Engineer, payments",
+      "company": "Amazon",
+      "date": "2017-07-25"
+    },
+    {
+      "text": "Thanks [a colleague] and Datta and the IN team for arriving at this resolution, which is simple and right.",
+      "role": "Senior engineering manager",
+      "company": "Amazon",
+      "date": "2017-07"
+    }
+  ],
+  "images": []
+}

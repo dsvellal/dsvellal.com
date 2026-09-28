@@ -1,0 +1,16 @@
+{
+  "id": "2011-tec-webinar-ides",
+  "date": "2011",
+  "year": "2011",
+  "month": null,
+  "era": "ibm-india",
+  "company": "IBM",
+  "title": "Webinar \"IDEs: your next programming platform\" for the IBM Technical Experts Council tech-talk series",
+  "type": "Talk",
+  "themes": [
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 13,
+  "tier": "line"
+}

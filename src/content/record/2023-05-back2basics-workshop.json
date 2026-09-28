@@ -1,0 +1,43 @@
+{
+  "id": "2023-05-back2basics-workshop",
+  "date": "2023-05-15",
+  "year": "2023",
+  "month": "05",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Designed and ran a hands-on code quality workshop for about 50 engineers",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "I designed and ran a two-hour workshop on design, code, test and review patterns, where engineers reviewed real open-source and shared code knowing they would co-own any bug they approved.",
+  "what_would_have_happened": "Engineers would keep reviewing code without shared techniques for spotting problems.",
+  "the_call": "Teach by having engineers review real code together and own what they approve.",
+  "what_i_did": "Built the review exercises and anti-pattern examples, and led the session in the room and online.",
+  "what_changed": "About 50 engineers took part, 12 in the room and 38 online. The announcement was seen by 1,103 people, and a leader asked to run these sessions more often.",
+  "metrics": [
+    {
+      "value": "~50",
+      "label": "engineers attended",
+      "context": ""
+    },
+    {
+      "value": "1,103",
+      "label": "people reached by the announcement",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2023-05-back2basics-workshop-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: Designed and ran a hands-on code quality workshop for about 50 engineers"
+    }
+  ]
+}

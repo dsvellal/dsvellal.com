@@ -1,0 +1,17 @@
+{
+  "id": "2019-07-unit-testing-workshop",
+  "date": "2019-07-04",
+  "year": "2019",
+  "month": "07",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Ran a half-day unit testing workshop for 24 nominated engineers",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 13,
+  "tier": "line"
+}

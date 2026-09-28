@@ -1,0 +1,50 @@
+{
+  "id": "2020-quality-at-desk-program",
+  "date": "2020",
+  "year": "2020",
+  "month": null,
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Led the move of quality checks to the developer's desk",
+  "type": "Program",
+  "themes": [
+    "quality",
+    "delivery",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "I led a program that put quality checks into developers' everyday builds, and paired with teams to make it stick. Three teams went live on its quality gates and two added mutation testing to their pipelines.",
+  "what_would_have_happened": "Quality was checked at the end of the pipeline, when fixes are slowest.",
+  "the_call": "Check quality where the code is written, and pair with teams to make it stick.",
+  "what_i_did": "Paired with teams (including a cloud platform team in Kotlin), ran quality-at-desk and dynamic analysis sessions, and presented the approach to leadership.",
+  "what_changed": "Leadership asked to build on the quality-at-desk concept; three teams went live on its parameters and two added mutation testing to their pipelines.",
+  "metrics": [
+    {
+      "value": "3",
+      "label": "teams live on quality gates",
+      "context": ""
+    },
+    {
+      "value": "2",
+      "label": "teams with mutation testing in pipelines",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2020-quality-at-desk-program-1.webp",
+      "kind": "chat",
+      "pending": false,
+      "alt": "Chat: Led the move of quality checks to the developer's desk"
+    },
+    {
+      "src": "/record/published/2020-quality-at-desk-program-2.webp",
+      "kind": "chat",
+      "pending": false,
+      "alt": "Chat: Led the move of quality checks to the developer's desk"
+    }
+  ]
+}

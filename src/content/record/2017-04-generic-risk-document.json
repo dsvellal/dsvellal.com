@@ -1,0 +1,36 @@
+{
+  "id": "2017-04-generic-risk-document",
+  "date": "2017-04",
+  "year": "2017",
+  "month": "04",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Set the risk-evaluation contract that 6 teams adopted unchanged",
+  "type": "Project",
+  "themes": [
+    "fraud-risk",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 19,
+  "tier": "public",
+  "summary": "I designed the generic document that carries context into a fraud-evaluation platform's risk API, won approval from senior and principal engineers, and wrote the onboarding guides that let 6 client teams adopt it with no change to its structure.",
+  "what_would_have_happened": "Each new client would have needed its own payload, and the platform's contract would have split.",
+  "the_call": "Make one generic contract that fits many clients and use cases, and take it through senior design review before building.",
+  "what_i_did": "Wrote the use case, prototype and design, got it approved by senior and principal engineers, presented the API to the director, and built the model and client handler.",
+  "what_changed": "The first version of the API launched on it, and 6 clients onboarded with little developer effort and no structural change.",
+  "metrics": [
+    {
+      "value": "6",
+      "label": "client teams",
+      "context": "on the risk-evaluation API"
+    },
+    {
+      "value": "0",
+      "label": "schema changes since launch",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

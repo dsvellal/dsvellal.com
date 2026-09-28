@@ -1,0 +1,24 @@
+{
+  "id": "2026-04-defect-triage-funded",
+  "date": "2026-04",
+  "year": "2026",
+  "month": "04",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Took AI defect triage from proposal to funded plan",
+  "type": "Program",
+  "themes": [
+    "ai"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "My proposal for AI-assisted defect triage in Ultrasound was selected for funding, and I aligned stakeholders on a six-month engagement to deliver it.",
+  "what_would_have_happened": "The funded idea would start without agreed scope, governance or architecture.",
+  "the_call": "Agree scope, governance and architecture options before any build work starts.",
+  "what_i_did": "Aligned stakeholders on scope, business-owned requirements, architecture and cost options, access needs and milestone governance, and shared templates from earlier projects.",
+  "what_changed": "The initiative moved from proposal into a funded, scoped six-month engagement.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
+}

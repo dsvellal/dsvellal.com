@@ -1,0 +1,25 @@
+{
+  "id": "2026-03-test-gap-detection-release",
+  "date": "2026-03-08",
+  "year": "2026",
+  "month": "03",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Released AI test-gap detection",
+  "type": "Project",
+  "themes": [
+    "ai",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "I released the platform's third capability, which finds requirements without test scenarios and generates candidate scenarios for engineers to review.",
+  "what_would_have_happened": "Teams would find untested requirements by hand, late in the release.",
+  "the_call": "Roll out one business at a time, after its data is validated.",
+  "what_i_did": "Wrote the release notes, stated the phased rollout plainly and asked the first business to start using it and send feedback.",
+  "what_changed": "Live for the first business on 8 March, with advanced search added for all current users.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
+}

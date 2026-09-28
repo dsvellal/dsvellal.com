@@ -1,0 +1,17 @@
+{
+  "id": "2026-05-first-deterministic-triage-output",
+  "date": "2026-05-06",
+  "year": "2026",
+  "month": "05",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Moved defect triage from plan to first end-to-end output, with a deterministic workflow and human validation",
+  "type": "Project",
+  "themes": [
+    "ai",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 15,
+  "tier": "line"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "2014-12-plan-selection-rewrite",
+  "date": "2014-12-16",
+  "year": "2014",
+  "month": "12",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Leading the plan selection rebuild",
+  "type": "Project",
+  "themes": [
+    "delivery",
+    "quality",
+    "reliability"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "I led a team of India developers in rewriting the exchange's plan selection on a layered data design, and presented the demo. The US head of development called it simply amazing.",
+  "what_would_have_happened": "Plan selection stayed slow and tangled, with every change risky.",
+  "the_call": "Rebuild on layers: a data layer, business entities separated from the CRM system, and proper logging and messaging.",
+  "what_i_did": "Set the layered approach, pulled the team's before-and-after measurements into one deck and presented the demo to US leadership.",
+  "what_changed": "The US head of development praised its speed, maintainability, extensibility and logging, and held it up to the organization as quality delivered in a short time.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "My reaction in one sentence is “it is simply amazing what you guys have done”",
+      "role": "US head of software development, Exeter Group",
+      "company": "Exeter",
+      "date": "2014-12-16"
+    },
+    {
+      "text": "So I appreciate the challenge you had taken on and shown to the rest of the organization what we can accomplish in a short timeframe with high quality.",
+      "role": "US head of software development, Exeter Group",
+      "company": "Exeter",
+      "date": "2014-12-16"
+    }
+  ],
+  "images": []
+}

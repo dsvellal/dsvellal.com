@@ -1,0 +1,16 @@
+{
+  "id": "2025-10-agent-test-scenario-demo",
+  "date": "2025-10",
+  "year": "2025",
+  "month": "10",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Demonstrated the requirements agent generating test scenarios from requirements",
+  "type": "Project",
+  "themes": [
+    "ai"
+  ],
+  "lane": "work",
+  "total": 12,
+  "tier": "line"
+}

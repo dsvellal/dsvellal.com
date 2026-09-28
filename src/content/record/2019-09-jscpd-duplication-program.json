@@ -1,0 +1,44 @@
+{
+  "id": "2019-09-jscpd-duplication-program",
+  "date": "2019-09",
+  "year": "2019",
+  "month": "09",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Brought duplicate-code detection to Philips, and teams removed 18,688 lines",
+  "type": "Program",
+  "themes": [
+    "quality",
+    "cost",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 21,
+  "tier": "public",
+  "summary": "I introduced an open-source duplicate-code detector to Philips and built the program around it, with guides, a hands-on workshop and a before-and-after report teams could run themselves. With a senior director as sponsor, I ran workshops across business units, and teams I worked with removed 18,688 lines of duplicate code.",
+  "what_would_have_happened": "Duplicate code grew unnoticed, so every fix had to be made in several places.",
+  "the_call": "Measure duplication with a free tool teams can run themselves, and pair every report with a hands-on session.",
+  "what_i_did": "Introduced the tool, wrote the installation and usage guides, designed the workshop and the before-and-after reporting template, ran sessions from September 2019 and compiled the results for leadership.",
+  "what_changed": "Developers across at least six business units ran the tool and reported back; a senior director asked for a mechanism to remove 23% of duplicate code; teams I influenced removed 18,688 duplicate lines.",
+  "metrics": [
+    {
+      "value": "18,688",
+      "label": "duplicate lines removed",
+      "context": "owner-reported in the 2019 review"
+    },
+    {
+      "value": "6+",
+      "label": "business units ran the tool",
+      "context": "per the reviewed email set"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Great Datta. It provides good insight. As next step we need to devise mechanism to remove and commit 23% of duplicate code.",
+      "role": "Senior Director, software",
+      "company": "Philips",
+      "date": "2019-10"
+    }
+  ],
+  "images": []
+}

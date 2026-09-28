@@ -1,0 +1,16 @@
+{
+  "id": "2015-09-hotfix-release-coordination",
+  "date": "2015-09-14",
+  "year": "2015",
+  "month": "09",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Planned and ran a hotfix release across three workstreams: a branch merge, renewals fixes and open bugs",
+  "type": "Project",
+  "themes": [
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 10,
+  "tier": "line"
+}

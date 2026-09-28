@@ -1,0 +1,16 @@
+{
+  "id": "2007-07-joined-ibm",
+  "date": "2007-07",
+  "year": "2007",
+  "month": "07",
+  "era": "ibm-india",
+  "company": "IBM",
+  "title": "Joined IBM India Software Labs, Bengaluru, as Associate Software Engineer on the JAX-WS layer for Lotus Lightweight Infrastructure 8.1.x",
+  "type": "Role",
+  "themes": [
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 9,
+  "tier": "line"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "2015-10-anchored-next-gen-platform",
+  "date": "2015-10-05",
+  "year": "2015",
+  "month": "10",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Anchoring the next-generation platform's first modules",
+  "type": "Role",
+  "themes": [
+    "leadership",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "The delivery head named me anchor for the first modules of the exchange's next-generation platform: application, pre-screener and My Accounts, each with its own development team.",
+  "what_would_have_happened": "Not applicable: this was a role assignment.",
+  "the_call": "Carry the lessons of the old platform into the new one.",
+  "what_i_did": "Anchored the teams building the three modules toward a planned October delivery, while other release streams ran in parallel.",
+  "what_changed": "I became the India anchor for the platform meant to replace the one I had helped stabilize.",
+  "metrics": [
+    {
+      "value": "3",
+      "label": "modules planned for October delivery",
+      "context": "application, pre-screener, My Accounts"
+    },
+    {
+      "value": "3",
+      "label": "development teams",
+      "context": "one per module"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Datta is anchoring this.",
+      "role": "Delivery head, Exeter Software India",
+      "company": "Exeter",
+      "date": "2015-10-05"
+    }
+  ],
+  "images": []
+}

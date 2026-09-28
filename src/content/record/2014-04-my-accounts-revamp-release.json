@@ -1,0 +1,26 @@
+{
+  "id": "2014-04-my-accounts-revamp-release",
+  "date": "2014-04-03",
+  "year": "2014",
+  "month": "04",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Owned the My Accounts revamp through release",
+  "type": "Project",
+  "themes": [
+    "delivery",
+    "reliability",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "I drove the revamp of the exchange's My Accounts area onto the shared data layer, then prioritized and closed the release's last open issues with the US lead.",
+  "what_would_have_happened": "My Accounts kept its slow, portal-bound data access and its open release issues.",
+  "the_call": "Move My Accounts onto the shared data layer and fix the slow data access at its source.",
+  "what_i_did": "Led the port to the data layer, then ranked the release's remaining issues and worked them to closure.",
+  "what_changed": "Two later reviews recorded a significant performance improvement; the US lead signed off the final issues with 'Awesome!'.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
+}

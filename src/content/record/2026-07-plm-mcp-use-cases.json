@@ -1,0 +1,16 @@
+{
+  "id": "2026-07-plm-mcp-use-cases",
+  "date": "2026-07",
+  "year": "2026",
+  "month": "07",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Defined five PLM integration use cases, with stories and acceptance criteria, as IT's requirements baseline",
+  "type": "Project",
+  "themes": [
+    "ai"
+  ],
+  "lane": "work",
+  "total": 13,
+  "tier": "line"
+}

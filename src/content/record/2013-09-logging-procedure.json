@@ -1,0 +1,38 @@
+{
+  "id": "2013-09-logging-procedure",
+  "date": "2013-09-15",
+  "year": "2013",
+  "month": "09",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "A logging procedure for every layer",
+  "type": "Project",
+  "themes": [
+    "reliability",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "Production failures were being debugged on calls with no information. With the delivery head, I co-wrote a logging procedure for every layer of the exchange platform, and he took it to US leadership to decide on a rollout.",
+  "what_would_have_happened": "Support calls kept running without data, and failures stayed hard to locate.",
+  "the_call": "Fix the missing evidence first: agree what each layer must log before debating individual bugs.",
+  "what_i_did": "Co-wrote the procedure with the delivery head over a few weeks. My review that quarter noted I was the first on the team to take ownership across layers.",
+  "what_changed": "The delivery head sent the draft to US leadership and asked a US architect to help finish it and decide on a rollout.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "We are getting into frustrating calls with no information and I think this document is something that we should start looking at this.",
+      "role": "Delivery head, Exeter Software India",
+      "company": "Exeter",
+      "date": "2013-09-15"
+    },
+    {
+      "text": "This is a draft but once implemented can give us greater insight into where things are failing that we have today.",
+      "role": "Delivery head, Exeter Software India",
+      "company": "Exeter",
+      "date": "2013-09-15"
+    }
+  ],
+  "images": []
+}

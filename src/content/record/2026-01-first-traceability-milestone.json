@@ -1,0 +1,25 @@
+{
+  "id": "2026-01-first-traceability-milestone",
+  "date": "2026-01",
+  "year": "2026",
+  "month": "01",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Delivered the first release of the AI traceability platform",
+  "type": "Project",
+  "themes": [
+    "ai",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 21,
+  "tier": "public",
+  "summary": "I led delivery of the traceability platform's first capability, which went live on release-document data from three business teams.",
+  "what_would_have_happened": "Traceability would stay manual, spread across documents and tools, and slow to audit.",
+  "the_call": "Model the trace as a knowledge graph on top of existing tools, with people approving every link.",
+  "what_i_did": "Led delivery of the first use case, wrote the release notes for business stakeholders and set out the path to the internal developer portal.",
+  "what_changed": "Release data from three business teams was traceable end to end in one place, and the milestone review confirmed the project was on track.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
+}

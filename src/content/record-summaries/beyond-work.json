@@ -1,0 +1,449 @@
+{
+  "slug": "beyond-work",
+  "label": "Beyond work",
+  "employer": "Community",
+  "years": "2007 to now",
+  "order": 5,
+  "lane": "beyond",
+  "events": 55,
+  "capsules": 55,
+  "public": 11,
+  "status": "live",
+  "headline": "2025 book drive: Rs 207,429",
+  "headline_capsule": "2025-book-drive",
+  "year_layers": [
+    {
+      "year": "2007",
+      "narrative": "5 blog posts.",
+      "numbers": [
+        "1 blog"
+      ],
+      "top": [],
+      "quote": null,
+      "months": [
+        "06"
+      ],
+      "also": [
+        "2007-blog-first-posts"
+      ],
+      "count": 1
+    },
+    {
+      "year": "2008",
+      "narrative": "6 blog posts.",
+      "numbers": [
+        "1 blog"
+      ],
+      "top": [],
+      "quote": null,
+      "months": [],
+      "also": [
+        "2008-blog-posts"
+      ],
+      "count": 1
+    },
+    {
+      "year": "2009",
+      "narrative": "Certified yoga instructor; 7 blog posts.",
+      "numbers": [
+        "1 blog",
+        "1 yoga"
+      ],
+      "top": [],
+      "quote": null,
+      "months": [
+        "10"
+      ],
+      "also": [
+        "2009-10-svyasa-yoga-instructor",
+        "2009-blog-posts"
+      ],
+      "count": 2
+    },
+    {
+      "year": "2010",
+      "narrative": "Talk: Yoga and its practical applications; Postgraduate diploma in yoga; 2 blog posts.",
+      "numbers": [
+        "1 blog",
+        "2 yoga"
+      ],
+      "top": [],
+      "quote": null,
+      "months": [
+        "05"
+      ],
+      "also": [
+        "2010-05-pes-yoga-talk",
+        "2010-05-pg-diploma-yoga",
+        "2010-blog-posts"
+      ],
+      "count": 3
+    },
+    {
+      "year": "2011",
+      "narrative": "Toastmasters Competent Leader; Toastmasters Competent Communicator; Master's in yoga.",
+      "numbers": [
+        "6 Toastmasters",
+        "1 blog",
+        "1 college teaching",
+        "1 yoga"
+      ],
+      "top": [],
+      "quote": null,
+      "months": [
+        "03",
+        "05",
+        "08",
+        "09",
+        "11",
+        "12"
+      ],
+      "also": [
+        "2011-09-toastmasters-competent-leader",
+        "2011-03-toastmasters-competent-communicator",
+        "2011-05-msc-yoga",
+        "2011-11-nhce-design-patterns-talk",
+        "2011-08-toastmasters-best-evaluator-aug-4",
+        "2011-08-toastmasters-best-evaluator-aug-17",
+        "2011-09-toastmasters-best-evaluator-sep-2",
+        "2011-12-toastmasters-best-speaker-bangalore",
+        "2011-blog-posts"
+      ],
+      "count": 9
+    },
+    {
+      "year": "2012",
+      "narrative": "Workshop: J2EE and advanced Java; Workshop: J2EE and advanced Java; Talk: Web 2.0.",
+      "numbers": [
+        "6 Toastmasters",
+        "1 blog",
+        "3 college teaching"
+      ],
+      "top": [
+        "2012-02-mvit-j2ee-workshop"
+      ],
+      "quote": {
+        "text": "He has presented the technical sessions (JAVA/J2EE tech Seminar at Sir MVIT, MCA dept in even semester 2012) effectively in terms of reaching the students/staff so that they are ensured for rich continuous learning.",
+        "role": "Professor and head of department",
+        "company": "Sir MVIT",
+        "date": "2014-01-07",
+        "capsule": "2012-02-mvit-j2ee-workshop"
+      },
+      "months": [
+        "01",
+        "02",
+        "03",
+        "07",
+        "11"
+      ],
+      "also": [
+        "2012-03-gmit-j2ee-workshop",
+        "2012-07-cmrit-web-2-seminar",
+        "2012-02-toastmasters-judges-training",
+        "2012-01-toastmasters-best-speaker",
+        "2012-07-toastmasters-best-table-topics-jul-5",
+        "2012-11-toastmasters-best-evaluator-nov-8",
+        "2012-11-toastmasters-best-table-topics-nov-8",
+        "2012-11-toastmasters-best-table-topics-nov-17",
+        "2012-03-blog-last-post"
+      ],
+      "count": 10
+    },
+    {
+      "year": "2013",
+      "narrative": "Leadership Advisor for a new Toastmasters club; Talk: Technical writing and presentation skills; Talk: Behind the scenes of social networks.",
+      "numbers": [
+        "1 Toastmasters",
+        "4 college teaching",
+        "1 yoga"
+      ],
+      "top": [
+        "2013-11-toastmasters-leadership-advisor"
+      ],
+      "quote": {
+        "text": "Toastmasters International, District 82 recognizes, Dattatreya S Vellal for successfully serving as a 'Leadership Advisor' under the Club Incubation Center",
+        "role": "Toastmasters International District 82",
+        "company": "Toastmasters International",
+        "date": "2013-11-24",
+        "capsule": "2013-11-toastmasters-leadership-advisor"
+      },
+      "months": [
+        "03",
+        "04",
+        "07",
+        "09",
+        "11"
+      ],
+      "also": [
+        "2013-03-drait-technical-writing-talk",
+        "2013-09-bmsit-social-networks-talk",
+        "2013-04-rnsit-design-patterns-talk",
+        "2013-11-yoga-day-at-office",
+        "2013-07-bmsit-project-contest-judge"
+      ],
+      "count": 6
+    },
+    {
+      "year": "2014",
+      "narrative": "Diwali giveback: Rs 35,432; Recommended by a professor I taught for; Talk: Building a successful IT career.",
+      "numbers": [
+        "2 college teaching",
+        "2 other"
+      ],
+      "top": [
+        "2014-10-diwali-giveback"
+      ],
+      "quote": null,
+      "months": [
+        "01",
+        "03",
+        "08",
+        "10"
+      ],
+      "also": [
+        "2014-01-linkedin-recommendation-professor",
+        "2014-08-bmsit-inauguration-career-talk",
+        "2014-03-volleyball-tarang-2014"
+      ],
+      "count": 4
+    },
+    {
+      "year": "2015",
+      "narrative": "2015 book drive: Rs 37,500; Talk: Web technologies and us; Workshop: Design patterns.",
+      "numbers": [
+        "1 book drive",
+        "3 college teaching",
+        "1 other",
+        "Rs 37,500 for books"
+      ],
+      "top": [
+        "2015-book-drive"
+      ],
+      "quote": null,
+      "months": [
+        "03",
+        "04",
+        "09",
+        "12"
+      ],
+      "also": [
+        "2015-12-bmsit-web-technologies-talk",
+        "2015-04-csi-design-patterns-workshop",
+        "2015-09-gsss-paper-judge",
+        "2015-03-volleyball-tarang-2015"
+      ],
+      "count": 5
+    },
+    {
+      "year": "2016",
+      "narrative": "2016 book drive: Rs 25,000; Talk: Lessons from 50 failed interviews; Seminar: SOLID principles.",
+      "numbers": [
+        "1 book drive",
+        "2 college teaching",
+        "1 other",
+        "Rs 25,000 for books"
+      ],
+      "top": [],
+      "quote": null,
+      "months": [
+        "07",
+        "09",
+        "11"
+      ],
+      "also": [
+        "2016-book-drive",
+        "2016-09-bmsit-50-failed-interviews-talk",
+        "2016-11-nhce-solid-principles-talk",
+        "2016-07-blood-donation"
+      ],
+      "count": 4
+    },
+    {
+      "year": "2017",
+      "narrative": "2017 book drive: Rs 69,652; Seminar: Java and placement preparation.",
+      "numbers": [
+        "1 book drive",
+        "1 college teaching",
+        "Rs 69,652 for books"
+      ],
+      "top": [
+        "2017-book-drive"
+      ],
+      "quote": null,
+      "months": [
+        "10"
+      ],
+      "also": [
+        "2017-10-vemana-placement-talk"
+      ],
+      "count": 2
+    },
+    {
+      "year": "2018",
+      "narrative": "2018 book drive: Rs 75,404.",
+      "numbers": [
+        "1 book drive",
+        "Rs 75,404 for books"
+      ],
+      "top": [
+        "2018-book-drive"
+      ],
+      "quote": null,
+      "months": [],
+      "also": [],
+      "count": 1
+    },
+    {
+      "year": "2019",
+      "narrative": "2019 book drive: Rs 63,700.",
+      "numbers": [
+        "1 book drive",
+        "Rs 63,700 for books"
+      ],
+      "top": [
+        "2019-book-drive"
+      ],
+      "quote": null,
+      "months": [],
+      "also": [],
+      "count": 1
+    },
+    {
+      "year": "2020",
+      "narrative": "Interview panel: civil services scholarship.",
+      "numbers": [
+        "1 other"
+      ],
+      "top": [],
+      "quote": null,
+      "months": [],
+      "also": [
+        "2020-ias-scholarship-panel"
+      ],
+      "count": 1
+    },
+    {
+      "year": "2022",
+      "narrative": "2022 book drive: Rs 119,617.",
+      "numbers": [
+        "1 book drive",
+        "Rs 119,617 for books"
+      ],
+      "top": [
+        "2022-book-drive"
+      ],
+      "quote": null,
+      "months": [],
+      "also": [],
+      "count": 1
+    },
+    {
+      "year": "2023",
+      "narrative": "2023 book drive: Rs 134,954.",
+      "numbers": [
+        "1 book drive",
+        "Rs 134,954 for books"
+      ],
+      "top": [
+        "2023-book-drive"
+      ],
+      "quote": null,
+      "months": [],
+      "also": [],
+      "count": 1
+    },
+    {
+      "year": "2024",
+      "narrative": "Personality type: ENFJ.",
+      "numbers": [
+        "1 other"
+      ],
+      "top": [],
+      "quote": null,
+      "months": [
+        "10"
+      ],
+      "also": [
+        "2024-10-personality-assessment"
+      ],
+      "count": 1
+    },
+    {
+      "year": "2025",
+      "narrative": "2025 book drive: Rs 207,429.",
+      "numbers": [
+        "1 book drive",
+        "Rs 207,429 for books"
+      ],
+      "top": [
+        "2025-book-drive"
+      ],
+      "quote": null,
+      "months": [],
+      "also": [],
+      "count": 1
+    },
+    {
+      "year": "2026",
+      "narrative": "2026 book drive: Rs 235,218.",
+      "numbers": [
+        "1 book drive",
+        "Rs 235,218 for books"
+      ],
+      "top": [
+        "2026-book-drive"
+      ],
+      "quote": null,
+      "months": [],
+      "also": [],
+      "count": 1
+    }
+  ],
+  "company": {
+    "arc": [],
+    "scope": [],
+    "signatures": [
+      {
+        "title": "Nine community book drives, Rs 968,474 for books for rural schools (2015 to 2026)",
+        "body": "Grew from Rs 37,500 in 2015 to Rs 235,218 in 2026 through 115 contributions from friends and colleagues; no drives in 2020, 2021 or 2024.",
+        "capsule": "2015-book-drive"
+      },
+      {
+        "title": "Guest teaching at colleges since 2010",
+        "body": "15 documented talks, workshops and judging roles at engineering colleges in Karnataka, from design patterns and Java to career and interview preparation, with audiences of up to about 300 students.",
+        "capsule": "2013-09-bmsit-social-networks-talk"
+      },
+      {
+        "title": "Toastmasters: speaker, leader and mentor to a new club",
+        "body": "Competent Communicator and Competent Leader in 2011, 9 club speaking and evaluation awards, judges training, and a district recognition as Leadership Advisor in 2013.",
+        "capsule": "2011-03-toastmasters-competent-communicator"
+      }
+    ],
+    "numbers": [
+      "9 book drives",
+      "Rs 968,474 raised",
+      "115 contributions",
+      "15 college talks, workshops and judging roles",
+      "3 yoga qualifications (instructor, diploma, master's, all with distinction where graded)",
+      "24 blog posts (2007 to 2012)"
+    ],
+    "quotes": [
+      {
+        "text": "He has presented the technical sessions (JAVA/J2EE tech Seminar at Sir MVIT, MCA dept in even semester 2012) effectively in terms of reaching the students/staff so that they are ensured for rich continuous learning.",
+        "role": "Professor and head of department",
+        "company": "Sir MVIT",
+        "date": "2014-01-07",
+        "capsule": "2012-02-mvit-j2ee-workshop"
+      },
+      {
+        "text": "Toastmasters International, District 82 recognizes, Dattatreya S Vellal for successfully serving as a 'Leadership Advisor' under the Club Incubation Center",
+        "role": "Toastmasters International District 82",
+        "company": "Toastmasters International",
+        "date": "2013-11-24",
+        "capsule": "2013-11-toastmasters-leadership-advisor"
+      }
+    ],
+    "took": "Outside work I learned that giving back scales people the way good engineering scales systems. Nine book drives, asking the same friends every year, grew from Rs 37,500 in 2015 to Rs 235,218 in 2026. Standing in front of students, and telling them I failed about 50 interviews, taught me that honesty about failure helps people more than advice about success. I keep doing both because they remind me who the work is for.",
+    "took_draft": false
+  }
+}

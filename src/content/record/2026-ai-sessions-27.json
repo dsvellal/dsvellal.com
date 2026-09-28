@@ -1,0 +1,41 @@
+{
+  "id": "2026-ai-sessions-27",
+  "date": "2026-09",
+  "year": "2026",
+  "month": "09",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Taught AI to 1,000+ people in 27 sessions in 2026",
+  "type": "Program",
+  "themes": [
+    "ai",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 21,
+  "tier": "public",
+  "summary": "I taught practical, compliant AI use in 27 sessions this year to more than 1,000 engineers, architects, managers and analysts, through Philips University, team requests and company events.",
+  "what_would_have_happened": "Teams would adopt AI unevenly, without shared guardrails for regulated work.",
+  "the_call": "Teach one practical curriculum, with people making the final call.",
+  "what_i_did": "Delivered Philips University courses, team-requested sessions and community series.",
+  "what_changed": "Average 8.7 out of 10 across 22 scored sessions; several communities asked for repeats.",
+  "metrics": [
+    {
+      "value": "27",
+      "label": "sessions",
+      "context": ""
+    },
+    {
+      "value": "1,000+",
+      "label": "attendees",
+      "context": ""
+    },
+    {
+      "value": "8.7/10",
+      "label": "average rating",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

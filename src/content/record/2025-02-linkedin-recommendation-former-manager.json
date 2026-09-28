@@ -1,0 +1,32 @@
+{
+  "id": "2025-02-linkedin-recommendation-former-manager",
+  "date": "2025-02-20",
+  "year": "2025",
+  "month": "02",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Recommended by my former manager for leadership and DORA gains",
+  "type": "Recognition",
+  "themes": [
+    "leadership",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "My former manager, head of worldwide Software Excellence, called me a natural leader who inspires people regardless of reporting lines, and credited my work with significant DORA improvements.",
+  "what_would_have_happened": "Not applicable: a role or recognition event, not an intervention.",
+  "the_call": "Lead by example across reporting lines and team boundaries.",
+  "what_i_did": "Led initiatives that, in his words, improved the team's performance and morale, and coached peers on craftsmanship, testing and CI/CD.",
+  "what_changed": "A public, named recommendation that cites DORA improvements for both traditional software and SaaS projects.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "His efforts have led to significant improvements in our DORA metrics for both traditional software and SaaS projects.",
+      "role": "Former head of worldwide Software Excellence",
+      "company": "Philips",
+      "date": "2025-02-20"
+    }
+  ],
+  "images": []
+}

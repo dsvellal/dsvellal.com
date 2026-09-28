@@ -1,0 +1,35 @@
+{
+  "id": "2022-book-drive",
+  "date": "2022",
+  "year": "2022",
+  "month": null,
+  "era": "beyond-work",
+  "company": "Community",
+  "title": "2022 book drive: Rs 119,617",
+  "type": "Community",
+  "themes": [
+    "community"
+  ],
+  "lane": "beyond",
+  "total": 18,
+  "tier": "public",
+  "summary": "Raised Rs 119,617 from 11 contributions for books for rural schools. Up from Rs 63,700 the drive before.",
+  "what_would_have_happened": "Children in rural schools start the year without enough notebooks and books.",
+  "the_call": "Ask friends and colleagues every year, and send the money straight to a charity that buys and delivers the books.",
+  "what_i_did": "Organized the drive, collected 11 contributions and passed them to a charitable trust in Mysuru that buys and distributes the books.",
+  "what_changed": "Rs 119,617 for books. Up from Rs 63,700 the drive before.",
+  "metrics": [
+    {
+      "value": "Rs 119,617",
+      "label": "raised",
+      "context": ""
+    },
+    {
+      "value": "11",
+      "label": "contributions",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

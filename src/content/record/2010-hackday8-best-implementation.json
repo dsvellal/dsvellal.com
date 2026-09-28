@@ -1,0 +1,31 @@
+{
+  "id": "2010-hackday8-best-implementation",
+  "date": "2010",
+  "year": "2010",
+  "month": null,
+  "era": "ibm-india",
+  "company": "IBM",
+  "title": "First place for implementation at IBM India's hackday",
+  "type": "Recognition",
+  "themes": [
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "My stretch project on micro-insurance won first place for best implementation at IBM India's Hackday 8, Pune.",
+  "what_would_have_happened": "Not applicable.",
+  "the_call": "Compete with a working implementation while also leading the event.",
+  "what_i_did": "Built the 'Micro-Insurance' stretch project.",
+  "what_changed": "Best Implementation, Pune, 1st place; certificate signed by the VP of IBM India Software Labs.",
+  "metrics": [],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2010-hackday8-best-implementation-1.webp",
+      "kind": "certificate",
+      "pending": false,
+      "alt": "Certificate: First place for implementation at IBM India's hackday"
+    }
+  ]
+}

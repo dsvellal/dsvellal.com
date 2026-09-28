@@ -1,0 +1,57 @@
+{
+  "id": "2020-08-bar-raiser-program-launch",
+  "date": "2020-08",
+  "year": "2020",
+  "month": "08",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Designed and ran the company's bar-raiser hiring program",
+  "type": "Hiring",
+  "themes": [
+    "hiring",
+    "people",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 23,
+  "tier": "public",
+  "summary": "I designed and ran the bar-raiser program, which trains experienced interviewers to sit on panels outside their own team and hold one hiring bar. With talent acquisition in each region I ran global inductions for Brazil, North America and Europe, and seven cohorts followed.",
+  "what_would_have_happened": "Each team hired for itself, with no one holding a common bar.",
+  "the_call": "Train a pool of independent interviewers and put one on every panel.",
+  "what_i_did": "Designed the training, ran the global inductions and cohorts with talent acquisition in Brazil, North America and Europe, recorded role-play interview videos and wrote the program material.",
+  "what_changed": "The new software hiring and assessment process went live globally, and talent acquisition said there was no way it could have worked without me.",
+  "metrics": [
+    {
+      "value": "7",
+      "label": "bar-raiser cohorts",
+      "context": "2020 to 2021"
+    },
+    {
+      "value": "3",
+      "label": "regions inducted",
+      "context": "Brazil, North America, Europe"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I wished to thank you for all that you have been doing regarding the bar-raiser project, all the effort that you are putting into this. There is no way we could make this work without you.",
+      "role": "Talent acquisition consultant, Amsterdam",
+      "company": "Philips",
+      "date": "2020-09-11"
+    }
+  ],
+  "images": [
+    {
+      "src": "/record/published/2020-08-bar-raiser-program-launch-1.webp",
+      "kind": "chat",
+      "pending": false,
+      "alt": "Chat: Designed and ran the company's bar-raiser hiring program"
+    },
+    {
+      "src": "/record/published/2020-08-bar-raiser-program-launch-2.webp",
+      "kind": "chat",
+      "pending": false,
+      "alt": "Chat: Designed and ran the company's bar-raiser hiring program"
+    }
+  ]
+}

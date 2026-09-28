@@ -1,0 +1,50 @@
+{
+  "id": "2018-03-variable-comparison-tool",
+  "date": "2018-03-20",
+  "year": "2018",
+  "month": "03",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Cut investigation effort about 60% on the Amazon Pay latency project",
+  "type": "Project",
+  "themes": [
+    "fraud-risk",
+    "payments",
+    "ai"
+  ],
+  "lane": "work",
+  "total": 19,
+  "tier": "public",
+  "summary": "While the org moved Amazon Pay top-up fraud checks to a new engine to cut latency, I reworked the tool that compares old and new fraud variables so engineers on two teams and the ML scientists could find and fix mismatches fast.",
+  "what_would_have_happened": "Engineers hunt by hand for why the new engine disagreed with the old one, and the migration slows.",
+  "the_call": "Make the tool generic and backward compatible, with filters and sample orders attached to every mismatch.",
+  "what_i_did": "Added customer-group and variable filters, sample order IDs for each mismatch and precision control, kept existing jobs running, and sent daily reports to the ML team.",
+  "what_changed": "Investigation effort dropped about 60%, my manager said the changes helped both teams, and the team's launch later cut fraud-check latency about 86% at p90.",
+  "metrics": [
+    {
+      "value": "~60%",
+      "label": "less engineer effort",
+      "context": "self-reported"
+    },
+    {
+      "value": "~86% / ~89%",
+      "label": "fraud-check latency cut at p90 / p99",
+      "context": "team launch, June 2018"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Thanks for improving the tool. I think the changes you have made are generic to help both teams",
+      "role": "Engineering manager",
+      "company": "Amazon",
+      "date": "2018-03"
+    },
+    {
+      "text": "Big customer win!",
+      "role": "Launch announcement",
+      "company": "Amazon",
+      "date": "2018-06"
+    }
+  ],
+  "images": []
+}

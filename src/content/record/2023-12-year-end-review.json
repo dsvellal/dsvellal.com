@@ -1,0 +1,38 @@
+{
+  "id": "2023-12-year-end-review",
+  "date": "2023-12",
+  "year": "2023",
+  "month": "12",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "2023 review: all three goals above expectations",
+  "type": "Review",
+  "themes": [
+    "leadership",
+    "people"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "My manager called my impact impressive and pointed to 24 pieces of requested feedback, mostly from the businesses we serve, whose feedback was 100% positive.",
+  "what_would_have_happened": "Not applicable: a review, not an intervention.",
+  "the_call": "Ask the businesses I served for feedback directly.",
+  "what_i_did": "Led InnerSource and modern tooling work and product-quality programs in business code bases, and mentored people inside and outside Software Excellence.",
+  "what_changed": "All three goals, on InnerSource and tooling, product quality and people development, were rated Exceeds Expectations, and my manager called the volume of requested feedback role-model behavior.",
+  "metrics": [
+    {
+      "value": "24",
+      "label": "pieces of requested feedback",
+      "context": "100% positive from businesses"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Feedback from businesses is 100% positive and thanks you for your skill and calm, clear communication.",
+      "role": "Manager, Software Excellence",
+      "company": "Philips",
+      "date": "2024-02"
+    }
+  ],
+  "images": []
+}

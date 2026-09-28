@@ -1,0 +1,78 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const essays = await getCollection('thinking', ({ data }) => import.meta.env.DEV || !data.draft);
+  return essays.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const showDraftNote = import.meta.env.DEV && entry.data.draft;
+---
+
+<Base title={entry.data.title} description={entry.data.summary} type="article">
+  <article class="wrap grid essay">
+    <header class="essay-head">
+      {showDraftNote && <p class="draft-note">Draft: to be edited into Datta's voice</p>}
+      <p class="label"><a href="/#thinking">Thinking</a></p>
+      <h1>{entry.data.title}</h1>
+      <p class="lede">{entry.data.summary}</p>
+    </header>
+    <div class="prose essay-body">
+      <Content />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .essay {
+    margin-top: clamp(2rem, 6vw, 5rem);
+    row-gap: 3rem;
+  }
+
+  .essay-head,
+  .essay-body {
+    grid-column: 1 / -1;
+  }
+
+  .draft-note {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.4rem 0.75rem;
+    border: 2px solid var(--accent);
+    font-size: var(--step--1);
+    font-weight: 700;
+  }
+
+  h1 {
+    margin-top: 0.75rem;
+    font-size: var(--step-4);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    max-width: 18ch;
+  }
+
+  .lede {
+    max-width: 36rem;
+    margin-top: 1.5rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .essay-body {
+    padding-top: 2rem;
+    border-top: 4px solid var(--accent);
+  }
+
+  @media (min-width: 48rem) {
+    .essay-head {
+      grid-column: 1 / span 10;
+    }
+
+    .essay-body {
+      grid-column: 3 / span 7;
+    }
+  }
+</style>

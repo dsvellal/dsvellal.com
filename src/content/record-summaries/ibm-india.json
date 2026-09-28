@@ -1,0 +1,275 @@
+{
+  "slug": "ibm-india",
+  "label": "IBM India",
+  "employer": "IBM",
+  "years": "2007 to 2013",
+  "order": 0,
+  "lane": "work",
+  "events": 49,
+  "capsules": 49,
+  "public": 17,
+  "status": "live",
+  "headline": "Named the most influential Technical Experts Council member in India",
+  "headline_capsule": "2010-09-rtle-most-influential-tec-member",
+  "year_layers": [
+    {
+      "year": "2007",
+      "narrative": "Joined IBM India Software Labs in July, straight from engineering college, building JAX-WS web-services support for IBM's Lightweight Infrastructure.",
+      "numbers": [
+        "July 2007 start",
+        "JAX-WS support for Lightweight Infrastructure 8.1.x"
+      ],
+      "top": [],
+      "quote": null,
+      "months": [
+        "07"
+      ],
+      "also": [
+        "2007-07-joined-ibm"
+      ],
+      "count": 1
+    },
+    {
+      "year": "2008",
+      "narrative": "Became component owner for the Lotus Expeditor toolkit, led an internship project that earned a Bravo award, and started organizing the lab's hackdays.",
+      "numbers": [
+        "1 internship led",
+        "1 Bravo award",
+        "4 foundational courses"
+      ],
+      "top": [
+        "2008-06-bravo-internship-leadership",
+        "2008-10-expeditor-component-owner"
+      ],
+      "quote": null,
+      "months": [
+        "04",
+        "06",
+        "10"
+      ],
+      "also": [
+        "2008-led-internship-project",
+        "2008-bluehouse-hackday-coordinator",
+        "2008-communicative-english-course",
+        "2008-presentation-skills-course",
+        "2008-04-assertiveness-skills-course",
+        "2008-06-time-management-lab"
+      ],
+      "count": 8
+    },
+    {
+      "year": "2009",
+      "narrative": "Co-authored three IBM developerWorks articles and organized five innovation events, from Hackday 7 to the first Lotus Knows, earning two Bravo awards.",
+      "numbers": [
+        "3 developerWorks articles",
+        "5 events organized",
+        "2 Bravo awards"
+      ],
+      "top": [
+        "2009-10-bravo-hackdays-and-events",
+        "2009-10-bravo-lotus-knows"
+      ],
+      "quote": null,
+      "months": [
+        "10"
+      ],
+      "also": [
+        "2009-hackday7-coordinator",
+        "2009-lotus-knows-coordinator",
+        "2009-developerworks-lotuslive-engage",
+        "2009-developerworks-lotuslive",
+        "2009-developerworks-smartcloud-meetings",
+        "2009-academy-of-technology-agm-coordinator",
+        "2009-qse-poster"
+      ],
+      "count": 9
+    },
+    {
+      "year": "2010",
+      "narrative": "Led IBM India's Hackday 8 and won its best-implementation prize, was named the most influential Technical Experts Council member in India, filed my first US patent and became worldwide lead for the Lotus Expeditor Webcontainer.",
+      "numbers": [
+        "1st place at Hackday 8 (Pune)",
+        "1 US patent filed",
+        "2 critical severity 1 defects solved",
+        "RTLE 2010 award"
+      ],
+      "top": [
+        "2010-09-rtle-most-influential-tec-member",
+        "2010-12-first-patent-application-award",
+        "2010-hackday8-best-implementation",
+        "2010-12-promoted-worldwide-webcontainer-lead",
+        "2010-hackday8-lead"
+      ],
+      "quote": null,
+      "months": [
+        "01",
+        "07",
+        "09",
+        "12"
+      ],
+      "also": [
+        "2010-07-inventor-award-first-disclosure",
+        "2010-12-filed-us-patent-application",
+        "2010-01-cct-2010-paper",
+        "2010-09-rtle-core-agenda-team",
+        "2010-12-it-in-defence-conference"
+      ],
+      "count": 10
+    },
+    {
+      "year": "2011",
+      "narrative": "Promoted to staff engineer on an industrial condition-monitoring solution; recognized by the lab's VP, in the regional general manager's report and with an Eminence and Excellence award; co-led IBM University Relations' T2E challenge.",
+      "numbers": [
+        "3 invention disclosures and 5 abstracts from team IP sessions",
+        "VP recognition",
+        "Eminence and Excellence award"
+      ],
+      "top": [
+        "2011-03-vp-recognition-hackday-progress",
+        "2011-07-rgm-report-t2e",
+        "2011-09-eminence-and-excellence-award",
+        "2011-03-promoted-staff-software-engineer"
+      ],
+      "quote": null,
+      "months": [
+        "03",
+        "04",
+        "06",
+        "07",
+        "09"
+      ],
+      "also": [
+        "2011-hackday9-advisory-council",
+        "2011-06-t2e-volunteer-certificate",
+        "2011-07-university-relations-newsletter",
+        "2011-rte-core-team",
+        "2011-tec-webinar-ides",
+        "2011-rte-condition-monitoring-poster",
+        "2011-04-lotuslive-meetings-demo"
+      ],
+      "count": 11
+    },
+    {
+      "year": "2012",
+      "narrative": "An IBM Master Inventor and my first manager wrote public recommendations; my patent application was published and a second disclosure went out on IP.com.",
+      "numbers": [
+        "3 LinkedIn recommendations",
+        "1 patent application published",
+        "1 IP.com disclosure"
+      ],
+      "top": [
+        "2012-04-linkedin-recommendation-first-manager",
+        "2012-04-linkedin-recommendation-master-inventor"
+      ],
+      "quote": {
+        "text": "He had, in a very early stage of his career started getting involved in the project initiatives, mentoring interns and other technical vitality activities, which showed his leadership capabilities.",
+        "role": "First manager at IBM",
+        "company": "IBM",
+        "date": "2012-04-21",
+        "capsule": "2012-04-linkedin-recommendation-first-manager"
+      },
+      "months": [
+        "04",
+        "06",
+        "10"
+      ],
+      "also": [
+        "2012-hackdayx-advisory-council",
+        "2012-06-patent-application-published",
+        "2012-06-linkedin-recommendation-teammate",
+        "2012-10-ipcom-gesture-disclosure",
+        "2012-rte-poster"
+      ],
+      "count": 7
+    },
+    {
+      "year": "2013",
+      "narrative": "Left IBM in March after five years and nine months; the availability patent was granted and has since been cited 27 times.",
+      "numbers": [
+        "US 8,560,487 granted",
+        "27 patent citations"
+      ],
+      "top": [
+        "2013-us-patent-granted"
+      ],
+      "quote": null,
+      "months": [
+        "01",
+        "03"
+      ],
+      "also": [
+        "2013-01-linkedin-recommendation-co-inventor",
+        "2013-03-left-ibm"
+      ],
+      "count": 3
+    }
+  ],
+  "company": {
+    "arc": [
+      {
+        "when": "Jul 2007",
+        "what": "Joined IBM India Software Labs, Bengaluru, as Associate Software Engineer on JAX-WS web services for Lightweight Infrastructure 8.1.x."
+      },
+      {
+        "when": "Oct 2008",
+        "what": "Developer and component owner for the Lotus Expeditor toolkit and runtime."
+      },
+      {
+        "when": "Dec 2010",
+        "what": "Promoted to Software Engineer and made worldwide lead for the Lotus Expeditor Webcontainer."
+      },
+      {
+        "when": "Mar 2011",
+        "what": "Promoted to Staff Software Engineer, Natural Resources Center of Excellence (condition monitoring)."
+      },
+      {
+        "when": "Mar 2013",
+        "what": "Left IBM after five years and nine months to lead development at Exeter."
+      }
+    ],
+    "scope": [],
+    "signatures": [
+      {
+        "title": "Worldwide owner of an IBM product component",
+        "body": "Delivered two Lotus Expeditor toolkit releases with defects brought to near zero, then led the Webcontainer worldwide, solved two critical severity 1 customer defects and took open severity 1 and 2 defects to zero.",
+        "capsule": "2008-10-expeditor-component-owner"
+      },
+      {
+        "title": "From first disclosure to a granted US patent",
+        "body": "My availability invention was approved for filing in 2010, earned IBM's CEO-signed invention award, and was granted as US 8,560,487, since cited by 27 patents; later I ran invention-mining sessions that gave my team 3 more disclosures.",
+        "capsule": "2010-12-first-patent-application-award"
+      },
+      {
+        "title": "Building the lab's technical community",
+        "body": "Organized Hackdays 6 to 8 and advised 9 and X, won Hackday 8's best-implementation prize, and was named the most influential Technical Experts Council member in India.",
+        "capsule": "2009-10-bravo-hackdays-and-events"
+      }
+    ],
+    "numbers": [
+      "5 years 9 months",
+      "3 developerWorks articles",
+      "1 granted US patent (27 citations)",
+      "2 published disclosures",
+      "12 IBM awards and recognitions",
+      "5 hackdays organized or advised"
+    ],
+    "quotes": [
+      {
+        "text": "He had, in a very early stage of his career started getting involved in the project initiatives, mentoring interns and other technical vitality activities, which showed his leadership capabilities.",
+        "role": "First manager at IBM",
+        "company": "IBM",
+        "date": "2012-04-21",
+        "capsule": "2012-04-linkedin-recommendation-first-manager"
+      },
+      {
+        "text": "He has been responsible for driving the org level Hackday event with Universities in South, which is also a very popular program within IBM Software Labs in India.",
+        "role": "IBM Master Inventor",
+        "company": "IBM",
+        "date": "2012-04-27",
+        "capsule": "2012-04-linkedin-recommendation-master-inventor"
+      }
+    ],
+    "took": "IBM is where I learned to build. I owned a component that customers depended on worldwide, filed my first patent, and ran hackdays across India that turned ideas into working software. I learned that the work around the job, the events, talks and inventions, compounds as much as the job itself. I still believe the fastest way to grow is to own something end to end and invite others in.",
+    "took_draft": false
+  }
+}

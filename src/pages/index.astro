@@ -1,0 +1,485 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Headshot from '../components/Headshot.astro';
+import Figure from '../components/Figure.astro';
+import QuoteBlock from '../components/QuoteBlock.astro';
+import { profile } from '../data/profile';
+import { claim, sessionsByEra } from '../data/claims';
+import { talks } from '../data/talks';
+
+const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+const thinking = (await getCollection('thinking', ({ data }) => import.meta.env.DEV || !data.draft)).sort((a, b) => a.data.order - b.data.order);
+const featuredTalks = talks.filter((t) => t.featured);
+const years = claim('years-experience');
+const adoption = claim('traceability-adoption');
+const maxEraSessions = Math.max(...sessionsByEra.map((e) => e.sessions));
+const employerList = `${profile.employers.slice(0, -1).join(', ')} and ${profile.employers.at(-1)}`;
+const intro =
+  `${years.value} in software at ${employerList}. ` +
+  `Today I lead AI-enabled transformations for medical-device engineering at Philips, working across ${adoption.value} businesses and a global software community of thousands.`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.fullName,
+  alternateName: profile.name,
+  jobTitle: profile.role,
+  description: profile.headline,
+  url: 'https://dsvellal.com',
+  email: `mailto:${profile.email}`,
+  sameAs: [profile.linkedin],
+  worksFor: { '@type': 'Organization', name: 'Philips' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Rochester', addressRegion: 'MI', addressCountry: 'US' },
+  knowsAbout: ['AI in regulated software', 'IEC 62304', 'Engineering excellence', 'DORA metrics', 'Technical debt reduction'],
+};
+---
+
+<Base
+  title={profile.name}
+  description={`${profile.headline} ${years.value} across ${profile.employers.join(', ')}.`}
+  type="profile"
+  jsonLd={jsonLd}
+>
+  <section class="hero wrap grid" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <h1 id="hero-title">{profile.headline}</h1>
+      <p class="hero-sub">
+        {intro}
+      </p>
+      <p class="hero-actions">
+        <a class="button" href="#work">See the work</a>
+        <a href="#contact">Contact</a>
+      </p>
+    </div>
+    <div class="hero-photo">
+      <Headshot />
+    </div>
+  </section>
+
+  <section id="work" class="wrap work" aria-labelledby="work-title">
+    <hr class="rule rule--accent" />
+    <h2 id="work-title" class="section-title">Work</h2>
+    <ol class="pillars">
+      {
+        work.map((entry, i) => (
+          <li class="pillar grid">
+            <p class="pillar-num figure" aria-hidden="true">
+              {String(i + 1).padStart(2, '0')}
+            </p>
+            <div class="pillar-body">
+              <p class="label">{entry.data.pillar}</p>
+              <h3>
+                <a href={`/work/${entry.id}`}>{entry.data.title}</a>
+              </h3>
+              <p class="muted">{entry.data.summary}</p>
+            </div>
+            <div class="pillar-fig">
+              <Figure id={entry.data.headlineClaim} size="medium" />
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="wrap speaking grid" aria-labelledby="speaking-title">
+    <div class="speaking-figs">
+      <Figure id="talks-count" size="large" />
+      <Figure id="talks-attendees" size="large" />
+      <ol class="era-mini" aria-label="Sessions by career era">
+        {sessionsByEra.map((e) => (
+          <li>
+            <span class="era-mini-name">
+              {e.employer} <span class="muted">{e.years}</span>
+            </span>
+            <span class="era-mini-bar" aria-hidden="true">
+              <span style={`width: ${(e.sessions / maxEraSessions) * 100}%`}></span>
+            </span>
+            <span class="era-mini-count">{e.sessions}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+    <div class="speaking-list">
+      <h2 id="speaking-title" class="section-title">Speaking and teaching</h2>
+      <ul>
+        {
+          featuredTalks.map((t) => (
+            <li>
+              <span class="talk-year label">{t.year}</span>
+              <span class="talk-title">{t.title}</span>
+              <span class="talk-venue muted">{t.detail ? `${t.venue}. ${t.detail}.` : t.venue}</span>
+            </li>
+          ))
+        }
+      </ul>
+      <p><a href="/speaking">All talks and topics</a></p>
+    </div>
+  </section>
+
+  <section class="wrap quotes grid" aria-labelledby="quotes-title">
+    <h2 id="quotes-title" class="visually-hidden">What colleagues say</h2>
+    <div class="quote-main">
+      <QuoteBlock id="q-nicholson-leader" size="large" />
+    </div>
+    <div class="quote-side">
+      <QuoteBlock id="q-watson-influence" />
+      <QuoteBlock id="q-patient-safety-evp" />
+    </div>
+  </section>
+
+  {thinking.length > 0 && (
+    <section id="thinking" class="wrap thinking grid" aria-labelledby="thinking-title">
+      <h2 id="thinking-title" class="section-title thinking-title">Thinking</h2>
+      <ul class="essays">
+        {thinking.map((entry) => (
+          <li>
+            <h3>
+              <a href={`/thinking/${entry.id}`}>{entry.data.title}</a>
+            </h3>
+            <p class="muted">{entry.data.summary}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <section id="contact" class="wrap contact" aria-labelledby="contact-title">
+    <hr class="rule" />
+    <h2 id="contact-title" class="invite">{profile.invite}</h2>
+    <ul class="contact-links">
+      <li><a href={`mailto:${profile.email}`}>{profile.email}</a></li>
+      <li><a href={profile.linkedin} rel="me">LinkedIn</a></li>
+    </ul>
+  </section>
+</Base>
+
+<style>
+  section {
+    margin-top: clamp(4rem, 10vw, 8rem);
+  }
+
+  .section-title {
+    font-size: var(--step-3);
+    font-weight: 800;
+  }
+
+  /* Hero */
+  .hero {
+    margin-top: clamp(2rem, 6vw, 5rem);
+    row-gap: 2.5rem;
+    align-items: end;
+  }
+
+  .hero-copy {
+    grid-column: 1 / -1;
+  }
+
+  .hero-photo {
+    grid-column: 1 / span 3;
+    max-width: 16rem;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: var(--step-4);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+    max-width: 16ch;
+  }
+
+  .hero-sub {
+    max-width: 34rem;
+    margin-top: 1.5rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.75rem;
+    margin-top: 2rem;
+    font-weight: 700;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 0.85rem 1.4rem;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .button:hover {
+    background: var(--accent);
+    color: var(--ink);
+  }
+
+  .button:active {
+    transform: translateY(1px);
+  }
+
+  @media (min-width: 48rem) {
+    .hero-copy {
+      grid-column: 1 / span 9;
+    }
+
+    .hero-photo {
+      grid-column: 10 / span 3;
+      max-width: none;
+    }
+  }
+
+  /* Work */
+  .work .section-title {
+    margin-top: 1.5rem;
+  }
+
+  .pillars {
+    margin: 2.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pillar {
+    row-gap: 1rem;
+    padding-block: 2.25rem;
+    border-top: 1px solid var(--ink);
+  }
+
+  .pillar-num {
+    grid-column: 1 / -1;
+    color: var(--accent);
+    font-size: var(--step-4);
+  }
+
+  .pillar-body {
+    grid-column: 1 / -1;
+  }
+
+  .pillar-body h3 {
+    margin-top: 0.5rem;
+    font-size: var(--step-2);
+  }
+
+  .pillar-body h3 a {
+    text-decoration-color: transparent;
+  }
+
+  .pillar-body h3 a:hover {
+    text-decoration-color: var(--accent);
+  }
+
+  .pillar-body .muted {
+    max-width: 34rem;
+    margin-top: 0.75rem;
+  }
+
+  .pillar-fig {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: 48rem) {
+    .pillar-num {
+      grid-column: 1 / span 2;
+    }
+
+    .pillar-body {
+      grid-column: 3 / span 6;
+    }
+
+    .pillar-fig {
+      grid-column: 9 / span 4;
+    }
+  }
+
+  /* Speaking */
+  .speaking {
+    row-gap: 3rem;
+  }
+
+  .speaking-figs {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 2.5rem;
+    align-content: start;
+  }
+
+  .speaking-list {
+    grid-column: 1 / -1;
+  }
+
+  .speaking-list ul {
+    margin: 2rem 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+
+  .speaking-list li {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    column-gap: 1rem;
+    padding-block: 1.1rem;
+  }
+
+  .speaking-list li + li {
+    border-top: 1px solid var(--rule);
+  }
+
+  .talk-title {
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .talk-venue {
+    grid-column: 2;
+    font-size: var(--step--1);
+  }
+
+  .era-mini {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 1.25rem 0 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+
+  .era-mini li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 2.5rem;
+    column-gap: 0.75rem;
+    row-gap: 0.25rem;
+    align-items: center;
+    font-size: var(--step--1);
+  }
+
+  .era-mini-name {
+    grid-column: 1 / -1;
+    font-weight: 700;
+  }
+
+  .era-mini-name .muted {
+    font-weight: 400;
+  }
+
+  .era-mini-bar {
+    height: 0.5rem;
+  }
+
+  .era-mini-bar span {
+    display: block;
+    height: 100%;
+    background: var(--accent);
+  }
+
+  .era-mini-count {
+    font-weight: 800;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  @media (min-width: 48rem) {
+    .speaking-figs {
+      grid-column: 1 / span 5;
+    }
+
+    .speaking-list {
+      grid-column: 7 / span 6;
+    }
+  }
+
+  /* Quotes */
+  .quotes {
+    row-gap: 3rem;
+    padding-block: clamp(2.5rem, 6vw, 4rem);
+    border-top: 4px solid var(--ink);
+  }
+
+  .quote-main {
+    grid-column: 1 / -1;
+  }
+
+  .quote-side {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 48rem) {
+    .quote-main {
+      grid-column: 1 / span 7;
+    }
+
+    .quote-side {
+      grid-column: 9 / span 4;
+    }
+  }
+
+  /* Thinking */
+  .thinking {
+    row-gap: 2rem;
+  }
+
+  .thinking-title {
+    grid-column: 1 / -1;
+  }
+
+  .essays {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .essays li {
+    padding-block: 1.5rem;
+    border-top: 1px solid var(--ink);
+  }
+
+  .essays h3 {
+    font-size: var(--step-1);
+  }
+
+  .essays .muted {
+    max-width: 36rem;
+    margin-top: 0.5rem;
+  }
+
+  @media (min-width: 48rem) {
+    .thinking-title {
+      grid-column: 1 / span 4;
+    }
+
+    .essays {
+      grid-column: 5 / span 8;
+    }
+  }
+
+  /* Contact */
+  .invite {
+    max-width: 20ch;
+    margin-top: 2rem;
+    font-size: var(--step-3);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: var(--step-1);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+</style>

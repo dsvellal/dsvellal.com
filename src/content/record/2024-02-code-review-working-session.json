@@ -1,0 +1,17 @@
+{
+  "id": "2024-02-code-review-working-session",
+  "date": "~2024-02-09",
+  "year": "2024",
+  "month": "02",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Gave a product team concrete actions to raise pull-request quality in a CI/CD working session",
+  "type": "Talk",
+  "themes": [
+    "quality",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 10,
+  "tier": "line"
+}

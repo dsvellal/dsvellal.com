@@ -1,0 +1,45 @@
+{
+  "id": "2017-11-spot-award-process-improvement",
+  "date": "2017-11",
+  "year": "2017",
+  "month": "11",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Spot Award for a sprint process that raised completion to 85%",
+  "type": "Recognition",
+  "themes": [
+    "delivery",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 20,
+  "tier": "public",
+  "summary": "I proposed a 'scaling for development' process in the fraud and risk org to help teams fit Scrum to their context and introduced it in my team; our sprint task completion rose to 85% and a senior manager gave me a Spot Award.",
+  "what_would_have_happened": "Sprints kept finishing only half to 60 percent of committed work.",
+  "the_call": "Fit the Scrum process to each team's context.",
+  "what_i_did": "Proposed the guidelines, introduced them in my team's sprints and helped the team adopt them.",
+  "what_changed": "Task completion rose from roughly 50-60% to 85%, and the org recognized the change with a Spot Award.",
+  "metrics": [
+    {
+      "value": "50-60% to 85%",
+      "label": "sprint task completion",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Process Oriented and Methodological is Datta's super power. He approaches every problem step by step.",
+      "role": "Manager, 2016-17 annual review",
+      "company": "Amazon",
+      "date": "2017-03-03"
+    }
+  ],
+  "images": [
+    {
+      "src": "/record/published/2017-11-spot-award-process-improvement-1.webp",
+      "kind": "certificate",
+      "pending": false,
+      "alt": "Certificate: Spot Award for a sprint process that raised completion to 85%"
+    }
+  ]
+}

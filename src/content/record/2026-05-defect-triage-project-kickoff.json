@@ -1,0 +1,16 @@
+{
+  "id": "2026-05-defect-triage-project-kickoff",
+  "date": "2026-05",
+  "year": "2026",
+  "month": "05",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Helped kick off the funded AI defect-triage project with daily standups, a requirements package and governance",
+  "type": "Project",
+  "themes": [
+    "ai"
+  ],
+  "lane": "work",
+  "total": 13,
+  "tier": "line"
+}

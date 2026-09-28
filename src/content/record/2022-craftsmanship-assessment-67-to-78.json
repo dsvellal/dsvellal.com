@@ -1,0 +1,31 @@
+{
+  "id": "2022-craftsmanship-assessment-67-to-78",
+  "date": "2022",
+  "year": "2022",
+  "month": null,
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Owned the program that raised the average craftsmanship score from 67 to 78",
+  "type": "Program",
+  "themes": [
+    "quality",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "I was accountable for the software craftsmanship assessment program. I directed global teams to set policies, reviewed their KPIs and goals, and oversaw the rollout that lifted the average assessment score from 67 to 78.",
+  "what_would_have_happened": "Engineering practice would stay unmeasured, and improvement would stay anecdotal.",
+  "the_call": "Measure engineering practice with one common assessment and hold teams to KPIs against it.",
+  "what_i_did": "Reviewed each team's KPIs and goals against the assessment and oversaw implementation and coaching on the gaps it exposed.",
+  "what_changed": "The average assessment score rose from 67 to 78.",
+  "metrics": [
+    {
+      "value": "67 to 78",
+      "label": "average assessment score",
+      "context": "craftsmanship assessment program"
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

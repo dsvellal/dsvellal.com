@@ -1,0 +1,156 @@
+---
+import { getCollection } from 'astro:content';
+import '../styles/global.css';
+import { profile } from '../data/profile';
+import { hasPublicAsset } from '../lib/assets';
+
+interface Props {
+  title: string;
+  description: string;
+  type?: 'website' | 'article' | 'profile';
+  jsonLd?: Record<string, unknown>;
+  noindex?: boolean;
+}
+
+const { title, description, type = 'website', jsonLd, noindex = false } = Astro.props;
+const path = Astro.url.pathname.replace(/(index)?\.html$/, '') || '/';
+const canonical = new URL(path, Astro.site);
+const fullTitle = title === profile.name ? `${profile.name} | Engineering leader` : `${title} | ${profile.name}`;
+const ogImage = hasPublicAsset('og.png') ? new URL('/og.png', Astro.site) : undefined;
+
+const publishedEssays = await getCollection('thinking', ({ data }) => import.meta.env.DEV || !data.draft);
+
+const nav = [
+  { href: '/#work', label: 'Work' },
+  { href: '/record', label: 'Record' },
+  { href: '/speaking', label: 'Speaking' },
+  ...(publishedEssays.length > 0 ? [{ href: '/#thinking', label: 'Thinking' }] : []),
+  { href: '/#contact', label: 'Contact' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={profile.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/" aria-current={path === '/' ? 'page' : undefined}>{profile.name}</a>
+        <nav aria-label="Primary">
+          <ul>
+            {
+              nav.map((item) => (
+                <li>
+                  <a
+                    href={item.href}
+                    aria-current={
+                      path === item.href || (!item.href.includes('#') && path.startsWith(`${item.href}/`)) ? 'page' : undefined
+                    }
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>{profile.name}</p>
+        <ul>
+          <li><a href={`mailto:${profile.email}`}>Email</a></li>
+          <li><a href={profile.linkedin} rel="me">LinkedIn</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    min-height: 4rem;
+    padding-block: 0.75rem;
+  }
+
+  .brand {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+
+  nav ul,
+  .site-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav a {
+    font-size: var(--step--1);
+    font-weight: 600;
+    text-decoration-color: transparent;
+  }
+
+  nav a:hover,
+  nav a[aria-current='page'] {
+    text-decoration-color: var(--accent);
+  }
+
+  .site-footer {
+    margin-top: clamp(4rem, 10vw, 8rem);
+    border-top: 1px solid var(--ink);
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 2rem 3rem;
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+</style>

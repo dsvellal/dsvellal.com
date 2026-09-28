@@ -1,0 +1,17 @@
+{
+  "id": "2021-06-observability-workshop",
+  "date": "2021-06-17",
+  "year": "2021",
+  "month": "06",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Co-ran an observability workshop for 22 at the global Software Excellence Conference",
+  "type": "Talk",
+  "themes": [
+    "teaching",
+    "reliability"
+  ],
+  "lane": "work",
+  "total": 14,
+  "tier": "line"
+}

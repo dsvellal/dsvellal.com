@@ -1,0 +1,32 @@
+{
+  "id": "2022-10-reusable-ci-workflow-pair-reviews",
+  "date": "2022-10",
+  "year": "2022",
+  "month": "10",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Coached a SaaS team on reusable CI workflows",
+  "type": "Project",
+  "themes": [
+    "delivery",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "After four design sessions with SaaS developers on reusable CI workflows, the project lead asked me to run weekly pair reviews with the team and to share the approach as a best practice.",
+  "what_would_have_happened": "Each SaaS team would design its CI pipelines from scratch.",
+  "the_call": "Coach the developers through the design by pairing with them, and let them build the workflows.",
+  "what_i_did": "Held four design discussions on the Java workflow flavor, then weekly pair reviews with the developers.",
+  "what_changed": "The project lead made the pair reviews a weekly practice and suggested I share the approach as a best practice for SaaS teams.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "Thank you for all the time you have given us so far. We have thoroughly enjoyed the learning.",
+      "role": "Software engineer, SaaS team",
+      "company": "Philips",
+      "date": "2022-10"
+    }
+  ],
+  "images": []
+}

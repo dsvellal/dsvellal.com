@@ -1,0 +1,33 @@
+{
+  "id": "2019-02-jenkins-end-to-end-test-automation",
+  "date": "2019-02",
+  "year": "2019",
+  "month": "02",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Led the first CI/CD milestone: automated end-to-end tests",
+  "type": "Project",
+  "themes": [
+    "delivery",
+    "quality",
+    "reliability"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "I led the first milestone of the CI/CD drive I had set for identity management in 2019: the team's end-to-end test automation running through Jenkins.",
+  "what_would_have_happened": "End-to-end tests ran by hand, so every release waited on manual checks.",
+  "the_call": "Automate the slowest check first, then build the pipeline around it.",
+  "what_i_did": "Set the milestone and led the contributors who got the end-to-end scripts running through Jenkins.",
+  "what_changed": "The director thanked all the contributors and named it the first step of the CI/CD pipeline drive.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "I would like to thank all the contributors in the first step of our initiative. This is very crucial step in the CI CD PIPELINE DRIVE.",
+      "role": "Director, identity management",
+      "company": "Philips",
+      "date": "2019-02-26"
+    }
+  ],
+  "images": []
+}

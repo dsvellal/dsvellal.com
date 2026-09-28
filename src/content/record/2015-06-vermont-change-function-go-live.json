@@ -1,0 +1,31 @@
+{
+  "id": "2015-06-vermont-change-function-go-live",
+  "date": "2015-06-01",
+  "year": "2015",
+  "month": "06",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Vermont's public deadline, met",
+  "type": "Project",
+  "themes": [
+    "delivery",
+    "reliability"
+  ],
+  "lane": "work",
+  "total": 20,
+  "tier": "public",
+  "summary": "Vermont's health insurance exchange needed its change function live by a public deadline. I had triaged the release's open tickets in January, and I stood by through the go-live weekend with about 20 India engineers. The Governor then announced the deadline was met.",
+  "what_would_have_happened": "The state would have missed a publicly committed deadline for residents to change their coverage.",
+  "the_call": "Stay on the go-live through the weekend until it worked.",
+  "what_i_did": "Sorted the release's open tickets by owner and fix effort in January so scope could be set, then troubleshot live issues through the go-live weekend.",
+  "what_changed": "The change function went live on time, and the product's US leadership and a partner's leadership thanked the India team.",
+  "metrics": [
+    {
+      "value": "~20",
+      "label": "India engineers on the weekend go-live",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

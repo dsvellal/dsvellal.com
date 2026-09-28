@@ -1,0 +1,17 @@
+{
+  "id": "2018-03-critical-incident-fixes",
+  "date": "2018-03",
+  "year": "2018",
+  "month": "03",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Called in to fix critical incidents, including a sev-2 spike of 6,400 manual investigations in three hours",
+  "type": "Project",
+  "themes": [
+    "reliability",
+    "fraud-risk"
+  ],
+  "lane": "work",
+  "total": 13,
+  "tier": "line"
+}

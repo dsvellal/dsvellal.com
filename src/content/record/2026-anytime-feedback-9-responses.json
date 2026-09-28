@@ -1,0 +1,32 @@
+{
+  "id": "2026-anytime-feedback-9-responses",
+  "date": "2026-09",
+  "year": "2026",
+  "month": "09",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Nine pieces of feedback across six locations",
+  "type": "Recognition",
+  "themes": [
+    "people",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "Colleagues in six locations described how I kept projects aligned and executing, set an architecture vision others adopted, and made it safe to speak up.",
+  "what_would_have_happened": "Not applicable: a role or recognition event, not an intervention.",
+  "the_call": "Bring stakeholders together, clarify priorities and clear roadblocks for the teams.",
+  "what_i_did": "Coordinated the traceability and defect-triage teams across locations and brought IEC 62304 into the company's AI agent platform.",
+  "what_changed": "An engineer could not recall the team ever missing a deadline, and respondents urged me to take more credit.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "Making others feel safe is extremely important for progress, collaboration, and true innovation. His willingness to help is an example for all.",
+      "role": "Quality Program Manager",
+      "company": "Philips",
+      "date": "2026"
+    }
+  ],
+  "images": []
+}

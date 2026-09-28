@@ -1,0 +1,38 @@
+{
+  "id": "2025-12-plymouth-genai-workshop",
+  "date": "2025-12-16",
+  "year": "2025",
+  "month": "12",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Ran a three-day GenAI workshop that lifted confidence 69%",
+  "type": "Talk",
+  "themes": [
+    "ai",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 20,
+  "tier": "public",
+  "summary": "An engineering team's leaders invited me to Plymouth, Minnesota, for three days of hands-on GenAI work; the team's confidence in using AI rose from 4.5 to 7.6 out of 10.",
+  "what_would_have_happened": "The team would keep using AI tentatively, as a chatbot.",
+  "the_call": "Teach hands-on, with exercises, and make sure no one is left behind.",
+  "what_i_did": "Taught prompt and context engineering, spec-driven development and AI for requirements, and measured confidence before and after.",
+  "what_changed": "Measured confidence rose 69%, and the team reported a significant rise in Copilot use after the training.",
+  "metrics": [
+    {
+      "value": "4.5 to 7.6",
+      "label": "self-rated AI confidence out of 10",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2025-12-plymouth-genai-workshop-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: Ran a three-day GenAI workshop that lifted confidence 69%"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+@import '@fontsource-variable/geist/wght.css';
+
+:root {
+  --paper: #ffffff;
+  --ink: #000000;
+  --ink-2: #3d3d3d;
+  --rule: #d9d9d9;
+  --accent: #ff4f00;
+
+  --font: 'Geist Variable', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --gutter: clamp(1rem, 3vw, 2rem);
+  --margin: clamp(1.25rem, 5vw, 4rem);
+  --max: 90rem;
+  --measure: 36rem;
+
+  --step--1: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.625rem, 1.4rem + 1.1vw, 2.25rem);
+  --step-3: clamp(2.125rem, 1.7rem + 2.1vw, 3.5rem);
+  --step-4: clamp(2.5rem, 1.8rem + 3.6vw, 5rem);
+  --step-5: clamp(3.25rem, 2rem + 6vw, 8rem);
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--step-0);
+  line-height: 1.55;
+  font-feature-settings: 'ss01', 'tnum' 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-thickness 120ms ease;
+}
+
+a:hover {
+  text-decoration-thickness: 4px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--paper);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--margin);
+  top: -4rem;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* 12-column grid */
+.wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--margin);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: var(--gutter);
+}
+
+@media (min-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
+.rule {
+  border: 0;
+  border-top: 1px solid var(--ink);
+  margin: 0;
+}
+
+.rule--accent {
+  border-top: 4px solid var(--accent);
+}
+
+.label {
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.muted {
+  color: var(--ink-2);
+}
+
+.figure {
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.prose {
+  max-width: var(--measure);
+}
+
+.prose h2 {
+  font-size: var(--step-2);
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose p,
+.prose ul,
+.prose ol {
+  font-size: var(--step-0);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.2em;
+  margin: 1em 0;
+}
+
+.prose li + li {
+  margin-top: 0.4em;
+}
+
+.prose strong {
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  .site-header nav,
+  .skip-link {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

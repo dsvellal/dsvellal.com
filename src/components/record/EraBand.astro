@@ -1,0 +1,91 @@
+---
+import type { Era } from '../../lib/record';
+
+interface Props {
+  era: Era;
+  max: number;
+}
+const { era, max } = Astro.props;
+const live = era.status === 'live';
+const width = `${Math.max(4, (era.events / max) * 100)}%`;
+const href = `/record/${era.slug}`;
+---
+
+<article class:list={['band', { soon: !live }]}>
+  <div class="who">
+    <h3>{live ? <a href={href}>{era.label}</a> : era.label}</h3>
+    <p class="label muted">{era.years}</p>
+  </div>
+  <div class="size">
+    <span class="bar" aria-hidden="true"><span style={`width: ${width}`}></span></span>
+    <span class="count"><span class="figure">{era.events}</span> <span class="label">events</span></span>
+  </div>
+  <div class="headline">
+    <p>{era.headline}</p>
+    <p class="label muted">{live ? `${era.public} documented in depth` : 'Coming soon'}</p>
+  </div>
+</article>
+
+<style>
+  .band {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1.25rem 0;
+  }
+
+  h3 {
+    font-size: var(--step-2);
+    font-weight: 800;
+  }
+
+  .soon h3 {
+    color: var(--ink-2);
+  }
+
+  .who .label {
+    margin-top: 0.35rem;
+  }
+
+  .size {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .bar {
+    display: block;
+    height: 0.75rem;
+  }
+
+  .bar span {
+    display: block;
+    height: 100%;
+    background: var(--accent);
+  }
+
+  .soon .bar span {
+    background: var(--ink);
+  }
+
+  .count .figure {
+    font-size: var(--step-2);
+  }
+
+  .headline p:first-child {
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .headline .label {
+    margin-top: 0.35rem;
+  }
+
+  @media (min-width: 48rem) {
+    .band {
+      grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 3fr);
+      gap: var(--gutter);
+      align-items: center;
+    }
+  }
+</style>

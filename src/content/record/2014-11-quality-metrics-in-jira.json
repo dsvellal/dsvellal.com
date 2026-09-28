@@ -1,0 +1,16 @@
+{
+  "id": "2014-11-quality-metrics-in-jira",
+  "date": "2014-11-20",
+  "year": "2014",
+  "month": "11",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Set the India team's ticket rules for measuring quality: due dates, status, deployment links, root cause",
+  "type": "Project",
+  "themes": [
+    "quality"
+  ],
+  "lane": "work",
+  "total": 12,
+  "tier": "line"
+}

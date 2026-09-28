@@ -1,0 +1,33 @@
+{
+  "id": "2018-07-prime-day-auto-approval-bug",
+  "date": "2018-07",
+  "year": "2018",
+  "month": "07",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Caught an auto-approval bug in a fraud rule on Prime Day",
+  "type": "Project",
+  "themes": [
+    "fraud-risk",
+    "payments",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 20,
+  "tier": "public",
+  "summary": "Under Prime Day volumes, ruleset failures were letting wallet top-up orders pass without a fraud check; I traced them to one wrongly written rule, pointed to the exact coding error and, after checking with my manager, escalated a sev-2.",
+  "what_would_have_happened": "Top-up orders keep passing without fraud checks through the heaviest traffic of the year.",
+  "the_call": "Go into the rule logic itself and treat the business impact as a sev-2.",
+  "what_i_did": "Matched the start of the errors to the time a rule change was pushed, found an assignment where a comparison belonged, and asked the rule owners to correct it on priority.",
+  "what_changed": "The rule was corrected, and my manager called it a great example of deep diving.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "You have shown great example of Deep Dive. Finding out exactly which rule was incorrect and also pointing to exact coding error.",
+      "role": "Engineering manager",
+      "company": "Amazon",
+      "date": "2018-07"
+    }
+  ],
+  "images": []
+}

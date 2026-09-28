@@ -1,0 +1,16 @@
+{
+  "id": "2019-10-20pct-duplication-found",
+  "date": "2019-10-11",
+  "year": "2019",
+  "month": "10",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Measured 20% duplicated code in a shared application codebase and reported it to its owners",
+  "type": "Program",
+  "themes": [
+    "quality"
+  ],
+  "lane": "work",
+  "total": 15,
+  "tier": "line"
+}

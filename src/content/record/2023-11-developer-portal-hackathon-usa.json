@@ -1,0 +1,38 @@
+{
+  "id": "2023-11-developer-portal-hackathon-usa",
+  "date": "2023-11-02",
+  "year": "2023",
+  "month": "11",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Organized the US developer portal hackathon",
+  "type": "Program",
+  "themes": [
+    "delivery",
+    "people"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "With the Software Excellence team, I organized a two-day hackathon in Cambridge where teams, some travelling from other US sites, built on the internal developer portal.",
+  "what_would_have_happened": "The portal would be adopted slowly, one team at a time.",
+  "the_call": "Get teams building on the portal together in a hackathon judged by senior leaders.",
+  "what_i_did": "Organized the two-day event with the Software Excellence team and announced the winners and the teams' work to the community.",
+  "what_changed": "The results post was seen by 1,569 people, and registration opened for the next editions in Brazil and India.",
+  "metrics": [
+    {
+      "value": "1,569",
+      "label": "people reached by the results post",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2023-11-developer-portal-hackathon-usa-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: Organized the US developer portal hackathon"
+    }
+  ]
+}

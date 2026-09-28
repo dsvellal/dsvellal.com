@@ -1,0 +1,56 @@
+{
+  "id": "2021-senior-hiring-redesign",
+  "date": "2021",
+  "year": "2021",
+  "month": null,
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Led the senior-hiring redesign: candidate NPS up 18%, manager NPS up 15%",
+  "type": "Hiring",
+  "themes": [
+    "hiring",
+    "people"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "Sponsored by the India site leader, I led a cross-functional team that redesigned senior hiring, from program planning and risk management to adoption and growth of the bar-raiser community. Candidate NPS rose 18% and hiring-manager NPS 15%.",
+  "what_would_have_happened": "Candidate and hiring-manager experience varied with each panel.",
+  "the_call": "Change the process and the interviewers together, and measure both sides.",
+  "what_i_did": "Led program planning, execution and risk management through to adoption and the growth of the bar-raiser community.",
+  "what_changed": "Candidate NPS up 18%, hiring-manager NPS up 15%; my manager praised my interview style and suggested it for company-wide interviewer training.",
+  "metrics": [
+    {
+      "value": "+18%",
+      "label": "candidate NPS",
+      "context": ""
+    },
+    {
+      "value": "+15%",
+      "label": "hiring-manager NPS",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "one thing I really like about your interview style is that you give just the right amount of time & space for your candidate to show what they can do but without over-running and still covering most of what you wanted to know.",
+      "role": "Head of Competencies (manager)",
+      "company": "Philips",
+      "date": "2021-06-01"
+    },
+    {
+      "text": "The way Interviewer drove the whole discussion and made me comfortable to get the best out of me was amazing.",
+      "role": "Candidate",
+      "company": "Philips",
+      "date": "2021-02-18"
+    }
+  ],
+  "images": [
+    {
+      "src": "/record/published/2021-senior-hiring-redesign-1.webp",
+      "kind": "chat",
+      "pending": false,
+      "alt": "Chat: Led the senior-hiring redesign: candidate NPS up 18%, manager NPS up 15%"
+    }
+  ]
+}

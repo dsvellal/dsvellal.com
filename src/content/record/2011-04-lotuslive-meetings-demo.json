@@ -1,0 +1,16 @@
+{
+  "id": "2011-04-lotuslive-meetings-demo",
+  "date": "2011-04",
+  "year": "2011",
+  "month": "04",
+  "era": "ibm-india",
+  "company": "IBM",
+  "title": "LotusLive Meetings education demo",
+  "type": "Talk",
+  "themes": [
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 9,
+  "tier": "line"
+}

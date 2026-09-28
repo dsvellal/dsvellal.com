@@ -1,0 +1,54 @@
+{
+  "id": "2019-connect-program",
+  "date": "2019",
+  "year": "2019",
+  "month": null,
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Set up measured outreach: 341 connects across 109 business units",
+  "type": "Program",
+  "themes": [
+    "people",
+    "teaching",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "In my first half-year in software excellence I designed a connect format and ran 341 connects, sessions and mentoring conversations with 236 people across 109 business units, 52 roles and 25 programming languages. I tracked every one so the results could feed the team's KPIs.",
+  "what_would_have_happened": "A central excellence team would have waited for teams to come to it.",
+  "the_call": "Go to the teams, and measure reach and feedback like a product.",
+  "what_i_did": "Designed the connect format, tracked every interaction and collected presenter and mentor ratings.",
+  "what_changed": "Reach across India, Shanghai, Brazil and the Netherlands; the data fed the team's KPIs.",
+  "metrics": [
+    {
+      "value": "341",
+      "label": "connects",
+      "context": ""
+    },
+    {
+      "value": "236",
+      "label": "people reached",
+      "context": ""
+    },
+    {
+      "value": "109",
+      "label": "business units",
+      "context": ""
+    },
+    {
+      "value": "25",
+      "label": "programming languages",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Please continue these sessions and I would like to see Design related sessions.",
+      "role": "Session participant",
+      "company": "Philips",
+      "date": "2019"
+    }
+  ],
+  "images": []
+}

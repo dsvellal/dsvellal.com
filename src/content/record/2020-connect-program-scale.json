@@ -1,0 +1,49 @@
+{
+  "id": "2020-connect-program-scale",
+  "date": "2020-08",
+  "year": "2020",
+  "month": "08",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Kept outreach going remotely, with about 2,125 participants in seven months",
+  "type": "Program",
+  "themes": [
+    "people",
+    "teaching",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "When work went remote in 2020, I moved the connect program online and kept measuring it. Between February and August the sessions reached about 2,125 participants across 12 cities and more than 40 departments.",
+  "what_would_have_happened": "Outreach would have stalled when offices closed.",
+  "the_call": "Move everything online and keep measuring reach monthly.",
+  "what_i_did": "Ran and tracked the connects monthly by city, role and department, and reported the numbers for the team's KPIs.",
+  "what_changed": "The numbers went into the team's KPI reporting, and the sessions led to three teams going live on quality gates and two adding mutation testing to their pipelines.",
+  "metrics": [
+    {
+      "value": "~2,125",
+      "label": "session participants",
+      "context": "Feb to Aug 2020"
+    },
+    {
+      "value": "12",
+      "label": "cities",
+      "context": ""
+    },
+    {
+      "value": "175",
+      "label": "unique participants in the peak month",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Very nice and Proud of you Datta!!",
+      "role": "Leader, Software Center of Excellence",
+      "company": "Philips",
+      "date": "2020-09"
+    }
+  ],
+  "images": []
+}

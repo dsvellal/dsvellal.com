@@ -1,0 +1,82 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import Breadcrumbs from '../../../../components/record/Breadcrumbs.astro';
+import CapsuleList from '../../../../components/record/CapsuleList.astro';
+import { capsules, eras, monthLong, monthShort, ranked, type Era } from '../../../../lib/record';
+
+export async function getStaticPaths() {
+  const live = (await eras()).filter((e) => e.status === 'live');
+  return live.flatMap((era) =>
+    era.year_layers.flatMap((layer) =>
+      layer.months.map((month) => ({ params: { era: era.slug, year: layer.year, month }, props: { era, layer, month } })),
+    ),
+  );
+}
+
+const { era, layer, month } = Astro.props as { era: Era; layer: Era['year_layers'][number]; month: string };
+const items = ranked((await capsules()).filter((c) => c.era === era.slug && c.year === layer.year && c.month === month));
+const lead = items.find((c) => c.tier === 'public') ?? items[0];
+const idx = layer.months.indexOf(month);
+const prev = layer.months[idx - 1];
+const next = layer.months[idx + 1];
+const heading = `${monthLong(month)} ${layer.year}`;
+---
+
+<Base title={`${heading} at ${era.label}`} description={`${items.length} ${items.length === 1 ? 'event' : 'events'} in ${heading} at ${era.label}. ${lead?.title ?? ''}`}>
+  <header class="wrap head">
+    <Breadcrumbs
+      items={[
+        { label: 'Record', href: '/record' },
+        { label: era.label, href: `/record/${era.slug}` },
+        { label: layer.year, href: `/record/${era.slug}/${layer.year}` },
+        { label: monthShort(month) },
+      ]}
+    />
+    <h1>{heading}</h1>
+    {lead && <p class="lede">{lead.title}.</p>}
+  </header>
+
+  <section class="wrap block">
+    <h2 class="visually-hidden">Events, most impactful first</h2>
+    <CapsuleList items={items} filters label={`Events in ${heading}`} />
+  </section>
+
+  <nav class="wrap pager" aria-label="Months">
+    {prev ? <a href={`/record/${era.slug}/${layer.year}/${prev}`}>Previous: {monthLong(prev)}</a> : <a href={`/record/${era.slug}/${layer.year}`}>Back to {layer.year}</a>}
+    {next && <a href={`/record/${era.slug}/${layer.year}/${next}`}>Next: {monthLong(next)}</a>}
+  </nav>
+</Base>
+
+<style>
+  .head {
+    padding-top: clamp(2rem, 5vw, 4rem);
+  }
+
+  h1 {
+    margin-top: 1.5rem;
+    font-size: var(--step-4);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+  }
+
+  .lede {
+    max-width: 44rem;
+    margin-top: 1.25rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .block {
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: clamp(3rem, 7vw, 5rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ink);
+    font-weight: 700;
+  }
+</style>

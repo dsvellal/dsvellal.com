@@ -1,0 +1,44 @@
+{
+  "id": "2022-12-anytime-feedback-17-responses",
+  "date": "2022-12",
+  "year": "2022",
+  "month": "12",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "17 pieces of feedback from colleagues in four countries",
+  "type": "Recognition",
+  "themes": [
+    "people",
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 17,
+  "tier": "public",
+  "summary": "Colleagues and leaders in four countries wrote about how I coached teams, paired with developers and kept tricky situations calm.",
+  "what_would_have_happened": "Not applicable: a recognition event, not an intervention.",
+  "the_call": "Ask for feedback from every business and program I worked with, beyond my own team.",
+  "what_i_did": "Requested feedback from the SaaS, DevOps, graduate program and business teams I supported.",
+  "what_changed": "17 responses in the year, 15 of them in the last quarter; a senior leader called me a wonderful technical coach, and another leader cited my drive for quality when hiring a DevOps scrum team.",
+  "metrics": [
+    {
+      "value": "17",
+      "label": "feedback responses",
+      "context": "India, Netherlands, US, Brazil"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "You are very level-headed and approach every situation with a calm and reassuring manner. This helps put people at ease and diffuse tricky situations.",
+      "role": "Colleague",
+      "company": "Philips",
+      "date": "2022"
+    },
+    {
+      "text": "Thanks Datta for being a wonderful technical coach and able to articulate complex concepts with relative ease.",
+      "role": "Senior leader",
+      "company": "Philips",
+      "date": "2022"
+    }
+  ],
+  "images": []
+}

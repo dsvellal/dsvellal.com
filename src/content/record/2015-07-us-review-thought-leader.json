@@ -1,0 +1,50 @@
+{
+  "id": "2015-07-us-review-thought-leader",
+  "date": "2015-07-09",
+  "year": "2015",
+  "month": "07",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "US review: the lead called in for firedrills",
+  "type": "Review",
+  "themes": [
+    "leadership",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 19,
+  "tier": "public",
+  "summary": "The US delivery lead's review said I take on any problem and see it through, and that I give the people working with me cover so fair use does not turn into abuse. It rated the India team's delivery 3.5 out of 4.",
+  "what_would_have_happened": "Not applicable: this is a performance review.",
+  "the_call": "Not applicable: this is a performance review.",
+  "what_i_did": "Ran maintenance firedrills across several workstreams and helped the US team carry the old platform's lessons into the new architecture.",
+  "what_changed": "Rated occasionally exceeds expectations; the reviewer rated the whole India team's delivery 3.5 out of 4, 'Exceptional'.",
+  "metrics": [
+    {
+      "value": "3.5 / 4",
+      "label": "US rating of the overall India team's delivery",
+      "context": "'Exceptional'"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I have never seen a problem that Datta is unwilling to take on.",
+      "role": "US delivery and release lead, Exeter Group",
+      "company": "Exeter",
+      "date": "2015-07-09"
+    },
+    {
+      "text": "There is a reason Datta is always involved in those firedrills: he works anything on his plate to completion.",
+      "role": "US delivery and release lead, Exeter Group",
+      "company": "Exeter",
+      "date": "2015-07-09"
+    },
+    {
+      "text": "He makes it possible to truly work together half way around the world.",
+      "role": "US delivery and release lead, Exeter Group",
+      "company": "Exeter",
+      "date": "2015-07-09"
+    }
+  ],
+  "images": []
+}

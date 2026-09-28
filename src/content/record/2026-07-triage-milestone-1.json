@@ -1,0 +1,17 @@
+{
+  "id": "2026-07-triage-milestone-1",
+  "date": "2026-07-10",
+  "year": "2026",
+  "month": "07",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Supported the defect-triage project through Milestone 1, with AI search matching failures to known issues",
+  "type": "Project",
+  "themes": [
+    "ai",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 15,
+  "tier": "line"
+}

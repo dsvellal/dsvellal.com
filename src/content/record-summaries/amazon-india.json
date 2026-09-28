@@ -1,0 +1,217 @@
+{
+  "slug": "amazon-india",
+  "label": "Amazon India",
+  "employer": "Amazon",
+  "years": "2016 to 2018",
+  "order": 2,
+  "lane": "work",
+  "events": 37,
+  "capsules": 37,
+  "public": 18,
+  "status": "live",
+  "headline": "Led the fraud check for the Amazon Pay India launch",
+  "headline_capsule": "2017-04-amazon-pay-one-account-check",
+  "year_layers": [
+    {
+      "year": "2016",
+      "narrative": "Joined Amazon in February as an individual contributor on the catalog ingestion team, made feed migration a self-service procedure that 29 providers moved onto without developer help, and owned the team's move of 57 hosts to Amazon Linux. Also backfilled about 2 billion catalog records, won the catalog org's global hackathon and started teaching Scrum to other engineers as a volunteer trainer.",
+      "numbers": [
+        "29 feed providers self-service",
+        "~2B catalog records backfilled",
+        "57 hosts migrated",
+        "1st of 45 hackathon teams",
+        "4 sessions"
+      ],
+      "top": [
+        "2016-05-self-service-xml-feed-migration",
+        "2016-08-amazon-linux-migration",
+        "2016-08-catalog-hackathon-first-place",
+        "2016-06-catalog-backfill-tool",
+        "2016-12-scrum-workshop-4-47"
+      ],
+      "quote": {
+        "text": "TL;DR The new parser implementation rocks and code is more readable and easy to understand !!",
+        "role": "Application Engineer, catalog support team",
+        "company": "Amazon",
+        "date": "2016-05",
+        "capsule": "2016-05-self-service-xml-feed-migration"
+      },
+      "months": [
+        "02",
+        "03",
+        "05",
+        "06",
+        "08",
+        "11",
+        "12"
+      ],
+      "also": [
+        "2016-11-scrum-workshop-4-12",
+        "2016-03-mysql-to-rds-migration",
+        "2016-sessions-delivered",
+        "2016-02-joined-amazon-sde2"
+      ],
+      "count": 9
+    },
+    {
+      "year": "2017",
+      "narrative": "Moved to payments fraud and risk and led the one-account-per-customer fraud check for the Amazon Pay India launch end to end, then unblocked general availability and got about 5,300 stalled investigations back to investigators. Designed a risk contract that 6 client teams adopted and set up the org's interview question bank. Won the Zeus Team Award for the risk-evaluation API and a Spot Award for a sprint process change.",
+      "numbers": [
+        "1,150 TPS fraud check at launch",
+        "5,293 investigations reopened",
+        "6 client teams on the risk contract",
+        "14 hiring events",
+        "2 awards"
+      ],
+      "top": [
+        "2017-04-amazon-pay-one-account-check",
+        "2017-07-amazon-pay-launch-unblock",
+        "2017-07-bulk-investigation-reopen-tool",
+        "2017-11-spot-award-process-improvement",
+        "2017-04-generic-risk-document"
+      ],
+      "quote": {
+        "text": "This is great work. Thanks team and looking forward to more deliveries for our payments business in India.",
+        "role": "Director, fraud and risk technology",
+        "company": "Amazon",
+        "date": "2017-04",
+        "capsule": "2017-04-amazon-pay-one-account-check"
+      },
+      "months": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "10",
+        "11"
+      ],
+      "also": [
+        "2017-10-zeus-team-award",
+        "2017-02-interview-question-bank",
+        "2017-10-scrum-workshop-top-score",
+        "2017-03-exemplary-design-document",
+        "2017-03-first-annual-review",
+        "2017-05-first-week-onboarding-guide",
+        "2017-07-tech-conference-poster",
+        "2017-11-product-ownership-facilitator",
+        "2017-06-troubleshooting-bookmarks-wiki",
+        "2017-sessions-delivered",
+        "2017-04-linkedin-recommendation-teammate"
+      ],
+      "count": 16
+    },
+    {
+      "year": "2018",
+      "narrative": "Took on cost and reliability for the fraud services around Prime Day: cut garbage collection on one service to about 2.4% of CPU, saved about $36K a year in hosts through load tests and a hardware clean-up, and traced a faulty fraud rule on Prime Day and escalated it as a sev-2. Became the trainer program's highest-scoring trainer, then left in August to join Philips.",
+      "numbers": [
+        "~17.7% to ~2.4% GC CPU",
+        "~$36K a year saved in hosts",
+        "~60% less investigation effort",
+        "4.57/5 top trainer",
+        "5 sessions"
+      ],
+      "top": [
+        "2018-07-prime-day-auto-approval-bug",
+        "2018-03-variable-comparison-tool",
+        "2018-08-highest-scoring-scrum-trainer",
+        "2018-01-gc-cpu-cut",
+        "2018-03-prime-day-right-sizing"
+      ],
+      "quote": {
+        "text": "You have shown great example of Deep Dive. Finding out exactly which rule was incorrect and also pointing to exact coding error.",
+        "role": "Engineering manager",
+        "company": "Amazon",
+        "date": "2018-07",
+        "capsule": "2018-07-prime-day-auto-approval-bug"
+      },
+      "months": [
+        "01",
+        "02",
+        "03",
+        "07",
+        "08"
+      ],
+      "also": [
+        "2018-01-new-generation-hosts",
+        "2018-03-annual-review",
+        "2018-08-left-amazon",
+        "2018-02-product-ownership-workshop",
+        "2018-03-critical-incident-fixes",
+        "2018-promotion-document-reviewer",
+        "2018-sessions-delivered"
+      ],
+      "count": 12
+    }
+  ],
+  "company": {
+    "arc": [
+      {
+        "when": "Feb 2016",
+        "what": "Joined Amazon Development Center India as Software Development Engineer II, an individual-contributor role on the catalog ingestion and normalization team, and built the onboarding repository the team used for new engineers."
+      },
+      {
+        "when": "~2017",
+        "what": "Moved to the India payments fraud and risk team (away-team model) and led the one-account-per-customer fraud check for the Amazon Pay launch, from requirements and stakeholder communication through onboarding."
+      },
+      {
+        "when": "Aug 2018",
+        "what": "Left after about 30 months and 68 interviews for the fraud and risk org to join Philips."
+      }
+    ],
+    "scope": [
+      "Individual-contributor role as Software Development Engineer II, first on catalog ingestion and normalization, then on India payments fraud and risk as part of an away team.",
+      "Owned fraud use cases for the Amazon Pay India launch end to end, from requirements and design through stakeholder communication, code reviews and onboarding.",
+      "Set technical targets past the ask and tracked the results, such as sizing a fraud check for 1,150 TPS against a 20 TPS requirement and raising sprint task completion to 85% with a new process.",
+      "Designed shared contracts and self-service procedures that other teams adopted with little developer help, including a risk contract used by 6 client teams and a feed migration procedure used for 29 providers.",
+      "Took part in hiring for the fraud and risk org with 68 interviews and set up the standard question bank used in 14 weekend hiring events.",
+      "Built capability in others as a volunteer Scrum and product ownership trainer (about 90 people across 3 Scrum workshops), a mentor to interns and junior engineers, and a reviewer on 3 promotion documents.",
+      "Took on cost and reliability work for fraud services around Prime Day, from JVM tuning and load-tested host sizing to tracing a faulty fraud rule."
+    ],
+    "signatures": [
+      {
+        "title": "Led fraud controls for the Amazon Pay India launch",
+        "body": "Led the one-account-per-customer check end to end, built for 1,150 TPS against a 20 TPS requirement; then unblocked general availability and put about 5,300 stalled investigations back with investigators.",
+        "capsule": "2017-04-amazon-pay-one-account-check"
+      },
+      {
+        "title": "Mechanisms other teams adopted",
+        "body": "A generic risk contract that 6 client teams used unchanged, a self-service feed migration used for 29 providers, and an interview question bank used in 14 hiring events.",
+        "capsule": "2017-04-generic-risk-document"
+      },
+      {
+        "title": "Cost and reliability around Prime Day",
+        "body": "Garbage-collection CPU from about 17.7% to 2.4%, about $36K a year saved in hosts, and a faulty fraud rule traced and escalated as a sev-2 on Prime Day.",
+        "capsule": "2018-01-gc-cpu-cut"
+      }
+    ],
+    "numbers": [
+      "68 interviews",
+      "14 hiring events on my question bank",
+      "3 Scrum workshops (~90 people) plus a product ownership workshop",
+      "Zeus and Spot awards",
+      "570 code changes",
+      "86 tickets",
+      "1st of 45 teams at a global hackathon"
+    ],
+    "quotes": [
+      {
+        "text": "This is great work. Thanks team and looking forward to more deliveries for our payments business in India.",
+        "role": "Director, fraud and risk technology",
+        "company": "Amazon",
+        "date": "2017-04",
+        "capsule": "2017-04-amazon-pay-one-account-check"
+      },
+      {
+        "text": "Great news !!!. Good job Team. Smooth integration is testimony on good design.",
+        "role": "Engineering manager",
+        "company": "Amazon",
+        "date": "2017-04-12",
+        "capsule": "2017-04-amazon-pay-one-account-check"
+      }
+    ],
+    "took": "Amazon taught me to operate at scale. I learned to design for the load you will get, not the load you are asked for, to fix problems at their source, and to write things down so the next engineer does not start from zero. It is also where I started teaching and interviewing seriously: 68 interviews and a question bank used across hiring events showed me that raising the bar is a daily habit, not a policy.",
+    "took_draft": false
+  }
+}

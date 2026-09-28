@@ -1,0 +1,16 @@
+{
+  "id": "2022-11-innersource-issueops-automation",
+  "date": "2022-11-17",
+  "year": "2022",
+  "month": "11",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Built IssueOps automation so people could get InnerSource artifact access through a GitHub issue",
+  "type": "Project",
+  "themes": [
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 13,
+  "tier": "line"
+}

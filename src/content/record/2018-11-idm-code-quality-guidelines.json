@@ -1,0 +1,17 @@
+{
+  "id": "2018-11-idm-code-quality-guidelines",
+  "date": "2018-11",
+  "year": "2018",
+  "month": "11",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Set 11 pull-request rules for the identity management team, including 100% test coverage on new code",
+  "type": "Project",
+  "themes": [
+    "quality",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 15,
+  "tier": "line"
+}

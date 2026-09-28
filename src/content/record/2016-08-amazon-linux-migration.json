@@ -1,0 +1,53 @@
+{
+  "id": "2016-08-amazon-linux-migration",
+  "date": "2016-08-16",
+  "year": "2016",
+  "month": "08",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "title": "Owned the team's move of 57 hosts to Amazon Linux",
+  "type": "Project",
+  "themes": [
+    "reliability",
+    "delivery"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "I owned the team's migration off an end-of-life operating system across 57 hosts, 22 environments and 9 pipelines, kept the feeds org informed on one tracking page, and closed the policy violation and its open tickets.",
+  "what_would_have_happened": "Hosts stayed on an unsupported OS, the policy-engine violation stayed open and the ticket kept showing up in weekly SLA reports.",
+  "the_call": "Put availability first. After one environment failed, move one host at a time, beta before prod, and stop on any failure.",
+  "what_i_did": "Tracked every environment on one page, cleared two blockers, and restored beta and prod capacity when one environment failed mid-move before carrying on.",
+  "what_changed": "57 hosts, 22 environments and 9 pipelines moved, 4 related tickets closed, and my manager replied 'Fantastic. Nice work.'",
+  "metrics": [
+    {
+      "value": "57",
+      "label": "hosts replaced",
+      "context": ""
+    },
+    {
+      "value": "22",
+      "label": "environments",
+      "context": "alpha, beta, gamma and prod"
+    },
+    {
+      "value": "9",
+      "label": "pipelines",
+      "context": ""
+    },
+    {
+      "value": "4",
+      "label": "tickets resolved",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Fantastic. Nice work. Thanks for the update.",
+      "role": "Engineering manager",
+      "company": "Amazon",
+      "date": "2016-08-18"
+    }
+  ],
+  "images": []
+}

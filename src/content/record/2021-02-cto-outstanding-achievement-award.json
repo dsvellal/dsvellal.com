@@ -1,0 +1,46 @@
+{
+  "id": "2021-02-cto-outstanding-achievement-award",
+  "date": "2021-02-24",
+  "year": "2021",
+  "month": "02",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "CTO Outstanding Technical Achievement Award, one of about 30 worldwide",
+  "type": "Recognition",
+  "themes": [
+    "leadership",
+    "hiring",
+    "teaching"
+  ],
+  "lane": "work",
+  "total": 22,
+  "tier": "public",
+  "summary": "At the 2021 CTO Annual Address I was one of about 30 people across Philips' global technology organization named for an Outstanding Technical Achievement Award, cited for teaching coding to non-technical compliance officers and for a data-driven hiring framework.",
+  "what_would_have_happened": "Not applicable: a recognition event, not an intervention.",
+  "the_call": "Not applicable.",
+  "what_i_did": "The citation named two things: teaching coding to non-technical compliance officers, and a data-driven hiring framework.",
+  "what_changed": "Company-wide recognition in front of the whole technology organization.",
+  "metrics": [
+    {
+      "value": "~30",
+      "label": "recipients worldwide",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Exceptional results, demonstrating role model behaviour",
+      "role": "Award citation, CTO Annual Address",
+      "company": "Philips",
+      "date": "2021-02-24"
+    }
+  ],
+  "images": [
+    {
+      "src": "/record/published/2021-02-cto-outstanding-achievement-award-1.webp",
+      "kind": "certificate",
+      "pending": false,
+      "alt": "Certificate: CTO Outstanding Technical Achievement Award, one of about 30 worldwide"
+    }
+  ]
+}

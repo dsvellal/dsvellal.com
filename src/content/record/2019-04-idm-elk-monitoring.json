@@ -1,0 +1,16 @@
+{
+  "id": "2019-04-idm-elk-monitoring",
+  "date": "2019-04",
+  "year": "2019",
+  "month": "04",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Drove central ELK logging and monitoring for identity management and started its next monitoring iteration",
+  "type": "Project",
+  "themes": [
+    "reliability"
+  ],
+  "lane": "work",
+  "total": 10,
+  "tier": "line"
+}

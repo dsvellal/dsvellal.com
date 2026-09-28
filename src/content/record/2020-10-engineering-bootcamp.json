@@ -1,0 +1,43 @@
+{
+  "id": "2020-10-engineering-bootcamp",
+  "date": "2020-10-01",
+  "year": "2020",
+  "month": "10",
+  "era": "philips-india",
+  "company": "Philips",
+  "title": "Helped the bootcamp lead structure the campus engineering bootcamp",
+  "type": "Program",
+  "themes": [
+    "teaching",
+    "people"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "I helped the bootcamp lead with the structure and ideas of the campus engineering bootcamp, which had 98 active participants, 788 repositories and more than 6,000 commits.",
+  "what_would_have_happened": "Not applicable: a contribution to a colleague's program, not an intervention.",
+  "the_call": "Not applicable.",
+  "what_i_did": "Advised the bootcamp lead on the program's structure and ideas.",
+  "what_changed": "Personal thanks from the bootcamp lead and a public credit on the bootcamp site.",
+  "metrics": [
+    {
+      "value": "98",
+      "label": "active participants",
+      "context": ""
+    },
+    {
+      "value": "788",
+      "label": "repositories",
+      "context": ""
+    }
+  ],
+  "quotes": [
+    {
+      "text": "you have helped me with the structure and ideas of bootcamp program in PIC.",
+      "role": "Engineering bootcamp lead",
+      "company": "Philips",
+      "date": "2020-10-01"
+    }
+  ],
+  "images": []
+}

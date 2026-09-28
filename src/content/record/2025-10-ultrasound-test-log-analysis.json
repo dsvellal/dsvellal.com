@@ -1,0 +1,17 @@
+{
+  "id": "2025-10-ultrasound-test-log-analysis",
+  "date": "2025-10",
+  "year": "2025",
+  "month": "10",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Started an Ultrasound test-log analysis project that grew into an AI defect-triage initiative",
+  "type": "Project",
+  "themes": [
+    "ai",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 12,
+  "tier": "line"
+}

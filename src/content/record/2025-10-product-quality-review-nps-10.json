@@ -1,0 +1,30 @@
+{
+  "id": "2025-10-product-quality-review-nps-10",
+  "date": "2025-10",
+  "year": "2025",
+  "month": "10",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Scored a perfect 10 on a product quality review",
+  "type": "Recognition",
+  "themes": [
+    "quality"
+  ],
+  "lane": "work",
+  "total": 18,
+  "tier": "public",
+  "summary": "I assessed software and cybersecurity for a product quality review and brought new ideas to it; the stakeholder gave an NPS of 10 and the program leader called it a bull's eye.",
+  "what_would_have_happened": "The product team would get findings without detailed software and cybersecurity comments on each question.",
+  "the_call": "Bring new ideas to the review and answer every question in detail.",
+  "what_i_did": "Reviewed all 30 software and cybersecurity questions, answered the team's open questions and asked for their review.",
+  "what_changed": "The stakeholder scored the work an NPS of 10; my manager and the program leader praised it.",
+  "metrics": [
+    {
+      "value": "10",
+      "label": "NPS",
+      "context": ""
+    }
+  ],
+  "quotes": [],
+  "images": []
+}

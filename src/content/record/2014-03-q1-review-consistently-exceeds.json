@@ -1,0 +1,43 @@
+{
+  "id": "2014-03-q1-review-consistently-exceeds",
+  "date": "2014-03-28",
+  "year": "2014",
+  "month": "03",
+  "era": "exeter-india",
+  "company": "Exeter",
+  "title": "Rated consistently exceeds for initiatives beyond the project",
+  "type": "Review",
+  "themes": [
+    "leadership"
+  ],
+  "lane": "work",
+  "total": 16,
+  "tier": "public",
+  "summary": "My second review moved up to consistently exceeds expectations. It credited initiatives I took inside the product team and across the company, and asked for my active help with the team on the quality of what we shipped.",
+  "what_would_have_happened": "Not applicable: this is a performance review.",
+  "the_call": "Not applicable: this is a performance review.",
+  "what_i_did": "Worked on the platform's newest initiatives and on company-wide initiatives outside the project.",
+  "what_changed": "Rated consistently exceeds expectations and called a role model for the team and for younger engineers.",
+  "metrics": [
+    {
+      "value": "3.19",
+      "label": "indexed score",
+      "context": "rating: consistently exceeds expectations"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "He is able to pitch his communication to the level of the recipient to make sure that he makes sense. Definitely, a role model for the team.",
+      "role": "Delivery head, Exeter Software India",
+      "company": "Exeter",
+      "date": "2014-03-28"
+    },
+    {
+      "text": "Cannot fault him for not trying.",
+      "role": "Delivery head, Exeter Software India",
+      "company": "Exeter",
+      "date": "2014-03-28"
+    }
+  ],
+  "images": []
+}

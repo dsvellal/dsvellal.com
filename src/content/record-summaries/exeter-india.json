@@ -1,0 +1,235 @@
+{
+  "slug": "exeter-india",
+  "label": "Exeter India",
+  "employer": "Exeter",
+  "years": "2013 to 2015",
+  "order": 1,
+  "lane": "work",
+  "events": 47,
+  "capsules": 47,
+  "public": 16,
+  "status": "live",
+  "headline": "Vermont's public deadline, met",
+  "headline_capsule": "2015-06-vermont-change-function-go-live",
+  "year_layers": [
+    {
+      "year": "2013",
+      "narrative": "Joined Exeter's Bengaluru center in April on the Affordable Care Act health insurance exchanges for Hawaii and Vermont, and became the first on the team to take ownership across the product's layers. Co-wrote a logging procedure for tracing production failures, which the delivery head took to US leadership. Took midnight calls to help the US team through a difficult release.",
+      "numbers": [
+        "Hawaii and Vermont exchanges",
+        "rated occasionally exceeds (first review)",
+        "1 logging procedure across all layers"
+      ],
+      "top": [
+        "2013-09-logging-procedure",
+        "2013-11-q3-review-occasionally-exceeds"
+      ],
+      "quote": {
+        "text": "We are getting into frustrating calls with no information and I think this document is something that we should start looking at this.",
+        "role": "Delivery head, Exeter Software India",
+        "company": "Exeter",
+        "date": "2013-09-15",
+        "capsule": "2013-09-logging-procedure"
+      },
+      "months": [
+        "04",
+        "07",
+        "09",
+        "11",
+        "12"
+      ],
+      "also": [
+        "2013-07-us-leadership-thanks-release-support",
+        "2013-07-employer-plan-selection-on-test",
+        "2013-04-joined-exeter-health-exchanges",
+        "2013-12-linkedin-ibm-colleague"
+      ],
+      "count": 6
+    },
+    {
+      "year": "2014",
+      "narrative": "The year I moved from contributor to leading work for the India team: point of contact for the application intake redesign, a phased clean-up plan from a root-cause analysis, My Accounts moved to the data layer and a place for the India team in re-architecting the product. Led the India team through a 400-fix release on its planned date, the standard 834 enrollment messaging proof of concept and the plan selection rewrite. Founded TExeter, a company-wide tech community that leadership formally thanked me for after six months.",
+      "numbers": [
+        "400+ bug fixes in one release",
+        "3 consecutive reviews rated consistently exceeds",
+        "834 enrollment messaging end to end",
+        "TExeter from idea to company-wide in 6 months",
+        "3-part design patterns course"
+      ],
+      "top": [
+        "2014-08-release-3-3-2-9-hf4",
+        "2014-10-834-enrollment-messaging-poc",
+        "2014-12-texeter-six-month-letter",
+        "2014-02-root-cause-before-revamp",
+        "2014-11-q3-review-consistently-exceeds"
+      ],
+      "quote": {
+        "text": "You all did a bang up job in getting this release out.",
+        "role": "US head of software development, Exeter Group",
+        "company": "Exeter",
+        "date": "2014-08-07",
+        "capsule": "2014-08-release-3-3-2-9-hf4"
+      },
+      "months": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "10",
+        "11",
+        "12"
+      ],
+      "also": [
+        "2014-12-plan-selection-rewrite",
+        "2014-03-q1-review-consistently-exceeds",
+        "2014-04-my-accounts-revamp-release",
+        "2014-07-launched-texeter-thursday",
+        "2014-02-agile-practices-session",
+        "2014-06-q2-review-consistently-exceeds",
+        "2014-10-new-hire-code-a-thon",
+        "2014-03-application-intake-point-of-contact",
+        "2014-07-design-patterns-training-series",
+        "2014-07-launched-texeter-times",
+        "2014-03-organized-tarang-feat-2014",
+        "2014-04-linkedin-ibm-manager",
+        "2014-10-campus-recruitment-interviewer",
+        "2014-11-quality-metrics-in-jira",
+        "2014-05-named-in-us-org-chart",
+        "2014-01-linkedin-professor",
+        "2014-12-emergency-response-team"
+      ],
+      "count": 22
+    },
+    {
+      "year": "2015",
+      "narrative": "Designated Senior Lead, Software Development, in July, and anchored the first modules of the next-generation platform in October. Triaged the release that put Vermont's change function live on its public deadline and stood by through the go-live weekend, brought portal pages under about three seconds and was named TExeter Thought Leader. Exeter closed in November after its acquisition; I declined the acquirer's offer and spent four months choosing my next company.",
+      "numbers": [
+        "~3 s pages under load",
+        "Vermont deadline met with ~20 India engineers",
+        "US rating of India team 3.5/4",
+        "Senior Lead designation",
+        "4 LinkedIn recommendations"
+      ],
+      "top": [
+        "2015-06-vermont-change-function-go-live",
+        "2015-07-us-review-thought-leader",
+        "2015-06-texeter-thought-leader",
+        "2015-03-liferay-page-load-under-3s",
+        "2015-10-anchored-next-gen-platform"
+      ],
+      "quote": {
+        "text": "I have never seen a problem that Datta is unwilling to take on.",
+        "role": "US delivery and release lead, Exeter Group",
+        "company": "Exeter",
+        "date": "2015-07-09",
+        "capsule": "2015-07-us-review-thought-leader"
+      },
+      "months": [
+        "01",
+        "03",
+        "04",
+        "06",
+        "07",
+        "09",
+        "10",
+        "11"
+      ],
+      "also": [
+        "2015-07-senior-lead-designation",
+        "2015-10-clear-text-password-fix",
+        "2015-10-linkedin-teammate",
+        "2015-04-organized-tarang-feat-2015",
+        "2015-10-coding-guidelines",
+        "2015-11-linkedin-direct-report-2-5-years",
+        "2015-11-linkedin-direct-report-3-years",
+        "2015-01-hotfix-triage",
+        "2015-11-linkedin-us-colleague",
+        "2015-09-hotfix-release-coordination",
+        "2015-11-left-exeter",
+        "2015-11-declined-acquirer-offer",
+        "2015-11-exeter-shutdown",
+        "2015-11-four-month-job-search"
+      ],
+      "count": 19
+    }
+  ],
+  "company": {
+    "arc": [
+      {
+        "when": "Apr 2013",
+        "what": "Joined Exeter Software India, Bengaluru, to build Affordable Care Act functionality for the Hawaii and Vermont health insurance exchanges."
+      },
+      {
+        "when": "2014",
+        "what": "Became India point of contact for the application intake redesign and earned the India team a place in re-architecting the product with the US architecture team."
+      },
+      {
+        "when": "Jul 2015",
+        "what": "Designated Senior Lead, Software Development; led a team of up to 20 engineers, including their hiring, reviews and mentoring."
+      },
+      {
+        "when": "Oct 2015",
+        "what": "Anchored the first three modules of the next-generation platform, each with its own development team."
+      },
+      {
+        "when": "Nov 2015",
+        "what": "Exeter closed after its acquisition; declined the acquirer's offer and left after two years and eight months."
+      }
+    ],
+    "scope": [
+      "Delivered Affordable Care Act functionality for the Hawaii and Vermont health insurance exchanges, including releases held to public state deadlines.",
+      "Scoped releases across legal, functional, development and test teams, and triaged release tickets by owner and fix effort so leadership could set scope.",
+      "Led a team of up to 20 engineers, with responsibility for their hiring, performance reviews, mentoring and year-end appraisals.",
+      "Was the India point of contact for the application intake redesign and represented the India team in re-architecting the product with the US architecture team.",
+      "Set quality practice for the India team: ticket rules that made quality measurable, shared coding standards, root-cause analysis before rework and a staged fix for a clear-text password.",
+      "Built capability beyond the project by founding TExeter, a company-wide knowledge-sharing community, and teaching design patterns and agile practices in the company's training programs."
+    ],
+    "signatures": [
+      {
+        "title": "Leading releases on public deadlines",
+        "body": "Led the India team through a 400-fix release on its planned date, led the proof of concept that had standard 834 enrollment messaging running end to end in a week, and triaged the release that put Vermont's change function live on its public deadline.",
+        "capsule": "2014-08-release-3-3-2-9-hf4"
+      },
+      {
+        "title": "Building a knowledge-sharing culture",
+        "body": "Founded TExeter, which grew from a meeting-room idea into a company-wide community in six months, then prepared the next group of organizers to carry it on.",
+        "capsule": "2014-07-launched-texeter-thursday"
+      },
+      {
+        "title": "Fixing root causes, then re-architecting",
+        "body": "Took a reopened defect to a phased clean-up plan, led the plan selection rewrite on the data layer and set the ticket rules that let the India team measure quality.",
+        "capsule": "2014-02-root-cause-before-revamp"
+      }
+    ],
+    "numbers": [
+      "Up to 20 engineers led",
+      "2 state exchanges (Hawaii, Vermont)",
+      "400+ fixes in one release",
+      "TExeter company-wide in 6 months",
+      "3 consecutive reviews rated consistently exceeds",
+      "7 LinkedIn recommendations"
+    ],
+    "quotes": [
+      {
+        "text": "There is a reason Datta is always involved in those firedrills: he works anything on his plate to completion.",
+        "role": "US delivery and release lead, Exeter Group",
+        "company": "Exeter",
+        "date": "2015-07-09",
+        "capsule": "2015-07-us-review-thought-leader"
+      },
+      {
+        "text": "TExeter started off as a meeting room discussion and in six months it has grown into the hearts and minds of the employees of Exeter Software India Pvt. Ltd.",
+        "role": "Managing Director and HR Head, Exeter Software India",
+        "company": "Exeter",
+        "date": "2014-12-24",
+        "capsule": "2014-12-texeter-six-month-letter"
+      }
+    ],
+    "took": "Exeter made me an owner. On state health insurance exchanges the deadline was public and the evidence had to hold, so I learned to find the root cause before touching the code and to propose a phased clean up instead of a rewrite. Starting TExeter taught me that a community can change how a whole company learns, if someone starts it and keeps showing up. Transformation is not about erasing the past but evolving it with purpose, and I still work that way.",
+    "took_draft": false
+  }
+}
