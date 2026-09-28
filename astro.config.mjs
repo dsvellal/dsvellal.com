@@ -10,7 +10,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       // Old URLs that now only redirect.
-      filter: (page) => !/^https:\/\/dsvellal\.com\/(record|speaking|giving-back|beyond-work)(\/|$)/.test(page),
+      filter: (page) => !/^https:\/\/dsvellal\.com\/(record|speaking|giving-back|beyond-work|social)(\/|$)/.test(page),
     }),
   ],
 });

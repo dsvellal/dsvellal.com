@@ -11,6 +11,7 @@ import { talks } from '../data/talks';
 const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
 const featuredTalks = talks.filter((t) => t.featured);
 const recentSessionsByEra = [...sessionsByEra].reverse();
+const linkedinQuotes = ['q-nicholson-leader', 'q-watson-influence', 'q-vieira-sponsorship'];
 const years = claim('years-experience');
 const adoption = claim('traceability-adoption');
 const maxEraSessions = Math.max(...recentSessionsByEra.map((e) => e.sessions));
@@ -48,7 +49,7 @@ const jsonLd = {
         {intro}
       </p>
       <p class="hero-actions">
-        <a class="button" href="#work">See the work</a>
+        <a class="button" href="/impact">See the Impact</a>
         <a href="#contact">Contact</a>
       </p>
     </div>
@@ -57,9 +58,17 @@ const jsonLd = {
     </div>
   </section>
 
-  <section id="work" class="wrap work" aria-labelledby="work-title">
+  <section class="wrap callouts" aria-labelledby="callouts-title">
+    <h2 id="callouts-title" class="callouts-title">From my LinkedIn recommendations</h2>
+    <div class="callout-grid">
+      {linkedinQuotes.map((id) => <QuoteBlock id={id} showContext={false} />)}
+    </div>
+    <p class="callouts-more"><a href={profile.linkedinRecommendations}>Read them all on LinkedIn</a></p>
+  </section>
+
+  <section id="about" class="wrap work" aria-labelledby="about-title">
     <hr class="rule rule--accent" />
-    <h2 id="work-title" class="section-title">Work</h2>
+    <h2 id="about-title" class="section-title">About</h2>
     <ol class="pillars">
       {
         work.map((entry, i) => (
@@ -121,10 +130,10 @@ const jsonLd = {
   <section class="wrap quotes grid" aria-labelledby="quotes-title">
     <h2 id="quotes-title" class="visually-hidden">What colleagues say</h2>
     <div class="quote-main">
-      <QuoteBlock id="q-nicholson-leader" size="large" />
+      <QuoteBlock id="q-ultrasound" size="large" />
     </div>
     <div class="quote-side">
-      <QuoteBlock id="q-watson-influence" />
+      <QuoteBlock id="q-radiology-architect" />
       <QuoteBlock id="q-patient-safety-evp" />
     </div>
   </section>
@@ -380,6 +389,30 @@ const jsonLd = {
   }
 
   /* Quotes */
+  .callouts {
+    margin-top: clamp(3rem, 7vw, 5rem);
+    padding-top: 1.5rem;
+    border-top: 4px solid var(--ink);
+  }
+
+  .callouts-title {
+    font-size: var(--step-1);
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+
+  .callout-grid {
+    display: grid;
+    gap: 2.5rem var(--gutter);
+    margin-top: 2rem;
+  }
+
+  .callouts-more {
+    margin-top: 2rem;
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
   .quotes {
     row-gap: 3rem;
     padding-block: clamp(2.5rem, 6vw, 4rem);
@@ -397,6 +430,10 @@ const jsonLd = {
   }
 
   @media (min-width: 48rem) {
+    .callout-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .quote-main {
       grid-column: 1 / span 7;
     }

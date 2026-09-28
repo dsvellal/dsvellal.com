@@ -39,7 +39,7 @@ const undated = layer.talks.filter((t) => !t.month);
     <h1>{layer.year}</h1>
     <p class="lede">
       {layer.talks.length} {layer.talks.length === 1 ? 'session' : 'sessions'} at {era.label}.
-      {hasImpactYear && <a href={yearHref(era, layer.year)}>See the work in {layer.year}</a>}
+      {hasImpactYear && <a href={yearHref(era, layer.year)}>See the Impact in {layer.year}</a>}
     </p>
   </header>
 

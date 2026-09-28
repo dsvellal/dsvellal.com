@@ -8,6 +8,7 @@ export const profile = {
   employers: ['Philips', 'Amazon', 'Exeter', 'IBM'],
   email: 'dsvellal@gmail.com',
   linkedin: 'https://www.linkedin.com/in/dattatreyavellal',
+  linkedinRecommendations: 'https://www.linkedin.com/in/dattatreyavellal/details/recommendations/',
   invite:
     "I'm interested in conversations about leading AI and engineering transformation where the stakes are high.",
 };

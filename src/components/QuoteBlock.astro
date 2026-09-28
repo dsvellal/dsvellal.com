@@ -4,9 +4,10 @@ import { quote } from '../data/claims';
 interface Props {
   id: string;
   size?: 'large' | 'regular';
+  showContext?: boolean;
 }
 
-const { id, size = 'regular' } = Astro.props;
+const { id, size = 'regular', showContext = true } = Astro.props;
 const q = quote(id);
 ---
 
@@ -18,7 +19,7 @@ const q = quote(id);
     {q.name && <span class="name">{q.name}</span>}
     <span class="role">{q.role}</span>
     <span class="muted">{q.company}, {q.year}</span>
-    {q.context && <span class="muted">{q.context}</span>}
+    {showContext && q.context && <span class="muted">{q.context}</span>}
   </figcaption>
 </figure>
 

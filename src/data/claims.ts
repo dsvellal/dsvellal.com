@@ -198,6 +198,15 @@ const quoteList: Quote[] = [
     context: 'Public LinkedIn recommendation.',
   },
   {
+    id: 'q-vieira-sponsorship',
+    text: 'His ability to report on projects involving software development or CI/CD in a manner accessible to C-level executives consistently garnered substantial corporate sponsorship.',
+    name: 'Fernando José Vieira',
+    role: 'Principal engineer, hired by me',
+    company: 'Philips',
+    year: '2025',
+    context: 'Public LinkedIn recommendation.',
+  },
+  {
     id: 'q-patient-safety-evp',
     text: 'Keep leading the way! Thank you for the collaboration!',
     role: 'Executive VP and Chief Patient Safety and Quality Officer',

@@ -2,7 +2,7 @@
 import Redirect from '../../components/Redirect.astro';
 import { socialsRedirectPaths } from '../../lib/record';
 
-/** Old /beyond-work URLs, kept as redirects to Socials. */
+/** Old /social URLs, kept as redirects to Socials. */
 export const getStaticPaths = socialsRedirectPaths;
 
 const { to } = Astro.props as { to: string };

@@ -63,22 +63,22 @@ export const newestFirst = (list: Capsule[]) => [...list].sort(byNewestDate);
 
 export const isBeyond = (x: { lane: string }) => x.lane === 'beyond';
 export const section = (x: { lane: string }) =>
-  isBeyond(x) ? { label: 'Social', href: '/social' } : { label: 'Impact', href: '/impact' };
+  isBeyond(x) ? { label: 'Socials', href: '/socials' } : { label: 'Impact', href: '/impact' };
 /** Where an era sits, for titles: "at IBM India", or "outside work" for the social lane. */
 export const atEra = (era: Era) => (isBeyond(era) ? 'outside work' : `at ${era.label}`);
 
-export const eraHref = (era: Era) => (isBeyond(era) ? '/social' : `/impact/${era.slug}`);
+export const eraHref = (era: Era) => (isBeyond(era) ? '/socials' : `/impact/${era.slug}`);
 export const yearHref = (era: Era, year: string) => `${eraHref(era)}/${year}`;
 export const monthHref = (era: Era, year: string, month: string) => `${yearHref(era, year)}/${month}`;
 
 export function capsuleHref(c: Capsule): string | undefined {
   if (c.tier !== 'public') return undefined;
-  return `${isBeyond(c) ? '/social' : '/impact'}/c/${c.id}`;
+  return `${isBeyond(c) ? '/socials' : '/impact'}/c/${c.id}`;
 }
 
 /** Public capsule page, or the month (or year) page that lists a line-tier capsule. */
 export function capsuleOrListHref(c: Capsule): string {
-  const base = isBeyond(c) ? '/social' : `/impact/${c.era}`;
+  const base = isBeyond(c) ? '/socials' : `/impact/${c.era}`;
   return capsuleHref(c) ?? (c.month ? `${base}/${c.year}/${c.month}` : `${base}/${c.year}`);
 }
 
@@ -101,6 +101,25 @@ export async function capsulePaths(lane: 'work' | 'beyond') {
         },
       };
     });
+}
+
+/** Redirect paths from a retired Socials address (/social, /beyond-work) to the current pages. */
+export async function socialsRedirectPaths() {
+  const era = (await eras()).find((e) => e.lane === 'beyond');
+  const paths: { params: { path: string | undefined }; props: { to: string } }[] = [
+    { params: { path: undefined }, props: { to: '/socials' } },
+  ];
+  for (const layer of era?.year_layers ?? []) {
+    paths.push({ params: { path: layer.year }, props: { to: yearHref(era!, layer.year) } });
+    for (const month of layer.months) {
+      paths.push({ params: { path: `${layer.year}/${month}` }, props: { to: monthHref(era!, layer.year, month) } });
+    }
+  }
+  for (const c of await capsules()) {
+    const to = c.lane === 'beyond' ? capsuleHref(c) : undefined;
+    if (to) paths.push({ params: { path: `c/${c.id}` }, props: { to } });
+  }
+  return paths;
 }
 
 /** Split "1,150 TPS fraud check at launch" into a big value and its label. */

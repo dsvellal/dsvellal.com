@@ -39,7 +39,7 @@ const sameYear = (await eras()).filter(
 );
 const crossLinks = sameYear.map((e) => ({
   href: yearHref(e, layer.year),
-  label: isBeyond(e) ? `Social in ${layer.year}` : `${e.label} in ${layer.year}`,
+  label: isBeyond(e) ? `Socials in ${layer.year}` : `${e.label} in ${layer.year}`,
 }));
 const talkCount = (await talks()).filter((t) => t.era === era.slug && t.year === layer.year).length;
 if (talkCount > 0) {
