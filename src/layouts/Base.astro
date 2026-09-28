@@ -56,7 +56,9 @@ const nav = [
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="wrap header-inner">
-        <a class="brand" href="/" aria-current={path === '/' ? 'page' : undefined}>{profile.name}</a>
+        <a class="brand" href="/" aria-current={path === '/' ? 'page' : undefined}>
+          <img src={profile.logo.src} alt={profile.name} width={profile.logo.width} height={profile.logo.height} />
+        </a>
         <nav aria-label="Primary">
           <ul>
             {
@@ -110,9 +112,14 @@ const nav = [
   }
 
   .brand {
-    font-weight: 800;
-    letter-spacing: -0.02em;
+    display: block;
     text-decoration: none;
+  }
+
+  .brand img {
+    display: block;
+    width: auto;
+    height: 2rem;
   }
 
   nav ul,

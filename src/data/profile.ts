@@ -1,6 +1,7 @@
 export const profile = {
   name: 'Datta Vellal',
   fullName: 'Dattatreya Subramanya Vellal',
+  logo: { src: '/logo.webp', width: 410, height: 80 },
   headline: 'Engineering leader who makes AI safe and fast in regulated software.',
   role: 'Software Competency Lead, Philips',
   location: 'Rochester, Michigan',

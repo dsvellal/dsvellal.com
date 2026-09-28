@@ -10,31 +10,88 @@ const initials = profile.name
 ---
 
 <figure class="headshot">
-  {
-    present ? (
-      <img src="/headshot.jpg" alt={`Portrait of ${profile.name}`} width="1000" height="1000" loading="eager" decoding="async" />
-    ) : (
-      <div class="fallback" role="img" aria-label={`${profile.name}, portrait coming soon`}>
-        <span aria-hidden="true">{initials}</span>
-      </div>
-    )
-  }
+  <div class="frame" data-headshot>
+    {
+      present ? (
+        <>
+          <img class="mono" src="/headshot.jpg" alt={`Portrait of ${profile.name}`} width="1000" height="1000" loading="eager" decoding="async" />
+          <img class="colour" src="/headshot.jpg" alt="" aria-hidden="true" width="1000" height="1000" loading="eager" decoding="async" />
+        </>
+      ) : (
+        <div class="fallback" role="img" aria-label={`${profile.name}, portrait coming soon`}>
+          <span aria-hidden="true">{initials}</span>
+        </div>
+      )
+    }
+  </div>
+  <figcaption>
+    <span class="full">{profile.fullName}</span> <span class="short">({profile.name})</span>
+  </figcaption>
 </figure>
+
+<script>
+  // Open the colour from where the pointer enters and close it toward where it leaves.
+  for (const frame of document.querySelectorAll<HTMLElement>('[data-headshot]')) {
+    const place = (e: PointerEvent) => {
+      const r = frame.getBoundingClientRect();
+      frame.style.setProperty('--x', `${((e.clientX - r.left) / r.width) * 100}%`);
+      frame.style.setProperty('--y', `${((e.clientY - r.top) / r.height) * 100}%`);
+    };
+    frame.addEventListener('pointerenter', place);
+    frame.addEventListener('pointerleave', place);
+  }
+</script>
 
 <style>
   .headshot {
     margin: 0;
+  }
+
+  .frame {
+    --x: 50%;
+    --y: 50%;
+    position: relative;
     aspect-ratio: 4 / 5;
     background: var(--ink);
     overflow: hidden;
   }
 
   img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: right center;
+  }
+
+  .mono {
     filter: grayscale(1) contrast(1.05);
+  }
+
+  .colour {
+    clip-path: circle(0% at var(--x) var(--y));
+    transition: clip-path 500ms var(--ease-out);
+  }
+
+  .frame:hover .colour {
+    clip-path: circle(150% at var(--x) var(--y));
+    transition-duration: 900ms;
+  }
+
+  figcaption {
+    margin-top: 0.75rem;
+    font-size: var(--step--1);
+    line-height: 1.35;
+  }
+
+  .full {
+    font-weight: 700;
+  }
+
+  .short {
+    color: var(--ink-2);
+    white-space: nowrap;
   }
 
   .fallback {
