@@ -2,7 +2,7 @@ export const profile = {
   name: 'Datta Vellal',
   fullName: 'Dattatreya Subramanya Vellal',
   headline: 'Engineering leader who makes AI safe and fast in regulated software.',
-  role: 'Software Competency Lead, Innovation Engineering, Philips',
+  role: 'Software Competency Lead, Philips',
   location: 'Rochester, Michigan',
   employers: ['IBM', 'Exeter', 'Amazon', 'Philips'],
   email: 'dsvellal@gmail.com',

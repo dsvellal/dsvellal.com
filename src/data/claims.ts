@@ -99,9 +99,9 @@ const claimList: Claim[] = [
   },
   {
     id: 'team-scope',
-    value: '9',
-    label: 'direct reports I lead in the Software Center of Excellence',
-    context: 'Software Competency Experts, with hiring and performance-review responsibility. The wider Center of Excellence team spans 6 nationalities and 12 locations.',
+    value: 'Across Philips',
+    label: 'supervisory leadership of software competency experts in India and North America',
+    context: 'Throughout my Philips career, with responsibilities for delegation, timelines, hiring recommendations and annual performance reviews.',
   },
   {
     id: 'engineers-mentored',
