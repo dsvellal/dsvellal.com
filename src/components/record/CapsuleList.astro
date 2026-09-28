@@ -1,14 +1,16 @@
 ---
-import { capsuleHref, formatDate, THEME_LABELS, type Capsule } from '../../lib/record';
+import { capsuleHref, eras, formatDate, THEME_LABELS, type Capsule } from '../../lib/record';
 import { talkHref, talksByRecord } from '../../lib/talks';
 
 interface Props {
   items: Capsule[];
   filters?: boolean;
   showSummary?: boolean;
+  showCompany?: boolean;
   label: string;
 }
-const { items, filters = false, showSummary = true, label } = Astro.props;
+const { items, filters = false, showSummary = true, showCompany = false, label } = Astro.props;
+const eraLabels = new Map((await eras()).map((e) => [e.slug, e.label]));
 const types = [...new Set(items.map((c) => c.type))].sort();
 const themes = [...new Set(items.flatMap((c) => c.themes))].sort();
 const listId = `list-${label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
@@ -44,7 +46,7 @@ const hrefFor = (c: Capsule) => {
       </div>
     )
   }
-  <ol id={listId} aria-label={label}>
+  <ol id={listId} aria-label={label} class:list={{ 'with-company': showCompany }}>
     {
       items.map((c) => {
         const href = hrefFor(c);
@@ -55,7 +57,7 @@ const hrefFor = (c: Capsule) => {
               {href ? <a href={href}>{c.title}</a> : <span>{c.title}</span>}
               {showSummary && href && c.summary && <span class="summary muted">{c.summary}</span>}
             </span>
-            <span class="kind label muted">{c.type}</span>
+            <span class="kind label muted">{showCompany ? (eraLabels.get(c.era) ?? c.company) : c.type}</span>
           </li>
         );
       })
@@ -164,6 +166,10 @@ const hrefFor = (c: Capsule) => {
 
     .kind {
       text-align: right;
+    }
+
+    .with-company li {
+      grid-template-columns: 9rem minmax(0, 1fr) 10rem;
     }
   }
 </style>

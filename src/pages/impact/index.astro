@@ -1,11 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 import EraBand from '../../components/record/EraBand.astro';
-import { eras } from '../../lib/record';
+import CapsuleList from '../../components/record/CapsuleList.astro';
+import { capsules, eras } from '../../lib/record';
 
 const work = (await eras()).filter((e) => e.lane === 'work');
 const max = Math.max(...work.map((e) => e.events), 1);
 const totalEvents = work.reduce((n, e) => n + e.events, 0);
+const documented = (await capsules()).filter((c) => c.lane === 'work' && c.tier === 'public');
+const years = [...new Set(documented.map((c) => c.year))].map((year) => ({
+  year,
+  items: documented.filter((c) => c.year === year),
+}));
 ---
 
 <Base
@@ -16,7 +22,7 @@ const totalEvents = work.reduce((n, e) => n + e.events, 0);
     <h1>Impact</h1>
     <p class="lede">
       {totalEvents} events since 2007, each documented with its date, result and what people said. Pick a company to
-      go year by year.
+      go year by year, or read the <a href="#all">{documented.length} documented in depth</a>, newest first.
     </p>
   </header>
 
@@ -34,6 +40,19 @@ const totalEvents = work.reduce((n, e) => n + e.events, 0);
         ))
       }
     </ol>
+  </section>
+
+  <section id="all" class="wrap all" aria-labelledby="all-title">
+    <h2 id="all-title">Documented in depth</h2>
+    <p class="muted all-note">Each entry has its own page with what was at stake, what I did, what changed and the proof.</p>
+    {
+      years.map((y) => (
+        <div class="year-group">
+          <h3 class="year figure">{y.year}</h3>
+          <CapsuleList items={y.items} label={`Documented in ${y.year}`} showCompany />
+        </div>
+      ))
+    }
   </section>
 </Base>
 
@@ -72,6 +91,30 @@ const totalEvents = work.reduce((n, e) => n + e.events, 0);
 
   .band-list > li {
     border-bottom: 1px solid var(--rule);
+  }
+
+  .all {
+    margin-top: clamp(3.5rem, 8vw, 6rem);
+  }
+
+  .all h2 {
+    font-size: var(--step-3);
+    font-weight: 800;
+  }
+
+  .all-note {
+    max-width: 36rem;
+    margin-top: 1rem;
+  }
+
+  .year-group {
+    margin-top: clamp(2rem, 5vw, 3rem);
+  }
+
+  .year {
+    margin-bottom: 0.75rem;
+    font-size: var(--step-2);
+    color: var(--accent);
   }
 
   @media (min-width: 48rem) {
