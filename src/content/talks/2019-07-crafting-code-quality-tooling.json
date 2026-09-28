@@ -1,0 +1,57 @@
+{
+  "id": "2019-07-crafting-code-quality-tooling",
+  "session_no": 60,
+  "date": "2019-07-11",
+  "date_label": null,
+  "year": "2019",
+  "month": "07",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "Crafting code quality: tooling",
+  "audience": "Philips software teams",
+  "summary": "A workshop I delivered for Philips software teams.",
+  "attendees": null,
+  "responses": 14,
+  "reach_note": null,
+  "rating": null,
+  "feedback": {
+    "responses": 14,
+    "ratings": [
+      {
+        "label": "Overall rating",
+        "average": 8.93,
+        "scale": 10,
+        "low": 7.0,
+        "high": 10.0,
+        "count": 14
+      },
+      {
+        "label": "Capturing attention",
+        "average": 4.36,
+        "scale": 5,
+        "low": 4.0,
+        "high": 5.0,
+        "count": 14
+      },
+      {
+        "label": "Audience engagement",
+        "average": 4.07,
+        "scale": 5,
+        "low": 2.0,
+        "high": 5.0,
+        "count": 14
+      }
+    ],
+    "themes": "Participants most often valued depth of knowledge and the presenter's delivery.",
+    "written_answers": 14,
+    "quotes": [
+      "The session gave a good insight specially for static analysis.",
+      "The presentation of the topic was good with examples."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

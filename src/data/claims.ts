@@ -251,6 +251,7 @@ export function quote(id: string): Quote {
 }
 
 export interface EraSessions {
+  slug: string;
   years: string;
   employer: string;
   sessions: number;
@@ -260,30 +261,35 @@ export interface EraSessions {
 // Delivered sessions with a dated source, counted from the private sessions log.
 export const sessionsByEra: EraSessions[] = [
   {
+    slug: 'ibm-india',
     years: '2007 to 2013',
     employer: 'IBM',
     sessions: 12,
     highlight: 'A national conference paper, an IBM technical webinar, Hackday briefings, and my first college seminars.',
   },
   {
+    slug: 'exeter-india',
     years: '2013 to 2015',
     employer: 'Exeter',
     sessions: 20,
     highlight: 'Design patterns training for engineers at work, and 15 seminars and workshops at colleges.',
   },
   {
+    slug: 'amazon-india',
     years: '2016 to 2018',
     employer: 'Amazon',
     sessions: 10,
     highlight: 'Scrum and product ownership workshops rated up to 4.6 out of 5, alongside talks for students.',
   },
   {
+    slug: 'philips-india',
     years: '2018 to 2021',
     employer: 'Philips India',
     sessions: 52,
     highlight: 'Clean code, unit testing and duplication workshops, seven bar-raiser training cohorts, and a 500-person conference panel.',
   },
   {
+    slug: 'philips-north-america',
     years: '2021 to now',
     employer: 'Philips North America',
     sessions: 65,

@@ -1,0 +1,57 @@
+{
+  "id": "2021-02-interviewing-tips-interactive-session",
+  "session_no": 100,
+  "date": "2021-02-26",
+  "date_label": null,
+  "year": "2021",
+  "month": "02",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Session",
+  "confidence": "High",
+  "title": "Interviewing tips: interactive session",
+  "audience": "Philips interviewers",
+  "summary": "A session I delivered for Philips interviewers.",
+  "attendees": null,
+  "responses": 6,
+  "reach_note": null,
+  "rating": {
+    "value": 9.0,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 6,
+    "ratings": [
+      {
+        "label": "Subject knowledge",
+        "average": 4.83,
+        "scale": 5,
+        "low": 4.0,
+        "high": 5.0,
+        "count": 6
+      },
+      {
+        "label": "Audience engagement",
+        "average": 4.67,
+        "scale": 5,
+        "low": 4.0,
+        "high": 5.0,
+        "count": 6
+      },
+      {
+        "label": "Eager to improve & inspire",
+        "average": 4.5,
+        "scale": 5,
+        "low": 4.0,
+        "high": 5.0,
+        "count": 6
+      }
+    ],
+    "themes": "",
+    "written_answers": 1,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

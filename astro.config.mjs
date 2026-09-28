@@ -7,5 +7,10 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'never',
   build: { format: 'file' },
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // Old URLs that now only redirect.
+      filter: (page) => !/^https:\/\/dsvellal\.com\/(record|speaking)(\/|$)/.test(page),
+    }),
+  ],
 });

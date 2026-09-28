@@ -1,0 +1,44 @@
+{
+  "id": "2025-08-leading-continuous-value-delivery",
+  "session_no": 139,
+  "date": "2025-08-19",
+  "date_label": null,
+  "year": "2025",
+  "month": "08",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "Leading Continuous Value Delivery",
+  "audience": "Philips University",
+  "summary": "A workshop I delivered for Philips University.",
+  "attendees": null,
+  "responses": 4,
+  "reach_note": null,
+  "rating": {
+    "value": 8.3,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 4,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.25,
+        "scale": 10,
+        "low": 7.0,
+        "high": 9.0,
+        "count": 4
+      }
+    ],
+    "themes": "Participants most often valued hands-on demos, depth of knowledge and the presenter's delivery.",
+    "written_answers": 3,
+    "quotes": [
+      "Got more insight in what is available to optimize your value delivery.",
+      "The examples used for this session was value add."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

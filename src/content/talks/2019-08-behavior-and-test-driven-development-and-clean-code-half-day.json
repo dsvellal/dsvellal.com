@@ -1,0 +1,60 @@
+{
+  "id": "2019-08-behavior-and-test-driven-development-and-clean-code-half-day",
+  "session_no": 61,
+  "date": "2019-08-01",
+  "date_label": null,
+  "year": "2019",
+  "month": "08",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "Behavior- and test-driven development and clean code (half day)",
+  "audience": "Philips software teams",
+  "summary": "A workshop I delivered for Philips software teams.",
+  "attendees": null,
+  "responses": 16,
+  "reach_note": null,
+  "rating": {
+    "value": 8.1,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 16,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.12,
+        "scale": 10,
+        "low": 2.0,
+        "high": 10.0,
+        "count": 16
+      },
+      {
+        "label": "Overall rating",
+        "average": 8.19,
+        "scale": 10,
+        "low": 3.0,
+        "high": 10.0,
+        "count": 16
+      },
+      {
+        "label": "Capturing attention",
+        "average": 4.25,
+        "scale": 5,
+        "low": 2.0,
+        "high": 5.0,
+        "count": 16
+      }
+    ],
+    "themes": "Participants most often valued the presenter's delivery, depth of knowledge and the interaction.",
+    "written_answers": 18,
+    "quotes": [
+      "Please extend the workshop for other languages and not just limited to Java.",
+      "All the agenda topics to be covered in detail in time."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": "2019-08-code-quality-workshop"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "2020-10-coding-practice-initiative-for-engineers-concluding-session",
+  "session_no": 95,
+  "date": "2020-10-16",
+  "date_label": null,
+  "year": "2020",
+  "month": "10",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Program session",
+  "confidence": "High",
+  "title": "Coding practice initiative for engineers, concluding session",
+  "audience": "Philips engineers",
+  "summary": "A program session I delivered for Philips engineers.",
+  "attendees": null,
+  "responses": 5,
+  "reach_note": null,
+  "rating": {
+    "value": 10.0,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 5,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 10.0,
+        "scale": 10,
+        "low": 10.0,
+        "high": 10.0,
+        "count": 5
+      },
+      {
+        "label": "Self-rated competence",
+        "average": 4.2,
+        "scale": 10,
+        "low": 1.0,
+        "high": 8.0,
+        "count": 5
+      },
+      {
+        "label": "Overall rating",
+        "average": 5.0,
+        "scale": 5,
+        "low": 5.0,
+        "high": 5.0,
+        "count": 5
+      }
+    ],
+    "themes": "Suggestions centered on tool setup and access.",
+    "written_answers": 9,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

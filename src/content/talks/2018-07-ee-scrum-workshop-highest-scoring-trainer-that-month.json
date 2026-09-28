@@ -1,0 +1,25 @@
+{
+  "id": "2018-07-ee-scrum-workshop-highest-scoring-trainer-that-month",
+  "session_no": 49,
+  "date": "2018-07-20",
+  "date_label": null,
+  "year": "2018",
+  "month": "07",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "EE Scrum Workshop (highest-scoring trainer that month)",
+  "audience": "Amazon engineers, India",
+  "summary": "A workshop I delivered for Amazon engineers, India.",
+  "attendees": null,
+  "responses": null,
+  "reach_note": null,
+  "rating": {
+    "value": 4.57,
+    "scale": 5
+  },
+  "feedback": null,
+  "record_capsule": "2018-08-highest-scoring-scrum-trainer"
+}

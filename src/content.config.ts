@@ -105,4 +105,48 @@ const recordSummaries = defineCollection({
   }),
 });
 
-export const collections = { work, thinking, record, 'record-summaries': recordSummaries };
+const talks = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/talks' }),
+  schema: z.object({
+    id: z.string(),
+    session_no: z.number(),
+    date: z.string(),
+    date_label: z.string().nullable(),
+    year: z.string(),
+    month: z.string().nullable(),
+    era: z.string(),
+    company: z.string(),
+    role: z.enum(['speaker', 'co-presenter', 'judge', 'organizer', 'program']),
+    format: z.string(),
+    confidence: z.string(),
+    title: z.string(),
+    audience: z.string(),
+    summary: z.string(),
+    attendees: z.string().nullable(),
+    responses: z.number().nullable(),
+    reach_note: z.string().nullable(),
+    rating: z.object({ value: z.number(), scale: z.number() }).nullable(),
+    feedback: z
+      .object({
+        responses: z.number(),
+        ratings: z.array(
+          z.object({
+            label: z.string(),
+            average: z.number(),
+            scale: z.number(),
+            low: z.number().nullable(),
+            high: z.number().nullable(),
+            count: z.number(),
+          }),
+        ),
+        themes: z.string(),
+        written_answers: z.number(),
+        quotes: z.array(z.string()),
+        shared_form: z.boolean(),
+      })
+      .nullable(),
+    record_capsule: z.string().nullable(),
+  }),
+});
+
+export const collections = { work, thinking, record, 'record-summaries': recordSummaries, talks };

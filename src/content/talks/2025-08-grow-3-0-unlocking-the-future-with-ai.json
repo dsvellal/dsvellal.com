@@ -1,0 +1,41 @@
+{
+  "id": "2025-08-grow-3-0-unlocking-the-future-with-ai",
+  "session_no": 141,
+  "date": "2025-08-28",
+  "date_label": null,
+  "year": "2025",
+  "month": "08",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Technical session",
+  "confidence": "High",
+  "title": "GROW 3.0: Unlocking the future with AI",
+  "audience": "Philips Innovation Engineering community",
+  "summary": "A technical session I delivered for Philips Innovation Engineering community.",
+  "attendees": null,
+  "responses": 35,
+  "reach_note": null,
+  "rating": {
+    "value": 9.2,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 35,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 9.2,
+        "scale": 10,
+        "low": 5.0,
+        "high": 10.0,
+        "count": 35
+      }
+    ],
+    "themes": "Suggestions centered on more hands-on practice and more time or a follow-up session.",
+    "written_answers": 21,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": "2025-08-grow-ai-session-9-2"
+}

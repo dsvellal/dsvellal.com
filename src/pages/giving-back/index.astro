@@ -1,0 +1,273 @@
+---
+import Base from '../../layouts/Base.astro';
+import Figure from '../../components/Figure.astro';
+import QuoteBlock from '../../components/QuoteBlock.astro';
+import EraBand from '../../components/record/EraBand.astro';
+import TalkList from '../../components/talks/TalkList.astro';
+import { topics } from '../../data/talks';
+import { profile } from '../../data/profile';
+import { claim, sessionsByEra } from '../../data/claims';
+import { eras } from '../../lib/record';
+import { reachOf, talkEraHref, talks } from '../../lib/talks';
+
+const total = claim('talks-count');
+const people = claim('talks-attendees');
+const lede =
+  `Since 2010 I have taught more than ${total.value.replace('+', '')} sessions to over ${people.value.replace('+', '')} people, at every company I have worked for and at more than 25 colleges. ` +
+  'I teach what I practice: writing software that lasts, measuring delivery honestly, and using AI responsibly in regulated engineering.';
+
+const all = await talks();
+const bands = (await eras())
+  .filter((e) => e.lane === 'work')
+  .map((era) => {
+    const list = all.filter((t) => t.era === era.slug);
+    const reach = reachOf(list);
+    return {
+      era,
+      count: list.length,
+      headline: sessionsByEra.find((s) => s.slug === era.slug)?.highlight ?? era.headline,
+      note: reach.withFeedback ? `${reach.withFeedback} with participant feedback` : 'Feedback not kept',
+    };
+  })
+  .filter((b) => b.count > 0);
+const max = Math.max(...bands.map((b) => b.count), 1);
+const recent = all.slice(0, 6);
+---
+
+<Base
+  title="Giving back"
+  description="Talks, workshops, courses and judging by Datta Vellal since 2007, browsable by company, year and month, with participant feedback."
+>
+  <header class="wrap grid page-head">
+    <div class="intro">
+      <h1>Giving back</h1>
+      <p class="lede">
+        {lede}
+      </p>
+    </div>
+  </header>
+
+  <section class="wrap grid figs" aria-label="Teaching in numbers">
+    <div><Figure id="talks-count" size="large" showContext /></div>
+    <div><Figure id="talks-attendees" size="large" showContext /></div>
+  </section>
+
+  <section class="wrap eras" aria-labelledby="eras-title">
+    <hr class="rule rule--accent" />
+    <h2 id="eras-title">Across my career</h2>
+    <p class="muted section-note">Every talk, workshop and judging role I have a record of. Pick a company to go year by year.</p>
+    <div class="band-head label muted" aria-hidden="true">
+      <span>Company</span><span>Sessions</span><span>Highlight</span>
+    </div>
+    <ol class="band-list">
+      {
+        bands.map((b) => (
+          <li>
+            <EraBand
+              era={b.era}
+              max={max}
+              href={talkEraHref(b.era.slug)}
+              count={b.count}
+              unit="sessions"
+              headline={b.headline}
+              note={b.note}
+            />
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="wrap recent" aria-labelledby="recent-title">
+    <hr class="rule" />
+    <h2 id="recent-title">Most recent</h2>
+    <div class="recent-list">
+      <TalkList items={recent} label="Most recent sessions" />
+    </div>
+  </section>
+
+  <section class="wrap now" aria-labelledby="now-title">
+    <hr class="rule" />
+    <h2 id="now-title">Teaching AI now</h2>
+    <div class="grid now-figs">
+      <div><Figure id="ai-people-trained" size="medium" showContext /></div>
+      <div><Figure id="ai-sessions-rating" size="medium" showContext /></div>
+      <div><Figure id="pu-program" size="medium" showContext /></div>
+    </div>
+    <div class="now-quote">
+      <QuoteBlock id="q-analytics" size="large" />
+    </div>
+  </section>
+
+  <section class="wrap topics" aria-labelledby="topics-title">
+    <hr class="rule rule--accent" />
+    <h2 id="topics-title">Topics</h2>
+    <dl class="topic-list">
+      {
+        topics.map((t) => (
+          <div>
+            <dt>{t.title}</dt>
+            <dd class="muted">{t.body}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </section>
+
+  <section class="wrap invite-block" aria-labelledby="invite-title">
+    <hr class="rule" />
+    <h2 id="invite-title">Organizing an event?</h2>
+    <p class="muted">
+      Write to <a href={`mailto:${profile.email}`}>{profile.email}</a> with the audience, format and date. A short bio and
+      headshot are available on request.
+    </p>
+  </section>
+</Base>
+
+<style>
+  section {
+    margin-top: clamp(3.5rem, 8vw, 6rem);
+  }
+
+  .page-head {
+    margin-top: clamp(2rem, 6vw, 5rem);
+  }
+
+  .intro {
+    grid-column: 1 / -1;
+  }
+
+  h1 {
+    font-size: var(--step-4);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+  }
+
+  .lede {
+    max-width: 36rem;
+    margin-top: 1.5rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .figs {
+    row-gap: 2.5rem;
+  }
+
+  .figs > div {
+    grid-column: 1 / -1;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ink);
+  }
+
+  h2 {
+    font-size: var(--step-3);
+    font-weight: 800;
+  }
+
+  .topics h2 {
+    margin-top: 1.5rem;
+  }
+
+  .topic-list {
+    display: grid;
+    gap: 2rem var(--gutter);
+    margin: 2.5rem 0 0;
+  }
+
+  dt {
+    font-size: var(--step-1);
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+
+  dd {
+    max-width: 30rem;
+    margin: 0.5rem 0 0;
+  }
+
+  .invite-block h2 {
+    margin-top: 2rem;
+    font-size: var(--step-2);
+  }
+
+  .invite-block p {
+    max-width: 34rem;
+    margin-top: 1rem;
+  }
+
+  .eras h2,
+  .recent h2,
+  .now h2 {
+    margin-top: 1.5rem;
+  }
+
+  .section-note {
+    max-width: 34rem;
+    margin-top: 1rem;
+  }
+
+  .band-head {
+    display: none;
+  }
+
+  .band-list {
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+
+  .band-list > li {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .recent-list {
+    margin-top: 2rem;
+  }
+
+  .now-figs {
+    row-gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .now-figs > div {
+    grid-column: 1 / -1;
+  }
+
+  .now-quote {
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  @media (min-width: 48rem) {
+    .band-head {
+      display: grid;
+      grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 3fr);
+      gap: var(--gutter);
+      margin-top: 2rem;
+      padding-bottom: 0.75rem;
+    }
+
+    .band-head + .band-list {
+      margin-top: 0;
+    }
+
+    .now-figs > div {
+      grid-column: span 4;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .intro {
+      grid-column: 1 / span 9;
+    }
+
+    .figs > div {
+      grid-column: span 6;
+    }
+
+    .topic-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>

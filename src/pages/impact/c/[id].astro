@@ -1,0 +1,10 @@
+---
+import CapsuleView from '../../../components/record/CapsuleView.astro';
+import { capsulePaths } from '../../../lib/record';
+
+export const getStaticPaths = () => capsulePaths('work');
+
+const props = Astro.props as Parameters<typeof CapsuleView>[0];
+---
+
+<CapsuleView {...props} />

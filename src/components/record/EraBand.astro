@@ -1,14 +1,19 @@
 ---
-import type { Era } from '../../lib/record';
+import { eraHref, type Era } from '../../lib/record';
 
 interface Props {
   era: Era;
   max: number;
+  href?: string;
+  count?: number;
+  unit?: string;
+  headline?: string;
+  note?: string;
 }
-const { era, max } = Astro.props;
+const { era, max, href = eraHref(era), count = era.events, unit = 'events', headline = era.headline } = Astro.props;
 const live = era.status === 'live';
-const width = `${Math.max(4, (era.events / max) * 100)}%`;
-const href = `/record/${era.slug}`;
+const width = `${Math.max(4, (count / max) * 100)}%`;
+const note = Astro.props.note ?? (live ? `${era.public} documented in depth` : 'Coming soon');
 ---
 
 <article class:list={['band', { soon: !live }]}>
@@ -18,11 +23,11 @@ const href = `/record/${era.slug}`;
   </div>
   <div class="size">
     <span class="bar" aria-hidden="true"><span style={`width: ${width}`}></span></span>
-    <span class="count"><span class="figure">{era.events}</span> <span class="label">events</span></span>
+    <span class="count"><span class="figure">{count}</span> <span class="label">{unit}</span></span>
   </div>
   <div class="headline">
-    <p>{era.headline}</p>
-    <p class="label muted">{live ? `${era.public} documented in depth` : 'Coming soon'}</p>
+    <p>{headline}</p>
+    <p class="label muted">{note}</p>
   </div>
 </article>
 

@@ -1,0 +1,44 @@
+{
+  "id": "2025-03-addressing-technical-debt-with-codescene",
+  "session_no": 120,
+  "date": "2025-03-05",
+  "date_label": null,
+  "year": "2025",
+  "month": "03",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Hands-on workshop (2h)",
+  "confidence": "High",
+  "title": "Addressing technical debt with CodeScene",
+  "audience": "Philips University",
+  "summary": "A hands-on workshop (2h) I delivered for Philips University.",
+  "attendees": null,
+  "responses": 6,
+  "reach_note": null,
+  "rating": {
+    "value": 8.0,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 6,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.0,
+        "scale": 10,
+        "low": 5.0,
+        "high": 10.0,
+        "count": 6
+      }
+    ],
+    "themes": "Participants most often valued the presenter's delivery, hands-on demos and real examples. Suggestions centered on more time or a follow-up session.",
+    "written_answers": 8,
+    "quotes": [
+      "Showing the tool via examples was useful.",
+      "Appreciate the hands -on style of the material presentation!"
+    ],
+    "shared_form": false
+  },
+  "record_capsule": "2025-03-technical-debt-course-nps-83"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "2025-12-genai-workshop-day-2-prompt-engineering-dev-and-test-explora",
+  "session_no": 144,
+  "date": "2025-12-17",
+  "date_label": null,
+  "year": "2025",
+  "month": "12",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Hands-on workshop",
+  "confidence": "High",
+  "title": "GenAI workshop day 2: prompt engineering, dev and test exploration",
+  "audience": "Philips IGT Devices team, Plymouth MN, in person",
+  "summary": "A hands-on workshop I delivered for Philips IGT Devices team, Plymouth MN, in person.",
+  "attendees": null,
+  "responses": 13,
+  "reach_note": null,
+  "rating": {
+    "value": 8.9,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 13,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.92,
+        "scale": 10,
+        "low": 8.0,
+        "high": 10.0,
+        "count": 13
+      }
+    ],
+    "themes": "Suggestions centered on tool setup and access.",
+    "written_answers": 10,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": "2025-12-plymouth-genai-workshop"
+}

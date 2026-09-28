@@ -1,0 +1,106 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import Breadcrumbs from '../../../../components/record/Breadcrumbs.astro';
+import TalkList from '../../../../components/talks/TalkList.astro';
+import { eras, monthLong, monthShort, type Era } from '../../../../lib/record';
+import { talkEraHref, talkMonthHref, talks, talkYearHref, yearsOf, type Talk } from '../../../../lib/talks';
+
+export async function getStaticPaths() {
+  const all = await talks();
+  return (await eras())
+    .filter((e) => e.lane === 'work')
+    .flatMap((era) =>
+      yearsOf(all.filter((t) => t.era === era.slug)).flatMap((layer) =>
+        layer.months.map((m, i) => ({
+          params: { era: era.slug, year: layer.year, month: m.month },
+          props: {
+            era,
+            year: layer.year,
+            month: m.month,
+            items: m.talks,
+            newer: layer.months[i - 1]?.month,
+            older: layer.months[i + 1]?.month,
+          },
+        })),
+      ),
+    );
+}
+
+const { era, year, month, items, newer, older } = Astro.props as {
+  era: Era;
+  year: string;
+  month: string;
+  items: Talk[];
+  newer?: string;
+  older?: string;
+};
+const heading = `${monthLong(month)} ${year}`;
+---
+
+<Base
+  title={`Talks in ${heading} at ${era.label}`}
+  description={`${items.length} ${items.length === 1 ? 'session' : 'sessions'} in ${heading} at ${era.label}. ${items[0]?.title ?? ''}`}
+>
+  <header class="wrap head">
+    <Breadcrumbs
+      items={[
+        { label: 'Giving back', href: '/giving-back' },
+        { label: era.label, href: talkEraHref(era.slug) },
+        { label: year, href: talkYearHref(era.slug, year) },
+        { label: monthShort(month) },
+      ]}
+    />
+    <h1>{heading}</h1>
+    <p class="lede">{items.length} {items.length === 1 ? 'session' : 'sessions'} at {era.label}, most recent first.</p>
+  </header>
+
+  <section class="wrap block">
+    <h2 class="visually-hidden">Sessions, most recent first</h2>
+    <TalkList items={items} label={`Sessions in ${heading}`} showSummary />
+  </section>
+
+  <nav class="wrap pager" aria-label="Months">
+    {
+      newer ? (
+        <a href={talkMonthHref(era.slug, year, newer)}>Newer: {monthLong(newer)}</a>
+      ) : (
+        <a href={talkYearHref(era.slug, year)}>Back to {year}</a>
+      )
+    }
+    {older && <a href={talkMonthHref(era.slug, year, older)}>Older: {monthLong(older)}</a>}
+  </nav>
+</Base>
+
+<style>
+  .head {
+    padding-top: clamp(2rem, 5vw, 4rem);
+  }
+
+  h1 {
+    margin-top: 1.5rem;
+    font-size: var(--step-4);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+  }
+
+  .lede {
+    max-width: 44rem;
+    margin-top: 1.25rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .block {
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: clamp(3rem, 7vw, 5rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ink);
+    font-weight: 700;
+  }
+</style>

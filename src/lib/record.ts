@@ -61,8 +61,44 @@ export async function eras(): Promise<Era[]> {
 
 export const newestFirst = (list: Capsule[]) => [...list].sort(byNewestDate);
 
+export const isBeyond = (x: { lane: string }) => x.lane === 'beyond';
+export const section = (x: { lane: string }) =>
+  isBeyond(x) ? { label: 'Beyond work', href: '/beyond-work' } : { label: 'Impact', href: '/impact' };
+
+export const eraHref = (era: Era) => (isBeyond(era) ? '/beyond-work' : `/impact/${era.slug}`);
+export const yearHref = (era: Era, year: string) => `${eraHref(era)}/${year}`;
+export const monthHref = (era: Era, year: string, month: string) => `${yearHref(era, year)}/${month}`;
+
 export function capsuleHref(c: Capsule): string | undefined {
-  return c.tier === 'public' ? `/record/c/${c.id}` : undefined;
+  if (c.tier !== 'public') return undefined;
+  return `${isBeyond(c) ? '/beyond-work' : '/impact'}/c/${c.id}`;
+}
+
+/** Public capsule page, or the month (or year) page that lists a line-tier capsule. */
+export function capsuleOrListHref(c: Capsule): string {
+  const base = isBeyond(c) ? '/beyond-work' : `/impact/${c.era}`;
+  return capsuleHref(c) ?? (c.month ? `${base}/${c.year}/${c.month}` : `${base}/${c.year}`);
+}
+
+/** Static paths for public capsule pages in one lane, with newer and older neighbours in the same era. */
+export async function capsulePaths(lane: 'work' | 'beyond') {
+  const all = await capsules();
+  const eraList = await eras();
+  return all
+    .filter((c) => c.tier === 'public' && c.lane === lane)
+    .map((c) => {
+      const siblings = all.filter((s) => s.era === c.era && s.tier === 'public');
+      const i = siblings.findIndex((s) => s.id === c.id);
+      return {
+        params: { id: c.id },
+        props: {
+          capsule: c,
+          eraLabel: eraList.find((e) => e.slug === c.era)?.label ?? c.company,
+          prev: siblings[i - 1],
+          next: siblings[i + 1],
+        },
+      };
+    });
 }
 
 /** Split "1,150 TPS fraud check at launch" into a big value and its label. */

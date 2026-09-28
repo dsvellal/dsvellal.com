@@ -1,0 +1,25 @@
+{
+  "id": "2026-07-coding-with-github-copilot",
+  "session_no": 160,
+  "date": "2026-07",
+  "date_label": null,
+  "year": "2026",
+  "month": "07",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Session",
+  "confidence": "High",
+  "title": "Coding with GitHub Copilot",
+  "audience": "Philips internal community (Elevate)",
+  "summary": "A session I delivered for Philips internal community (Elevate), with about 39 people.",
+  "attendees": "39",
+  "responses": null,
+  "reach_note": null,
+  "rating": {
+    "value": 9.1,
+    "scale": 10
+  },
+  "feedback": null,
+  "record_capsule": null
+}

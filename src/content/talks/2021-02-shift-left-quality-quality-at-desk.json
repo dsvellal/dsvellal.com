@@ -1,0 +1,41 @@
+{
+  "id": "2021-02-shift-left-quality-quality-at-desk",
+  "session_no": 99,
+  "date": "2021-02-10",
+  "date_label": null,
+  "year": "2021",
+  "month": "02",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Session",
+  "confidence": "High",
+  "title": "Shift-left quality (quality at desk)",
+  "audience": "Philips software teams",
+  "summary": "A session I delivered for Philips software teams.",
+  "attendees": null,
+  "responses": 5,
+  "reach_note": null,
+  "rating": {
+    "value": 9.6,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 5,
+    "ratings": [
+      {
+        "label": "Overall rating",
+        "average": 9.6,
+        "scale": 10,
+        "low": 9.0,
+        "high": 10.0,
+        "count": 5
+      }
+    ],
+    "themes": "",
+    "written_answers": 0,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

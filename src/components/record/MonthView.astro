@@ -1,0 +1,78 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import CapsuleList from './CapsuleList.astro';
+import { capsules, eraHref, isBeyond, monthHref, monthLong, monthShort, newestFirst, section, yearHref, type Era } from '../../lib/record';
+
+interface Props {
+  era: Era;
+  layer: Era['year_layers'][number];
+  month: string;
+}
+const { era, layer, month } = Astro.props;
+const items = newestFirst((await capsules()).filter((c) => c.era === era.slug && c.year === layer.year && c.month === month));
+const lead = items.find((c) => c.tier === 'public') ?? items[0];
+const idx = layer.months.indexOf(month);
+const newer = layer.months[idx - 1];
+const older = layer.months[idx + 1];
+const heading = `${monthLong(month)} ${layer.year}`;
+const home = section(era);
+const crumbs = [
+  { label: home.label, href: home.href },
+  ...(isBeyond(era) ? [] : [{ label: era.label, href: eraHref(era) }]),
+  { label: layer.year, href: yearHref(era, layer.year) },
+  { label: monthShort(month) },
+];
+---
+
+<Base title={`${heading} at ${era.label}`} description={`${items.length} ${items.length === 1 ? 'event' : 'events'} in ${heading} at ${era.label}. ${lead?.title ?? ''}`}>
+  <header class="wrap head">
+    <Breadcrumbs items={crumbs} />
+    <h1>{heading}</h1>
+    {lead && <p class="lede">{lead.title}.</p>}
+  </header>
+
+  <section class="wrap block">
+    <h2 class="visually-hidden">Events, most recent first</h2>
+    <CapsuleList items={items} filters label={`Events in ${heading}`} />
+  </section>
+
+  <nav class="wrap pager" aria-label="Months">
+    {newer ? <a href={monthHref(era, layer.year, newer)}>Newer: {monthLong(newer)}</a> : <a href={yearHref(era, layer.year)}>Back to {layer.year}</a>}
+    {older && <a href={monthHref(era, layer.year, older)}>Older: {monthLong(older)}</a>}
+  </nav>
+</Base>
+
+<style>
+  .head {
+    padding-top: clamp(2rem, 5vw, 4rem);
+  }
+
+  h1 {
+    margin-top: 1.5rem;
+    font-size: var(--step-4);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+  }
+
+  .lede {
+    max-width: 44rem;
+    margin-top: 1.25rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .block {
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: clamp(3rem, 7vw, 5rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ink);
+    font-weight: 700;
+  }
+</style>

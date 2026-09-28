@@ -1,0 +1,255 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import NumbersStrip from './NumbersStrip.astro';
+import RecordQuote from './RecordQuote.astro';
+import CapsuleList from './CapsuleList.astro';
+import {
+  capsuleHref,
+  capsules,
+  eraHref,
+  eras,
+  isBeyond,
+  monthHref,
+  monthLong,
+  newestFirst,
+  section,
+  yearHref,
+  type Era,
+} from '../../lib/record';
+import { talks, talkYearHref } from '../../lib/talks';
+
+type Layer = Era['year_layers'][number];
+interface Props {
+  era: Era;
+  layer: Layer;
+}
+const { era, layer } = Astro.props;
+const all = (await capsules()).filter((c) => c.era === era.slug && c.year === layer.year);
+const byId = new Map(all.map((c) => [c.id, c]));
+const top = newestFirst(layer.top.map((id) => byId.get(id)).filter((c) => c !== undefined));
+const also = newestFirst(all.filter((c) => !layer.top.includes(c.id)));
+const monthCounts = layer.months.map((m) => ({ m, n: all.filter((c) => c.month === m).length }));
+const idx = era.year_layers.findIndex((y) => y.year === layer.year);
+const newer = era.year_layers[idx - 1];
+const older = era.year_layers[idx + 1];
+const sameYear = (await eras()).filter(
+  (e) => e.slug !== era.slug && e.lane !== era.lane && e.year_layers.some((y) => y.year === layer.year),
+);
+const crossLinks = sameYear.map((e) => ({
+  href: yearHref(e, layer.year),
+  label: isBeyond(e) ? `Beyond work in ${layer.year}` : `${e.label} in ${layer.year}`,
+}));
+const talkCount = (await talks()).filter((t) => t.era === era.slug && t.year === layer.year).length;
+if (talkCount > 0) {
+  crossLinks.push({ href: talkYearHref(era.slug, layer.year), label: `${talkCount} talks in ${layer.year}` });
+}
+const home = section(era);
+const crumbs = [
+  { label: home.label, href: home.href },
+  ...(isBeyond(era) ? [] : [{ label: era.label, href: eraHref(era) }]),
+  { label: layer.year },
+];
+---
+
+<Base title={`${layer.year} at ${era.label}`} description={layer.narrative || `${layer.count} events in ${layer.year} at ${era.label}.`}>
+  <header class="wrap head">
+    <Breadcrumbs items={crumbs} />
+    <h1>{layer.year}</h1>
+    {layer.narrative && <p class="lede">{layer.narrative}</p>}
+    {
+      crossLinks.length > 0 && (
+        <ul class="cross" aria-label="Same year elsewhere">
+          {crossLinks.map((l) => (
+            <li>
+              <a href={l.href}>{l.label}</a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </header>
+
+  <section class="wrap block">
+    <h2 class="visually-hidden">In numbers</h2>
+    <NumbersStrip items={layer.numbers} />
+  </section>
+
+  {
+    top.length > 0 && (
+      <section class="wrap block" aria-labelledby="top-title">
+        <h2 id="top-title">What mattered most</h2>
+        <ol class="top">
+          {top.map((c, i) => (
+            <li>
+              <span class="figure num">{String(i + 1).padStart(2, '0')}</span>
+              <div>
+                <h3>
+                  <a href={capsuleHref(c)}>{c.title}</a>
+                </h3>
+                {c.summary && <p class="muted">{c.summary}</p>}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )
+  }
+
+  {
+    layer.quote && (
+      <section class="wrap block voice">
+        <h2 class="visually-hidden">What people said</h2>
+        <RecordQuote quote={layer.quote} size="large" link />
+      </section>
+    )
+  }
+
+  <section class="wrap grid block" aria-labelledby="months-title">
+    <h2 id="months-title" class="side">By month</h2>
+    <ul class="months main">
+      {
+        monthCounts.map(({ m, n }) => (
+          <li>
+            <a href={monthHref(era, layer.year, m)}>{monthLong(m)}</a>
+            <span class="label muted">
+              {n} {n === 1 ? 'event' : 'events'}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  {
+    also.length > 0 && (
+      <section class="wrap block" aria-labelledby="also-title">
+        <h2 id="also-title">Also in {layer.year}</h2>
+        <CapsuleList items={also} filters label={`Also in ${layer.year}`} showSummary={false} />
+      </section>
+    )
+  }
+
+  <nav class="wrap pager" aria-label="Years">
+    {newer ? <a href={yearHref(era, newer.year)}>Newer: {newer.year}</a> : <span />}
+    {older && <a href={yearHref(era, older.year)}>Older: {older.year}</a>}
+  </nav>
+</Base>
+
+<style>
+  .head {
+    padding-top: clamp(2rem, 5vw, 4rem);
+  }
+
+  .cross {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: var(--step--1);
+    font-weight: 700;
+  }
+
+  h1 {
+    margin-top: 1.5rem;
+    font-size: var(--step-5);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+  }
+
+  .lede {
+    max-width: 44rem;
+    margin-top: 1.5rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .block {
+    margin-top: clamp(3rem, 7vw, 5rem);
+  }
+
+  h2 {
+    font-size: var(--step-2);
+    margin-bottom: 1.25rem;
+  }
+
+  .top {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+
+  .top li {
+    display: grid;
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    gap: var(--gutter);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .num {
+    font-size: var(--step-2);
+    color: var(--accent);
+  }
+
+  .top h3 {
+    font-size: var(--step-1);
+  }
+
+  .top p {
+    max-width: 44rem;
+    margin-top: 0.5rem;
+  }
+
+  .voice {
+    padding-top: 2rem;
+    border-top: 4px solid var(--accent);
+  }
+
+  .side,
+  .main {
+    grid-column: 1 / -1;
+  }
+
+  .months {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 0 var(--gutter);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+
+  .months li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule);
+    font-weight: 700;
+  }
+
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: clamp(3rem, 7vw, 5rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ink);
+    font-weight: 700;
+  }
+
+  @media (min-width: 48rem) {
+    .side {
+      grid-column: 1 / span 3;
+    }
+
+    .main {
+      grid-column: 4 / span 9;
+    }
+  }
+</style>

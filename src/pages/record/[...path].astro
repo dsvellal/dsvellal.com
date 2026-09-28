@@ -1,0 +1,33 @@
+---
+import Redirect from '../../components/Redirect.astro';
+import { capsuleHref, capsules, eraHref, eras, monthHref, yearHref } from '../../lib/record';
+
+/** Old /record URLs, kept as redirects to Impact and Beyond work. */
+export async function getStaticPaths() {
+  const eraList = await eras();
+  const paths: { params: { path: string | undefined }; props: { to: string } }[] = [
+    { params: { path: undefined }, props: { to: '/impact' } },
+  ];
+  for (const era of eraList) {
+    paths.push({ params: { path: era.slug }, props: { to: eraHref(era) } });
+    for (const layer of era.year_layers) {
+      paths.push({ params: { path: `${era.slug}/${layer.year}` }, props: { to: yearHref(era, layer.year) } });
+      for (const month of layer.months) {
+        paths.push({
+          params: { path: `${era.slug}/${layer.year}/${month}` },
+          props: { to: monthHref(era, layer.year, month) },
+        });
+      }
+    }
+  }
+  for (const c of await capsules()) {
+    const to = capsuleHref(c);
+    if (to) paths.push({ params: { path: `c/${c.id}` }, props: { to } });
+  }
+  return paths;
+}
+
+const { to } = Astro.props as { to: string };
+---
+
+<Redirect to={to} />

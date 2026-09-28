@@ -1,0 +1,60 @@
+{
+  "id": "2019-09-clean-code-clean-test-workshop-day-2",
+  "session_no": 73,
+  "date": "2019-09-26",
+  "date_label": null,
+  "year": "2019",
+  "month": "09",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "Clean code, clean test workshop, day 2",
+  "audience": "Philips software teams",
+  "summary": "A workshop I delivered for Philips software teams.",
+  "attendees": null,
+  "responses": null,
+  "reach_note": null,
+  "rating": {
+    "value": 8.7,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 65,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.68,
+        "scale": 10,
+        "low": 4.0,
+        "high": 10.0,
+        "count": 65
+      },
+      {
+        "label": "Effectiveness",
+        "average": 8.35,
+        "scale": 10,
+        "low": 3.0,
+        "high": 10.0,
+        "count": 65
+      },
+      {
+        "label": "Level of engagement with the audience",
+        "average": 4.64,
+        "scale": 5,
+        "low": 3.0,
+        "high": 5.0,
+        "count": 47
+      }
+    ],
+    "themes": "Participants most often valued hands-on demos, the interaction and clear explanations. Suggestions centered on more hands-on practice and more time or a follow-up session.",
+    "written_answers": 111,
+    "quotes": [
+      "Practical session , Brief of the concepts , Q & A.",
+      "The facilitators were well prepared and had a clear agenda on the content to be present. Hence the workshop was very interesting from start to the end."
+    ],
+    "shared_form": true
+  },
+  "record_capsule": null
+}

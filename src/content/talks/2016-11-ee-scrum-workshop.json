@@ -1,0 +1,25 @@
+{
+  "id": "2016-11-ee-scrum-workshop",
+  "session_no": 41,
+  "date": "2016-11-25",
+  "date_label": null,
+  "year": "2016",
+  "month": "11",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "EE Scrum Workshop",
+  "audience": "Amazon engineers, India",
+  "summary": "A workshop I delivered for Amazon engineers, India, with about 28 people.",
+  "attendees": "28",
+  "responses": null,
+  "reach_note": null,
+  "rating": {
+    "value": 4.12,
+    "scale": 5
+  },
+  "feedback": null,
+  "record_capsule": "2016-11-scrum-workshop-4-12"
+}

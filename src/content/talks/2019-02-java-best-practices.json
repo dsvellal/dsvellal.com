@@ -1,0 +1,29 @@
+{
+  "id": "2019-02-java-best-practices",
+  "session_no": 53,
+  "date": "2019-02-01",
+  "date_label": null,
+  "year": "2019",
+  "month": "02",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Session",
+  "confidence": "High",
+  "title": "Java best practices",
+  "audience": "Philips software teams, Bangalore",
+  "summary": "A session I delivered for Philips software teams, Bangalore.",
+  "attendees": null,
+  "responses": 13,
+  "reach_note": null,
+  "rating": null,
+  "feedback": {
+    "responses": 13,
+    "ratings": [],
+    "themes": "",
+    "written_answers": 13,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": "2019-02-java-best-practices-session"
+}

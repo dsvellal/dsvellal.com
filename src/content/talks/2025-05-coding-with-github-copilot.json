@@ -1,0 +1,44 @@
+{
+  "id": "2025-05-coding-with-github-copilot",
+  "session_no": 125,
+  "date": "2025-05-06",
+  "date_label": null,
+  "year": "2025",
+  "month": "05",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Training",
+  "confidence": "High",
+  "title": "Coding with GitHub Copilot",
+  "audience": "Philips University",
+  "summary": "A training I delivered for Philips University.",
+  "attendees": null,
+  "responses": 8,
+  "reach_note": null,
+  "rating": {
+    "value": 9.0,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 8,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 9.0,
+        "scale": 10,
+        "low": 7.0,
+        "high": 10.0,
+        "count": 8
+      }
+    ],
+    "themes": "",
+    "written_answers": 9,
+    "quotes": [
+      "I understood the effective use of prompts and references. How to ask Copilot to give the prompts.",
+      "Informative and relatable to the team work."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

@@ -1,0 +1,25 @@
+{
+  "id": "2024-09-github-foundational-training-course",
+  "session_no": 117,
+  "date": "2024-09-27",
+  "date_label": null,
+  "year": "2024",
+  "month": "09",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Training",
+  "confidence": "High",
+  "title": "GitHub foundational training course",
+  "audience": "Philips OHC software teams",
+  "summary": "A training I delivered for Philips OHC software teams.",
+  "attendees": null,
+  "responses": 5,
+  "reach_note": null,
+  "rating": {
+    "value": 8.6,
+    "scale": 10
+  },
+  "feedback": null,
+  "record_capsule": null
+}

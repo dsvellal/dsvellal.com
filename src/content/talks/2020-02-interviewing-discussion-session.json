@@ -1,0 +1,32 @@
+{
+  "id": "2020-02-interviewing-discussion-session",
+  "session_no": 79,
+  "date": "2020-02",
+  "date_label": null,
+  "year": "2020",
+  "month": "02",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Session",
+  "confidence": "High",
+  "title": "Interviewing: discussion session",
+  "audience": "Philips interviewers",
+  "summary": "A session I delivered for Philips interviewers.",
+  "attendees": null,
+  "responses": 9,
+  "reach_note": null,
+  "rating": {
+    "value": 9.7,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 9,
+    "ratings": [],
+    "themes": "",
+    "written_answers": 0,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

@@ -1,0 +1,72 @@
+---
+import { ratingText, talkDate, talkHref, type Talk } from '../../lib/talks';
+
+interface Props {
+  items: Talk[];
+  label: string;
+  showSummary?: boolean;
+}
+const { items, label, showSummary = false } = Astro.props;
+---
+
+<ol class="talk-list" aria-label={label}>
+  {
+    items.map((t) => (
+      <li>
+        <span class="when label muted">{talkDate(t)}</span>
+        <span class="what">
+          <a href={talkHref(t)}>{t.title}</a>
+          <span class="meta muted">
+            {t.format}, {t.audience}
+          </span>
+          {showSummary && t.feedback?.themes && <span class="summary muted">{t.feedback.themes}</span>}
+        </span>
+        <span class="score label muted">{t.rating ? ratingText(t.rating) : t.feedback ? `${t.feedback.responses} responses` : ''}</span>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .talk-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.35rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .what {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .meta,
+  .summary {
+    max-width: 44rem;
+    font-size: var(--step--1);
+    font-weight: 400;
+  }
+
+  @media (min-width: 48rem) {
+    li {
+      grid-template-columns: 9rem minmax(0, 1fr) 8rem;
+      column-gap: var(--gutter);
+      align-items: baseline;
+    }
+
+    .score {
+      text-align: right;
+    }
+  }
+</style>

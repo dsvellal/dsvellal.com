@@ -1,0 +1,57 @@
+{
+  "id": "2019-07-unit-testing-workshop-half-day",
+  "session_no": 59,
+  "date": "2019-07-04",
+  "date_label": null,
+  "year": "2019",
+  "month": "07",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "Unit testing workshop (half day)",
+  "audience": "Philips software teams, nominations",
+  "summary": "A workshop I delivered for Philips software teams, nominations.",
+  "attendees": null,
+  "responses": 20,
+  "reach_note": null,
+  "rating": null,
+  "feedback": {
+    "responses": 20,
+    "ratings": [
+      {
+        "label": "Overall rating",
+        "average": 8.9,
+        "scale": 10,
+        "low": 7.0,
+        "high": 10.0,
+        "count": 20
+      },
+      {
+        "label": "Capturing attention",
+        "average": 4.5,
+        "scale": 5,
+        "low": 3.0,
+        "high": 5.0,
+        "count": 20
+      },
+      {
+        "label": "Audience engagement",
+        "average": 4.65,
+        "scale": 5,
+        "low": 4.0,
+        "high": 5.0,
+        "count": 20
+      }
+    ],
+    "themes": "Participants most often valued the presenter's delivery and depth of knowledge.",
+    "written_answers": 28,
+    "quotes": [
+      "Thank you for your insights Datta. Will definitely we taking away certain concepts like 'Mutation Testing' from this session.",
+      "Datta has great crisp code. Simon has huge understanding."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": "2019-07-unit-testing-workshop"
+}

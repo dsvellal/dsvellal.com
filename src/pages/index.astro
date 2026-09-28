@@ -91,7 +91,7 @@ const jsonLd = {
         {recentSessionsByEra.map((e) => (
           <li>
             <span class="era-mini-name">
-              {e.employer} <span class="muted">{e.years}</span>
+              <a href={`/giving-back/${e.slug}`}>{e.employer}</a> <span class="muted">{e.years}</span>
             </span>
             <span class="era-mini-bar" aria-hidden="true">
               <span style={`width: ${(e.sessions / maxEraSessions) * 100}%`}></span>
@@ -102,7 +102,7 @@ const jsonLd = {
       </ol>
     </div>
     <div class="speaking-list">
-      <h2 id="speaking-title" class="section-title">Speaking and teaching</h2>
+      <h2 id="speaking-title" class="section-title">Giving back</h2>
       <ul>
         {
           featuredTalks.map((t) => (
@@ -114,7 +114,7 @@ const jsonLd = {
           ))
         }
       </ul>
-      <p><a href="/speaking">All talks and topics</a></p>
+      <p><a href="/giving-back">All talks, by company and year</a></p>
     </div>
   </section>
 

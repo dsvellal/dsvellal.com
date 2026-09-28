@@ -1,0 +1,44 @@
+{
+  "id": "2025-07-coding-with-github-copilot",
+  "session_no": 135,
+  "date": "2025-07-10",
+  "date_label": null,
+  "year": "2025",
+  "month": "07",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Training",
+  "confidence": "High",
+  "title": "Coding with GitHub Copilot",
+  "audience": "Philips University",
+  "summary": "A training I delivered for Philips University.",
+  "attendees": null,
+  "responses": 8,
+  "reach_note": null,
+  "rating": {
+    "value": 8.9,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 8,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.88,
+        "scale": 10,
+        "low": 8.0,
+        "high": 10.0,
+        "count": 8
+      }
+    ],
+    "themes": "Participants most often valued relevance to daily work.",
+    "written_answers": 7,
+    "quotes": [
+      "Very useful session, contents were arranged systematically.",
+      "The session made me much more informed about Copilot."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

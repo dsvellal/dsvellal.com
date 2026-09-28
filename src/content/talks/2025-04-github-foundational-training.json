@@ -1,0 +1,43 @@
+{
+  "id": "2025-04-github-foundational-training",
+  "session_no": 123,
+  "date": "2025-04-17",
+  "date_label": null,
+  "year": "2025",
+  "month": "04",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Training",
+  "confidence": "High",
+  "title": "GitHub Foundational Training",
+  "audience": "Philips University",
+  "summary": "A training I delivered for Philips University.",
+  "attendees": null,
+  "responses": 10,
+  "reach_note": null,
+  "rating": {
+    "value": 9.6,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 10,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 9.6,
+        "scale": 10,
+        "low": 9.0,
+        "high": 10.0,
+        "count": 10
+      }
+    ],
+    "themes": "Participants most often valued clear explanations and hands-on demos.",
+    "written_answers": 7,
+    "quotes": [
+      "Basic training and also practical training went well."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

@@ -1,0 +1,44 @@
+{
+  "id": "2019-04-conducting-interviews-knowledge-sharing-session",
+  "session_no": 56,
+  "date": "2019-04-15",
+  "date_label": null,
+  "year": "2019",
+  "month": "04",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Session",
+  "confidence": "High",
+  "title": "Conducting interviews: knowledge-sharing session",
+  "audience": "Philips interviewers",
+  "summary": "A session I delivered for Philips interviewers.",
+  "attendees": null,
+  "responses": 8,
+  "reach_note": null,
+  "rating": {
+    "value": 9.0,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 8,
+    "ratings": [
+      {
+        "label": "Overall rating",
+        "average": 9.0,
+        "scale": 10,
+        "low": 8.0,
+        "high": 10.0,
+        "count": 8
+      }
+    ],
+    "themes": "Participants most often valued clear explanations, depth of knowledge and the presenter's delivery.",
+    "written_answers": 7,
+    "quotes": [
+      "Session was interactive, the approach followed for capturing the feedback was more detailed. it was a good session.",
+      "Very good session with clear details on steps or approach."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

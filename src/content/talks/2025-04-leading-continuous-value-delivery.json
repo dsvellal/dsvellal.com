@@ -1,0 +1,44 @@
+{
+  "id": "2025-04-leading-continuous-value-delivery",
+  "session_no": 124,
+  "date": "2025-04-29",
+  "date_label": null,
+  "year": "2025",
+  "month": "04",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "Leading Continuous Value Delivery",
+  "audience": "Philips University",
+  "summary": "A workshop I delivered for Philips University.",
+  "attendees": null,
+  "responses": 11,
+  "reach_note": null,
+  "rating": {
+    "value": 9.2,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 11,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 9.18,
+        "scale": 10,
+        "low": 8.0,
+        "high": 10.0,
+        "count": 11
+      }
+    ],
+    "themes": "",
+    "written_answers": 9,
+    "quotes": [
+      "Today's session clearly explained how continuous value delivery enables faster, more customer-focused outcomes by aligning development efforts with real-time feedback and business priorities.",
+      "Now i have understood the concepts of CVD now i am confident enough to apply the learnings in my projects."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": "2025-04-leading-cvd-course"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "2020-07-microservices-reliability-and-design-thinking",
+  "session_no": 84,
+  "date": "2020-07-16",
+  "date_label": null,
+  "year": "2020",
+  "month": "07",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Session",
+  "confidence": "High",
+  "title": "Microservices, reliability and design thinking",
+  "audience": "Philips software team",
+  "summary": "A session I delivered for Philips software team.",
+  "attendees": null,
+  "responses": 7,
+  "reach_note": null,
+  "rating": {
+    "value": 8.7,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 7,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.71,
+        "scale": 10,
+        "low": 5.0,
+        "high": 10.0,
+        "count": 7
+      }
+    ],
+    "themes": "Participants most often valued depth of knowledge and the interaction. Suggestions centered on more time or a follow-up session.",
+    "written_answers": 15,
+    "quotes": [
+      "The concepts were explained in a interactive way from the scratch which helped even the juniors to get attention\\involvement."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

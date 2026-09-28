@@ -17,6 +17,6 @@ npm run dev
 
 ## Where the content comes from
 
-The Impact Record pages (`src/content/record/` and `src/content/record-summaries/`) are generated from a private archive of career records. A publishing script copies the whole tree here from a private repository, and each publish replaces everything, so changes made directly in this repository will be lost. Corrections go into the archive first.
+The Impact, Beyond work and Giving back pages (`src/content/record/`, `src/content/record-summaries/` and `src/content/talks/`) are generated from a private archive of career records. A publishing script copies the whole tree here from a private repository, and each publish replaces everything, so changes made directly in this repository will be lost. Corrections go into the archive first.
 
 The writing and images are not licensed for reuse.

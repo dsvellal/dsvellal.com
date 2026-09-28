@@ -1,0 +1,41 @@
+{
+  "id": "2021-12-interviewing-skills-primer-session-1",
+  "session_no": 106,
+  "date": "2021-12-12",
+  "date_label": null,
+  "year": "2021",
+  "month": "12",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Training",
+  "confidence": "High",
+  "title": "Interviewing skills primer, session 1",
+  "audience": "Philips interviewers",
+  "summary": "A training I delivered for Philips interviewers.",
+  "attendees": null,
+  "responses": 2,
+  "reach_note": null,
+  "rating": {
+    "value": 8.5,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 2,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.5,
+        "scale": 10,
+        "low": 7.0,
+        "high": 10.0,
+        "count": 2
+      }
+    ],
+    "themes": "",
+    "written_answers": 0,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": "2021-12-interviewing-skills-primer"
+}

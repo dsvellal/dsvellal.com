@@ -1,0 +1,85 @@
+---
+import Base from '../../layouts/Base.astro';
+import EraBand from '../../components/record/EraBand.astro';
+import { eras } from '../../lib/record';
+
+const work = (await eras()).filter((e) => e.lane === 'work');
+const max = Math.max(...work.map((e) => e.events), 1);
+const totalEvents = work.reduce((n, e) => n + e.events, 0);
+---
+
+<Base
+  title="Impact"
+  description="Every contribution at work since 2007, documented with sources and feedback. Browse by company, year and month."
+>
+  <header class="wrap head">
+    <h1>Impact</h1>
+    <p class="lede">
+      {totalEvents} events since 2007, each documented with its date, result and what people said. Pick a company to
+      go year by year.
+    </p>
+  </header>
+
+  <section class="wrap bands" aria-labelledby="bands-title">
+    <h2 id="bands-title" class="visually-hidden">Career eras</h2>
+    <div class="band-head label muted" aria-hidden="true">
+      <span>Company</span><span>Events</span><span>Headline</span>
+    </div>
+    <ol class="band-list">
+      {
+        work.map((e) => (
+          <li>
+            <EraBand era={e} max={max} />
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+</Base>
+
+<style>
+  .head {
+    padding-top: clamp(2rem, 5vw, 4rem);
+  }
+
+  h1 {
+    font-size: var(--step-5);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+  }
+
+  .lede {
+    max-width: 38rem;
+    margin-top: 1.5rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .bands {
+    margin-top: clamp(3rem, 7vw, 5rem);
+  }
+
+  .band-head {
+    display: none;
+  }
+
+  .band-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+
+  .band-list > li {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  @media (min-width: 48rem) {
+    .band-head {
+      display: grid;
+      grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 3fr);
+      gap: var(--gutter);
+      padding-bottom: 0.75rem;
+    }
+  }
+</style>

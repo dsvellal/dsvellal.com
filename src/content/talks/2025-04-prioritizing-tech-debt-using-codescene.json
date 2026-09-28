@@ -1,0 +1,44 @@
+{
+  "id": "2025-04-prioritizing-tech-debt-using-codescene",
+  "session_no": 122,
+  "date": "2025-04-15",
+  "date_label": null,
+  "year": "2025",
+  "month": "04",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "Prioritizing tech debt using CodeScene",
+  "audience": "Philips University",
+  "summary": "A workshop I delivered for Philips University.",
+  "attendees": null,
+  "responses": 6,
+  "reach_note": null,
+  "rating": {
+    "value": 9.0,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 6,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 9.0,
+        "scale": 10,
+        "low": 7.0,
+        "high": 10.0,
+        "count": 6
+      }
+    ],
+    "themes": "Participants most often valued the presenter's delivery, depth of knowledge and hands-on demos.",
+    "written_answers": 3,
+    "quotes": [
+      "Dattatreya gave a good, structured overview and some hands-on demos.",
+      "Really liked the presenter knowledge on the topic. It was detailed explanation."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

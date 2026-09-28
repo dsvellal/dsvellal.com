@@ -1,0 +1,25 @@
+{
+  "id": "2018-02-ee-product-ownership-workshop",
+  "session_no": 47,
+  "date": "2018-02-16",
+  "date_label": null,
+  "year": "2018",
+  "month": "02",
+  "era": "amazon-india",
+  "company": "Amazon",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "EE Product Ownership Workshop",
+  "audience": "Amazon engineers, India",
+  "summary": "A workshop I delivered for Amazon engineers, India, with about 10 people.",
+  "attendees": "~10",
+  "responses": null,
+  "reach_note": null,
+  "rating": {
+    "value": 3.9,
+    "scale": 5
+  },
+  "feedback": null,
+  "record_capsule": "2018-02-product-ownership-workshop"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "2025-06-coding-with-github-copilot-copilot-class-for-a-philips-appli",
+  "session_no": 130,
+  "date": "2025-06-02",
+  "date_label": null,
+  "year": "2025",
+  "month": "06",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Training",
+  "confidence": "High",
+  "title": "Coding with GitHub Copilot (Copilot class for a Philips application team)",
+  "audience": "Philips University",
+  "summary": "A training I delivered for Philips University, with about 34 people.",
+  "attendees": "34",
+  "responses": 12,
+  "reach_note": null,
+  "rating": {
+    "value": 9.1,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 12,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 9.08,
+        "scale": 10,
+        "low": 7.0,
+        "high": 10.0,
+        "count": 12
+      }
+    ],
+    "themes": "Participants most often valued depth of knowledge and relevance to daily work.",
+    "written_answers": 8,
+    "quotes": [
+      "It was a good and useful start for learning copilot as a beginner."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": "2025-06-copilot-train-the-trainer"
+}

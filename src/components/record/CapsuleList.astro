@@ -1,5 +1,6 @@
 ---
 import { capsuleHref, formatDate, THEME_LABELS, type Capsule } from '../../lib/record';
+import { talkHref, talksByRecord } from '../../lib/talks';
 
 interface Props {
   items: Capsule[];
@@ -11,6 +12,14 @@ const { items, filters = false, showSummary = true, label } = Astro.props;
 const types = [...new Set(items.map((c) => c.type))].sort();
 const themes = [...new Set(items.flatMap((c) => c.themes))].sort();
 const listId = `list-${label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+const linkedTalks = await talksByRecord();
+// Line-tier talk events have no capsule page, so they link to their Giving back talk page instead.
+const hrefFor = (c: Capsule) => {
+  const own = capsuleHref(c);
+  if (own) return own;
+  const talk = linkedTalks.get(c.id);
+  return talk?.length === 1 ? talkHref(talk[0]) : undefined;
+};
 ---
 
 <div class="capsule-list" data-capsule-list>
@@ -38,7 +47,7 @@ const listId = `list-${label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
   <ol id={listId} aria-label={label}>
     {
       items.map((c) => {
-        const href = capsuleHref(c);
+        const href = hrefFor(c);
         return (
           <li data-type={c.type} data-themes={c.themes.join(' ')} class:list={{ line: !href }}>
             <span class="when label muted">{formatDate(c.date)}</span>

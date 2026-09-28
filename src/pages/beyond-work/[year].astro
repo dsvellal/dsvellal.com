@@ -1,0 +1,13 @@
+---
+import YearView from '../../components/record/YearView.astro';
+import { eras, type Era } from '../../lib/record';
+
+export async function getStaticPaths() {
+  const era = (await eras()).find((e) => e.lane === 'beyond');
+  return (era?.year_layers ?? []).map((layer) => ({ params: { year: layer.year }, props: { era, layer } }));
+}
+
+const { era, layer } = Astro.props as { era: Era; layer: Era['year_layers'][number] };
+---
+
+<YearView era={era} layer={layer} />

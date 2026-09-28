@@ -1,0 +1,29 @@
+{
+  "id": "2020-08-bar-raiser-training-cohort-3",
+  "session_no": 90,
+  "date": "2020-08-26",
+  "date_label": null,
+  "year": "2020",
+  "month": "08",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Training",
+  "confidence": "High",
+  "title": "Bar-raiser training, cohort 3",
+  "audience": "Philips hiring managers and interviewers",
+  "summary": "A training I delivered for Philips hiring managers and interviewers.",
+  "attendees": null,
+  "responses": 2,
+  "reach_note": null,
+  "rating": null,
+  "feedback": {
+    "responses": 19,
+    "ratings": [],
+    "themes": "Suggestions centered on more time or a follow-up session and more hands-on practice.",
+    "written_answers": 19,
+    "quotes": [],
+    "shared_form": true
+  },
+  "record_capsule": "2020-08-bar-raiser-program-launch"
+}

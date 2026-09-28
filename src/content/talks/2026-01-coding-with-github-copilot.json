@@ -1,0 +1,25 @@
+{
+  "id": "2026-01-coding-with-github-copilot",
+  "session_no": 146,
+  "date": "2026-01",
+  "date_label": null,
+  "year": "2026",
+  "month": "01",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Session",
+  "confidence": "High",
+  "title": "Coding with GitHub Copilot",
+  "audience": "Philips University",
+  "summary": "A session I delivered for Philips University, with about 15 people.",
+  "attendees": "15",
+  "responses": null,
+  "reach_note": null,
+  "rating": {
+    "value": 7.5,
+    "scale": 10
+  },
+  "feedback": null,
+  "record_capsule": null
+}

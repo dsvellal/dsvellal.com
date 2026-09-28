@@ -1,0 +1,41 @@
+{
+  "id": "2020-01-coding-practice-initiative-for-engineers-kick-off",
+  "session_no": 78,
+  "date": "2020-01",
+  "date_label": null,
+  "year": "2020",
+  "month": "01",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Program session",
+  "confidence": "High",
+  "title": "Coding practice initiative for engineers, kick-off",
+  "audience": "Philips engineers",
+  "summary": "A program session I delivered for Philips engineers.",
+  "attendees": null,
+  "responses": 85,
+  "reach_note": null,
+  "rating": {
+    "value": 9.4,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 85,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 9.4,
+        "scale": 10,
+        "low": 8.0,
+        "high": 10.0,
+        "count": 85
+      }
+    ],
+    "themes": "Suggestions centered on more time or a follow-up session and tool setup and access.",
+    "written_answers": 57,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

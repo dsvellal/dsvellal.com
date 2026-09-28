@@ -1,0 +1,17 @@
+---
+import MonthView from '../../../../components/record/MonthView.astro';
+import { eras, type Era } from '../../../../lib/record';
+
+export async function getStaticPaths() {
+  const live = (await eras()).filter((e) => e.status === 'live' && e.lane === 'work');
+  return live.flatMap((era) =>
+    era.year_layers.flatMap((layer) =>
+      layer.months.map((month) => ({ params: { era: era.slug, year: layer.year, month }, props: { era, layer, month } })),
+    ),
+  );
+}
+
+const { era, layer, month } = Astro.props as { era: Era; layer: Era['year_layers'][number]; month: string };
+---
+
+<MonthView era={era} layer={layer} month={month} />

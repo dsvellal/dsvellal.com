@@ -1,0 +1,54 @@
+{
+  "id": "2019-10-mutation-testing-session",
+  "session_no": 74,
+  "date": "2019-10-14",
+  "date_label": null,
+  "year": "2019",
+  "month": "10",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Session",
+  "confidence": "High",
+  "title": "Mutation testing session",
+  "audience": "Philips software team",
+  "summary": "A session I delivered for Philips software team.",
+  "attendees": null,
+  "responses": 1,
+  "reach_note": null,
+  "rating": null,
+  "feedback": {
+    "responses": 1,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 10.0,
+        "scale": 10,
+        "low": 10.0,
+        "high": 10.0,
+        "count": 1
+      },
+      {
+        "label": "Overall rating",
+        "average": 2.0,
+        "scale": 5,
+        "low": 2.0,
+        "high": 2.0,
+        "count": 1
+      },
+      {
+        "label": "Effectiveness",
+        "average": 10.0,
+        "scale": 10,
+        "low": 10.0,
+        "high": 10.0,
+        "count": 1
+      }
+    ],
+    "themes": "",
+    "written_answers": 1,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": "2019-10-mutation-testing-session"
+}

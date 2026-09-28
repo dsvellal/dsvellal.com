@@ -1,0 +1,41 @@
+{
+  "id": "2025-08-dora-for-software-leaders",
+  "session_no": 138,
+  "date": "2025-08-08",
+  "date_label": null,
+  "year": "2025",
+  "month": "08",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "DORA for software leaders",
+  "audience": "Philips University",
+  "summary": "A workshop I delivered for Philips University.",
+  "attendees": null,
+  "responses": 12,
+  "reach_note": null,
+  "rating": {
+    "value": 9.0,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 12,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 9.0,
+        "scale": 10,
+        "low": 6.0,
+        "high": 10.0,
+        "count": 12
+      }
+    ],
+    "themes": "Suggestions centered on more hands-on practice.",
+    "written_answers": 2,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

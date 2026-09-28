@@ -1,0 +1,41 @@
+{
+  "id": "2020-06-relooking-at-interviews-things-we-already-know",
+  "session_no": 83,
+  "date": "2020-06-04",
+  "date_label": null,
+  "year": "2020",
+  "month": "06",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Session",
+  "confidence": "High",
+  "title": "Relooking at interviews: things we already know",
+  "audience": "Philips interviewers",
+  "summary": "A session I delivered for Philips interviewers.",
+  "attendees": null,
+  "responses": 3,
+  "reach_note": null,
+  "rating": {
+    "value": 7.3,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 3,
+    "ratings": [
+      {
+        "label": "Overall rating",
+        "average": 7.33,
+        "scale": 10,
+        "low": 6.0,
+        "high": 8.0,
+        "count": 3
+      }
+    ],
+    "themes": "Participants most often valued the interaction and relevance to daily work. Suggestions centered on more time or a follow-up session.",
+    "written_answers": 5,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

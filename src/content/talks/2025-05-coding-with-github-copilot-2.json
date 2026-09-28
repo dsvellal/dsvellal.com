@@ -1,0 +1,44 @@
+{
+  "id": "2025-05-coding-with-github-copilot-2",
+  "session_no": 129,
+  "date": "2025-05-30",
+  "date_label": null,
+  "year": "2025",
+  "month": "05",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Training",
+  "confidence": "High",
+  "title": "Coding with GitHub Copilot",
+  "audience": "Philips University",
+  "summary": "A training I delivered for Philips University.",
+  "attendees": null,
+  "responses": 11,
+  "reach_note": null,
+  "rating": {
+    "value": 8.5,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 11,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.45,
+        "scale": 10,
+        "low": 7.0,
+        "high": 10.0,
+        "count": 11
+      }
+    ],
+    "themes": "Participants most often valued clear explanations and relevance to daily work. Suggestions centered on more hands-on practice.",
+    "written_answers": 8,
+    "quotes": [
+      "Clearly instruction or advice is: Don't give bigger context to get best result. always minimize the context and get best out of it. Co-pilot means helper and not main person to implement.",
+      "This will give me a very good start to my co-pilot journey. Thank you."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

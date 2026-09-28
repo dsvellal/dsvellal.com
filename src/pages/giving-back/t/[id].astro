@@ -1,0 +1,339 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/record/Breadcrumbs.astro';
+import { capsuleOrListHref, capsules, eras, monthShort, section } from '../../../lib/record';
+import {
+  ratingText,
+  roleLabel,
+  talkDate,
+  talkEraHref,
+  talkHref,
+  talkMonthHref,
+  talks,
+  talkYearHref,
+  type Talk,
+} from '../../../lib/talks';
+
+export async function getStaticPaths() {
+  const all = await talks();
+  const eraList = await eras();
+  return all.map((t) => {
+    const siblings = all.filter((s) => s.era === t.era);
+    const i = siblings.findIndex((s) => s.id === t.id);
+    return {
+      params: { id: t.id },
+      props: {
+        talk: t,
+        eraLabel: eraList.find((e) => e.slug === t.era)?.label ?? t.company,
+        newer: siblings[i - 1],
+        older: siblings[i + 1],
+      },
+    };
+  });
+}
+
+const { talk: t, eraLabel, newer, older } = Astro.props as { talk: Talk; eraLabel: string; newer?: Talk; older?: Talk };
+const record = t.record_capsule ? (await capsules()).find((c) => c.id === t.record_capsule) : undefined;
+const crumbs = [
+  { label: 'Giving back', href: '/giving-back' },
+  { label: eraLabel, href: talkEraHref(t.era) },
+  { label: t.year, href: talkYearHref(t.era, t.year) },
+  ...(t.month ? [{ label: monthShort(t.month), href: talkMonthHref(t.era, t.year, t.month) }] : []),
+  { label: t.title },
+];
+const fb = t.feedback;
+const headline = t.rating ?? (fb?.ratings[0] ? { value: fb.ratings[0].average, scale: fb.ratings[0].scale } : null);
+const metrics = [
+  ...(t.attendees ? [{ value: t.attendees, label: 'people in the room or online' }] : []),
+  ...(headline ? [{ value: ratingText(headline), label: fb?.ratings[0]?.label ?? 'Participant rating' }] : []),
+  ...(fb ? [{ value: String(fb.responses), label: fb.shared_form ? 'responses on a shared form' : 'feedback responses' }] : []),
+];
+const range = (r: { low: number | null; high: number | null }) =>
+  r.low !== null && r.high !== null && r.low !== r.high ? `, from ${r.low} to ${r.high}` : '';
+---
+
+<Base title={t.title} description={t.summary} type="article">
+  <article>
+    <header class="wrap head">
+      <Breadcrumbs items={crumbs} />
+      <p class="meta label muted">
+        {talkDate(t)}, {t.company}. {t.format}
+      </p>
+      <h1>{t.title}</h1>
+      <p class="lede">{t.summary}</p>
+    </header>
+
+    {
+      metrics.length > 0 && (
+        <section class="wrap metrics" aria-label="Key numbers">
+          {metrics.map((m) => (
+            <div class="metric">
+              <p class="figure value">{m.value}</p>
+              <p class="text">{m.label}</p>
+            </div>
+          ))}
+        </section>
+      )
+    }
+
+    <div class="wrap story">
+      <section class="grid part">
+        <h2 class="side">The session</h2>
+        <dl class="main facts">
+          <div><dt>Format</dt><dd>{t.format}</dd></div>
+          <div><dt>Audience</dt><dd>{t.audience}</dd></div>
+          <div><dt>My role</dt><dd>{roleLabel(t)}</dd></div>
+          {t.reach_note && <div><dt>Reach</dt><dd>{t.reach_note}</dd></div>}
+          {t.confidence !== 'High' && (
+            <div><dt>Evidence</dt><dd>Indirect, such as an undated deck or a scheduling note, so treat the date and details as approximate.</dd></div>
+          )}
+        </dl>
+      </section>
+
+      {
+        fb && (
+          <section class="grid part">
+            <h2 class="side">How it was received</h2>
+            <div class="main">
+              <p>
+                {fb.responses} {fb.responses === 1 ? 'person' : 'people'} answered the feedback form
+                {fb.written_answers > 0 && `, with ${fb.written_answers} written ${fb.written_answers === 1 ? 'comment' : 'comments'}`}.
+                {fb.shared_form && ' The same form covered more than one day or cohort, so these results are shared.'}
+              </p>
+              {fb.themes && <p>{fb.themes}</p>}
+              {fb.ratings.length > 0 && (
+                <ul class="ratings">
+                  {fb.ratings.map((r) => (
+                    <li>
+                      <span>{r.label}</span>
+                      <span class="muted">
+                        {ratingText({ value: r.average, scale: r.scale })} average across {r.count} answers{range(r)}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </section>
+        )
+      }
+
+      {
+        !fb && t.rating && (
+          <section class="grid part">
+            <h2 class="side">How it was received</h2>
+            <p class="main">Participants rated it {ratingText(t.rating)}.</p>
+          </section>
+        )
+      }
+
+      {
+        fb && fb.quotes.length > 0 && (
+          <section class="grid part">
+            <h2 class="side">What participants said</h2>
+            <div class="main voices">
+              {fb.quotes.map((q) => (
+                <figure>
+                  <blockquote>
+                    <p>&ldquo;{q}&rdquo;</p>
+                  </blockquote>
+                  <figcaption class="label muted">Anonymous participant, feedback form</figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+        )
+      }
+
+      {
+        record && (
+          <section class="grid part">
+            <h2 class="side">In {section(record).label}</h2>
+            <p class="main">
+              <a href={capsuleOrListHref(record)}>{record.title}</a>
+            </p>
+          </section>
+        )
+      }
+
+      <section class="grid part">
+        <h2 class="side">Proof</h2>
+        <p class="main muted">The feedback forms and source documents are held in my private record and can be shared on request.</p>
+      </section>
+    </div>
+
+    <nav class="wrap pager" aria-label={`More talks at ${eraLabel}`}>
+      {newer ? <a href={talkHref(newer)}>Newer: {newer.title}</a> : <span />}
+      {older && <a class="next" href={talkHref(older)}>Older: {older.title}</a>}
+    </nav>
+  </article>
+</Base>
+
+<style>
+  .head {
+    padding-top: clamp(2rem, 5vw, 4rem);
+  }
+
+  .meta {
+    margin-top: 2rem;
+  }
+
+  h1 {
+    max-width: 56rem;
+    margin-top: 0.75rem;
+    font-size: var(--step-4);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  .lede {
+    max-width: 44rem;
+    margin-top: 1.5rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    gap: 2rem var(--gutter);
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+    padding-top: 1.5rem;
+    border-top: 4px solid var(--accent);
+  }
+
+  .value {
+    font-size: var(--step-3);
+    color: var(--accent);
+  }
+
+  .metric .text {
+    max-width: 18rem;
+    margin-top: 0.75rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .story {
+    margin-top: clamp(3rem, 7vw, 5rem);
+    border-top: 1px solid var(--ink);
+  }
+
+  .part {
+    row-gap: 0.75rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .side,
+  .main {
+    grid-column: 1 / -1;
+  }
+
+  .side {
+    font-size: var(--step-0);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  p.main,
+  .main > p {
+    max-width: 44rem;
+    font-size: var(--step-1);
+    line-height: 1.4;
+  }
+
+  .main > p + p {
+    margin-top: 1rem;
+  }
+
+  .facts {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+  }
+
+  .facts div {
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr);
+    gap: var(--gutter);
+  }
+
+  .facts dt {
+    font-weight: 700;
+  }
+
+  .facts dd {
+    margin: 0;
+    max-width: 40rem;
+  }
+
+  .ratings {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ratings li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    font-weight: 700;
+  }
+
+  .ratings .muted {
+    font-weight: 400;
+  }
+
+  .voices {
+    display: grid;
+    gap: 2rem;
+  }
+
+  figure,
+  blockquote {
+    margin: 0;
+  }
+
+  blockquote p {
+    max-width: 44rem;
+    font-size: var(--step-1);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+
+  figcaption {
+    margin-top: 0.75rem;
+  }
+
+  .pager {
+    display: grid;
+    gap: 1rem;
+    margin-top: clamp(3rem, 7vw, 5rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ink);
+    font-weight: 700;
+  }
+
+  @media (min-width: 48rem) {
+    .side {
+      grid-column: 1 / span 3;
+    }
+
+    .main {
+      grid-column: 4 / span 9;
+    }
+
+    .pager {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gutter);
+    }
+
+    .pager .next {
+      text-align: right;
+    }
+  }
+</style>

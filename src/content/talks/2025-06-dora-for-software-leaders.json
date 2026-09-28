@@ -1,0 +1,41 @@
+{
+  "id": "2025-06-dora-for-software-leaders",
+  "session_no": 133,
+  "date": "2025-06-19",
+  "date_label": null,
+  "year": "2025",
+  "month": "06",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "DORA for software leaders",
+  "audience": "Philips University",
+  "summary": "A workshop I delivered for Philips University.",
+  "attendees": null,
+  "responses": 5,
+  "reach_note": null,
+  "rating": {
+    "value": 8.4,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 5,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.4,
+        "scale": 10,
+        "low": 7.0,
+        "high": 10.0,
+        "count": 5
+      }
+    ],
+    "themes": "",
+    "written_answers": 1,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

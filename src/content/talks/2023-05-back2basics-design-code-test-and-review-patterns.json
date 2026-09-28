@@ -1,0 +1,29 @@
+{
+  "id": "2023-05-back2basics-design-code-test-and-review-patterns",
+  "session_no": 109,
+  "date": "2023-05-15",
+  "date_label": null,
+  "year": "2023",
+  "month": "05",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Hands-on workshop (2h)",
+  "confidence": "High",
+  "title": "#Back2Basics: design, code, test and review patterns",
+  "audience": "Philips Bangalore engineers, hybrid",
+  "summary": "A hands-on workshop (2h) I delivered for Philips Bangalore engineers, hybrid, with about 50 people.",
+  "attendees": "~50",
+  "responses": 10,
+  "reach_note": null,
+  "rating": null,
+  "feedback": {
+    "responses": 10,
+    "ratings": [],
+    "themes": "",
+    "written_answers": 0,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": "2023-05-back2basics-workshop"
+}

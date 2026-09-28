@@ -1,0 +1,52 @@
+{
+  "id": "2019-09-code-duplication-elimination-workshop",
+  "session_no": 66,
+  "date": "2019-09-09",
+  "date_label": null,
+  "year": "2019",
+  "month": "09",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "Code duplication elimination workshop",
+  "audience": "Philips software teams",
+  "summary": "A workshop I delivered for Philips software teams.",
+  "attendees": null,
+  "responses": 17,
+  "reach_note": null,
+  "rating": {
+    "value": 8.5,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 17,
+    "ratings": [
+      {
+        "label": "Effectiveness",
+        "average": 8.53,
+        "scale": 10,
+        "low": 6.0,
+        "high": 10.0,
+        "count": 17
+      },
+      {
+        "label": "Likely to engage again",
+        "average": 9.29,
+        "scale": 10,
+        "low": 8.0,
+        "high": 10.0,
+        "count": 17
+      }
+    ],
+    "themes": "Participants most often valued hands-on demos, the presenter's delivery and clear explanations.",
+    "written_answers": 27,
+    "quotes": [
+      "Datta makes discussion practicable. Well done!",
+      "Understanding of tokens and tics may not always be a correct metric to judge the code."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

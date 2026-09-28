@@ -1,0 +1,41 @@
+{
+  "id": "2023-08-github-foundational-training",
+  "session_no": 110,
+  "date": "2023-08-21",
+  "date_label": null,
+  "year": "2023",
+  "month": "08",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Training",
+  "confidence": "High",
+  "title": "GitHub Foundational Training",
+  "audience": "Philips engineering team",
+  "summary": "A training I delivered for Philips engineering team.",
+  "attendees": null,
+  "responses": 1,
+  "reach_note": null,
+  "rating": {
+    "value": 8.0,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 1,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.0,
+        "scale": 10,
+        "low": 8.0,
+        "high": 8.0,
+        "count": 1
+      }
+    ],
+    "themes": "Participants most often valued clear explanations and real examples.",
+    "written_answers": 1,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

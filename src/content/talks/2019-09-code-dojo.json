@@ -1,0 +1,57 @@
+{
+  "id": "2019-09-code-dojo",
+  "session_no": 70,
+  "date": "2019-09-13",
+  "date_label": null,
+  "year": "2019",
+  "month": "09",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "co-presenter",
+  "format": "Coding dojo",
+  "confidence": "High",
+  "title": "Code dojo",
+  "audience": "Philips software team",
+  "summary": "A coding dojo I delivered with colleagues for Philips software team.",
+  "attendees": null,
+  "responses": 2,
+  "reach_note": null,
+  "rating": {
+    "value": 9.5,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 2,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 9.5,
+        "scale": 10,
+        "low": 9.0,
+        "high": 10.0,
+        "count": 2
+      },
+      {
+        "label": "Overall rating",
+        "average": 9.0,
+        "scale": 10,
+        "low": 8.0,
+        "high": 10.0,
+        "count": 2
+      },
+      {
+        "label": "Effectiveness",
+        "average": 9.5,
+        "scale": 10,
+        "low": 9.0,
+        "high": 10.0,
+        "count": 2
+      }
+    ],
+    "themes": "Participants most often valued relevance to daily work.",
+    "written_answers": 3,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

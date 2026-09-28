@@ -1,5 +1,5 @@
 ---
-import { formatDate } from '../../lib/record';
+import { capsuleHref, capsules, formatDate } from '../../lib/record';
 
 interface Props {
   quote: { text: string; role: string; company: string; date: string; capsule?: string };
@@ -7,6 +7,8 @@ interface Props {
   link?: boolean;
 }
 const { quote, size = 'regular', link = false } = Astro.props;
+const source = link && quote.capsule ? (await capsules()).find((c) => c.id === quote.capsule) : undefined;
+const href = source ? capsuleHref(source) : undefined;
 ---
 
 <figure class:list={['rquote', size]}>
@@ -16,7 +18,7 @@ const { quote, size = 'regular', link = false } = Astro.props;
   <figcaption>
     <span class="role">{quote.role}</span>
     <span class="muted">{quote.company}, {formatDate(quote.date)}</span>
-    {link && quote.capsule && <a class="label" href={`/record/c/${quote.capsule}`}>Read the capsule</a>}
+    {href && <a class="label" href={href}>Read the capsule</a>}
   </figcaption>
 </figure>
 

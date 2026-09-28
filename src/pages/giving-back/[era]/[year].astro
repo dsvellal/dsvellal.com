@@ -1,0 +1,154 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/record/Breadcrumbs.astro';
+import TalkList from '../../../components/talks/TalkList.astro';
+import { eras, yearHref, type Era } from '../../../lib/record';
+import { talkEraHref, talkMonthHref, talks, talkYearHref, yearsOf } from '../../../lib/talks';
+
+export async function getStaticPaths() {
+  const all = await talks();
+  return (await eras())
+    .filter((e) => e.lane === 'work')
+    .flatMap((era) => {
+      const years = yearsOf(all.filter((t) => t.era === era.slug));
+      return years.map((layer, i) => ({
+        params: { era: era.slug, year: layer.year },
+        props: { era, layer, newer: years[i - 1]?.year, older: years[i + 1]?.year },
+      }));
+    });
+}
+
+type Layer = ReturnType<typeof yearsOf>[number];
+const { era, layer, newer, older } = Astro.props as { era: Era; layer: Layer; newer?: string; older?: string };
+const hasImpactYear = era.year_layers.some((y) => y.year === layer.year);
+const undated = layer.talks.filter((t) => !t.month);
+---
+
+<Base
+  title={`Talks in ${layer.year} at ${era.label}`}
+  description={`${layer.talks.length} talks and teaching sessions in ${layer.year} at ${era.label}, newest first.`}
+>
+  <header class="wrap head">
+    <Breadcrumbs
+      items={[
+        { label: 'Giving back', href: '/giving-back' },
+        { label: era.label, href: talkEraHref(era.slug) },
+        { label: layer.year },
+      ]}
+    />
+    <h1>{layer.year}</h1>
+    <p class="lede">
+      {layer.talks.length} {layer.talks.length === 1 ? 'session' : 'sessions'} at {era.label}.
+      {hasImpactYear && <a href={yearHref(era, layer.year)}>See the work in {layer.year}</a>}
+    </p>
+  </header>
+
+  {
+    layer.months.length > 0 && (
+      <section class="wrap grid block" aria-labelledby="months-title">
+        <h2 id="months-title" class="side">By month</h2>
+        <ul class="months main">
+          {layer.months.map((m) => (
+            <li>
+              <a href={talkMonthHref(era.slug, layer.year, m.month)}>{m.label}</a>
+              <span class="label muted">
+                {m.talks.length} {m.talks.length === 1 ? 'session' : 'sessions'}
+              </span>
+            </li>
+          ))}
+          {undated.length > 0 && (
+            <li>
+              <span>Month not recorded</span>
+              <span class="label muted">
+                {undated.length} {undated.length === 1 ? 'session' : 'sessions'}
+              </span>
+            </li>
+          )}
+        </ul>
+      </section>
+    )
+  }
+
+  <section class="wrap block" aria-labelledby="all-title">
+    <h2 id="all-title">All sessions in {layer.year}</h2>
+    <TalkList items={layer.talks} label={`Sessions in ${layer.year}`} />
+  </section>
+
+  <nav class="wrap pager" aria-label="Years">
+    {newer ? <a href={talkYearHref(era.slug, newer)}>Newer: {newer}</a> : <span />}
+    {older && <a href={talkYearHref(era.slug, older)}>Older: {older}</a>}
+  </nav>
+</Base>
+
+<style>
+  .head {
+    padding-top: clamp(2rem, 5vw, 4rem);
+  }
+
+  h1 {
+    margin-top: 1.5rem;
+    font-size: var(--step-5);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+  }
+
+  .lede {
+    max-width: 44rem;
+    margin-top: 1.5rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .block {
+    margin-top: clamp(3rem, 7vw, 5rem);
+  }
+
+  h2 {
+    font-size: var(--step-2);
+    margin-bottom: 1.25rem;
+  }
+
+  .side,
+  .main {
+    grid-column: 1 / -1;
+  }
+
+  .months {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 0 var(--gutter);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+
+  .months li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule);
+    font-weight: 700;
+  }
+
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: clamp(3rem, 7vw, 5rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ink);
+    font-weight: 700;
+  }
+
+  @media (min-width: 48rem) {
+    .side {
+      grid-column: 1 / span 3;
+    }
+
+    .main {
+      grid-column: 4 / span 9;
+    }
+  }
+</style>

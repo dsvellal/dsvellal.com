@@ -1,0 +1,44 @@
+{
+  "id": "2025-03-prioritizing-tech-debt-using-codescene",
+  "session_no": 121,
+  "date": "2025-03-25",
+  "date_label": null,
+  "year": "2025",
+  "month": "03",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Workshop",
+  "confidence": "High",
+  "title": "Prioritizing tech debt using CodeScene",
+  "audience": "Philips University",
+  "summary": "A workshop I delivered for Philips University.",
+  "attendees": null,
+  "responses": 6,
+  "reach_note": null,
+  "rating": {
+    "value": 9.7,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 6,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 9.67,
+        "scale": 10,
+        "low": 9.0,
+        "high": 10.0,
+        "count": 6
+      }
+    ],
+    "themes": "Participants most often valued depth of knowledge, the presenter's delivery and hands-on demos.",
+    "written_answers": 6,
+    "quotes": [
+      "Level of depth and coverage of topics Very good communication style and format with two speakers.",
+      "I like how the tools helps in understanding where the technical debt lies and how it helps in finding those points."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

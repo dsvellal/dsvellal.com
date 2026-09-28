@@ -1,0 +1,44 @@
+{
+  "id": "2019-11-code-quality-tools-training-sonarlint-ide-plugins-3-days",
+  "session_no": 77,
+  "date": "2019-11-11",
+  "date_label": null,
+  "year": "2019",
+  "month": "11",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Training",
+  "confidence": "High",
+  "title": "Code quality tools training (SonarLint, IDE plugins), 3 days",
+  "audience": "Philips software teams",
+  "summary": "A training I delivered for Philips software teams.",
+  "attendees": null,
+  "responses": 14,
+  "reach_note": null,
+  "rating": {
+    "value": 9.1,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 14,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 9.07,
+        "scale": 10,
+        "low": 7.0,
+        "high": 10.0,
+        "count": 14
+      }
+    ],
+    "themes": "Participants most often valued depth of knowledge, hands-on demos and clear explanations. Suggestions centered on more hands-on practice.",
+    "written_answers": 24,
+    "quotes": [
+      "Detailed Guidance during the session, Clear and Crisp acknowledgement of asked questions.",
+      "Its good to learn new tools like Sonarlint and how to use that for improving code quality and saving overall development time."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

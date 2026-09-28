@@ -1,0 +1,57 @@
+{
+  "id": "2019-08-tech-debt-what-does-that-mean",
+  "session_no": 62,
+  "date": "2019-08-08",
+  "date_label": null,
+  "year": "2019",
+  "month": "08",
+  "era": "philips-india",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Session",
+  "confidence": "High",
+  "title": "Tech debt: what does that mean?",
+  "audience": "Philips software teams",
+  "summary": "A session I delivered for Philips software teams.",
+  "attendees": null,
+  "responses": 4,
+  "reach_note": null,
+  "rating": {
+    "value": 8.3,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 4,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.25,
+        "scale": 10,
+        "low": 7.0,
+        "high": 9.0,
+        "count": 4
+      },
+      {
+        "label": "Overall rating",
+        "average": 8.5,
+        "scale": 10,
+        "low": 7.0,
+        "high": 10.0,
+        "count": 4
+      },
+      {
+        "label": "Capturing attention",
+        "average": 4.5,
+        "scale": 5,
+        "low": 4.0,
+        "high": 5.0,
+        "count": 4
+      }
+    ],
+    "themes": "",
+    "written_answers": 6,
+    "quotes": [],
+    "shared_form": false
+  },
+  "record_capsule": null
+}

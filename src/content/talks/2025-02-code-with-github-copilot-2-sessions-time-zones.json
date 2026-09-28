@@ -1,0 +1,44 @@
+{
+  "id": "2025-02-code-with-github-copilot-2-sessions-time-zones",
+  "session_no": 119,
+  "date": "2025-02-27",
+  "date_label": null,
+  "year": "2025",
+  "month": "02",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Training",
+  "confidence": "High",
+  "title": "Code with GitHub Copilot (2 sessions, time zones)",
+  "audience": "Philips University, global",
+  "summary": "A training I delivered for Philips University, global.",
+  "attendees": null,
+  "responses": 18,
+  "reach_note": "Announcement seen by 4,103 people",
+  "rating": {
+    "value": 8.9,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 18,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.89,
+        "scale": 10,
+        "low": 6.0,
+        "high": 10.0,
+        "count": 18
+      }
+    ],
+    "themes": "Participants most often valued the interaction, hands-on demos and clear explanations. Suggestions centered on more hands-on practice.",
+    "written_answers": 21,
+    "quotes": [
+      "Very well session with hands on with Copilot along with interaction with audience.",
+      "Very much interactive session and well explained."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": "2025-02-copilot-session-4103-views"
+}

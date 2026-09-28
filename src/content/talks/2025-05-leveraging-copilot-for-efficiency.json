@@ -1,0 +1,44 @@
+{
+  "id": "2025-05-leveraging-copilot-for-efficiency",
+  "session_no": 126,
+  "date": "2025-05-13",
+  "date_label": null,
+  "year": "2025",
+  "month": "05",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Training",
+  "confidence": "High",
+  "title": "Leveraging Copilot for efficiency",
+  "audience": "Philips University",
+  "summary": "A training I delivered for Philips University.",
+  "attendees": null,
+  "responses": 8,
+  "reach_note": null,
+  "rating": {
+    "value": 8.9,
+    "scale": 10
+  },
+  "feedback": {
+    "responses": 8,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 8.88,
+        "scale": 10,
+        "low": 7.0,
+        "high": 10.0,
+        "count": 8
+      }
+    ],
+    "themes": "Participants most often valued depth of knowledge, relevance to daily work and the presenter's delivery.",
+    "written_answers": 8,
+    "quotes": [
+      "Fantastic, really well done Datta. Very interacting training, super knowledgeable trainer!",
+      "Good to explore how CoPilot can help me with my work in future!"
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}
