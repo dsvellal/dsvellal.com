@@ -4,7 +4,7 @@ import Breadcrumbs from '../../../components/record/Breadcrumbs.astro';
 import NumbersStrip from '../../../components/record/NumbersStrip.astro';
 import RecordQuote from '../../../components/record/RecordQuote.astro';
 import CapsuleList from '../../../components/record/CapsuleList.astro';
-import { capsules, eras, monthLong, ranked, type Era } from '../../../lib/record';
+import { capsules, eras, monthLong, newestFirst, type Era } from '../../../lib/record';
 
 export async function getStaticPaths() {
   const live = (await eras()).filter((e) => e.status === 'live');
@@ -17,12 +17,12 @@ type Layer = Era['year_layers'][number];
 const { era, layer } = Astro.props as { era: Era; layer: Layer };
 const all = (await capsules()).filter((c) => c.era === era.slug && c.year === layer.year);
 const byId = new Map(all.map((c) => [c.id, c]));
-const top = layer.top.map((id) => byId.get(id)).filter((c) => c !== undefined);
-const also = ranked(all.filter((c) => !layer.top.includes(c.id)));
+const top = newestFirst(layer.top.map((id) => byId.get(id)).filter((c) => c !== undefined));
+const also = newestFirst(all.filter((c) => !layer.top.includes(c.id)));
 const monthCounts = layer.months.map((m) => ({ m, n: all.filter((c) => c.month === m).length }));
 const idx = era.year_layers.findIndex((y) => y.year === layer.year);
-const prev = era.year_layers[idx - 1];
-const next = era.year_layers[idx + 1];
+const newer = era.year_layers[idx - 1];
+const older = era.year_layers[idx + 1];
 const sameYear = (await eras()).filter(
   (e) => e.slug !== era.slug && e.lane !== era.lane && e.year_layers.some((y) => y.year === layer.year),
 );
@@ -117,8 +117,8 @@ const crossLinks = sameYear.map((e) => ({
   }
 
   <nav class="wrap pager" aria-label="Years">
-    {prev ? <a href={`/record/${era.slug}/${prev.year}`}>Previous: {prev.year}</a> : <span />}
-    {next && <a href={`/record/${era.slug}/${next.year}`}>Next: {next.year}</a>}
+    {newer && <a href={`/record/${era.slug}/${newer.year}`}>Newer: {newer.year}</a>}
+    {older && <a href={`/record/${era.slug}/${older.year}`}>Older: {older.year}</a>}
   </nav>
 </Base>
 

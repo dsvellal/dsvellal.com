@@ -1,5 +1,4 @@
 ---
-import { getCollection } from 'astro:content';
 import '../styles/global.css';
 import { profile } from '../data/profile';
 import { hasPublicAsset } from '../lib/assets';
@@ -18,13 +17,10 @@ const canonical = new URL(path, Astro.site);
 const fullTitle = title === profile.name ? `${profile.name} | Engineering leader` : `${title} | ${profile.name}`;
 const ogImage = hasPublicAsset('og.png') ? new URL('/og.png', Astro.site) : undefined;
 
-const publishedEssays = await getCollection('thinking', ({ data }) => import.meta.env.DEV || !data.draft);
-
 const nav = [
   { href: '/#work', label: 'Work' },
   { href: '/record', label: 'Record' },
   { href: '/speaking', label: 'Speaking' },
-  ...(publishedEssays.length > 0 ? [{ href: '/#thinking', label: 'Thinking' }] : []),
   { href: '/#contact', label: 'Contact' },
 ];
 ---

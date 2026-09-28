@@ -16,7 +16,6 @@ const showDraftNote = import.meta.env.DEV && entry.data.draft;
   <article class="wrap grid essay">
     <header class="essay-head">
       {showDraftNote && <p class="draft-note">Draft: to be edited into Datta's voice</p>}
-      <p class="label"><a href="/#thinking">Thinking</a></p>
       <h1>{entry.data.title}</h1>
       <p class="lede">{entry.data.summary}</p>
     </header>

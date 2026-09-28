@@ -13,38 +13,56 @@
   "headline_capsule": "2015-06-vermont-change-function-go-live",
   "year_layers": [
     {
-      "year": "2013",
-      "narrative": "Joined Exeter's Bengaluru center in April on the Affordable Care Act health insurance exchanges for Hawaii and Vermont, and became the first on the team to take ownership across the product's layers. Co-wrote a logging procedure for tracing production failures, which the delivery head took to US leadership. Took midnight calls to help the US team through a difficult release.",
+      "year": "2015",
+      "narrative": "Designated Senior Lead, Software Development, in July, and anchored the first modules of the next-generation platform in October. Triaged the release that put Vermont's change function live on its public deadline and stood by through the go-live weekend, brought portal pages under about three seconds and was named TExeter Thought Leader. Exeter closed in November after its acquisition; I declined the acquirer's offer and spent four months choosing my next company.",
       "numbers": [
-        "Hawaii and Vermont exchanges",
-        "rated occasionally exceeds (first review)",
-        "1 logging procedure across all layers"
+        "~3 s pages under load",
+        "Vermont deadline met with ~20 India engineers",
+        "US rating of India team 3.5/4",
+        "Senior Lead designation",
+        "4 LinkedIn recommendations"
       ],
       "top": [
-        "2013-09-logging-procedure",
-        "2013-11-q3-review-occasionally-exceeds"
+        "2015-10-anchored-next-gen-platform",
+        "2015-07-us-review-thought-leader",
+        "2015-06-texeter-thought-leader",
+        "2015-06-vermont-change-function-go-live",
+        "2015-03-liferay-page-load-under-3s"
       ],
       "quote": {
-        "text": "We are getting into frustrating calls with no information and I think this document is something that we should start looking at this.",
-        "role": "Delivery head, Exeter Software India",
+        "text": "I have never seen a problem that Datta is unwilling to take on.",
+        "role": "US delivery and release lead, Exeter Group",
         "company": "Exeter",
-        "date": "2013-09-15",
-        "capsule": "2013-09-logging-procedure"
+        "date": "2015-07-09",
+        "capsule": "2015-07-us-review-thought-leader"
       },
       "months": [
-        "04",
-        "07",
-        "09",
         "11",
-        "12"
+        "10",
+        "09",
+        "07",
+        "06",
+        "04",
+        "03",
+        "01"
       ],
       "also": [
-        "2013-07-us-leadership-thanks-release-support",
-        "2013-07-employer-plan-selection-on-test",
-        "2013-04-joined-exeter-health-exchanges",
-        "2013-12-linkedin-ibm-colleague"
+        "2015-11-linkedin-direct-report-3-years",
+        "2015-11-linkedin-direct-report-2-5-years",
+        "2015-11-linkedin-us-colleague",
+        "2015-11-left-exeter",
+        "2015-11-four-month-job-search",
+        "2015-11-exeter-shutdown",
+        "2015-11-declined-acquirer-offer",
+        "2015-10-linkedin-teammate",
+        "2015-10-clear-text-password-fix",
+        "2015-10-coding-guidelines",
+        "2015-09-hotfix-release-coordination",
+        "2015-07-senior-lead-designation",
+        "2015-04-organized-tarang-feat-2015",
+        "2015-01-hotfix-triage"
       ],
-      "count": 6
+      "count": 19
     },
     {
       "year": "2014",
@@ -57,11 +75,11 @@
         "3-part design patterns course"
       ],
       "top": [
-        "2014-08-release-3-3-2-9-hf4",
-        "2014-10-834-enrollment-messaging-poc",
         "2014-12-texeter-six-month-letter",
-        "2014-02-root-cause-before-revamp",
-        "2014-11-q3-review-consistently-exceeds"
+        "2014-11-q3-review-consistently-exceeds",
+        "2014-10-834-enrollment-messaging-poc",
+        "2014-08-release-3-3-2-9-hf4",
+        "2014-02-root-cause-before-revamp"
       ],
       "quote": {
         "text": "You all did a bang up job in getting this release out.",
@@ -71,113 +89,95 @@
         "capsule": "2014-08-release-3-3-2-9-hf4"
       },
       "months": [
-        "01",
-        "02",
-        "03",
-        "04",
-        "05",
-        "06",
-        "07",
-        "08",
-        "10",
+        "12",
         "11",
-        "12"
+        "10",
+        "08",
+        "07",
+        "06",
+        "05",
+        "04",
+        "03",
+        "02",
+        "01"
       ],
       "also": [
         "2014-12-plan-selection-rewrite",
-        "2014-03-q1-review-consistently-exceeds",
-        "2014-04-my-accounts-revamp-release",
-        "2014-07-launched-texeter-thursday",
-        "2014-02-agile-practices-session",
-        "2014-06-q2-review-consistently-exceeds",
-        "2014-10-new-hire-code-a-thon",
-        "2014-03-application-intake-point-of-contact",
-        "2014-07-design-patterns-training-series",
-        "2014-07-launched-texeter-times",
-        "2014-03-organized-tarang-feat-2014",
-        "2014-04-linkedin-ibm-manager",
-        "2014-10-campus-recruitment-interviewer",
+        "2014-12-emergency-response-team",
         "2014-11-quality-metrics-in-jira",
+        "2014-10-campus-recruitment-interviewer",
+        "2014-10-new-hire-code-a-thon",
+        "2014-07-launched-texeter-times",
+        "2014-07-design-patterns-training-series",
+        "2014-07-launched-texeter-thursday",
+        "2014-06-q2-review-consistently-exceeds",
         "2014-05-named-in-us-org-chart",
-        "2014-01-linkedin-professor",
-        "2014-12-emergency-response-team"
+        "2014-04-linkedin-ibm-manager",
+        "2014-04-my-accounts-revamp-release",
+        "2014-03-q1-review-consistently-exceeds",
+        "2014-03-application-intake-point-of-contact",
+        "2014-03-organized-tarang-feat-2014",
+        "2014-02-agile-practices-session",
+        "2014-01-linkedin-professor"
       ],
       "count": 22
     },
     {
-      "year": "2015",
-      "narrative": "Designated Senior Lead, Software Development, in July, and anchored the first modules of the next-generation platform in October. Triaged the release that put Vermont's change function live on its public deadline and stood by through the go-live weekend, brought portal pages under about three seconds and was named TExeter Thought Leader. Exeter closed in November after its acquisition; I declined the acquirer's offer and spent four months choosing my next company.",
+      "year": "2013",
+      "narrative": "Joined Exeter's Bengaluru center in April on the Affordable Care Act health insurance exchanges for Hawaii and Vermont, and became the first on the team to take ownership across the product's layers. Co-wrote a logging procedure for tracing production failures, which the delivery head took to US leadership. Took midnight calls to help the US team through a difficult release.",
       "numbers": [
-        "~3 s pages under load",
-        "Vermont deadline met with ~20 India engineers",
-        "US rating of India team 3.5/4",
-        "Senior Lead designation",
-        "4 LinkedIn recommendations"
+        "Hawaii and Vermont exchanges",
+        "rated occasionally exceeds (first review)",
+        "1 logging procedure across all layers"
       ],
       "top": [
-        "2015-06-vermont-change-function-go-live",
-        "2015-07-us-review-thought-leader",
-        "2015-06-texeter-thought-leader",
-        "2015-03-liferay-page-load-under-3s",
-        "2015-10-anchored-next-gen-platform"
+        "2013-11-q3-review-occasionally-exceeds",
+        "2013-09-logging-procedure"
       ],
       "quote": {
-        "text": "I have never seen a problem that Datta is unwilling to take on.",
-        "role": "US delivery and release lead, Exeter Group",
+        "text": "We are getting into frustrating calls with no information and I think this document is something that we should start looking at this.",
+        "role": "Delivery head, Exeter Software India",
         "company": "Exeter",
-        "date": "2015-07-09",
-        "capsule": "2015-07-us-review-thought-leader"
+        "date": "2013-09-15",
+        "capsule": "2013-09-logging-procedure"
       },
       "months": [
-        "01",
-        "03",
-        "04",
-        "06",
-        "07",
+        "12",
+        "11",
         "09",
-        "10",
-        "11"
+        "07",
+        "04"
       ],
       "also": [
-        "2015-07-senior-lead-designation",
-        "2015-10-clear-text-password-fix",
-        "2015-10-linkedin-teammate",
-        "2015-04-organized-tarang-feat-2015",
-        "2015-10-coding-guidelines",
-        "2015-11-linkedin-direct-report-2-5-years",
-        "2015-11-linkedin-direct-report-3-years",
-        "2015-01-hotfix-triage",
-        "2015-11-linkedin-us-colleague",
-        "2015-09-hotfix-release-coordination",
-        "2015-11-left-exeter",
-        "2015-11-declined-acquirer-offer",
-        "2015-11-exeter-shutdown",
-        "2015-11-four-month-job-search"
+        "2013-12-linkedin-ibm-colleague",
+        "2013-07-employer-plan-selection-on-test",
+        "2013-07-us-leadership-thanks-release-support",
+        "2013-04-joined-exeter-health-exchanges"
       ],
-      "count": 19
+      "count": 6
     }
   ],
   "company": {
     "arc": [
       {
-        "when": "Apr 2013",
-        "what": "Joined Exeter Software India, Bengaluru, to build Affordable Care Act functionality for the Hawaii and Vermont health insurance exchanges."
-      },
-      {
-        "when": "2014",
-        "what": "Became India point of contact for the application intake redesign and earned the India team a place in re-architecting the product with the US architecture team."
-      },
-      {
-        "when": "Jul 2015",
-        "what": "Designated Senior Lead, Software Development; led a team of up to 20 engineers, including their hiring, reviews and mentoring."
+        "when": "Nov 2015",
+        "what": "Exeter closed after its acquisition; declined the acquirer's offer and left after two years and eight months."
       },
       {
         "when": "Oct 2015",
         "what": "Anchored the first three modules of the next-generation platform, each with its own development team."
       },
       {
-        "when": "Nov 2015",
-        "what": "Exeter closed after its acquisition; declined the acquirer's offer and left after two years and eight months."
+        "when": "Jul 2015",
+        "what": "Designated Senior Lead, Software Development; led a team of up to 20 engineers, including their hiring, reviews and mentoring."
+      },
+      {
+        "when": "2014",
+        "what": "Became India point of contact for the application intake redesign and earned the India team a place in re-architecting the product with the US architecture team."
+      },
+      {
+        "when": "Apr 2013",
+        "what": "Joined Exeter Software India, Bengaluru, to build Affordable Care Act functionality for the Hawaii and Vermont health insurance exchanges."
       }
     ],
     "scope": [

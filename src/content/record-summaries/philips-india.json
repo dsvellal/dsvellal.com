@@ -13,6 +13,161 @@
   "headline_capsule": "2020-08-bar-raiser-program-launch",
   "year_layers": [
     {
+      "year": "2021",
+      "narrative": "Took on a managerial role in March as Software Competency Specialist II and led software excellence transformation projects for Philips businesses, then was promoted to Software Excellence Competency Lead with the transfer to the US in November. I led the senior-hiring redesign sponsored by the India site leader (candidate NPS up 18%), was lead coach for the technical-debt program that realized about EUR 2.1M in savings and spoke at a developer conference in Brazil. The CTO Annual Address named me one of about 30 Outstanding Technical Achievement Award recipients, and I won the campus award for organizational capability.",
+      "numbers": [
+        "~30 CTO award recipients worldwide",
+        "~EUR 2.1M savings",
+        "+18% candidate NPS",
+        "575 connects",
+        "2,975 touchpoints"
+      ],
+      "top": [
+        "2021-03-managerial-role-swcoe",
+        "2021-02-cto-outstanding-achievement-award",
+        "2021-tech-debt-savings-program",
+        "2021-senior-hiring-redesign",
+        "2021-connect-program"
+      ],
+      "quote": {
+        "text": "Exceptional results, demonstrating role model behaviour",
+        "role": "Award citation, CTO Annual Address",
+        "company": "Philips",
+        "date": "2021-02-24",
+        "capsule": "2021-02-cto-outstanding-achievement-award"
+      },
+      "months": [
+        "09",
+        "06",
+        "03",
+        "02"
+      ],
+      "also": [
+        "2021-09-reverse-mentor-senior-leader",
+        "2021-06-championed-for-us-role",
+        "2021-06-observability-workshop",
+        "2021-06-tdc-brazil-shift-left-talk",
+        "2021-03-pic-annual-award-organisational-capabilities",
+        "2021-03-excellence-competition-finalist",
+        "2021-02-dot-tune-productivity-coaching"
+      ],
+      "count": 12
+    },
+    {
+      "year": "2020",
+      "narrative": "Designed and ran the bar-raiser hiring program, with global inductions for Brazil, North America and Europe, and led quality checks at the developer's desk, with three teams live on its quality gates. As work went remote I kept the connect program going online, with about 2,125 participants across 12 cities, and co-authored the company CI/CD reference architecture. Four goals rated Exceeds, 'top score and top results'.",
+      "numbers": [
+        "~2,125 connect participants",
+        "12 cities",
+        "7 bar-raiser cohorts",
+        "3 teams on quality gates",
+        "4 goals Exceeds"
+      ],
+      "top": [
+        "2020-12-year-end-review-top-score",
+        "2020-connect-program-scale",
+        "2020-08-bar-raiser-program-launch",
+        "2020-quality-at-desk-program",
+        "2020-cicd-reference-architecture-whitepaper"
+      ],
+      "quote": {
+        "text": "I wished to thank you for all that you have been doing regarding the bar-raiser project, all the effort that you are putting into this. There is no way we could make this work without you.",
+        "role": "Talent acquisition consultant, Amsterdam",
+        "company": "Philips",
+        "date": "2020-09-11",
+        "capsule": "2020-08-bar-raiser-program-launch"
+      },
+      "months": [
+        "12",
+        "10",
+        "09",
+        "08",
+        "07",
+        "06",
+        "05",
+        "03",
+        "01"
+      ],
+      "also": [
+        "2020-10-engineering-bootcamp",
+        "2020-09-blumenau-interview-training",
+        "2020-07-hackathon-judge",
+        "2020-06-recognition-bar-raisers",
+        "2020-05-virtual-learning-summit",
+        "2020-03-china-business-progress-dialogues",
+        "2020-01-recognition-code-craft-evaluation",
+        "2020-reverse-mentor-program",
+        "2020-leadership-development-report",
+        "2020-crack-the-code-for-brazil"
+      ],
+      "count": 15
+    },
+    {
+      "year": "2019",
+      "narrative": "Moved in July from architecting one product to company-wide software excellence, after leading identity management to automated end-to-end tests and unit-test coverage from 63% to 86% with no extra people. I brought duplicate-code detection to business units with hands-on workshops, put the data in front of the CTO, started and led the campus interview-standardization work and ran 341 connects across 109 business units. Rated Exceeds.",
+      "numbers": [
+        "63% to 86% unit-test coverage",
+        "18,688 duplicate lines removed",
+        "29 workshops at 8.93/10",
+        "225+ at one sharing session",
+        "341 connects across 109 business units"
+      ],
+      "top": [
+        "2019-12-year-end-review-exceeds",
+        "2019-10-duplication-data-for-cto-call",
+        "2019-09-jscpd-duplication-program",
+        "2019-07-recognition-code-quality-culture",
+        "2019-connect-program"
+      ],
+      "quote": {
+        "text": "Great Datta. It provides good insight. As next step we need to devise mechanism to remove and commit 23% of duplicate code.",
+        "role": "Senior Director, software",
+        "company": "Philips",
+        "date": "2019-10",
+        "capsule": "2019-09-jscpd-duplication-program"
+      },
+      "months": [
+        "12",
+        "10",
+        "09",
+        "08",
+        "07",
+        "05",
+        "04",
+        "03",
+        "02",
+        "01"
+      ],
+      "also": [
+        "2019-12-sig-tech-debt-partnership",
+        "2019-12-code-craft-year-end-assessments",
+        "2019-10-hiring-process-upgrade",
+        "2019-10-best-practices-competition-judge",
+        "2019-10-mutation-testing-session",
+        "2019-10-20pct-duplication-found",
+        "2019-10-proposed-tech-debt-time-per-pi",
+        "2019-09-software-excellence-conference-speaker",
+        "2019-09-developer-conference-panel",
+        "2019-09-technical-sharing-225",
+        "2019-08-code-quality-workshop",
+        "2019-07-unit-testing-workshop",
+        "2019-07-moved-to-software-coe",
+        "2019-05-recognition-interview-tips",
+        "2019-05-how-to-interview-training",
+        "2019-04-s101-architecture-workshop",
+        "2019-04-software-coe-sharing-session-april",
+        "2019-04-idm-elk-monitoring",
+        "2019-03-idm-devops-progress-to-chief-architect",
+        "2019-02-java-best-practices-session",
+        "2019-02-jenkins-end-to-end-test-automation",
+        "2019-02-interview-standardization-framework",
+        "2019-01-idm-team-site",
+        "2019-01-defect-life-cycle-standard",
+        "2019-01-announced-as-idm-project-architect"
+      ],
+      "count": 30
+    },
+    {
       "year": "2018",
       "narrative": "Joined Philips Innovation Campus in September as project architect for identity management, responsible for its architecture and delivery pipeline. In four months I set the team's pull-request and code-quality rules and its 2019 CI/CD goals, and built a DevOps architecture strategy with the team that my first review recorded as delivered.",
       "numbers": [
@@ -30,191 +185,36 @@
         "capsule": "2018-12-first-philips-year-end-review"
       },
       "months": [
-        "09",
+        "12",
         "11",
-        "12"
-      ],
-      "also": [
-        "2018-11-idm-code-quality-guidelines",
-        "2018-09-joined-philips-idm-architect",
-        "2018-12-cicd-vision-netflix-example",
-        "2018-12-asked-for-first-three-months-feedback"
-      ],
-      "count": 5
-    },
-    {
-      "year": "2019",
-      "narrative": "Moved in July from architecting one product to company-wide software excellence, after leading identity management to automated end-to-end tests and unit-test coverage from 63% to 86% with no extra people. I brought duplicate-code detection to business units with hands-on workshops, put the data in front of the CTO, started and led the campus interview-standardization work and ran 341 connects across 109 business units. Rated Exceeds.",
-      "numbers": [
-        "63% to 86% unit-test coverage",
-        "18,688 duplicate lines removed",
-        "29 workshops at 8.93/10",
-        "225+ at one sharing session",
-        "341 connects across 109 business units"
-      ],
-      "top": [
-        "2019-09-jscpd-duplication-program",
-        "2019-12-year-end-review-exceeds",
-        "2019-07-recognition-code-quality-culture",
-        "2019-connect-program",
-        "2019-10-duplication-data-for-cto-call"
-      ],
-      "quote": {
-        "text": "Great Datta. It provides good insight. As next step we need to devise mechanism to remove and commit 23% of duplicate code.",
-        "role": "Senior Director, software",
-        "company": "Philips",
-        "date": "2019-10",
-        "capsule": "2019-09-jscpd-duplication-program"
-      },
-      "months": [
-        "01",
-        "02",
-        "03",
-        "04",
-        "05",
-        "07",
-        "08",
-        "09",
-        "10",
-        "12"
-      ],
-      "also": [
-        "2019-12-code-craft-year-end-assessments",
-        "2019-03-idm-devops-progress-to-chief-architect",
-        "2019-07-moved-to-software-coe",
-        "2019-02-jenkins-end-to-end-test-automation",
-        "2019-09-technical-sharing-225",
-        "2019-01-announced-as-idm-project-architect",
-        "2019-02-interview-standardization-framework",
-        "2019-10-20pct-duplication-found",
-        "2019-10-hiring-process-upgrade",
-        "2019-12-sig-tech-debt-partnership",
-        "2019-05-how-to-interview-training",
-        "2019-09-developer-conference-panel",
-        "2019-09-software-excellence-conference-speaker",
-        "2019-07-unit-testing-workshop",
-        "2019-08-code-quality-workshop",
-        "2019-05-recognition-interview-tips",
-        "2019-01-defect-life-cycle-standard",
-        "2019-02-java-best-practices-session",
-        "2019-10-proposed-tech-debt-time-per-pi",
-        "2019-10-best-practices-competition-judge",
-        "2019-04-idm-elk-monitoring",
-        "2019-04-software-coe-sharing-session-april",
-        "2019-04-s101-architecture-workshop",
-        "2019-10-mutation-testing-session",
-        "2019-01-idm-team-site"
-      ],
-      "count": 30
-    },
-    {
-      "year": "2020",
-      "narrative": "Designed and ran the bar-raiser hiring program, with global inductions for Brazil, North America and Europe, and led quality checks at the developer's desk, with three teams live on its quality gates. As work went remote I kept the connect program going online, with about 2,125 participants across 12 cities, and co-authored the company CI/CD reference architecture. Four goals rated Exceeds, 'top score and top results'.",
-      "numbers": [
-        "~2,125 connect participants",
-        "12 cities",
-        "7 bar-raiser cohorts",
-        "3 teams on quality gates",
-        "4 goals Exceeds"
-      ],
-      "top": [
-        "2020-08-bar-raiser-program-launch",
-        "2020-12-year-end-review-top-score",
-        "2020-cicd-reference-architecture-whitepaper",
-        "2020-connect-program-scale",
-        "2020-quality-at-desk-program"
-      ],
-      "quote": {
-        "text": "I wished to thank you for all that you have been doing regarding the bar-raiser project, all the effort that you are putting into this. There is no way we could make this work without you.",
-        "role": "Talent acquisition consultant, Amsterdam",
-        "company": "Philips",
-        "date": "2020-09-11",
-        "capsule": "2020-08-bar-raiser-program-launch"
-      },
-      "months": [
-        "01",
-        "03",
-        "05",
-        "06",
-        "07",
-        "08",
-        "09",
-        "10",
-        "12"
-      ],
-      "also": [
-        "2020-01-recognition-code-craft-evaluation",
-        "2020-09-blumenau-interview-training",
-        "2020-10-engineering-bootcamp",
-        "2020-05-virtual-learning-summit",
-        "2020-leadership-development-report",
-        "2020-06-recognition-bar-raisers",
-        "2020-reverse-mentor-program",
-        "2020-07-hackathon-judge",
-        "2020-crack-the-code-for-brazil",
-        "2020-03-china-business-progress-dialogues"
-      ],
-      "count": 15
-    },
-    {
-      "year": "2021",
-      "narrative": "Took on a managerial role in March as Software Competency Specialist II and led software excellence transformation projects for Philips businesses, then was promoted to Software Excellence Competency Lead with the transfer to the US in November. I led the senior-hiring redesign sponsored by the India site leader (candidate NPS up 18%), was lead coach for the technical-debt program that realized about EUR 2.1M in savings and spoke at a developer conference in Brazil. The CTO Annual Address named me one of about 30 Outstanding Technical Achievement Award recipients, and I won the campus award for organizational capability.",
-      "numbers": [
-        "~30 CTO award recipients worldwide",
-        "~EUR 2.1M savings",
-        "+18% candidate NPS",
-        "575 connects",
-        "2,975 touchpoints"
-      ],
-      "top": [
-        "2021-02-cto-outstanding-achievement-award",
-        "2021-03-managerial-role-swcoe",
-        "2021-senior-hiring-redesign",
-        "2021-tech-debt-savings-program",
-        "2021-connect-program"
-      ],
-      "quote": {
-        "text": "Exceptional results, demonstrating role model behaviour",
-        "role": "Award citation, CTO Annual Address",
-        "company": "Philips",
-        "date": "2021-02-24",
-        "capsule": "2021-02-cto-outstanding-achievement-award"
-      },
-      "months": [
-        "02",
-        "03",
-        "06",
         "09"
       ],
       "also": [
-        "2021-03-excellence-competition-finalist",
-        "2021-06-tdc-brazil-shift-left-talk",
-        "2021-03-pic-annual-award-organisational-capabilities",
-        "2021-06-championed-for-us-role",
-        "2021-09-reverse-mentor-senior-leader",
-        "2021-02-dot-tune-productivity-coaching",
-        "2021-06-observability-workshop"
+        "2018-12-cicd-vision-netflix-example",
+        "2018-12-asked-for-first-three-months-feedback",
+        "2018-11-idm-code-quality-guidelines",
+        "2018-09-joined-philips-idm-architect"
       ],
-      "count": 12
+      "count": 5
     }
   ],
   "company": {
     "arc": [
       {
-        "when": "Sep 2018",
-        "what": "Joined Philips Innovation Campus, Bengaluru, as Project Architect for Identity Management, responsible for its architecture, delivery pipeline and code-quality rules."
-      },
-      {
-        "when": "Jul 2019",
-        "what": "Moved to Competency Specialist, Software Excellence, in the Software Center of Excellence, to lead initiatives such as technical debt reduction across Philips businesses."
+        "when": "Nov 2021",
+        "what": "Promoted to Software Excellence Competency Lead with the transfer to Philips North America (see the Philips North America layer)."
       },
       {
         "when": "Mar 2021",
         "what": "Took on a managerial role as Software Competency Specialist II and led software excellence transformation projects for Philips businesses with small teams of architects and specialists."
       },
       {
-        "when": "Nov 2021",
-        "what": "Promoted to Software Excellence Competency Lead with the transfer to Philips North America (see the Philips North America layer)."
+        "when": "Jul 2019",
+        "what": "Moved to Competency Specialist, Software Excellence, in the Software Center of Excellence, to lead initiatives such as technical debt reduction across Philips businesses."
+      },
+      {
+        "when": "Sep 2018",
+        "what": "Joined Philips Innovation Campus, Bengaluru, as Project Architect for Identity Management, responsible for its architecture, delivery pipeline and code-quality rules."
       }
     ],
     "scope": [

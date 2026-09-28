@@ -48,19 +48,18 @@ export function formatDate(date: string): string {
   return `${Number(d)} ${monthLong(m)} ${y}`;
 }
 
-const byRank = (a: Capsule, b: Capsule) => b.total - a.total || a.date.localeCompare(b.date);
 const plain = (d: string) => d.replace(/^~/, '');
-const byDate = (a: Capsule, b: Capsule) => plain(a.date).localeCompare(plain(b.date)) || a.id.localeCompare(b.id);
+const byNewestDate = (a: Capsule, b: Capsule) => plain(b.date).localeCompare(plain(a.date)) || a.id.localeCompare(b.id);
 
 export async function capsules(): Promise<Capsule[]> {
-  return (await getCollection('record')).map((e) => e.data).sort(byDate);
+  return (await getCollection('record')).map((e) => e.data).sort(byNewestDate);
 }
 
 export async function eras(): Promise<Era[]> {
-  return (await getCollection('record-summaries')).map((e) => e.data).sort((a, b) => a.order - b.order);
+  return (await getCollection('record-summaries')).map((e) => e.data).sort((a, b) => b.order - a.order);
 }
 
-export const ranked = (list: Capsule[]) => [...list].sort(byRank);
+export const newestFirst = (list: Capsule[]) => [...list].sort(byNewestDate);
 
 export function capsuleHref(c: Capsule): string | undefined {
   return c.tier === 'public' ? `/record/c/${c.id}` : undefined;

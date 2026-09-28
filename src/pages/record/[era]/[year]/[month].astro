@@ -2,7 +2,7 @@
 import Base from '../../../../layouts/Base.astro';
 import Breadcrumbs from '../../../../components/record/Breadcrumbs.astro';
 import CapsuleList from '../../../../components/record/CapsuleList.astro';
-import { capsules, eras, monthLong, monthShort, ranked, type Era } from '../../../../lib/record';
+import { capsules, eras, monthLong, monthShort, newestFirst, type Era } from '../../../../lib/record';
 
 export async function getStaticPaths() {
   const live = (await eras()).filter((e) => e.status === 'live');
@@ -14,11 +14,11 @@ export async function getStaticPaths() {
 }
 
 const { era, layer, month } = Astro.props as { era: Era; layer: Era['year_layers'][number]; month: string };
-const items = ranked((await capsules()).filter((c) => c.era === era.slug && c.year === layer.year && c.month === month));
+const items = newestFirst((await capsules()).filter((c) => c.era === era.slug && c.year === layer.year && c.month === month));
 const lead = items.find((c) => c.tier === 'public') ?? items[0];
 const idx = layer.months.indexOf(month);
-const prev = layer.months[idx - 1];
-const next = layer.months[idx + 1];
+const newer = layer.months[idx - 1];
+const older = layer.months[idx + 1];
 const heading = `${monthLong(month)} ${layer.year}`;
 ---
 
@@ -37,13 +37,13 @@ const heading = `${monthLong(month)} ${layer.year}`;
   </header>
 
   <section class="wrap block">
-    <h2 class="visually-hidden">Events, most impactful first</h2>
+    <h2 class="visually-hidden">Events, most recent first</h2>
     <CapsuleList items={items} filters label={`Events in ${heading}`} />
   </section>
 
   <nav class="wrap pager" aria-label="Months">
-    {prev ? <a href={`/record/${era.slug}/${layer.year}/${prev}`}>Previous: {monthLong(prev)}</a> : <a href={`/record/${era.slug}/${layer.year}`}>Back to {layer.year}</a>}
-    {next && <a href={`/record/${era.slug}/${layer.year}/${next}`}>Next: {monthLong(next)}</a>}
+    {newer ? <a href={`/record/${era.slug}/${layer.year}/${newer}`}>Newer: {monthLong(newer)}</a> : <a href={`/record/${era.slug}/${layer.year}`}>Back to {layer.year}</a>}
+    {older && <a href={`/record/${era.slug}/${layer.year}/${older}`}>Older: {monthLong(older)}</a>}
   </nav>
 </Base>
 

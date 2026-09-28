@@ -4,7 +4,7 @@ export const profile = {
   headline: 'Engineering leader who makes AI safe and fast in regulated software.',
   role: 'Software Competency Lead, Philips',
   location: 'Rochester, Michigan',
-  employers: ['IBM', 'Exeter', 'Amazon', 'Philips'],
+  employers: ['Philips', 'Amazon', 'Exeter', 'IBM'],
   email: 'dsvellal@gmail.com',
   linkedin: 'https://www.linkedin.com/in/dattatreyavellal',
   invite:

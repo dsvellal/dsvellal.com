@@ -13,45 +13,46 @@
   "headline_capsule": "2017-04-amazon-pay-one-account-check",
   "year_layers": [
     {
-      "year": "2016",
-      "narrative": "Joined Amazon in February as an individual contributor on the catalog ingestion team, made feed migration a self-service procedure that 29 providers moved onto without developer help, and owned the team's move of 57 hosts to Amazon Linux. Also backfilled about 2 billion catalog records, won the catalog org's global hackathon and started teaching Scrum to other engineers as a volunteer trainer.",
+      "year": "2018",
+      "narrative": "Took on cost and reliability for the fraud services around Prime Day: cut garbage collection on one service to about 2.4% of CPU, saved about $36K a year in hosts through load tests and a hardware clean-up, and traced a faulty fraud rule on Prime Day and escalated it as a sev-2. Became the trainer program's highest-scoring trainer, then left in August to join Philips.",
       "numbers": [
-        "29 feed providers self-service",
-        "~2B catalog records backfilled",
-        "57 hosts migrated",
-        "1st of 45 hackathon teams",
-        "4 sessions"
+        "~17.7% to ~2.4% GC CPU",
+        "~$36K a year saved in hosts",
+        "~60% less investigation effort",
+        "4.57/5 top trainer",
+        "5 sessions"
       ],
       "top": [
-        "2016-05-self-service-xml-feed-migration",
-        "2016-08-amazon-linux-migration",
-        "2016-08-catalog-hackathon-first-place",
-        "2016-06-catalog-backfill-tool",
-        "2016-12-scrum-workshop-4-47"
+        "2018-08-highest-scoring-scrum-trainer",
+        "2018-07-prime-day-auto-approval-bug",
+        "2018-03-variable-comparison-tool",
+        "2018-03-prime-day-right-sizing",
+        "2018-01-gc-cpu-cut"
       ],
       "quote": {
-        "text": "TL;DR The new parser implementation rocks and code is more readable and easy to understand !!",
-        "role": "Application Engineer, catalog support team",
+        "text": "You have shown great example of Deep Dive. Finding out exactly which rule was incorrect and also pointing to exact coding error.",
+        "role": "Engineering manager",
         "company": "Amazon",
-        "date": "2016-05",
-        "capsule": "2016-05-self-service-xml-feed-migration"
+        "date": "2018-07",
+        "capsule": "2018-07-prime-day-auto-approval-bug"
       },
       "months": [
-        "02",
-        "03",
-        "05",
-        "06",
         "08",
-        "11",
-        "12"
+        "07",
+        "03",
+        "02",
+        "01"
       ],
       "also": [
-        "2016-11-scrum-workshop-4-12",
-        "2016-03-mysql-to-rds-migration",
-        "2016-sessions-delivered",
-        "2016-02-joined-amazon-sde2"
+        "2018-08-left-amazon",
+        "2018-03-annual-review",
+        "2018-03-critical-incident-fixes",
+        "2018-02-product-ownership-workshop",
+        "2018-01-new-generation-hosts",
+        "2018-sessions-delivered",
+        "2018-promotion-document-reviewer"
       ],
-      "count": 9
+      "count": 12
     },
     {
       "year": "2017",
@@ -64,10 +65,10 @@
         "2 awards"
       ],
       "top": [
-        "2017-04-amazon-pay-one-account-check",
+        "2017-11-spot-award-process-improvement",
         "2017-07-amazon-pay-launch-unblock",
         "2017-07-bulk-investigation-reopen-tool",
-        "2017-11-spot-award-process-improvement",
+        "2017-04-amazon-pay-one-account-check",
         "2017-04-generic-risk-document"
       ],
       "quote": {
@@ -78,86 +79,85 @@
         "capsule": "2017-04-amazon-pay-one-account-check"
       },
       "months": [
-        "02",
-        "03",
-        "04",
-        "05",
-        "06",
-        "07",
+        "11",
         "10",
-        "11"
+        "07",
+        "06",
+        "05",
+        "04",
+        "03",
+        "02"
       ],
       "also": [
-        "2017-10-zeus-team-award",
-        "2017-02-interview-question-bank",
-        "2017-10-scrum-workshop-top-score",
-        "2017-03-exemplary-design-document",
-        "2017-03-first-annual-review",
-        "2017-05-first-week-onboarding-guide",
-        "2017-07-tech-conference-poster",
         "2017-11-product-ownership-facilitator",
+        "2017-10-scrum-workshop-top-score",
+        "2017-10-zeus-team-award",
+        "2017-07-tech-conference-poster",
         "2017-06-troubleshooting-bookmarks-wiki",
-        "2017-sessions-delivered",
-        "2017-04-linkedin-recommendation-teammate"
+        "2017-05-first-week-onboarding-guide",
+        "2017-04-linkedin-recommendation-teammate",
+        "2017-03-first-annual-review",
+        "2017-03-exemplary-design-document",
+        "2017-02-interview-question-bank",
+        "2017-sessions-delivered"
       ],
       "count": 16
     },
     {
-      "year": "2018",
-      "narrative": "Took on cost and reliability for the fraud services around Prime Day: cut garbage collection on one service to about 2.4% of CPU, saved about $36K a year in hosts through load tests and a hardware clean-up, and traced a faulty fraud rule on Prime Day and escalated it as a sev-2. Became the trainer program's highest-scoring trainer, then left in August to join Philips.",
+      "year": "2016",
+      "narrative": "Joined Amazon in February as an individual contributor on the catalog ingestion team, made feed migration a self-service procedure that 29 providers moved onto without developer help, and owned the team's move of 57 hosts to Amazon Linux. Also backfilled about 2 billion catalog records, won the catalog org's global hackathon and started teaching Scrum to other engineers as a volunteer trainer.",
       "numbers": [
-        "~17.7% to ~2.4% GC CPU",
-        "~$36K a year saved in hosts",
-        "~60% less investigation effort",
-        "4.57/5 top trainer",
-        "5 sessions"
+        "29 feed providers self-service",
+        "~2B catalog records backfilled",
+        "57 hosts migrated",
+        "1st of 45 hackathon teams",
+        "4 sessions"
       ],
       "top": [
-        "2018-07-prime-day-auto-approval-bug",
-        "2018-03-variable-comparison-tool",
-        "2018-08-highest-scoring-scrum-trainer",
-        "2018-01-gc-cpu-cut",
-        "2018-03-prime-day-right-sizing"
+        "2016-12-scrum-workshop-4-47",
+        "2016-08-amazon-linux-migration",
+        "2016-08-catalog-hackathon-first-place",
+        "2016-06-catalog-backfill-tool",
+        "2016-05-self-service-xml-feed-migration"
       ],
       "quote": {
-        "text": "You have shown great example of Deep Dive. Finding out exactly which rule was incorrect and also pointing to exact coding error.",
-        "role": "Engineering manager",
+        "text": "TL;DR The new parser implementation rocks and code is more readable and easy to understand !!",
+        "role": "Application Engineer, catalog support team",
         "company": "Amazon",
-        "date": "2018-07",
-        "capsule": "2018-07-prime-day-auto-approval-bug"
+        "date": "2016-05",
+        "capsule": "2016-05-self-service-xml-feed-migration"
       },
       "months": [
-        "01",
-        "02",
+        "12",
+        "11",
+        "08",
+        "06",
+        "05",
         "03",
-        "07",
-        "08"
+        "02"
       ],
       "also": [
-        "2018-01-new-generation-hosts",
-        "2018-03-annual-review",
-        "2018-08-left-amazon",
-        "2018-02-product-ownership-workshop",
-        "2018-03-critical-incident-fixes",
-        "2018-promotion-document-reviewer",
-        "2018-sessions-delivered"
+        "2016-11-scrum-workshop-4-12",
+        "2016-03-mysql-to-rds-migration",
+        "2016-02-joined-amazon-sde2",
+        "2016-sessions-delivered"
       ],
-      "count": 12
+      "count": 9
     }
   ],
   "company": {
     "arc": [
       {
-        "when": "Feb 2016",
-        "what": "Joined Amazon Development Center India as Software Development Engineer II, an individual-contributor role on the catalog ingestion and normalization team, and built the onboarding repository the team used for new engineers."
+        "when": "Aug 2018",
+        "what": "Left after about 30 months and 68 interviews for the fraud and risk org to join Philips."
       },
       {
         "when": "~2017",
         "what": "Moved to the India payments fraud and risk team (away-team model) and led the one-account-per-customer fraud check for the Amazon Pay launch, from requirements and stakeholder communication through onboarding."
       },
       {
-        "when": "Aug 2018",
-        "what": "Left after about 30 months and 68 interviews for the fraud and risk org to join Philips."
+        "when": "Feb 2016",
+        "what": "Joined Amazon Development Center India as Software Development Engineer II, an individual-contributor role on the catalog ingestion and normalization team, and built the onboarding repository the team used for new engineers."
       }
     ],
     "scope": [

@@ -9,11 +9,11 @@ import { claim, sessionsByEra } from '../data/claims';
 import { talks } from '../data/talks';
 
 const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
-const thinking = (await getCollection('thinking', ({ data }) => import.meta.env.DEV || !data.draft)).sort((a, b) => a.data.order - b.data.order);
 const featuredTalks = talks.filter((t) => t.featured);
+const recentSessionsByEra = [...sessionsByEra].reverse();
 const years = claim('years-experience');
 const adoption = claim('traceability-adoption');
-const maxEraSessions = Math.max(...sessionsByEra.map((e) => e.sessions));
+const maxEraSessions = Math.max(...recentSessionsByEra.map((e) => e.sessions));
 const employerList = `${profile.employers.slice(0, -1).join(', ')} and ${profile.employers.at(-1)}`;
 const intro =
   `${years.value} in software at ${employerList}. ` +
@@ -88,7 +88,7 @@ const jsonLd = {
       <Figure id="talks-count" size="large" />
       <Figure id="talks-attendees" size="large" />
       <ol class="era-mini" aria-label="Sessions by career era">
-        {sessionsByEra.map((e) => (
+        {recentSessionsByEra.map((e) => (
           <li>
             <span class="era-mini-name">
               {e.employer} <span class="muted">{e.years}</span>
@@ -128,22 +128,6 @@ const jsonLd = {
       <QuoteBlock id="q-patient-safety-evp" />
     </div>
   </section>
-
-  {thinking.length > 0 && (
-    <section id="thinking" class="wrap thinking grid" aria-labelledby="thinking-title">
-      <h2 id="thinking-title" class="section-title thinking-title">Thinking</h2>
-      <ul class="essays">
-        {thinking.map((entry) => (
-          <li>
-            <h3>
-              <a href={`/thinking/${entry.id}`}>{entry.data.title}</a>
-            </h3>
-            <p class="muted">{entry.data.summary}</p>
-          </li>
-        ))}
-      </ul>
-    </section>
-  )}
 
   <section id="contact" class="wrap contact" aria-labelledby="contact-title">
     <hr class="rule" />
@@ -419,46 +403,6 @@ const jsonLd = {
 
     .quote-side {
       grid-column: 9 / span 4;
-    }
-  }
-
-  /* Thinking */
-  .thinking {
-    row-gap: 2rem;
-  }
-
-  .thinking-title {
-    grid-column: 1 / -1;
-  }
-
-  .essays {
-    grid-column: 1 / -1;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .essays li {
-    padding-block: 1.5rem;
-    border-top: 1px solid var(--ink);
-  }
-
-  .essays h3 {
-    font-size: var(--step-1);
-  }
-
-  .essays .muted {
-    max-width: 36rem;
-    margin-top: 0.5rem;
-  }
-
-  @media (min-width: 48rem) {
-    .thinking-title {
-      grid-column: 1 / span 4;
-    }
-
-    .essays {
-      grid-column: 5 / span 8;
     }
   }
 
