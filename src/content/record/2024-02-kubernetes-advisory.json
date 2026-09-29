@@ -5,12 +5,20 @@
   "month": "02",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Advised an identity platform team to use managed Kubernetes for its node upgrade",
+  "title": "Kubernetes advice for a platform team",
   "type": "Project",
   "themes": [
     "delivery"
   ],
   "lane": "work",
   "total": 9,
-  "tier": "line"
+  "tier": "public",
+  "summary": "I advised a platform team on Kubernetes usage over three conversations.",
+  "what_would_have_happened": "",
+  "the_call": "",
+  "what_i_did": "",
+  "what_changed": "",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

@@ -5,12 +5,20 @@
   "month": "03",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Anytime feedback from a team member on mentoring: a good mentor, colleague and friend, available on busy days",
+  "title": "Feedback on mentoring",
   "type": "Recognition",
   "themes": [
     "people"
   ],
   "lane": "work",
   "total": 10,
-  "tier": "line"
+  "tier": "public",
+  "summary": "A team member called me a good mentor, colleague and friend.",
+  "what_would_have_happened": "Not applicable: a role or recognition event, not an intervention.",
+  "the_call": "",
+  "what_i_did": "",
+  "what_changed": "",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

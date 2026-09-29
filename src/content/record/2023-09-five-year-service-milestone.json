@@ -5,12 +5,20 @@
   "month": "09",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Reached five years of service at Philips",
+  "title": "Five years at Philips",
   "type": "Recognition",
   "themes": [
     "leadership"
   ],
   "lane": "work",
   "total": 8,
-  "tier": "line"
+  "tier": "public",
+  "summary": "I reached five years at Philips.",
+  "what_would_have_happened": "Not applicable: a role or recognition event, not an intervention.",
+  "the_call": "",
+  "what_i_did": "",
+  "what_changed": "",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

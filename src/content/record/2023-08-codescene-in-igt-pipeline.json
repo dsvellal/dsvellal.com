@@ -5,7 +5,7 @@
   "month": "08",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Helped a business unit add code-health analysis to its systems pipeline, tracked in its progress dialogue",
+  "title": "Brought code-health analysis into a product pipeline",
   "type": "Project",
   "themes": [
     "quality",
@@ -13,5 +13,13 @@
   ],
   "lane": "work",
   "total": 15,
-  "tier": "line"
+  "tier": "public",
+  "summary": "I helped a systems business add code-health analysis to its pipeline and reviewed progress with its leaders.",
+  "what_would_have_happened": "Code health would stay invisible until defects appeared.",
+  "the_call": "Put the analysis in the pipeline, not in a report.",
+  "what_i_did": "Supported the integration and the review.",
+  "what_changed": "The business reviewed it in its progress dialogue.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

@@ -5,12 +5,20 @@
   "month": "10",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Shared bar-raiser interview resources with a Cambridge hiring manager, whose team then asked for a session",
+  "title": "Shared interviewing resources",
   "type": "Hiring",
   "themes": [
     "hiring"
   ],
   "lane": "work",
   "total": 10,
-  "tier": "line"
+  "tier": "public",
+  "summary": "I shared the bar-raiser interviewing resources with a Cambridge team that then asked for a session.",
+  "what_would_have_happened": "",
+  "the_call": "Reuse the bar-raiser program.",
+  "what_i_did": "Shared resources.",
+  "what_changed": "The team asked for a session.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

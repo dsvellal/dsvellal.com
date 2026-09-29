@@ -5,12 +5,20 @@
   "month": "02",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Co-authored the State of Software Craftsmanship 2023 report, praised publicly by senior leaders",
+  "title": "Craftsmanship report recognized company-wide",
   "type": "Recognition",
   "themes": [
     "quality"
   ],
   "lane": "work",
   "total": 14,
-  "tier": "line"
+  "tier": "public",
+  "summary": "The report was presented to the whole software community as a guide for leaders and practitioners.",
+  "what_would_have_happened": "Not applicable: a role or recognition event, not an intervention.",
+  "the_call": "",
+  "what_i_did": "",
+  "what_changed": "Data covered over 80% of the software community.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

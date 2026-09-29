@@ -5,12 +5,27 @@
   "month": "09",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Personal thanks from the head of worldwide Software Excellence for work on the Cambridge launch event",
+  "title": "Thanks from the head of software excellence",
   "type": "Recognition",
   "themes": [
     "leadership"
   ],
   "lane": "work",
   "total": 11,
-  "tier": "line"
+  "tier": "public",
+  "summary": "The head of software excellence thanked me personally for the launch event work.",
+  "what_would_have_happened": "Not applicable: a role or recognition event, not an intervention.",
+  "the_call": "",
+  "what_i_did": "",
+  "what_changed": "",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "I just wanted to add my personal thanks to you for your work on the launch event.",
+      "role": "Head of worldwide Software Excellence",
+      "company": "Philips",
+      "date": "2023-09"
+    }
+  ],
+  "images": []
 }

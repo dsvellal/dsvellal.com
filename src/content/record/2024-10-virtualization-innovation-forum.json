@@ -5,7 +5,7 @@
   "month": "10",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Presented the ultrasound simulator virtualization journey and next steps at the Innovation Forum",
+  "title": "Presented virtualization at the Innovation Forum",
   "type": "Talk",
   "themes": [
     "delivery",
@@ -13,5 +13,13 @@
   ],
   "lane": "work",
   "total": 13,
-  "tier": "line"
+  "tier": "public",
+  "summary": "I presented the journey, advantages and next steps of simulator virtualization.",
+  "what_would_have_happened": "",
+  "the_call": "",
+  "what_i_did": "",
+  "what_changed": "",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

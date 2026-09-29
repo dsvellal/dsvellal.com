@@ -60,7 +60,8 @@ const groups = RELATIONSHIPS.map((r) => ({ ...r, items: all.filter((v) => v.rela
                 </span>
                 {v.recorded && (
                   <a href={v.href}>
-                    Record<span class="visually-hidden">: {v.who}, {v.year}</span>
+                    {v.href.startsWith('/talks/') ? 'Session' : 'Record'}
+                    <span class="visually-hidden">: {v.who}, {v.year}</span>
                   </a>
                 )}
               </p>

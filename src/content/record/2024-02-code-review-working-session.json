@@ -5,7 +5,7 @@
   "month": "02",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Gave a product team concrete actions to raise pull-request quality in a CI/CD working session",
+  "title": "Code-review improvements for a product team",
   "type": "Talk",
   "themes": [
     "quality",
@@ -13,5 +13,13 @@
   ],
   "lane": "work",
   "total": 10,
-  "tier": "line"
+  "tier": "public",
+  "summary": "I ran a working session with a product team and left them four concrete actions to improve pull requests.",
+  "what_would_have_happened": "",
+  "the_call": "",
+  "what_i_did": "Recommended PR-comment analysis, traceability checks, merge blocks and IDE linting.",
+  "what_changed": "",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

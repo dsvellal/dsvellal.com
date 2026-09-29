@@ -5,7 +5,7 @@
   "month": "09",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Co-hosted a demo area at the Cambridge launch event and demoed software tools, including AI coding assistance",
+  "title": "Demoed AI coding tools at a Cambridge launch event",
   "type": "Talk",
   "themes": [
     "ai",
@@ -13,5 +13,13 @@
   ],
   "lane": "work",
   "total": 15,
-  "tier": "line"
+  "tier": "public",
+  "summary": "At the Cambridge launch event of our organization, I co-hosted the engineering area and demoed software tools including AI coding assistance.",
+  "what_would_have_happened": "",
+  "the_call": "Show, not tell.",
+  "what_i_did": "Co-hosted the area and ran demos.",
+  "what_changed": "Leaders thanked the hosts publicly.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

@@ -5,7 +5,7 @@
   "month": "09",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Reviewed the software bill of materials GitHub Action and gave design feedback for its next steps",
+  "title": "Reviewed an SBOM automation",
   "type": "Project",
   "themes": [
     "quality",
@@ -13,5 +13,13 @@
   ],
   "lane": "work",
   "total": 13,
-  "tier": "line"
+  "tier": "public",
+  "summary": "I reviewed a GitHub Action that generates software bills of materials and checked conformance.",
+  "what_would_have_happened": "",
+  "the_call": "",
+  "what_i_did": "Gave inputs on the conformance checker actions.",
+  "what_changed": "The team incorporated my inputs.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

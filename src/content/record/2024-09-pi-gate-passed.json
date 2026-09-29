@@ -5,12 +5,20 @@
   "month": "09",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Supported a product project that passed its program-increment gate with management's go-ahead",
+  "title": "Supported a project through its program gate",
   "type": "Project",
   "themes": [
     "delivery"
   ],
   "lane": "work",
   "total": 12,
-  "tier": "line"
+  "tier": "public",
+  "summary": "A project I supported passed its program-increment gate with management's go-ahead.",
+  "what_would_have_happened": "",
+  "the_call": "",
+  "what_i_did": "",
+  "what_changed": "",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

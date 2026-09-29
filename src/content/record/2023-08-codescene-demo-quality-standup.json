@@ -5,7 +5,7 @@
   "month": "08",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Backed a business engineer to lead the quality stand-up demo of code-health and open-source scans in CI/CD",
+  "title": "Demoed code-health analysis to a quality team",
   "type": "Project",
   "themes": [
     "quality",
@@ -13,5 +13,13 @@
   ],
   "lane": "work",
   "total": 14,
-  "tier": "line"
+  "tier": "public",
+  "summary": "I demoed code-health analysis at a software quality stand-up.",
+  "what_would_have_happened": "",
+  "the_call": "Show the tool on real code.",
+  "what_i_did": "Ran the demo.",
+  "what_changed": "The quality team followed up on integrating it.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

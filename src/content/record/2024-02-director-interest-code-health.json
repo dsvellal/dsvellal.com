@@ -5,12 +5,27 @@
   "month": "02",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Ran a code-health analysis session that led an Ultrasound engineering director to explore adoption",
+  "title": "A director asked to adopt code-health analysis",
   "type": "Project",
   "themes": [
     "quality"
   ],
   "lane": "work",
   "total": 15,
-  "tier": "line"
+  "tier": "public",
+  "summary": "After my code-health session, an engineering director in Ultrasound saw it serving his objectives.",
+  "what_would_have_happened": "",
+  "the_call": "",
+  "what_i_did": "Ran the session.",
+  "what_changed": "Director-level interest in adoption.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "Thank you for the informative session on CodeScene yesterday. Was quite impressive and many of the features discussed could facilitate some of Ultrasounds' objectives.",
+      "role": "Director of Engineering, Ultrasound",
+      "company": "Philips",
+      "date": "2024-02-29"
+    }
+  ],
+  "images": []
 }

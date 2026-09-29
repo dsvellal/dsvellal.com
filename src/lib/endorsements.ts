@@ -1,4 +1,5 @@
 import { capsules, capsuleOrListHref } from './record';
+import { talks, talkHref } from './talks';
 import { quote, quotes } from '../data/claims';
 import { linkedinRecs, type Employer, type Relationship } from '../data/endorsements';
 
@@ -98,6 +99,25 @@ export async function voices(): Promise<Voice[]> {
         year: q.date.replace(/^~/, '').slice(0, 4),
         linkedin: false,
         href: capsuleOrListHref(c),
+        recorded: true,
+      });
+    });
+  }
+
+  for (const t of await talks()) {
+    (t.feedback?.quotes ?? []).forEach((text, i) => {
+      if (used.has(text)) return;
+      used.add(text);
+      out.push({
+        id: `${t.id}-feedback-${i + 1}`,
+        text,
+        who: `Participant, ${t.title}`,
+        company: t.company,
+        employer: employerOf(t.company),
+        relationship: 'learner',
+        year: t.year,
+        linkedin: false,
+        href: talkHref(t),
         recorded: true,
       });
     });

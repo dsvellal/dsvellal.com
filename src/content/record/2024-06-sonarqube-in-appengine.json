@@ -5,7 +5,7 @@
   "month": "06",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Guided an apps team, with a member of his team, to add static analysis to its CI as a reusable workflow",
+  "title": "Static analysis built into a platform's pipeline",
   "type": "Project",
   "themes": [
     "quality",
@@ -13,5 +13,20 @@
   ],
   "lane": "work",
   "total": 15,
-  "tier": "line"
+  "tier": "public",
+  "summary": "With my support, an engineer integrated static analysis into the team's application platform and made it reusable across repositories.",
+  "what_would_have_happened": "",
+  "the_call": "",
+  "what_i_did": "Supported the integration.",
+  "what_changed": "A reusable workflow for all the platform's repositories.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "Thanks to your valuable support, I was able to integrate SonarQube in AppEngine successfully.",
+      "role": "Engineer",
+      "company": "Philips",
+      "date": "2024-06-12"
+    }
+  ],
+  "images": []
 }

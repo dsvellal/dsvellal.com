@@ -5,12 +5,27 @@
   "month": "02",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "LinkedIn recommendation from a team member: clear context before each task helped him finish on time",
+  "title": "A team member on my mentoring",
   "type": "Recognition",
   "themes": [
     "people"
   ],
   "lane": "work",
   "total": 12,
-  "tier": "line"
+  "tier": "public",
+  "summary": "A software technologist on my team wrote that my clarity helped him start and finish work on time.",
+  "what_would_have_happened": "Not applicable: a role or recognition event, not an intervention.",
+  "the_call": "Explain the purpose before the task.",
+  "what_i_did": "Mentored and set clear expectations.",
+  "what_changed": "Public recommendation.",
+  "metrics": [],
+  "quotes": [
+    {
+      "text": "The clarity and details you provide before sharing the work help me understand the purpose of the work and the expected outcome, allowing me to get started on the work and finish it on time without any struggle.",
+      "role": "Software Technologist",
+      "company": "Philips",
+      "date": "2023-02-03"
+    }
+  ],
+  "images": []
 }

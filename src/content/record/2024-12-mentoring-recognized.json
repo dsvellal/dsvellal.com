@@ -5,12 +5,20 @@
   "month": "12",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Recognized by a former manager for coaching a colleague during her strong year",
+  "title": "Mentoring recognized",
   "type": "Recognition",
   "themes": [
     "people"
   ],
   "lane": "work",
   "total": 9,
-  "tier": "line"
+  "tier": "public",
+  "summary": "A former manager recognized my mentoring of a colleague.",
+  "what_would_have_happened": "Not applicable: a role or recognition event, not an intervention.",
+  "the_call": "",
+  "what_i_did": "",
+  "what_changed": "",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

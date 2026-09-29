@@ -5,7 +5,7 @@
   "month": "10",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Paired with a team for an hour and got their first successful static-analysis build after a week of trying",
+  "title": "Unblocked a team's static-analysis build in an hour",
   "type": "Project",
   "themes": [
     "quality",
@@ -13,5 +13,13 @@
   ],
   "lane": "work",
   "total": 13,
-  "tier": "line"
+  "tier": "public",
+  "summary": "A team found me through the internal Q&A site after a week trying to set up static analysis; an hour of pairing got them their first successful build.",
+  "what_would_have_happened": "The team would lose more days on setup.",
+  "the_call": "Pair right away rather than schedule a consultation.",
+  "what_i_did": "Debugged with them for an hour and suggested changes.",
+  "what_changed": "They got their first successful build.",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

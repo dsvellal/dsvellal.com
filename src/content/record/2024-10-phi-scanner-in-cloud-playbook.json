@@ -5,7 +5,7 @@
   "month": "10",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Built a repository scanner for protected health information, listed in the R&D cloud-migration playbook",
+  "title": "Health-data scanner adopted in a cloud playbook",
   "type": "Project",
   "themes": [
     "quality",
@@ -13,5 +13,13 @@
   ],
   "lane": "work",
   "total": 14,
-  "tier": "line"
+  "tier": "public",
+  "summary": "An in-house tool that scans repositories for protected health information was listed in the R&D cloud-migration playbook.",
+  "what_would_have_happened": "",
+  "the_call": "",
+  "what_i_did": "",
+  "what_changed": "",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

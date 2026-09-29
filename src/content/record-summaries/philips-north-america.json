@@ -7,7 +7,7 @@
   "lane": "work",
   "events": 100,
   "capsules": 100,
-  "public": 41,
+  "public": 63,
   "status": "live",
   "headline": "Took the traceability platform to 14 businesses",
   "headline_capsule": "2026-09-traceability-platform-14-businesses",
@@ -147,7 +147,8 @@
         "2024-12-year-end-review",
         "2024-07-developer-days-india",
         "2024-06-solid-principles-series",
-        "2024-06-ultrasound-test-virtualization"
+        "2024-06-ultrasound-test-virtualization",
+        "2024-02-director-interest-code-health"
       ],
       "quote": {
         "text": "Many thanks to each of the teammates who helped think through the 'art of possibility'.",
@@ -171,7 +172,6 @@
         "2024-10-virtualization-innovation-forum",
         "2024-09-pi-gate-passed",
         "2024-06-sonarqube-in-appengine",
-        "2024-02-director-interest-code-health",
         "2024-02-kubernetes-advisory",
         "2024-02-code-review-working-session",
         "2024-02-craftsmanship-report-recognized"
@@ -190,6 +190,7 @@
       "top": [
         "2023-12-year-end-review",
         "2023-11-developer-portal-hackathon-usa",
+        "2023-08-codescene-in-igt-pipeline",
         "2023-05-back2basics-workshop",
         "2023-state-of-software-craftsmanship-report"
       ],
@@ -218,7 +219,6 @@
         "2023-09-cambridge-launch-event-demo",
         "2023-09-five-year-service-milestone",
         "2023-09-sbom-github-action-review",
-        "2023-08-codescene-in-igt-pipeline",
         "2023-08-codescene-demo-quality-standup",
         "2023-05-software-excellence-awards-tagged",
         "2023-03-anytime-feedback-mentoring",

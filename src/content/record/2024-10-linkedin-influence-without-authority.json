@@ -5,12 +5,20 @@
   "month": "10",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Published the LinkedIn article 'Influence without Authority: Lessons from Game Theory'",
+  "title": "Wrote on influence without authority",
   "type": "Writing",
   "themes": [
     "leadership"
   ],
   "lane": "work",
   "total": 11,
-  "tier": "line"
+  "tier": "public",
+  "summary": "I published an article on leading through influence, drawing on game theory.",
+  "what_would_have_happened": "",
+  "the_call": "",
+  "what_i_did": "",
+  "what_changed": "",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }

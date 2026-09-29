@@ -5,12 +5,20 @@
   "month": "10",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Invited with the head of software excellence to talk design and mastery with the Cambridge data science team",
+  "title": "A mastery chat with a data science team",
   "type": "Talk",
   "themes": [
     "teaching"
   ],
   "lane": "work",
   "total": 9,
-  "tier": "line"
+  "tier": "public",
+  "summary": "The data science team asked me and the head of software excellence how to design systems and build mastery.",
+  "what_would_have_happened": "",
+  "the_call": "",
+  "what_i_did": "Held the conversation.",
+  "what_changed": "",
+  "metrics": [],
+  "quotes": [],
+  "images": []
 }
