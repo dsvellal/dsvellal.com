@@ -4,6 +4,7 @@ import Figure from '../../components/Figure.astro';
 import QuoteBlock from '../../components/QuoteBlock.astro';
 import EraBand from '../../components/record/EraBand.astro';
 import TalkList from '../../components/talks/TalkList.astro';
+import AdoptionLadder from '../../components/story/AdoptionLadder.astro';
 import { topics } from '../../data/talks';
 import { profile } from '../../data/profile';
 import { claim, sessionsByEra } from '../../data/claims';
@@ -89,10 +90,13 @@ const recent = all.slice(0, 6);
   <section class="wrap now" aria-labelledby="now-title">
     <hr class="rule" />
     <h2 id="now-title">Teaching AI now</h2>
+    <div class="now-ladder">
+      <AdoptionLadder />
+    </div>
     <div class="grid now-figs">
-      <div><Figure id="ai-people-trained" size="medium" showContext /></div>
       <div><Figure id="ai-sessions-rating" size="medium" showContext /></div>
       <div><Figure id="pu-program" size="medium" showContext /></div>
+      <div><Figure id="ai-confidence" size="medium" showContext /></div>
     </div>
     <div class="now-quote">
       <QuoteBlock id="q-analytics" size="large" />
@@ -226,9 +230,13 @@ const recent = all.slice(0, 6);
     margin-top: 2rem;
   }
 
+  .now-ladder {
+    margin-top: 2.5rem;
+  }
+
   .now-figs {
     row-gap: 2rem;
-    margin-top: 2.5rem;
+    margin-top: clamp(2.5rem, 6vw, 4rem);
   }
 
   .now-figs > div {

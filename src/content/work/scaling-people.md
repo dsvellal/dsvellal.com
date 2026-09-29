@@ -1,11 +1,16 @@
 ---
 title: Growing engineers, not just systems
-pillar: Scaling people
+pillar: Hiring and growing engineers
 order: 4
 summary: A better senior hiring process, mentoring engineers into senior technical roles, and more than a decade of teaching outside the job.
 employer: Amazon, Philips and beyond
 period: 2010 to now
 headlineClaim: engineers-mentored
+problem: Each part of the organization hired senior engineers its own way. The quality of hires varied, and interview feedback was collected inconsistently.
+decision: Write the process down, train every interviewer before they join a panel, and bring in bar-raisers from outside the hiring team.
+shifts:
+  - candidate-nps
+  - engineers-mentored
 outcomes:
   - team-scope
   - candidate-nps

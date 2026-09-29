@@ -5,9 +5,11 @@ interface Props {
   id: string;
   size?: 'large' | 'regular';
   showContext?: boolean;
+  /** How the speaker relates to me, such as "My manager". */
+  relation?: string;
 }
 
-const { id, size = 'regular', showContext = true } = Astro.props;
+const { id, size = 'regular', showContext = true, relation } = Astro.props;
 const q = quote(id);
 ---
 
@@ -16,6 +18,7 @@ const q = quote(id);
     <p>&ldquo;{q.text}&rdquo;</p>
   </blockquote>
   <figcaption>
+    {relation && <span class="relation">{relation}</span>}
     {q.name && <span class="name">{q.name}</span>}
     <span class="role">{q.role}</span>
     <span class="muted">{q.company}, {q.year}</span>
@@ -56,6 +59,11 @@ const q = quote(id);
   .role,
   .name {
     font-weight: 700;
+  }
+
+  .relation {
+    margin-bottom: 0.35rem;
+    font-weight: 800;
   }
 
   .name + .role {

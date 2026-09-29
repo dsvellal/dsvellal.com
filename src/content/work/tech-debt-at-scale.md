@@ -1,11 +1,16 @@
 ---
 title: Paying down technical debt at scale
-pillar: Transformation
+pillar: Cost and technical debt
 order: 3
-summary: Lead coach for a technical debt and resource optimization program that realized about €2M in savings in 2021, with about €3M more identified.
+summary: Lead coach for a technical debt and resource optimization program that realized about €2.1M in savings in 2021, with about €3.45M more identified.
 employer: Philips
 period: '2021'
 headlineClaim: techdebt-savings
+problem: Technical debt was adding cost and slowing delivery. One shared application codebase was about 20% duplicated code, so every fix had to be made in several places.
+decision: Pay the debt down in measured steps inside normal delivery, on a three-year roadmap agreed with the business, instead of stopping for a rewrite.
+shifts:
+  - techdebt-savings
+  - techdebt-opportunity
 outcomes:
   - techdebt-opportunity
 doAgain: Transformation is not about erasing the past but evolving it with purpose. Understand the system you inherited, change it in steps you can measure, and put the savings in terms the business already uses.
@@ -25,6 +30,6 @@ The key decision was to pay the debt down in steps inside normal delivery, on a 
 
 ## What I did, and what the team did
 
-I was lead coach for the program in the Software Center of Excellence, working with teams on technical debt reduction and resource optimization. The teams did the work. In 2021 the program realized about €2M in savings and identified about €3M more in future savings.
+I was lead coach for the program in the Software Center of Excellence, working with teams on technical debt reduction and resource optimization. The teams did the work. In 2021 the program realized about €2.1M in savings and identified about €3.45M more in future savings.
 
 I introduced the duplication and reliability analysis tooling, trained teams to run it and compiled the results for leadership. I proposed a code reliability analyzer and drove its adoption in four business groups, which found and removed about 18,000 lines of duplicate code.

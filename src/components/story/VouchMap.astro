@@ -1,0 +1,302 @@
+---
+import { EMPLOYERS, RELATIONSHIPS } from '../../data/endorsements';
+import { quote } from '../../data/claims';
+import { voices } from '../../lib/endorsements';
+
+interface Props {
+  notes?: boolean;
+}
+
+const { notes = false } = Astro.props;
+const all = await voices();
+const rows = RELATIONSHIPS.map((r) => ({
+  ...r,
+  cells: EMPLOYERS.map((e) => all.filter((v) => v.relationship === r.id && v.employer === e)),
+}));
+const totals = EMPLOYERS.map((e) => all.filter((v) => v.employer === e).length);
+const linkedin = all.filter((v) => v.linkedin).length;
+const years = all.map((v) => Number(v.year)).filter((y) => y > 0);
+const first = Math.min(...years);
+const last = Math.max(...years);
+const lead = quote('q-ultrasound');
+const said = (text?: string) => (text ? `\u201c${text}\u201d` : '');
+---
+
+<figure class="vouch" data-vouch-map aria-labelledby="vouch-caption">
+  <p id="vouch-caption" class="summary">
+    <strong>{all.length} recorded voices</strong> from {first} to {last}, at all four employers and outside work.
+    <span class="li-key"><span class="dot li" aria-hidden="true"></span>{linkedin} are LinkedIn recommendations.</span>
+    <span class="other-key"><span class="dot" aria-hidden="true"></span>The rest are reviews, messages, surveys and awards.</span>
+  </p>
+  <div class="map-wrap">
+    <table class="map">
+      <caption class="visually-hidden">Recorded voices by employer and by where the person stood relative to me</caption>
+      <thead>
+        <tr>
+          <td></td>
+          {
+            EMPLOYERS.map((e, i) => (
+              <th scope="col">
+                <span class="emp">
+                  {e === 'Outside work' ? (
+                    <>
+                      Outside<span class="wide-only"> work</span>
+                    </>
+                  ) : (
+                    e
+                  )}
+                </span>{' '}
+                <span class="tot">{totals[i]}</span>
+              </th>
+            ))
+          }
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map((r) => (
+            <tr>
+              <th scope="row">
+                <span class="rel">{r.label}</span>
+                {notes && <span class="rel-note muted">{r.note}</span>}
+              </th>
+              {r.cells.map((cell, i) => (
+                <td>
+                  <span class="visually-hidden">
+                    {cell.length} from {EMPLOYERS[i]}
+                  </span>
+                  <span class="dots">
+                    {cell.map((v) => (
+                      <a
+                        class:list={['dot', { li: v.linkedin }]}
+                        href={v.href}
+                        data-text={v.text ? said(v.text) : v.summary}
+                        data-who={`${v.who}, ${v.company}, ${v.year}${v.linkedin ? '. LinkedIn recommendation' : ''}`}
+                        aria-label={`${v.text ? said(v.text) : v.summary} ${v.who}, ${v.company}, ${v.year}`}
+                      />
+                    ))}
+                  </span>
+                </td>
+              ))}
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <figure class="panel" aria-live="polite">
+      <blockquote>
+        <p data-vm-text>{said(lead.text)}</p>
+      </blockquote>
+      <figcaption data-vm-who>{lead.role}, {lead.company}, {lead.year}</figcaption>
+      <p class="hint muted">Point at a square to read what that person said. Each one links to its record.</p>
+    </figure>
+  </div>
+</figure>
+
+<script>
+  for (const map of document.querySelectorAll<HTMLElement>('[data-vouch-map]')) {
+    const text = map.querySelector<HTMLElement>('[data-vm-text]');
+    const who = map.querySelector<HTMLElement>('[data-vm-who]');
+    if (!text || !who) continue;
+    const show = (dot: HTMLElement) => {
+      text.textContent = dot.dataset.text ?? '';
+      who.textContent = dot.dataset.who ?? '';
+      map.querySelector('.dot.shown')?.classList.remove('shown');
+      dot.classList.add('shown');
+    };
+    for (const dot of map.querySelectorAll<HTMLElement>('.map .dot')) {
+      dot.addEventListener('pointerenter', () => show(dot));
+      dot.addEventListener('focus', () => show(dot));
+    }
+  }
+</script>
+
+<style>
+  .vouch {
+    margin: 0;
+  }
+
+  .summary {
+    max-width: 44rem;
+    font-size: var(--step-0);
+    line-height: 1.45;
+  }
+
+  .summary > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-right: 0.75rem;
+    font-size: var(--step--1);
+    color: var(--ink-2);
+  }
+
+  .li-key {
+    margin-left: 0.25rem;
+  }
+
+  .map-wrap {
+    display: grid;
+    gap: 2rem;
+    margin-top: 1.75rem;
+  }
+
+  .map {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .map thead th {
+    padding: 0 0.15rem 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-align: left;
+    vertical-align: bottom;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .wide-only {
+    display: none;
+  }
+
+  .map thead td {
+    width: 4.75rem;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .emp {
+    display: block;
+    line-height: 1.2;
+  }
+
+  .tot {
+    font-weight: 400;
+    color: var(--ink-2);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .map tbody th {
+    padding: 0.7rem 0.75rem 0.7rem 0;
+    font-size: var(--step--1);
+    font-weight: 700;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.25;
+  }
+
+  .rel-note {
+    display: block;
+    margin-top: 0.25rem;
+    font-weight: 400;
+  }
+
+  .map tbody td {
+    padding: 0.7rem 0.2rem;
+    vertical-align: top;
+    border-left: 1px solid var(--rule);
+  }
+
+  .map tbody tr + tr > * {
+    border-top: 1px solid var(--rule);
+  }
+
+  .dots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: var(--ink);
+    text-decoration: none;
+    transition: transform 140ms var(--ease-out);
+  }
+
+  .dot.li {
+    background: var(--accent);
+  }
+
+  .map .dot:hover,
+  .map .dot:focus-visible,
+  .map .dot.shown {
+    transform: scale(1.45);
+    outline: 2px solid var(--ink);
+    outline-offset: 1px;
+    box-shadow: none;
+  }
+
+  .panel {
+    margin: 0;
+    padding-top: 1.25rem;
+    border-top: 4px solid var(--ink);
+  }
+
+  .panel blockquote {
+    margin: 0;
+  }
+
+  .panel p[data-vm-text] {
+    font-size: var(--step-1);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+    min-height: 4.2em;
+  }
+
+  .panel figcaption {
+    margin-top: 1rem;
+    font-size: var(--step--1);
+    font-weight: 700;
+  }
+
+  .hint {
+    margin-top: 1rem;
+    font-size: var(--step--1);
+  }
+
+  @media (min-width: 48rem) {
+    .map thead th {
+      padding: 0 0.35rem 0.6rem;
+      font-size: var(--step--1);
+    }
+
+    .wide-only {
+      display: inline;
+    }
+
+    .map thead td {
+      width: 6.5rem;
+    }
+
+    .map tbody td {
+      padding: 0.7rem 0.35rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .map-wrap {
+      grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+      column-gap: calc(var(--gutter) * 2);
+      align-items: start;
+    }
+
+    .map thead td {
+      width: 9rem;
+    }
+
+    .dot {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+
+  @media (hover: none) {
+    .hint {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,117 @@
+---
+import { signals } from '../../data/story';
+import { recordHref } from '../../lib/record';
+
+interface Props {
+  seal?: boolean;
+}
+
+const { seal = false } = Astro.props;
+const resolved = await Promise.all(
+  signals
+    .filter((s) => !seal || s.seal)
+    .map(async (s) => ({ ...s, link: s.capsule ? await recordHref(s.capsule) : s.href })),
+);
+const groups = [
+  { title: 'At Philips', items: resolved.filter((s) => s.where === 'philips') },
+  { title: 'Beyond Philips', items: resolved.filter((s) => s.where === 'beyond') },
+];
+---
+
+{
+  seal ? (
+    <ul class="seal" aria-label="Recognition">
+      {resolved.map((s) => (
+        <li>
+          {s.link ? <a href={s.link}>{s.text}</a> : s.text}
+          <span class="year muted">{s.year}</span>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <div class="signals">
+      {groups.map((g) => (
+        <div>
+          <h3>{g.title}</h3>
+          <ul>
+            {g.items.map((s) => (
+              <li>
+                <span class="year muted">{s.year}</span>
+                <span>{s.link ? <a href={s.link}>{s.text}</a> : s.text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+<style>
+  .seal {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: var(--step--1);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .seal li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.5rem;
+  }
+
+  .seal a {
+    text-decoration-color: var(--rule);
+  }
+
+  .seal a:hover {
+    text-decoration-color: var(--accent);
+  }
+
+  .seal .year {
+    font-weight: 400;
+  }
+
+  .signals {
+    display: grid;
+    gap: 2rem var(--gutter);
+  }
+
+  h3 {
+    padding-bottom: 0.6rem;
+    font-size: var(--step-0);
+    font-weight: 800;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .signals ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .signals li {
+    display: grid;
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    column-gap: 0.75rem;
+    padding: 0.7rem 0;
+    font-size: var(--step--1);
+    line-height: 1.4;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .signals li > span:last-child {
+    font-weight: 600;
+  }
+
+  @media (min-width: 48rem) {
+    .signals {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>

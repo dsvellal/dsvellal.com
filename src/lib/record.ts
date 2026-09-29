@@ -82,6 +82,18 @@ export function capsuleOrListHref(c: Capsule): string {
   return capsuleHref(c) ?? (c.month ? `${base}/${c.year}/${c.month}` : `${base}/${c.year}`);
 }
 
+/** Link for a record entry by id; fails the build when the id is not in the public record. */
+export async function recordHref(id: string): Promise<string> {
+  const c = (await capsules()).find((x) => x.id === id);
+  if (!c) throw new Error(`Unknown record id: ${id}`);
+  return capsuleOrListHref(c);
+}
+
+/** Where a claim's evidence lives: its record entry, or a page named in the claim. */
+export async function claimHref(c: { capsule?: string; href?: string }): Promise<string | undefined> {
+  return c.capsule ? recordHref(c.capsule) : c.href;
+}
+
 /** Static paths for public capsule pages in one lane, with newer and older neighbours in the same era. */
 export async function capsulePaths(lane: 'work' | 'beyond') {
   const all = await capsules();

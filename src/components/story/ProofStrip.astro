@@ -1,0 +1,83 @@
+---
+import { claim } from '../../data/claims';
+import { claimHref } from '../../lib/record';
+
+interface Props {
+  ids: string[];
+}
+
+const items = await Promise.all(
+  Astro.props.ids.map(async (id) => {
+    const c = claim(id);
+    return { c, href: await claimHref(c) };
+  }),
+);
+---
+
+<ul class="proof" aria-label="In numbers">
+  {
+    items.map(({ c, href }) => (
+      <li>
+        <a href={href}>
+          <span class="value figure">{c.value}</span>
+          <span class="text">{c.short ?? c.label}</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .proof {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem var(--gutter);
+    margin: 0;
+    padding: 1.25rem 0 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+
+  li {
+    display: grid;
+    align-content: start;
+    gap: 0.6rem;
+  }
+
+  a {
+    display: grid;
+    gap: 0.4rem;
+    text-decoration: none;
+  }
+
+  .value {
+    font-size: var(--step-3);
+    transition: color 160ms var(--ease-out);
+  }
+
+  .text {
+    max-width: 16rem;
+    font-size: var(--step--1);
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color 160ms var(--ease-out);
+  }
+
+  a:hover .value {
+    color: var(--accent);
+  }
+
+  a:hover .text {
+    text-decoration-color: var(--accent);
+  }
+
+  @media (min-width: 48rem) {
+    .proof {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+</style>

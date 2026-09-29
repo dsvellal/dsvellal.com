@@ -2,23 +2,22 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Headshot from '../components/Headshot.astro';
-import Figure from '../components/Figure.astro';
 import QuoteBlock from '../components/QuoteBlock.astro';
+import ProofStrip from '../components/story/ProofStrip.astro';
+import CareerArc from '../components/story/CareerArc.astro';
+import Shift from '../components/story/Shift.astro';
+import ValueLedger from '../components/story/ValueLedger.astro';
+import VouchMap from '../components/story/VouchMap.astro';
+import Signals from '../components/story/Signals.astro';
+import AdoptionLadder from '../components/story/AdoptionLadder.astro';
 import { profile } from '../data/profile';
-import { claim, sessionsByEra } from '../data/claims';
-import { talks } from '../data/talks';
+import { claim } from '../data/claims';
+import { heroProof, readingPaths } from '../data/story';
+import { trio } from '../data/endorsements';
 
 const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
-const featuredTalks = talks.filter((t) => t.featured);
-const recentSessionsByEra = [...sessionsByEra].reverse();
-const linkedinQuotes = ['q-nicholson-leader', 'q-watson-influence', 'q-vieira-sponsorship'];
 const years = claim('years-experience');
-const adoption = claim('traceability-adoption');
-const maxEraSessions = Math.max(...recentSessionsByEra.map((e) => e.sessions));
-const employerList = `${profile.employers.slice(0, -1).join(', ')} and ${profile.employers.at(-1)}`;
-const intro =
-  `${years.value} in software at ${employerList}. ` +
-  `Today I lead AI-enabled transformations for medical-device engineering at Philips, working across ${adoption.value} businesses and a global software community of thousands.`;
+const talksCount = claim('talks-count');
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -31,8 +30,17 @@ const jsonLd = {
   email: `mailto:${profile.email}`,
   sameAs: [profile.linkedin],
   worksFor: { '@type': 'Organization', name: 'Philips' },
+  alumniOf: { '@type': 'CollegeOrUniversity', name: 'RV College of Engineering' },
+  award: ['CTO Outstanding Technical Achievement Award, Philips, 2021'],
   address: { '@type': 'PostalAddress', addressLocality: 'Rochester', addressRegion: 'MI', addressCountry: 'US' },
-  knowsAbout: ['AI in regulated software', 'IEC 62304', 'Engineering excellence', 'DORA metrics', 'Technical debt reduction'],
+  knowsAbout: [
+    'AI transformation in regulated software',
+    'IEC 62304',
+    'Engineering excellence',
+    'DORA metrics',
+    'Technical debt reduction',
+    'Hiring process design',
+  ],
 };
 ---
 
@@ -45,9 +53,13 @@ const jsonLd = {
   <section class="hero wrap grid" aria-labelledby="hero-title">
     <div class="hero-copy">
       <h1 id="hero-title">{profile.headline}</h1>
-      <p class="hero-sub">
-        {intro}
-      </p>
+      <p class="hero-sub">{profile.story}</p>
+      <div class="hero-proof">
+        <ProofStrip ids={heroProof} />
+      </div>
+      <div class="hero-seal">
+        <Signals seal />
+      </div>
       <p class="hero-actions">
         <a class="button" href="/impact">See the Impact</a>
         <a href="#contact">Contact</a>
@@ -58,84 +70,146 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="wrap callouts" aria-labelledby="callouts-title">
-    <h2 id="callouts-title" class="callouts-title">From my LinkedIn recommendations</h2>
-    <div class="callout-grid">
-      {linkedinQuotes.map((id) => <QuoteBlock id={id} showContext={false} />)}
+  <section class="wrap arc-section" aria-labelledby="arc-title">
+    <hr class="rule rule--accent" />
+    <h2 id="arc-title" class="section-title">One problem, a wider scope each time</h2>
+    <p class="section-lede">
+      From one product component at IBM to AI across medical-device businesses at Philips. Pick a company to see its
+      record year by year.
+    </p>
+    <div class="section-body">
+      <CareerArc />
     </div>
-    <p class="callouts-more"><a href={profile.linkedinRecommendations}>Read them all on LinkedIn</a></p>
   </section>
 
-  <section id="about" class="wrap work" aria-labelledby="about-title">
+  <section id="work" class="wrap work" aria-labelledby="work-title">
     <hr class="rule rule--accent" />
-    <h2 id="about-title" class="section-title">About</h2>
-    <ol class="pillars">
+    <h2 id="work-title" class="section-title">Problems I took on</h2>
+    <p class="section-lede">
+      Four problems that crossed teams and business units: what was going wrong, the call I made, and what changed.
+    </p>
+    <ol class="cases">
       {
-        work.map((entry, i) => (
-          <li class="pillar grid">
-            <p class="pillar-num figure" aria-hidden="true">
-              {String(i + 1).padStart(2, '0')}
-            </p>
-            <div class="pillar-body">
-              <p class="label">{entry.data.pillar}</p>
+        work.map((entry) => (
+          <li class="case grid">
+            <div class="case-main">
               <h3>
                 <a href={`/work/${entry.id}`}>{entry.data.title}</a>
               </h3>
-              <p class="muted">{entry.data.summary}</p>
+              <p class="case-meta muted">
+                {entry.data.pillar}. {entry.data.employer}, {entry.data.period}.
+              </p>
+              <dl class="case-steps">
+                <div>
+                  <dt>Before</dt>
+                  <dd>{entry.data.problem}</dd>
+                </div>
+                <div>
+                  <dt>The call</dt>
+                  <dd>{entry.data.decision}</dd>
+                </div>
+              </dl>
             </div>
-            <div class="pillar-fig">
-              <Figure id={entry.data.headlineClaim} size="medium" />
+            <div class="case-shifts">
+              {entry.data.shifts.slice(0, 2).map((id) => (
+                <Shift id={id} />
+              ))}
             </div>
+            {entry.data.quote && (
+              <div class="case-quote">
+                <QuoteBlock id={entry.data.quote} showContext={false} />
+              </div>
+            )}
           </li>
         ))
       }
     </ol>
   </section>
 
-  <section class="wrap speaking grid" aria-labelledby="speaking-title">
-    <div class="speaking-figs">
-      <Figure id="talks-count" size="large" />
-      <Figure id="talks-attendees" size="large" />
-      <ol class="era-mini" aria-label="Sessions by career era">
-        {recentSessionsByEra.map((e) => (
-          <li>
-            <span class="era-mini-name">
-              <a href={`/talks/${e.slug}`}>{e.employer}</a> <span class="muted">{e.years}</span>
-            </span>
-            <span class="era-mini-bar" aria-hidden="true">
-              <span style={`width: ${(e.sessions / maxEraSessions) * 100}%`}></span>
-            </span>
-            <span class="era-mini-count">{e.sessions}</span>
-          </li>
-        ))}
-      </ol>
+  <section class="wrap value" aria-labelledby="value-title">
+    <hr class="rule rule--accent" />
+    <h2 id="value-title" class="section-title">What it was worth</h2>
+    <p class="section-lede">
+      Money, time, quality and adoption, each with my part in it. Where a figure has an entry in the record, it links
+      there.
+    </p>
+    <div class="section-body">
+      <ValueLedger />
     </div>
-    <div class="speaking-list">
-      <h2 id="speaking-title" class="section-title">Talks and workshops</h2>
-      <ul>
-        {
-          featuredTalks.map((t) => (
-            <li>
-              <span class="talk-year label">{t.year}</span>
-              <span class="talk-title">{t.title}</span>
-              <span class="talk-venue muted">{t.detail ? `${t.venue}. ${t.detail}.` : t.venue}</span>
-            </li>
-          ))
-        }
-      </ul>
-      <p><a href="/talks">All talks, by company and year</a></p>
-    </div>
+    <p class="more"><a href="/impact#value">Every figure, with its context</a></p>
   </section>
 
-  <section class="wrap quotes grid" aria-labelledby="quotes-title">
-    <h2 id="quotes-title" class="visually-hidden">What colleagues say</h2>
-    <div class="quote-main">
-      <QuoteBlock id="q-ultrasound" size="large" />
+  <section class="wrap vouch" aria-labelledby="vouch-title">
+    <hr class="rule rule--accent" />
+    <h2 id="vouch-title" class="section-title">Who vouches for the work</h2>
+    <div class="section-body">
+      <VouchMap />
     </div>
-    <div class="quote-side">
-      <QuoteBlock id="q-radiology-architect" />
-      <QuoteBlock id="q-patient-safety-evp" />
+    <div class="trio">
+      <h3 class="trio-title">Three LinkedIn recommendations from 2025</h3>
+      <div class="trio-grid">
+        {trio.map((t) => <QuoteBlock id={t.quote} relation={t.relation} showContext={false} />)}
+      </div>
+      <p class="more">
+        <a href={profile.linkedinRecommendations}>Read them all on LinkedIn</a>
+      </p>
     </div>
+    <div class="called-out">
+      <h3 class="trio-title">Called out</h3>
+      <Signals />
+    </div>
+    <p class="more"><a href="/endorsements">Every recorded voice, grouped by who said it</a></p>
+  </section>
+
+  <section class="wrap adoption" aria-labelledby="adoption-title">
+    <hr class="rule rule--accent" />
+    <h2 id="adoption-title" class="section-title">Getting people to use AI at work</h2>
+    <p class="section-lede">
+      Changing how teams work is most of an AI transformation. This is how the numbers stack up from first contact to
+      daily use.
+    </p>
+    <div class="section-body">
+      <AdoptionLadder />
+    </div>
+    <p class="more">
+      <a href="/talks">All {talksCount.value} talks and workshops since 2010, by company and year</a>
+    </p>
+  </section>
+
+  <nav class="wrap paths" aria-labelledby="paths-title">
+    <hr class="rule" />
+    <h2 id="paths-title" class="section-title">Where to go next</h2>
+    <ul class="path-list">
+      {
+        readingPaths.map((p) => (
+          <li>
+            <a href={p.href}>{p.title}</a>
+            <p class="muted">{p.body}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+
+  <section id="about" class="wrap about grid" aria-labelledby="about-title">
+    <div class="about-head">
+      <hr class="rule rule--accent" />
+      <h2 id="about-title" class="section-title">About me</h2>
+    </div>
+    <div class="about-body">
+      {profile.about.map((p) => <p>{p}</p>)}
+      <p><a href="/socials">Community work and the book drive</a></p>
+    </div>
+    <dl class="about-facts">
+      {
+        profile.facts.map((f) => (
+          <div>
+            <dt>{f.label}</dt>
+            <dd>{f.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
   </section>
 
   <section id="contact" class="wrap contact" aria-labelledby="contact-title">
@@ -149,20 +223,40 @@ const jsonLd = {
 </Base>
 
 <style>
-  section {
-    margin-top: clamp(4rem, 10vw, 8rem);
+  section,
+  .paths {
+    margin-top: clamp(4rem, 9vw, 7rem);
   }
 
   .section-title {
+    margin-top: 1.5rem;
     font-size: var(--step-3);
     font-weight: 800;
   }
 
+  .section-lede {
+    max-width: 38rem;
+    margin-top: 1rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+    color: var(--ink-2);
+  }
+
+  .section-body {
+    margin-top: clamp(2rem, 4vw, 3rem);
+  }
+
+  .more {
+    margin-top: 2rem;
+    font-size: var(--step--1);
+    font-weight: 700;
+  }
+
   /* Hero */
   .hero {
-    margin-top: clamp(2rem, 6vw, 5rem);
+    margin-top: clamp(2rem, 5vw, 4rem);
     row-gap: 2.5rem;
-    align-items: end;
+    align-items: start;
   }
 
   .hero-copy {
@@ -171,23 +265,31 @@ const jsonLd = {
 
   .hero-photo {
     grid-column: 1 / span 3;
-    max-width: 16rem;
+    max-width: 14rem;
   }
 
   h1 {
     margin-top: 0;
     font-size: var(--step-4);
     font-weight: 800;
-    letter-spacing: -0.045em;
+    letter-spacing: -0.04em;
     line-height: 0.98;
     max-width: 16ch;
   }
 
   .hero-sub {
-    max-width: 34rem;
-    margin-top: 1.5rem;
+    max-width: 36rem;
+    margin-top: 1.25rem;
     font-size: var(--step-1);
     line-height: 1.35;
+  }
+
+  .hero-proof {
+    margin-top: 2rem;
+  }
+
+  .hero-seal {
+    margin-top: 1.75rem;
   }
 
   .hero-actions {
@@ -206,6 +308,7 @@ const jsonLd = {
     color: var(--paper);
     text-decoration: none;
     white-space: nowrap;
+    transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out);
   }
 
   .button:hover {
@@ -225,220 +328,219 @@ const jsonLd = {
     .hero-photo {
       grid-column: 10 / span 3;
       max-width: none;
+      margin-top: 0.5rem;
     }
   }
 
-  /* Work */
-  .work .section-title {
-    margin-top: 1.5rem;
-  }
-
-  .pillars {
-    margin: 2.5rem 0 0;
+  /* Problems */
+  .cases {
+    margin: clamp(2rem, 4vw, 3rem) 0 0;
     padding: 0;
     list-style: none;
   }
 
-  .pillar {
-    row-gap: 1rem;
+  .case {
+    row-gap: 1.75rem;
     padding-block: 2.25rem;
     border-top: 1px solid var(--ink);
   }
 
-  .pillar-num {
-    grid-column: 1 / -1;
-    color: var(--accent);
-    font-size: var(--step-4);
-  }
-
-  .pillar-body {
+  .case-main,
+  .case-shifts,
+  .case-quote {
     grid-column: 1 / -1;
   }
 
-  .pillar-body h3 {
-    margin-top: 0.5rem;
+  .case h3 {
     font-size: var(--step-2);
   }
 
-  .pillar-body h3 a {
+  .case h3 a {
     text-decoration-color: transparent;
   }
 
-  .pillar-body h3 a:hover {
+  .case h3 a:hover {
     text-decoration-color: var(--accent);
   }
 
-  .pillar-body .muted {
-    max-width: 34rem;
-    margin-top: 0.75rem;
-  }
-
-  .pillar-fig {
-    grid-column: 1 / -1;
-  }
-
-  @media (min-width: 48rem) {
-    .pillar-num {
-      grid-column: 1 / span 2;
-    }
-
-    .pillar-body {
-      grid-column: 3 / span 6;
-    }
-
-    .pillar-fig {
-      grid-column: 9 / span 4;
-    }
-  }
-
-  /* Speaking */
-  .speaking {
-    row-gap: 3rem;
-  }
-
-  .speaking-figs {
-    grid-column: 1 / -1;
-    display: grid;
-    gap: 2.5rem;
-    align-content: start;
-  }
-
-  .speaking-list {
-    grid-column: 1 / -1;
-  }
-
-  .speaking-list ul {
-    margin: 2rem 0;
-    padding: 0;
-    list-style: none;
-    border-top: 1px solid var(--ink);
-  }
-
-  .speaking-list li {
-    display: grid;
-    grid-template-columns: 4rem 1fr;
-    column-gap: 1rem;
-    padding-block: 1.1rem;
-  }
-
-  .speaking-list li + li {
-    border-top: 1px solid var(--rule);
-  }
-
-  .talk-title {
-    font-weight: 700;
-    line-height: 1.3;
-  }
-
-  .talk-venue {
-    grid-column: 2;
-    font-size: var(--step--1);
-  }
-
-  .era-mini {
-    display: grid;
-    gap: 0.75rem;
-    margin: 0;
-    padding: 1.25rem 0 0;
-    list-style: none;
-    border-top: 1px solid var(--ink);
-  }
-
-  .era-mini li {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 2.5rem;
-    column-gap: 0.75rem;
-    row-gap: 0.25rem;
-    align-items: center;
-    font-size: var(--step--1);
-  }
-
-  .era-mini-name {
-    grid-column: 1 / -1;
-    font-weight: 700;
-  }
-
-  .era-mini-name .muted {
-    font-weight: 400;
-  }
-
-  .era-mini-bar {
-    height: 0.5rem;
-  }
-
-  .era-mini-bar span {
-    display: block;
-    height: 100%;
-    background: var(--accent);
-  }
-
-  .era-mini-count {
-    font-weight: 800;
-    text-align: right;
-    font-variant-numeric: tabular-nums;
-  }
-
-  @media (min-width: 48rem) {
-    .speaking-figs {
-      grid-column: 1 / span 5;
-    }
-
-    .speaking-list {
-      grid-column: 7 / span 6;
-    }
-  }
-
-  /* Quotes */
-  .callouts {
-    margin-top: clamp(3rem, 7vw, 5rem);
-    padding-top: 1.5rem;
-    border-top: 4px solid var(--ink);
-  }
-
-  .callouts-title {
-    font-size: var(--step-1);
-    font-weight: 700;
-    letter-spacing: -0.015em;
-  }
-
-  .callout-grid {
-    display: grid;
-    gap: 2.5rem var(--gutter);
-    margin-top: 2rem;
-  }
-
-  .callouts-more {
-    margin-top: 2rem;
+  .case-meta {
+    margin-top: 0.5rem;
     font-size: var(--step--1);
     font-weight: 600;
   }
 
-  .quotes {
-    row-gap: 3rem;
-    padding-block: clamp(2.5rem, 6vw, 4rem);
+  .case-steps {
+    display: grid;
+    gap: 1rem;
+    max-width: 34rem;
+    margin: 1.25rem 0 0;
+  }
+
+  .case-steps dt {
+    font-size: var(--step--1);
+    font-weight: 800;
+  }
+
+  .case-steps dd {
+    margin: 0.2rem 0 0;
+    line-height: 1.45;
+  }
+
+  .case-shifts {
+    display: grid;
+    gap: 1.75rem;
+    align-content: start;
+  }
+
+  .case-quote {
+    align-self: start;
+    padding-top: 1rem;
     border-top: 4px solid var(--ink);
   }
 
-  .quote-main {
-    grid-column: 1 / -1;
+  @media (min-width: 48rem) {
+    .case-main {
+      grid-column: 1 / span 6;
+    }
+
+    .case-shifts {
+      grid-column: 7 / span 6;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--gutter);
+    }
+
+    .case-quote {
+      grid-column: 7 / span 6;
+    }
   }
 
-  .quote-side {
-    grid-column: 1 / -1;
+  @media (min-width: 72rem) {
+    .case-main {
+      grid-column: 1 / span 5;
+    }
+
+    .case-shifts {
+      grid-column: 6 / span 4;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+
+    .case-quote {
+      grid-column: 10 / span 3;
+    }
+  }
+
+  /* Vouch */
+  .trio,
+  .called-out {
+    margin-top: clamp(3rem, 6vw, 4.5rem);
+  }
+
+  .trio-title {
+    font-size: var(--step-1);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .trio-grid {
     display: grid;
-    gap: 2.5rem;
+    gap: 2.5rem var(--gutter);
+    margin-top: 1.75rem;
+  }
+
+  .called-out :global(.signals) {
+    margin-top: 1.5rem;
   }
 
   @media (min-width: 48rem) {
-    .callout-grid {
+    .trio-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+  }
 
-    .quote-main {
+  /* Paths */
+  .path-list {
+    display: grid;
+    gap: 1.5rem var(--gutter);
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .path-list li {
+    padding-top: 1rem;
+    border-top: 4px solid var(--ink);
+  }
+
+  .path-list a {
+    font-size: var(--step-1);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .path-list p {
+    max-width: 22rem;
+    margin-top: 0.5rem;
+    font-size: var(--step--1);
+  }
+
+  @media (min-width: 48rem) {
+    .path-list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  /* About */
+  .about {
+    row-gap: 2rem;
+  }
+
+  .about-head,
+  .about-body,
+  .about-facts {
+    grid-column: 1 / -1;
+  }
+
+  .about-body {
+    max-width: 36rem;
+    font-size: var(--step-1);
+    line-height: 1.4;
+  }
+
+  .about-body p:last-child {
+    font-size: var(--step--1);
+    font-weight: 700;
+  }
+
+  .about-facts {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    align-content: start;
+  }
+
+  .about-facts div {
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .about-facts dt {
+    font-size: var(--step--1);
+    font-weight: 800;
+  }
+
+  .about-facts dd {
+    margin: 0.25rem 0 0;
+    font-size: var(--step--1);
+    line-height: 1.4;
+  }
+
+  @media (min-width: 48rem) {
+    .about-body {
       grid-column: 1 / span 7;
     }
 
-    .quote-side {
+    .about-facts {
       grid-column: 9 / span 4;
     }
   }

@@ -18,10 +18,12 @@ const fullTitle = title === profile.name ? `${profile.name} | Engineering leader
 const ogImage = hasPublicAsset('og.png') ? new URL('/og.png', Astro.site) : undefined;
 
 const nav = [
-  { href: '/#about', label: 'About' },
+  { href: '/#work', label: 'Work' },
   { href: '/impact', label: 'Impact' },
   { href: '/talks', label: 'Talks' },
+  { href: '/endorsements', label: 'Endorsements' },
   { href: '/socials', label: 'Socials' },
+  { href: '/#about', label: 'About' },
   { href: '/#contact', label: 'Contact' },
 ];
 ---

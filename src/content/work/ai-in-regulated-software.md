@@ -6,6 +6,12 @@ summary: An AI-assisted traceability platform and a practical AI curriculum, bui
 employer: Philips
 period: 2024 to now
 headlineClaim: traceability-adoption
+problem: Every requirement in medical-device software has to be traced to its design, tests and risks. That trace was kept by hand across many tools, and gaps surfaced late.
+decision: Model the trace as a knowledge graph on top of the tools engineers already use. AI suggests links and flags gaps, and a person decides anything regulated.
+shifts:
+  - traceability-adoption
+  - traceability-hours
+  - platform-nps
 outcomes:
   - traceability-hours
   - ai-people-trained
@@ -33,6 +39,8 @@ We chose not to replace the tools engineers already used. The platform sits on t
 ## What I did, and what the team did
 
 I conceived the platform, set its core design and guided its development. I also secured innovation funding for the work. The team built it, piloted it with one business, and took it into production across 14.
+
+In 2026 I presented the platform to the Philips Executive Committee, two businesses scored it 10 out of 10, and the platform team was recognized as "Impact Makers" at a global town hall.
 
 The platform links requirements, tests and risks in one graph. It gives one-click impact analysis, flags gaps between requirements and tests, and suggests missing test scenarios. We released it in steps: each release went live for one business first, then rolled out to the next once its data was validated.
 

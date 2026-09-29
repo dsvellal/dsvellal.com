@@ -6,6 +6,12 @@ summary: Shared engineering standards, delivery-flow measurement and an evidence
 employer: Philips
 period: 2020 to now
 headlineClaim: developers-platform
+problem: Nearly every team had continuous integration, but fewer than a third could deploy automatically to a test environment, and about two thirds had no defined process for technical debt.
+decision: Measure delivery and quality first, then move automated checks into developers' everyday builds and share the data openly with teams.
+shifts:
+  - quality-defects
+  - craftsmanship-score
+  - cycle-time
 outcomes:
   - cycle-time
   - craftsmanship-projects

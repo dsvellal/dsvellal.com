@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import EraBand from '../../components/record/EraBand.astro';
 import CapsuleList from '../../components/record/CapsuleList.astro';
+import ValueLedger from '../../components/story/ValueLedger.astro';
 import { capsules, eras } from '../../lib/record';
 
 const work = (await eras()).filter((e) => e.lane === 'work');
@@ -40,6 +41,17 @@ const years = [...new Set(documented.map((c) => c.year))].map((year) => ({
         ))
       }
     </ol>
+  </section>
+
+  <section id="value" class="wrap value" aria-labelledby="value-title">
+    <h2 id="value-title">What it was worth</h2>
+    <p class="muted all-note">
+      Every figure on this site that measures a result, with my part in it and what backs it. Each links to its entry in
+      the record.
+    </p>
+    <div class="value-body">
+      <ValueLedger variant="full" />
+    </div>
   </section>
 
   <section id="all" class="wrap all" aria-labelledby="all-title">
@@ -95,6 +107,25 @@ const years = [...new Set(documented.map((c) => c.year))].map((year) => ({
 
   .all {
     margin-top: clamp(3.5rem, 8vw, 6rem);
+  }
+
+  .value {
+    margin-top: clamp(3.5rem, 8vw, 6rem);
+    scroll-margin-top: 1.5rem;
+  }
+
+  .value h2 {
+    font-size: var(--step-3);
+    font-weight: 800;
+  }
+
+  .value .all-note {
+    max-width: 36rem;
+    margin-top: 1rem;
+  }
+
+  .value-body {
+    margin-top: 2rem;
   }
 
   .all h2 {

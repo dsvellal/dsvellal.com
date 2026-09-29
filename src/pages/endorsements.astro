@@ -1,0 +1,186 @@
+---
+import Base from '../layouts/Base.astro';
+import VouchMap from '../components/story/VouchMap.astro';
+import Signals from '../components/story/Signals.astro';
+import { profile } from '../data/profile';
+import { RELATIONSHIPS } from '../data/endorsements';
+import { voices } from '../lib/endorsements';
+
+const all = await voices();
+const groups = RELATIONSHIPS.map((r) => ({ ...r, items: all.filter((v) => v.relationship === r.id) }));
+---
+
+<Base
+  title="What people said"
+  description="Every recorded voice about Datta Vellal's work since 2012, from managers, peers, people he led or hired, and learners, at IBM, Exeter, Amazon, Philips and beyond."
+>
+  <header class="wrap head">
+    <h1>What people said</h1>
+    <p class="lede">
+      Every recommendation, review line, message and survey comment I have kept, placed by where the person stood
+      relative to me. Quotes are verbatim; where a recommendation is not public, the record describes it instead.
+    </p>
+  </header>
+
+  <section class="wrap map-section" aria-label="Voices by employer and relationship">
+    <VouchMap notes />
+  </section>
+
+  <section class="wrap called" aria-labelledby="called-title">
+    <hr class="rule rule--accent" />
+    <h2 id="called-title">Called out</h2>
+    <div class="called-body">
+      <Signals />
+    </div>
+  </section>
+
+  {
+    groups.map((g) => (
+      <section class="wrap group" aria-labelledby={`g-${g.id}`}>
+        <hr class="rule" />
+        <h2 id={`g-${g.id}`}>
+          {g.label} <span class="count muted">{g.items.length}</span>
+        </h2>
+        <p class="muted note">{g.note}</p>
+        <ul class="voices">
+          {g.items.map((v) => (
+            <li id={v.id}>
+              {v.text ? (
+                <blockquote>
+                  <p>&ldquo;{v.text}&rdquo;</p>
+                </blockquote>
+              ) : (
+                <p class="summary">{v.summary}</p>
+              )}
+              <p class="who">
+                <span class="role">{v.who}</span>
+                <span class="muted">
+                  {v.company}, {v.year}
+                  {v.linkedin ? '. LinkedIn recommendation' : ''}
+                </span>
+                {v.recorded && (
+                  <a href={v.href}>
+                    Record<span class="visually-hidden">: {v.who}, {v.year}</span>
+                  </a>
+                )}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+
+  <section class="wrap more" aria-label="More">
+    <p><a href={profile.linkedinRecommendations}>Read the recommendations on LinkedIn</a></p>
+  </section>
+</Base>
+
+<style>
+  .head {
+    padding-top: clamp(2rem, 5vw, 4rem);
+  }
+
+  h1 {
+    font-size: var(--step-5);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  .lede {
+    max-width: 38rem;
+    margin-top: 1.5rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .map-section {
+    margin-top: clamp(3rem, 7vw, 5rem);
+  }
+
+  .called,
+  .group {
+    margin-top: clamp(3.5rem, 8vw, 6rem);
+  }
+
+  h2 {
+    margin-top: 1.5rem;
+    font-size: var(--step-3);
+    font-weight: 800;
+  }
+
+  .count {
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .called-body {
+    margin-top: 2rem;
+  }
+
+  .note {
+    max-width: 34rem;
+    margin-top: 0.75rem;
+  }
+
+  .voices {
+    display: grid;
+    gap: 0 var(--gutter);
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .voices li {
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--rule);
+    scroll-margin-top: 1.5rem;
+  }
+
+  .voices li:target {
+    border-top: 4px solid var(--accent);
+  }
+
+  blockquote {
+    margin: 0;
+  }
+
+  blockquote p,
+  .summary {
+    max-width: 34rem;
+    font-size: var(--step-0);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .summary {
+    color: var(--ink-2);
+  }
+
+  .who {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+    margin-top: 0.75rem;
+    font-size: var(--step--1);
+  }
+
+  .role {
+    font-weight: 700;
+  }
+
+  .who a {
+    font-weight: 700;
+  }
+
+  .more {
+    margin-top: 3rem;
+    font-weight: 700;
+  }
+
+  @media (min-width: 64rem) {
+    .voices {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>
