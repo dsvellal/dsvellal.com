@@ -19,7 +19,7 @@ export const profile = {
   ],
   facts: [
     { label: 'Education', value: 'B.E. Computer Science, RV College of Engineering. M.Sc. Yoga, Annamalai University.' },
-    { label: 'Patent', value: 'US 8,560,487 B2, granted, cited by 27 later patents.' },
+    { label: 'Patents', value: 'US 8,560,487 B2 (granted) and US 2015/0095117 A1 (published), from IBM.' },
     { label: 'Speaking', value: 'Toastmasters awards for best speaker, best evaluator and table topics.' },
     { label: 'Based in', value: 'Rochester, Michigan.' },
   ],

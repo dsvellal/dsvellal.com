@@ -12,12 +12,24 @@ import Signals from '../components/story/Signals.astro';
 import AdoptionLadder from '../components/story/AdoptionLadder.astro';
 import { profile } from '../data/profile';
 import { claim } from '../data/claims';
-import { heroProof, readingPaths } from '../data/story';
+import { adoptionLadder, heroProof, readingPaths } from '../data/story';
 import { trio } from '../data/endorsements';
 
 const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
 const years = claim('years-experience');
 const talksCount = claim('talks-count');
+
+// Each figure appears once on this page; earlier sections keep theirs.
+const shown = new Set<string>(heroProof);
+const caseShifts = work.map((entry) => {
+  const ids = entry.data.shifts.filter((id) => !shown.has(id)).slice(0, 2);
+  ids.forEach((id) => shown.add(id));
+  return ids;
+});
+const beforeLadder = [...shown];
+adoptionLadder.flatMap((s) => s.claims).forEach((id) => shown.add(id));
+const beforeLedger = [...shown];
+const shownCapsules = beforeLedger.map((id) => claim(id).capsule).filter((c): c is string => Boolean(c));
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -90,7 +102,7 @@ const jsonLd = {
     </p>
     <ol class="cases">
       {
-        work.map((entry) => (
+        work.map((entry, i) => (
           <li class="case grid">
             <div class="case-main">
               <h3>
@@ -111,7 +123,7 @@ const jsonLd = {
               </dl>
             </div>
             <div class="case-shifts">
-              {entry.data.shifts.slice(0, 2).map((id) => (
+              {caseShifts[i].map((id) => (
                 <Shift id={id} />
               ))}
             </div>
@@ -130,11 +142,10 @@ const jsonLd = {
     <hr class="rule rule--accent" />
     <h2 id="value-title" class="section-title">What it was worth</h2>
     <p class="section-lede">
-      Money, time, quality and adoption, each with my part in it. Where a figure has an entry in the record, it links
-      there.
+      Money, time and quality, each with my part in it. Where a figure has an entry in the record, it links there.
     </p>
     <div class="section-body">
-      <ValueLedger />
+      <ValueLedger exclude={beforeLedger} />
     </div>
     <p class="more"><a href="/impact#value">Every figure, with its context</a></p>
   </section>
@@ -156,7 +167,7 @@ const jsonLd = {
     </div>
     <div class="called-out">
       <h3 class="trio-title">Called out</h3>
-      <Signals />
+      <Signals hideSeal excludeCapsules={shownCapsules} />
     </div>
     <p class="more"><a href="/endorsements">Every recorded voice, grouped by who said it</a></p>
   </section>
@@ -169,7 +180,7 @@ const jsonLd = {
       daily use.
     </p>
     <div class="section-body">
-      <AdoptionLadder />
+      <AdoptionLadder exclude={beforeLadder} />
     </div>
     <p class="more">
       <a href="/talks">All {talksCount.value} talks and workshops since 2010, by company and year</a>

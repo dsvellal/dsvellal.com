@@ -266,6 +266,15 @@ const claimList: Claim[] = [
     capsule: '2021-tech-debt-savings-program',
   },
   {
+    id: 'duplicate-lines',
+    value: '18,000+',
+    label: 'lines of duplicate code removed after teams adopted the analysis I introduced',
+    context: 'Recorded in my 2019 review.',
+    year: '2019',
+    role: 'Introduced the tooling',
+    capsule: '2019-09-jscpd-duplication-program',
+  },
+  {
     id: 'team-scope',
     value: 'Across Philips',
     label: 'supervisory leadership of software competency experts in India and North America',

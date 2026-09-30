@@ -11,6 +11,7 @@ decision: Pay the debt down in measured steps inside normal delivery, on a three
 shifts:
   - techdebt-savings
   - techdebt-opportunity
+  - duplicate-lines
 outcomes:
   - techdebt-opportunity
 doAgain: Transformation is not about erasing the past but evolving it with purpose. Understand the system you inherited, change it in steps you can measure, and put the savings in terms the business already uses.

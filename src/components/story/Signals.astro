@@ -4,12 +4,18 @@ import { recordHref } from '../../lib/record';
 
 interface Props {
   seal?: boolean;
+  /** Leave out the lines already shown under the headline. */
+  hideSeal?: boolean;
+  /** Record entries whose figures are already on the page. */
+  excludeCapsules?: string[];
 }
 
-const { seal = false } = Astro.props;
+const { seal = false, hideSeal = false, excludeCapsules = [] } = Astro.props;
 const resolved = await Promise.all(
   signals
     .filter((s) => !seal || s.seal)
+    .filter((s) => !hideSeal || !s.seal)
+    .filter((s) => !s.capsule || !excludeCapsules.includes(s.capsule))
     .map(async (s) => ({ ...s, link: s.capsule ? await recordHref(s.capsule) : s.href })),
 );
 const groups = [

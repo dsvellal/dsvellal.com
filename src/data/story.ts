@@ -53,7 +53,7 @@ export const arc: ArcStep[] = [
     start: 2018.7,
     end: 2021.9,
     scope: 'Engineering practice across business units',
-    milestone: 'Lead coach for a technical debt program that realized ~€2.1M',
+    milestone: 'Lead coach for a company-wide technical debt program',
     capsule: '2021-tech-debt-savings-program',
   },
   {
@@ -63,7 +63,7 @@ export const arc: ArcStep[] = [
     start: 2021.9,
     end: 2026.8,
     scope: 'AI and engineering practice across businesses',
-    milestone: 'Took an AI traceability platform to 14 businesses',
+    milestone: 'Conceived an AI traceability platform, now in production',
     capsule: '2026-09-traceability-platform-14-businesses',
   },
 ];
@@ -85,7 +85,7 @@ export interface LedgerGroup {
 export const ledger: LedgerGroup[] = [
   { group: 'Money', rows: ['techdebt-savings', 'techdebt-opportunity', 'infra-savings', 'ai-portfolio-potential'], lead: 2 },
   { group: 'Time', rows: ['cycle-time', 'traceability-hours', 'scanner-setup', 'ai-issues-triaged'], lead: 2 },
-  { group: 'Quality', rows: ['quality-defects', 'craftsmanship-score', 'test-coverage', 'sprint-completion', 'candidate-nps'], lead: 2 },
+  { group: 'Quality', rows: ['quality-defects', 'craftsmanship-score', 'test-coverage', 'sprint-completion', 'candidate-nps', 'duplicate-lines'], lead: 2 },
   { group: 'Adoption', rows: ['traceability-adoption', 'platform-nps', 'ai-people-trained', 'trainers-trained'], lead: 2 },
 ];
 

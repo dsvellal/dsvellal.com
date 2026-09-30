@@ -3,11 +3,20 @@ import { claim } from '../../data/claims';
 import { adoptionLadder } from '../../data/story';
 import { claimHref } from '../../lib/record';
 
+interface Props {
+  /** Claim ids already shown elsewhere on the page. */
+  exclude?: string[];
+}
+
+const { exclude = [] } = Astro.props;
+const visible = adoptionLadder
+  .map((s) => ({ ...s, claims: s.claims.filter((id) => !exclude.includes(id)) }))
+  .filter((s) => s.claims.length > 0);
 const steps = await Promise.all(
-  adoptionLadder.map(async (s, i) => ({
+  visible.map(async (s, i) => ({
     ...s,
     rise: i + 1,
-    now: i === adoptionLadder.length - 1,
+    now: i === visible.length - 1,
     items: await Promise.all(
       s.claims.map(async (id) => {
         const c = claim(id);

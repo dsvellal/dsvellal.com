@@ -5,20 +5,24 @@ import { claimHref } from '../../lib/record';
 
 interface Props {
   variant?: 'compact' | 'full';
+  /** Claim ids already shown elsewhere on the page. */
+  exclude?: string[];
 }
 
-const { variant = 'compact' } = Astro.props;
-const groups = await Promise.all(
-  ledger.map(async (g) => ({
-    group: g.group,
-    rows: await Promise.all(
-      (variant === 'full' ? g.rows : g.rows.slice(0, g.lead)).map(async (id) => {
-        const c = claim(id);
-        return { c, href: await claimHref(c) };
-      }),
-    ),
-  })),
-);
+const { variant = 'compact', exclude = [] } = Astro.props;
+const groups = (
+  await Promise.all(
+    ledger.map(async (g) => ({
+      group: g.group,
+      rows: await Promise.all(
+        (variant === 'full' ? g.rows : g.rows.filter((id) => !exclude.includes(id)).slice(0, g.lead)).map(async (id) => {
+          const c = claim(id);
+          return { c, href: await claimHref(c) };
+        }),
+      ),
+    })),
+  )
+).filter((g) => g.rows.length > 0);
 ---
 
 <div class:list={['ledger', variant]}>
