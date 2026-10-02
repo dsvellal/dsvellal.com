@@ -5,7 +5,7 @@
   "month": "09",
   "era": "philips-india",
   "company": "Philips",
-  "title": "Joined Philips Innovation Campus, Bengaluru, as Project Architect responsible for identity management",
+  "title": "Senior architect for identity management, directing product strategy for a ~20-person team",
   "type": "Role",
   "themes": [
     "leadership",
@@ -13,5 +13,24 @@
   ],
   "lane": "work",
   "total": 13,
-  "tier": "line"
+  "tier": "public",
+  "summary": "I joined Philips Innovation Campus in Bengaluru in September 2018 as senior architect for the identity management platform used across health informatics products, directing its product strategy and growth for a team of about 20.",
+  "what_would_have_happened": "Not applicable: a role change, not an intervention.",
+  "the_call": "Move from payments engineering into healthcare software, where quality and compliance carry more weight, and take ownership of a platform's direction rather than one piece of it.",
+  "what_i_did": "As senior architect, directed product strategy and growth for the identity management platform and its team of about 20, and set up its quality and delivery pipeline in the first months.",
+  "what_changed": "Started the Philips chapter that led into company-wide software excellence work.",
+  "metrics": [
+    {
+      "value": "~20",
+      "label": "people on the identity management team I directed",
+      "context": "As senior architect; team size and scope are my own recollection, not independently documented."
+    },
+    {
+      "value": "Sep 2018",
+      "label": "start date",
+      "context": "Philips Innovation Campus, Bengaluru"
+    }
+  ],
+  "quotes": [],
+  "images": []
 }

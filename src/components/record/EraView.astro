@@ -1,10 +1,7 @@
 ---
-import Base from '../../layouts/Base.astro';
-import Breadcrumbs from './Breadcrumbs.astro';
 import NumbersStrip from './NumbersStrip.astro';
 import RecordQuote from './RecordQuote.astro';
-import { capsuleHref, capsules, isBeyond, section, yearHref, type Era } from '../../lib/record';
-import { talkEraHref, talks } from '../../lib/talks';
+import { capsuleHref, capsules, yearHref, type Era } from '../../lib/record';
 
 interface Props {
   era: Era;
@@ -14,30 +11,9 @@ const all = (await capsules()).filter((c) => c.era === era.slug);
 const byId = new Map(all.map((c) => [c.id, c]));
 const company = era.company;
 const showTook = Boolean(company?.took);
-const home = section(era);
-const eraTalks = (await talks()).filter((t) => t.era === era.slug).length;
-const crumbs = isBeyond(era) ? [{ label: home.label }] : [{ label: home.label, href: home.href }, { label: era.label }];
 ---
 
-<Base
-  title={`${era.label}, ${era.years}`}
-  description={isBeyond(era) ? `Outside work, ${era.years}: ${era.headline}.` : `What I delivered at ${era.label}, ${era.years}: ${era.headline}.`}
->
-  <header class="wrap head">
-    <Breadcrumbs items={crumbs} />
-    <h1>{era.label}</h1>
-    <p class="lede">{era.years}. {all.length} events, {era.public} documented in depth.</p>
-    {
-      eraTalks > 0 && (
-        <p class="talks-link">
-          <a href={talkEraHref(era.slug)}>
-            {eraTalks} talks and teaching sessions at {era.label}
-          </a>
-        </p>
-      )
-    }
-  </header>
-
+<Fragment>
   {
     company && (
       <>
@@ -138,29 +114,9 @@ const crumbs = isBeyond(era) ? [{ label: home.label }] : [{ label: home.label, h
       </section>
     )
   }
-</Base>
+</Fragment>
 
 <style>
-  .head {
-    padding-top: clamp(2rem, 5vw, 4rem);
-  }
-
-  h1 {
-    margin-top: 1.5rem;
-    font-size: var(--step-5);
-    font-weight: 800;
-    letter-spacing: -0.05em;
-  }
-
-  .lede {
-    margin-top: 1rem;
-    font-size: var(--step-1);
-  }
-
-  .talks-link {
-    margin-top: 1rem;
-    font-weight: 700;
-  }
 
   .block {
     margin-top: clamp(3rem, 7vw, 5rem);

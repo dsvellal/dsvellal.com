@@ -7,7 +7,7 @@
   "lane": "work",
   "events": 62,
   "capsules": 62,
-  "public": 27,
+  "public": 28,
   "status": "live",
   "headline": "Designed and ran the company's bar-raiser hiring program",
   "headline_capsule": "2020-08-bar-raiser-program-launch",
@@ -175,7 +175,8 @@
         "DevOps architecture in 4 months"
       ],
       "top": [
-        "2018-12-first-philips-year-end-review"
+        "2018-12-first-philips-year-end-review",
+        "2018-09-joined-philips-idm-architect"
       ],
       "quote": {
         "text": "Appreciate his effort in bringing few quality drives already in 2018 to strengthen the quality code delivery. Demonstrated already UT coverage improvement.",
@@ -192,8 +193,7 @@
       "also": [
         "2018-12-cicd-vision-netflix-example",
         "2018-12-asked-for-first-three-months-feedback",
-        "2018-11-idm-code-quality-guidelines",
-        "2018-09-joined-philips-idm-architect"
+        "2018-11-idm-code-quality-guidelines"
       ],
       "count": 5
     }
@@ -210,21 +210,21 @@
       },
       {
         "when": "Jul 2019",
-        "what": "Moved to Competency Specialist, Software Excellence, in the Software Center of Excellence, to lead initiatives such as technical debt reduction across Philips businesses."
+        "what": "Moved to Competency Specialist, Software Excellence, in the Software Center of Excellence, to lead initiatives such as technical debt reduction across Philips businesses. This is where my cross-functional leadership, across teams and businesses rather than one product, began."
       },
       {
         "when": "Sep 2018",
-        "what": "Joined Philips Innovation Campus, Bengaluru, as Project Architect for Identity Management, responsible for its architecture, delivery pipeline and code-quality rules."
+        "what": "Joined Philips Innovation Campus, Bengaluru, as senior architect for Identity Management, directing the platform's product strategy and growth for a team of about 20."
       }
     ],
     "scope": [
-      "Advised business leaders on software quality, security and regulatory compliance in medical software development and delivery, and helped set the strategies and policies for their practices.",
-      "Held medical software lifecycle responsibilities under ISO 13485 and IEC 62304, covering planning, design reviews, verification and validation cycles, and change control.",
+      "Directed strategy and policy for software quality, security and regulatory compliance in medical software development and delivery, advising business leaders across Philips businesses.",
+      "Owned medical software lifecycle responsibilities under ISO 13485 and IEC 62304 for the platforms in my remit, directing planning, design reviews, verification and validation cycles, and change control.",
       "Set new interview policies, goals, KPIs and procedures for global software hiring at the India site leader's request, with tools that met each region's data rules, and coached senior leaders on them.",
       "Built recruitment strategies with recruiters and HR across regions, mentored senior managers through shadow and mock interviews, and interviewed for senior roles as a decision maker.",
-      "Taught cross-competency teams through hands-on workshops, seminars and pairing with leaders and architects, mentored leaders on DevOps and drove adoption of BizDevOps practices.",
-      "Brought measurable code-quality practice to business units, from duplicate-code detection to quality gates at the developer's desk, and gave direction on Philips HealthSuite platform solutions and on moving legacy systems to Philips' cloud platform.",
-      "From Mar 2021, led software excellence transformation projects end to end with small rotating teams of architects and specialists: scoped them with business heads, allocated and supervised the work, presented findings and approved remediation actions."
+      "Led cross-competency teams through hands-on workshops, seminars and pairing with leaders and architects, mentored leaders on DevOps and drove adoption of BizDevOps practices.",
+      "Delivered measurable code-quality practice to business units, from duplicate-code detection to quality gates at the developer's desk, and directed Philips HealthSuite platform solutions and the move of legacy systems to Philips' cloud platform.",
+      "From Sep 2018, directed product strategy and growth for the identity management platform and its team of about 20 as senior architect, then from Mar 2021 led software excellence transformation projects end to end with small rotating teams of architects and specialists: scoped them with business heads, allocated and supervised the work, presented findings and approved remediation actions."
     ],
     "signatures": [
       {
