@@ -40,7 +40,9 @@
       "src": "/record/published/2025-06-copilot-train-the-trainer-1.webp",
       "kind": "chat",
       "pending": false,
-      "alt": "Chat: Coached trainers so teams could lead their own AI adoption"
+      "alt": "Chat: Coached trainers so teams could lead their own AI adoption",
+      "width": 1024,
+      "height": 645
     }
   ]
 }

@@ -25,7 +25,9 @@
       "src": "/record/published/2010-hackday8-best-implementation-1.webp",
       "kind": "certificate",
       "pending": false,
-      "alt": "Certificate: First place for implementation at IBM India's hackday"
+      "alt": "Certificate: First place for implementation at IBM India's hackday",
+      "width": 1600,
+      "height": 1131
     }
   ]
 }

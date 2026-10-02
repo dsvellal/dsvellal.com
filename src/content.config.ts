@@ -9,6 +9,8 @@ const thinking = defineCollection({
     summary: z.string(),
     order: z.number(),
     draft: z.boolean().default(false),
+    /** The LinkedIn article this essay was adapted from, if any. */
+    linkedin: z.string().url().optional(),
   }),
 });
 
@@ -43,7 +45,7 @@ const record = defineCollection({
     metrics: z.array(z.object({ value: z.string(), label: z.string(), context: z.string() })).optional(),
     quotes: z.array(quote).optional(),
     images: z
-      .array(z.object({ src: z.string(), kind: z.string(), pending: z.boolean(), alt: z.string() }))
+      .array(z.object({ src: z.string(), kind: z.string(), pending: z.boolean(), alt: z.string(), width: z.number(), height: z.number() }))
       .optional(),
   }),
 });

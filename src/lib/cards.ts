@@ -138,7 +138,9 @@ export function cardFor(c: Capsule): CardSpec {
     viz = [...viz, { type: 'stats', items: rest.map((m) => ({ v: m.value, l: m.label })) }];
   }
 
-  const first: CardImage | undefined = c.images?.[0] ? { src: c.images[0].src, alt: c.images[0].alt } : undefined;
+  const first: CardImage | undefined = c.images?.[0]
+    ? { src: c.images[0].src, alt: c.images[0].alt, w: c.images[0].width, h: c.images[0].height }
+    : undefined;
   // Dark ground for someone else's words; curated cards pick their own.
   const ground: Ground = o.ground ?? (viz[0]?.type === 'quote' && !o.viz ? 'ink' : 'paper');
 

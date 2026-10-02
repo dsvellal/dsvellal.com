@@ -1,6 +1,6 @@
 ---
 import TrendCard from './TrendCard.astro';
-import { capsuleOrListHref, capsules, monthShort, yearHref, type Era } from '../../lib/record';
+import { capsuleOrListHref, capsules, eraHref, monthShort, yearHref, type Era } from '../../lib/record';
 import { ERA_SLOT, cardFor, byNewest } from '../../lib/cards';
 import { talkEraHref, talks } from '../../lib/talks';
 import { profile } from '../../data/profile';
@@ -9,11 +9,15 @@ interface Props {
   era: Era;
   /** h1 on the era's own page, h2 on the Impact page. */
   level?: 1 | 2;
+  /** On the Impact index, show only the newest few and link to the rest. Omit to show all. */
+  limit?: number;
 }
 
-const { era, level = 2 } = Astro.props;
+const { era, level = 2, limit } = Astro.props;
 const all = (await capsules()).filter((c) => c.era === era.slug);
 const cards = all.filter((c) => c.tier === 'public').map(cardFor).sort(byNewest);
+const shown = limit ? cards.slice(0, limit) : cards;
+const hiddenCount = cards.length - shown.length;
 const lines = all.filter((c) => c.tier === 'line');
 const lineYears = [...new Set(lines.map((c) => c.year))].map((year) => ({ year, items: lines.filter((c) => c.year === year) }));
 const eraTalks = (await talks()).filter((t) => t.era === era.slug).length;
@@ -53,13 +57,21 @@ const headId = `${slot}-title`;
 
   <ol class="wrap tc-grid" aria-label={`${era.label}, newest first`}>
     {
-      cards.map((c) => (
+      shown.map((c) => (
         <li>
           <TrendCard card={c} />
         </li>
       ))
     }
   </ol>
+
+  {
+    hiddenCount > 0 && (
+      <p class="wrap see-all">
+        <a href={eraHref(era)}>See all {cards.length} at {era.label} &rarr;</a>
+      </p>
+    )
+  }
 
   {
     lines.length > 0 && (
@@ -169,6 +181,16 @@ const headId = `${slot}-title`;
     padding-top: 0;
     padding-bottom: 0;
     list-style: none;
+  }
+
+  .see-all {
+    margin-top: clamp(1.25rem, 3vw, 2rem);
+    font-size: var(--step--1);
+    font-weight: 800;
+  }
+
+  .see-all a {
+    text-decoration-color: var(--accent);
   }
 
   .also {

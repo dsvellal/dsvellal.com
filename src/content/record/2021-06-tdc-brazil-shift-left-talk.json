@@ -33,7 +33,9 @@
       "src": "/record/published/2021-06-tdc-brazil-shift-left-talk-1.webp",
       "kind": "certificate",
       "pending": false,
-      "alt": "Certificate: Spoke for Philips at a major developer conference in Brazil"
+      "alt": "Certificate: Spoke for Philips at a major developer conference in Brazil",
+      "width": 1600,
+      "height": 1129
     }
   ]
 }

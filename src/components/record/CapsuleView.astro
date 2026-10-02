@@ -94,7 +94,7 @@ const linkedTalks = (await talksByRecord()).get(c.id) ?? [];
               <div class="shots">
                 {images.map((img) => (
                   <figure>
-                    <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+                    <img src={img.src} alt={img.alt} width={img.width} height={img.height} loading="lazy" decoding="async" />
                     {img.pending && (
                       <figcaption class="label muted">
                         <span class="pending">Pending review</span>

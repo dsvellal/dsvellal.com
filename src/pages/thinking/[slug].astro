@@ -21,6 +21,13 @@ const showDraftNote = import.meta.env.DEV && entry.data.draft;
     </header>
     <div class="prose essay-body">
       <Content />
+      {
+        entry.data.linkedin && (
+          <p class="source">
+            <a href={entry.data.linkedin} rel="external noopener">Originally published on LinkedIn &rarr;</a>
+          </p>
+        )
+      }
     </div>
   </article>
 </Base>
@@ -63,6 +70,12 @@ const showDraftNote = import.meta.env.DEV && entry.data.draft;
   .essay-body {
     padding-top: 2rem;
     border-top: 4px solid var(--accent);
+  }
+
+  .source {
+    margin-top: 2.5rem;
+    font-size: var(--step--1);
+    font-weight: 700;
   }
 
   @media (min-width: 48rem) {

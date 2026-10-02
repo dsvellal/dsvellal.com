@@ -1,7 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Figure from '../../components/Figure.astro';
-import Headshot from '../../components/Headshot.astro';
 import QuoteBlock from '../../components/QuoteBlock.astro';
 import EraBand from '../../components/record/EraBand.astro';
 import TrendCard from '../../components/cards/TrendCard.astro';
@@ -154,28 +153,9 @@ const subjects = SUBJECTS.map((s) => {
     </ol>
   </section>
 
-  <section class="wrap speaker" aria-labelledby="invite-title">
-    <div class="speaker-photo">
-      <Headshot />
-    </div>
-    <div class="speaker-text">
-      <p class="label muted">For event organizers</p>
-      <h2 id="invite-title">Invite me to speak</h2>
-      <p class="speaker-bio">
-        {profile.name}, {profile.role}. More than {total.value.replace('+', '')} talks, workshops and courses since 2010, from
-        engineering colleges to Philips University and an international developer conference.
-      </p>
-      <p class="label">Topics</p>
-      <ul class="speaker-topics">
-        {subjects.filter((s) => s.id !== 'community').map((s) => <li><a href={`#${s.id}`}>{s.title}</a></li>)}
-      </ul>
-      <p class="speaker-actions">
-        <a class="primary" href={`mailto:${profile.email}?subject=Speaking%20invitation`}>Email me the audience, format and date</a>
-        <a href="/headshot.jpg" download="datta-vellal-headshot.jpg">Download headshot</a>
-        <a href="/about#speaker-bio">Speaker bio</a>
-      </p>
-    </div>
-  </section>
+  <p class="wrap invite">
+    <a href="/speaking">Want me to speak at your event? See the speaking page &rarr;</a>
+  </p>
 </Base>
 
 <script>
@@ -364,82 +344,12 @@ const subjects = SUBJECTS.map((s) => {
     list-style: none;
   }
 
-  .speaker {
-    display: grid;
-    gap: clamp(1.5rem, 4vw, 3rem);
+  .invite {
+    margin-top: clamp(3.5rem, 8vw, 6rem);
     padding-top: 1.5rem;
     border-top: 4px solid var(--accent);
-  }
-
-  .speaker-photo {
-    max-width: 16rem;
-  }
-
-  .speaker-text {
-    display: grid;
-    align-content: start;
-    gap: 1rem;
-  }
-
-  .speaker-text h2 {
-    font-size: var(--step-3);
-  }
-
-  .speaker-bio {
-    max-width: 36rem;
     font-size: var(--step-1);
-    line-height: 1.35;
-  }
-
-  .speaker-topics {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .speaker-topics a {
-    display: block;
-    padding: 0.35rem 0.75rem;
-    border: 1px solid var(--ink);
-    font-size: var(--step--1);
-    font-weight: 700;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .speaker-topics a:hover {
-    border-color: var(--accent);
-    box-shadow: inset 0 -3px 0 var(--accent);
-  }
-
-  .speaker-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.75rem 1.5rem;
-    margin-top: 0.5rem;
-    font-weight: 700;
-  }
-
-  .speaker-actions .primary {
-    padding: 0.7rem 1.1rem;
-    background: var(--ink);
-    color: var(--paper);
-    text-decoration: none;
-  }
-
-  .speaker-actions .primary:hover {
-    background: var(--accent);
-    color: var(--ink);
-  }
-
-  @media (min-width: 48rem) {
-    .speaker {
-      grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
-    }
+    font-weight: 800;
   }
 
   .eras h2,

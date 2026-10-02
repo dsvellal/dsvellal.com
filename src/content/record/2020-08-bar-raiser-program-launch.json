@@ -45,13 +45,17 @@
       "src": "/record/published/2020-08-bar-raiser-program-launch-1.webp",
       "kind": "chat",
       "pending": false,
-      "alt": "Chat: Designed and ran the company's bar-raiser hiring program"
+      "alt": "Chat: Designed and ran the company's bar-raiser hiring program",
+      "width": 300,
+      "height": 693
     },
     {
       "src": "/record/published/2020-08-bar-raiser-program-launch-2.webp",
       "kind": "chat",
       "pending": false,
-      "alt": "Chat: Designed and ran the company's bar-raiser hiring program"
+      "alt": "Chat: Designed and ran the company's bar-raiser hiring program",
+      "width": 926,
+      "height": 536
     }
   ]
 }

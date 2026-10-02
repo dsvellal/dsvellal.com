@@ -32,7 +32,9 @@
       "src": "/record/published/2009-10-bravo-hackdays-and-events-1.webp",
       "kind": "certificate",
       "pending": false,
-      "alt": "Certificate: Bravo award for running five innovation events in two years"
+      "alt": "Certificate: Bravo award for running five innovation events in two years",
+      "width": 1600,
+      "height": 1131
     }
   ]
 }

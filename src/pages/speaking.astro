@@ -1,5 +1,191 @@
 ---
-import Redirect from '../components/Redirect.astro';
+import Base from '../layouts/Base.astro';
+import Figure from '../components/Figure.astro';
+import Headshot from '../components/Headshot.astro';
+import { profile } from '../data/profile';
+import { claim } from '../data/claims';
+import { SUBJECTS } from '../data/talks';
+
+const total = claim('talks-count');
+const people = claim('talks-attendees');
 ---
 
-<Redirect to="/talks" />
+<Base
+  title="Speaking"
+  description={`Invite ${profile.name} to speak. ${total.value.replace('+', '')} talks, workshops and courses since 2010, on AI, code quality and engineering leadership.`}
+>
+  <header class="wrap grid head">
+    <div class="photo">
+      <Headshot />
+    </div>
+    <div class="intro">
+      <p class="label muted">For event organizers</p>
+      <h1>Invite me to speak</h1>
+      <p class="lede">
+        {profile.name}, {profile.role}. More than {total.value.replace('+', '')} talks, workshops and courses since 2010, from
+        engineering colleges to Philips University and an international developer conference.
+      </p>
+      <p class="actions">
+        <a class="primary" href={`mailto:${profile.email}?subject=Speaking%20invitation`}>Email me the audience, format and date</a>
+        <a href="/headshot.jpg" download="datta-vellal-headshot.jpg">Download headshot</a>
+      </p>
+    </div>
+  </header>
+
+  <section class="wrap grid figs" aria-label="Teaching in numbers">
+    <div><Figure id="talks-count" size="large" showContext /></div>
+    <div><Figure id="talks-attendees" size="large" showContext /></div>
+  </section>
+
+  <section class="wrap grid block" aria-labelledby="topics-title">
+    <h2 id="topics-title" class="side">Topics</h2>
+    <ul class="main topics">
+      {
+        SUBJECTS.map((s) => (
+          <li>
+            <a href={`/talks#${s.id}`}>{s.title}</a>
+            <p class="muted">{s.note}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="wrap grid block" aria-labelledby="more-title">
+    <h2 id="more-title" class="side">More</h2>
+    <p class="main links">
+      <a href="/talks">Every talk, with dates and participant ratings</a>
+      <a href="/about#speaker-bio">Full speaker bio, to use as written</a>
+    </p>
+  </section>
+</Base>
+
+<style>
+  .head {
+    row-gap: 2rem;
+    padding-top: clamp(2rem, 5vw, 4rem);
+    align-items: end;
+  }
+
+  .photo {
+    grid-column: 1 / -1;
+    order: 1;
+    max-width: 18rem;
+  }
+
+  .intro {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: var(--step-5);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+  }
+
+  .lede {
+    max-width: 38rem;
+    font-size: var(--step-1);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.5rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
+  }
+
+  .actions .primary {
+    padding: 0.7rem 1.1rem;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+  }
+
+  .actions .primary:hover {
+    background: var(--accent);
+    color: var(--ink);
+  }
+
+  .figs {
+    row-gap: 2.5rem;
+    margin-top: clamp(3rem, 7vw, 5rem);
+  }
+
+  .figs > div {
+    grid-column: 1 / -1;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--ink);
+  }
+
+  .block {
+    row-gap: 1rem;
+    margin-top: clamp(3rem, 7vw, 5rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--ink);
+  }
+
+  .side,
+  .main {
+    grid-column: 1 / -1;
+  }
+
+  .side {
+    font-size: var(--step-1);
+    font-weight: 800;
+  }
+
+  .topics {
+    display: grid;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .topics a {
+    font-size: var(--step-1);
+    font-weight: 800;
+  }
+
+  .topics p {
+    max-width: 44rem;
+    margin-top: 0.25rem;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-weight: 700;
+  }
+
+  @media (min-width: 48rem) {
+    .photo {
+      grid-column: 1 / span 4;
+    }
+
+    .intro {
+      grid-column: 5 / -1;
+    }
+
+    .figs > div {
+      grid-column: span 6;
+    }
+
+    .side {
+      grid-column: 1 / span 3;
+    }
+
+    .main {
+      grid-column: 4 / -1;
+    }
+  }
+</style>

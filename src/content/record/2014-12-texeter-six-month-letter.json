@@ -46,7 +46,9 @@
       "src": "/record/published/2014-12-texeter-six-month-letter-1.webp",
       "kind": "certificate",
       "pending": false,
-      "alt": "Certificate: Thanked for six months of leading TExeter"
+      "alt": "Certificate: Thanked for six months of leading TExeter",
+      "width": 1600,
+      "height": 2263
     }
   ]
 }

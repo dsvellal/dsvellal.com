@@ -36,13 +36,17 @@
       "src": "/record/published/2015-book-drive-1.webp",
       "kind": "photo",
       "pending": false,
-      "alt": "Photo: 2015 book drive: Rs 37,500"
+      "alt": "Photo: 2015 book drive: Rs 37,500",
+      "width": 1406,
+      "height": 2500
     },
     {
       "src": "/record/published/2015-book-drive-2.webp",
       "kind": "photo",
       "pending": false,
-      "alt": "Photo: 2015 book drive: Rs 37,500"
+      "alt": "Photo: 2015 book drive: Rs 37,500",
+      "width": 1600,
+      "height": 1200
     }
   ]
 }

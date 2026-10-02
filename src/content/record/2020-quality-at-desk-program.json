@@ -38,13 +38,17 @@
       "src": "/record/published/2020-quality-at-desk-program-1.webp",
       "kind": "chat",
       "pending": false,
-      "alt": "Chat: Led the move of quality checks to the developer's desk"
+      "alt": "Chat: Led the move of quality checks to the developer's desk",
+      "width": 646,
+      "height": 942
     },
     {
       "src": "/record/published/2020-quality-at-desk-program-2.webp",
       "kind": "chat",
       "pending": false,
-      "alt": "Chat: Led the move of quality checks to the developer's desk"
+      "alt": "Chat: Led the move of quality checks to the developer's desk",
+      "width": 1600,
+      "height": 2067
     }
   ]
 }

@@ -24,6 +24,9 @@ export interface CardImage {
   src: string;
   alt: string;
   pos?: string;
+  /** Natural pixel size, so the browser reserves space before the image loads. */
+  w: number;
+  h: number;
 }
 
 export interface CardSpec {
@@ -56,7 +59,17 @@ export interface CardSpec {
 
 export type CardOverride = Partial<Omit<CardSpec, 'id' | 'slot' | 'href' | 'date'>>;
 
-const img = (file: string, alt: string, pos?: string): CardImage => ({ src: `/record/published/${file}`, alt, pos });
+/** Natural pixel size of each file in public/record/published, so cards never shift as images load. */
+const IMG_SIZE: Record<string, [number, number]> = {
+  '2010-hackday8-best-implementation-1.webp': [1600, 1131],
+  '2014-12-texeter-six-month-letter-1.webp': [1600, 2263],
+  '2015-book-drive-2.webp': [1600, 1200],
+};
+
+const img = (file: string, alt: string, pos?: string): CardImage => {
+  const [w, h] = IMG_SIZE[file];
+  return { src: `/record/published/${file}`, alt, pos, w, h };
+};
 
 const scrum = (hi: string): Viz => ({
   type: 'lolli',

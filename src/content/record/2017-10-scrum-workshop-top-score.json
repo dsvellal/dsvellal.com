@@ -43,7 +43,9 @@
       "src": "/record/published/2017-10-scrum-workshop-top-score-1.webp",
       "kind": "document",
       "pending": false,
-      "alt": "Document: Coached 21 engineers in agile software development, received feedback score of 4.6/5"
+      "alt": "Document: Coached 21 engineers in agile software development, received feedback score of 4.6/5",
+      "width": 1600,
+      "height": 325
     }
   ]
 }

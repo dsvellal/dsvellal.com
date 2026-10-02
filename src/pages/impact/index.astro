@@ -42,7 +42,7 @@ const withCards = entries.filter((c) => c.tier === 'public').length;
     </ol>
   </nav>
 
-  {work.map((e) => <EraSection era={e} />)}
+  {work.map((e) => <EraSection era={e} limit={4} />)}
 </Base>
 
 <script>

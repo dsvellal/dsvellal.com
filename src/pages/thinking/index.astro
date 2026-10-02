@@ -1,0 +1,98 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const essays = (await getCollection('thinking', ({ data }) => import.meta.env.DEV || !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<Base
+  title="Thinking"
+  description="Essays on using AI responsibly in regulated engineering, writing software that lasts, and leading the people who do."
+>
+  <header class="wrap head">
+    <h1>Thinking</h1>
+    <p class="lede">Short essays on AI, engineering and leadership, written from what I have actually shipped.</p>
+  </header>
+
+  <ol class="wrap list">
+    {
+      essays.map((entry) => (
+        <li>
+          <a href={`/thinking/${entry.id}`}>
+            <h2>{entry.data.title}</h2>
+            <p>{entry.data.summary}</p>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</Base>
+
+<style>
+  .head {
+    padding-top: clamp(2rem, 5vw, 4rem);
+  }
+
+  h1 {
+    font-size: var(--step-5);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+  }
+
+  .lede {
+    max-width: 36rem;
+    margin-top: 1.25rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .list {
+    display: grid;
+    gap: 2rem;
+    margin: clamp(2.5rem, 6vw, 4rem) auto 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .list li {
+    padding-top: 1.5rem;
+    border-top: 4px solid var(--ink);
+  }
+
+  .list li:first-child {
+    border-top-color: var(--accent);
+  }
+
+  .list a {
+    display: grid;
+    gap: 0.5rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .list h2 {
+    font-size: var(--step-2);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .list a:hover h2 {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+  }
+
+  .list p {
+    max-width: 48rem;
+    font-size: var(--step-0);
+    line-height: 1.4;
+  }
+
+  @media (min-width: 48rem) {
+    .list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2.5rem var(--gutter);
+    }
+  }
+</style>

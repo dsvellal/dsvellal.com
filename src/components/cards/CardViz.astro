@@ -245,7 +245,7 @@ const lolliPct = (val: number) => (v.type === 'lolli' ? ((val - v.min) / (v.max 
   v.type === 'wall' && (
     <div class="tc-wall">
       {v.imgs.map((i) => (
-        <img src={i.src} alt={i.alt} loading="lazy" decoding="async" />
+        <img src={i.src} alt={i.alt} width="1600" height="800" loading="lazy" decoding="async" />
       ))}
     </div>
   )

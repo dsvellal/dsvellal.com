@@ -34,7 +34,9 @@
       "src": "/record/published/2020-cicd-reference-architecture-whitepaper-1.webp",
       "kind": "chat",
       "pending": false,
-      "alt": "Chat: Co-authored one CI/CD reference architecture for the company"
+      "alt": "Chat: Co-authored one CI/CD reference architecture for the company",
+      "width": 1002,
+      "height": 655
     }
   ]
 }

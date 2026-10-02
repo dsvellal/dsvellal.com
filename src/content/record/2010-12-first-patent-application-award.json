@@ -25,7 +25,9 @@
       "src": "/record/published/2010-12-first-patent-application-award-1.webp",
       "kind": "certificate",
       "pending": false,
-      "alt": "Certificate: IBM invention award for my first patent application"
+      "alt": "Certificate: IBM invention award for my first patent application",
+      "width": 720,
+      "height": 557
     }
   ]
 }

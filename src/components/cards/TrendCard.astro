@@ -69,10 +69,27 @@ const go = c.go ?? 'See the evidence';
     {
       c.img ? (
         <div class="tc-base">
-          <img class="big" src={c.img.src} alt={c.img.alt} loading="lazy" decoding="async" style={c.img.pos ? `object-position:${c.img.pos}` : undefined} />
+          <img
+            class="big"
+            src={c.img.src}
+            alt={c.img.alt}
+            width={c.img.w}
+            height={c.img.h}
+            loading="lazy"
+            decoding="async"
+            style={c.img.pos ? `object-position:${c.img.pos}` : undefined}
+          />
           <ul class="tc-chips" aria-label="Evidence">
             <li class="thumb" aria-hidden="true">
-              <img src={c.img.src} alt="" loading="lazy" decoding="async" style={c.img.pos ? `object-position:${c.img.pos}` : undefined} />
+              <img
+                src={c.img.src}
+                alt=""
+                width={c.img.w}
+                height={c.img.h}
+                loading="lazy"
+                decoding="async"
+                style={c.img.pos ? `object-position:${c.img.pos}` : undefined}
+              />
             </li>
             {c.mark && <li class="mark">{c.mark}</li>}
             {c.chips?.map((ch) => (

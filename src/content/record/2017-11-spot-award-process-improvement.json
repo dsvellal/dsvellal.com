@@ -39,7 +39,9 @@
       "src": "/record/published/2017-11-spot-award-process-improvement-1.webp",
       "kind": "certificate",
       "pending": false,
-      "alt": "Certificate: Spot Award for a sprint process that raised completion to 85%"
+      "alt": "Certificate: Spot Award for a sprint process that raised completion to 85%",
+      "width": 1600,
+      "height": 1130
     }
   ]
 }

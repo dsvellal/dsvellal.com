@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Headshot from '../components/Headshot.astro';
 import QuoteBlock from '../components/QuoteBlock.astro';
@@ -15,6 +16,7 @@ const years = claim('years-experience');
 const lead = { ...claim(heroLead), href: await claimHref(claim(heroLead)) };
 const strip = await Promise.all(heroStrip.map(async (id) => ({ ...claim(id), href: await claimHref(claim(id)) })));
 const withCards = (await capsules()).filter((c) => c.lane === 'work' && c.tier === 'public').length;
+const featuredEssay = (await getCollection('thinking', ({ data }) => !data.draft)).sort((a, b) => b.data.order - a.data.order)[0];
 const paths = [
   { href: '/impact', title: 'See the Impact', body: `${withCards} achievements with their evidence, newest first, by company.` },
   ...readingPaths,
@@ -84,6 +86,21 @@ const jsonLd = {
     <EraStrip />
   </div>
 
+  {
+    featuredEssay && (
+      <section class="wrap thinking" aria-labelledby="thinking-title">
+        <hr class="rule" />
+        <h2 id="thinking-title" class="section-title">Recent thinking</h2>
+        <a class="thinking-card" href={`/thinking/${featuredEssay.id}`}>
+          <h3>{featuredEssay.data.title}</h3>
+          <p>{featuredEssay.data.summary}</p>
+          <span class="go">Read it &rarr;</span>
+        </a>
+        <p class="more"><a href="/thinking">Every essay</a></p>
+      </section>
+    )
+  }
+
   <section class="wrap vouch" aria-labelledby="vouch-title">
     <hr class="rule rule--accent" />
     <h2 id="vouch-title" class="section-title">Who vouches for the work</h2>
@@ -139,6 +156,38 @@ const jsonLd = {
     margin-top: clamp(2rem, 4vw, 3rem);
   }
 
+  .thinking-card {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 42rem;
+    margin-top: clamp(1.5rem, 4vw, 2.5rem);
+    padding-top: 1rem;
+    border-top: 4px solid var(--accent);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .thinking-card h3 {
+    font-size: var(--step-2);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .thinking-card p {
+    font-size: var(--step-0);
+    line-height: 1.4;
+  }
+
+  .thinking-card .go {
+    font-size: var(--step--1);
+    font-weight: 800;
+  }
+
+  .thinking-card:hover h3 {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+  }
+
   .more {
     margin-top: 2rem;
     font-size: var(--step--1);
@@ -152,16 +201,17 @@ const jsonLd = {
     align-items: end;
   }
 
+  /* Mobile reads the headline before the photo; desktop (below) puts them side by side. */
   .hero-photo {
     grid-column: 1 / span 2;
-    grid-row: 1;
+    grid-row: 2;
   }
 
   .hero-id {
     display: grid;
     gap: 0.25rem;
     grid-column: 3 / span 2;
-    grid-row: 1;
+    grid-row: 2;
     align-self: end;
     padding-bottom: 2.25rem;
     font-size: var(--step--1);
@@ -171,7 +221,7 @@ const jsonLd = {
 
   .hero-copy {
     grid-column: 1 / -1;
-    grid-row: 2;
+    grid-row: 1;
   }
 
   h1 {
