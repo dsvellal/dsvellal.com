@@ -78,12 +78,12 @@ export const trio = [
 export type Praise = 'teaching' | 'people' | 'quality' | 'ai' | 'delivery' | 'leadership';
 
 export const PRAISES: { id: Praise; label: string; note: string }[] = [
-  { id: 'teaching', label: 'Teaching and coaching', note: 'Sessions, workshops and one-to-one help, in the words of the people in the room.' },
-  { id: 'people', label: 'Hiring and growing people', note: 'Interviewing, the hiring bar, mentoring and careers.' },
-  { id: 'quality', label: 'Quality and engineering craft', note: 'Code, tests, reviews and the habits behind them.' },
+  { id: 'leadership', label: 'Leadership and influence', note: 'Vision, initiative and bringing people along.' },
   { id: 'ai', label: 'Responsible AI', note: 'AI in regulated medical software, from coaching to tools in daily use.' },
   { id: 'delivery', label: 'Delivery and ownership', note: 'Shipping, owning problems and following through.' },
-  { id: 'leadership', label: 'Leadership and influence', note: 'Vision, initiative and bringing people along.' },
+  { id: 'people', label: 'Hiring and growing people', note: 'Interviewing, the hiring bar, mentoring and careers.' },
+  { id: 'quality', label: 'Quality and engineering craft', note: 'Code, tests, reviews and the habits behind them.' },
+  { id: 'teaching', label: 'Teaching and coaching', note: 'Sessions, workshops and one-to-one help, in the words of the people in the room.' },
 ];
 
 export interface PrintItem {

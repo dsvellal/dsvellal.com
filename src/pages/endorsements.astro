@@ -10,6 +10,8 @@ import { slotAt, type CardSpec } from '../lib/cards';
 import { monthShort } from '../lib/record';
 
 const CARDS_PER_THEME = 6;
+// Leadership and influence lead, regardless of which theme has the most voices: PRAISES is already in that order.
+const PRAISE_RANK = new Map(PRAISES.map((p, i) => [p.id, i]));
 const all = await voices();
 const themes = PRAISES.map((p) => {
   const items = all.filter((v) => v.praise === p.id);
@@ -17,7 +19,7 @@ const themes = PRAISES.map((p) => {
   return { ...p, items, top, rest: items.filter((v) => !top.includes(v)) };
 })
   .filter((t) => t.items.length > 0)
-  .sort((a, b) => b.items.length - a.items.length);
+  .sort((a, b) => PRAISE_RANK.get(a.id)! - PRAISE_RANK.get(b.id)!);
 const max = Math.max(...themes.map((t) => t.items.length));
 const years = all.map((v) => Number(v.year)).filter(Boolean);
 const span = `${Math.min(...years)} to ${Math.max(...years)}`;

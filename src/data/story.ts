@@ -1,8 +1,8 @@
 // How the landing page tells the story. Every number here is a claim id from claims.ts.
 
 /** The one number under the headline, then a strip of three more. */
-export const heroLead = 'ai-people-trained';
-export const heroStrip = ['traceability-adoption', 'techdebt-savings', 'years-experience'];
+export const heroLead = 'traceability-adoption';
+export const heroStrip = ['techdebt-savings', 'ai-people-trained', 'years-experience'];
 
 export interface LadderStep {
   step: string;
@@ -101,7 +101,7 @@ export const readingPaths = [
   {
     href: '/impact#usa',
     title: 'Hiring for AI transformation',
-    body: 'Start with the responsible use of AI in regulated medical software at Philips North America: the traceability platform, the coaching and the pilots.',
+    body: 'Start with digital transformation in regulated software at Philips North America: the traceability platform, the coaching and the pilots.',
   },
   {
     href: '/impact/philips-north-america/2026',
