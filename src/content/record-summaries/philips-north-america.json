@@ -5,9 +5,9 @@
   "years": "2021 to now",
   "order": 4,
   "lane": "work",
-  "events": 100,
-  "capsules": 100,
-  "public": 63,
+  "events": 101,
+  "capsules": 101,
+  "public": 64,
   "status": "live",
   "headline": "Took the traceability platform from a three-business pilot to a fourth business",
   "headline_capsule": "2026-09-traceability-platform-adoption",
@@ -36,6 +36,7 @@
         "capsule": "2026-09-traceability-platform-adoption"
       },
       "months": [
+        "10",
         "09",
         "08",
         "07",
@@ -47,6 +48,7 @@
         "01"
       ],
       "also": [
+        "2026-10-engineering-impact-showcase",
         "2026-anytime-feedback-9-responses",
         "2026-09-named-solution-architect",
         "2026-09-design-checklist-feasibility",
@@ -75,7 +77,7 @@
         "2026-02-dora-cvd-course",
         "2026-02-expanded-oversubscribed-ai-sessions"
       ],
-      "count": 32
+      "count": 33
     },
     {
       "year": "2025",

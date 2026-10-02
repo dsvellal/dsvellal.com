@@ -1,0 +1,32 @@
+{
+  "id": "2026-10-engineering-impact-showcase",
+  "date": "2026-10-01",
+  "year": "2026",
+  "month": "10",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Presented at Philips' first Innovation Engineering Impact Showcase",
+  "type": "Talk",
+  "themes": [
+    "ai",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 13,
+  "tier": "public",
+  "summary": "I presented the technical portion of an AI-assisted compliance and traceability story at Philips' first Innovation Engineering Impact Showcase on October 1. The event post lists me among the speakers and thanks the presenters.",
+  "what_would_have_happened": "The technical work could have remained known mainly to the teams already using it.",
+  "the_call": "Present the technical story to a broader engineering audience.",
+  "what_i_did": "Updated the impact slide and presented the technical portion of the story.",
+  "what_changed": "The post-event message listed me among the speakers and thanked everyone who contributed to the showcase.",
+  "metrics": [],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/2026-10-engineering-impact-showcase-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: Presented at Philips' first Innovation Engineering Impact Showcase"
+    }
+  ]
+}
