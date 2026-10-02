@@ -220,7 +220,7 @@
     "scope": [
       "Advised business leaders on software quality, security and regulatory compliance in medical software development and delivery, and helped set the strategies and policies for their practices.",
       "Held medical software lifecycle responsibilities under ISO 13485 and IEC 62304, covering planning, design reviews, verification and validation cycles, and change control.",
-      "Set new interview policies, goals, KPIs and procedures for global software hiring at the India site leader's request, with tools that met each region's data rules, and trained senior leaders on them.",
+      "Set new interview policies, goals, KPIs and procedures for global software hiring at the India site leader's request, with tools that met each region's data rules, and coached senior leaders on them.",
       "Built recruitment strategies with recruiters and HR across regions, mentored senior managers through shadow and mock interviews, and interviewed for senior roles as a decision maker.",
       "Taught cross-competency teams through hands-on workshops, seminars and pairing with leaders and architects, mentored leaders on DevOps and drove adoption of BizDevOps practices.",
       "Brought measurable code-quality practice to business units, from duplicate-code detection to quality gates at the developer's desk, and gave direction on Philips HealthSuite platform solutions and on moving legacy systems to Philips' cloud platform.",
@@ -269,7 +269,7 @@
         "capsule": "2020-08-bar-raiser-program-launch"
       }
     ],
-    "took": "Philips India is where I learned to build systems for other people. A central team earns its place by going to the teams, measuring honestly and handing them tools they can run themselves, which is how the duplication program and the craftsmanship assessments worked. Hiring and code quality turned out to be the same problem: make the bar explicit, train people to it and measure the result, which is what the bar-raiser program did across three regions. That belief has shaped every program I have led since.",
+    "took": "Philips India is where I learned to build systems for other people. A central team earns its place by going to the teams, measuring honestly and handing them tools they can run themselves, which is how the duplication program and the craftsmanship assessments worked. Hiring and code quality turned out to be the same problem: make the bar explicit, coach people to it and measure the result, which is what the bar-raiser program did across three regions. That belief has shaped every program I have led since.",
     "took_draft": false
   }
 }

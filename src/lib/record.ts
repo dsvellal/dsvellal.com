@@ -62,6 +62,9 @@ export async function eras(): Promise<Era[]> {
 export const newestFirst = (list: Capsule[]) => [...list].sort(byNewestDate);
 
 export const isBeyond = (x: { lane: string }) => x.lane === 'beyond';
+/** AI work at Philips North America, which is regulated medical software. */
+export const isResponsibleAi = (c: { lane: string; era: string; themes: string[] }) =>
+  c.lane === 'work' && c.era === 'philips-north-america' && c.themes.includes('ai');
 export const section = (x: { lane: string }) =>
   isBeyond(x) ? { label: 'Socials', href: '/socials' } : { label: 'Impact', href: '/impact' };
 /** Where an era sits, for titles: "at IBM India", or "outside work" for the social lane. */

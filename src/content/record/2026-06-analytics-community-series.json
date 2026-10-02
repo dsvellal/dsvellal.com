@@ -34,5 +34,12 @@
       "date": "2026"
     }
   ],
-  "images": []
+  "images": [
+    {
+      "src": "/record/published/2026-06-analytics-community-series-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: Taught analysts to work with AI in a three-part series"
+    }
+  ]
 }

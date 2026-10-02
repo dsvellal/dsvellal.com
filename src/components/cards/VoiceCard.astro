@@ -1,0 +1,63 @@
+---
+import '../../styles/cards.css';
+import { RAIL, decimalYear, railX, type Slot } from '../../lib/cards';
+import { RELATIONSHIPS } from '../../data/endorsements';
+import { empKey, type Voice } from '../../lib/endorsements';
+
+interface Props {
+  voice: Voice;
+  ground?: 'paper' | 'ink' | 'accent';
+}
+
+const { voice: v, ground = 'paper' } = Astro.props;
+const SLOTS: Record<string, Slot> = { IBM: 'ibm', Exeter: 'exeter', Amazon: 'amazon' };
+const slot: Slot | undefined = v.employer === 'Philips' ? (Number(v.year) >= 2022 ? 'usa' : 'india') : SLOTS[v.employer];
+const text = v.text ?? '';
+const size = text.length <= 110 ? 'q1' : text.length <= 200 ? 'q2' : text.length <= 320 ? 'q3' : 'q4';
+const badge = RELATIONSHIPS.find((r) => r.id === v.relationship)!.badge;
+const session = v.href.startsWith('/talks/');
+const source = v.linkedin ? 'LinkedIn recommendation' : session ? 'Feedback form' : undefined;
+const Tag = v.recorded ? 'a' : 'div';
+---
+
+<Tag
+  class:list={['tc', `tc--${ground}`, 'vc']}
+  href={v.recorded ? v.href : undefined}
+  id={v.id}
+  data-voice
+  data-rel={v.relationship}
+  data-emp={empKey(v.employer)}
+>
+  <div class="tc-in">
+    <p class="tc-dateline">{v.year}<span>{v.company}</span></p>
+    <div class="tc-rail" aria-hidden="true">
+      {RAIL.map((e) => <span class:list={['re', { on: e.slot === slot }]} style={`left:${railX(e.s)}%;width:${railX(e.e) - railX(e.s)}%`} />)}
+      <span class="pin" style={`left:${railX(decimalYear(v.year))}%`} />
+    </div>
+
+    <blockquote class:list={['vc-q', size]} data-quote>
+      <p>&ldquo;{text}&rdquo;</p>
+    </blockquote>
+
+    <div class="vc-low">
+      <p class="vc-who">{v.who}</p>
+      <ul class="tc-chips" aria-label="Who and where">
+        <li class:list={['vc-badge', `rel-${v.relationship}`]}>{badge}</li>
+        {source && <li>{source}</li>}
+      </ul>
+    </div>
+
+    <footer class="tc-foot">
+      <span class="go">
+        {v.recorded ? (session ? 'See the session' : 'See it in context') : 'Verbatim'}
+        {
+          v.recorded && (
+            <svg viewBox="0 0 24 12" aria-hidden="true">
+              <path d="M0 6h22M17 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+          )
+        }
+      </span>
+    </footer>
+  </div>
+</Tag>

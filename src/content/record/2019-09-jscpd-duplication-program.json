@@ -40,5 +40,12 @@
       "date": "2019-10"
     }
   ],
-  "images": []
+  "images": [
+    {
+      "src": "/record/published/2019-09-jscpd-duplication-program-1.webp",
+      "kind": "chat",
+      "pending": false,
+      "alt": "Chat: Brought duplicate-code detection to Philips, and teams removed 18,688 lines"
+    }
+  ]
 }

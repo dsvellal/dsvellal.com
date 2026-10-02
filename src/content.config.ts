@@ -2,25 +2,6 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
-const work = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/work' }),
-  schema: z.object({
-    title: z.string(),
-    pillar: z.string(),
-    order: z.number(),
-    summary: z.string(),
-    employer: z.string(),
-    period: z.string(),
-    headlineClaim: z.string(),
-    problem: z.string(),
-    decision: z.string(),
-    shifts: z.array(z.string()).min(1),
-    outcomes: z.array(z.string()).min(1),
-    quote: z.string().optional(),
-    doAgain: z.string(),
-  }),
-});
-
 const thinking = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/thinking' }),
   schema: z.object({
@@ -152,4 +133,4 @@ const talks = defineCollection({
   }),
 });
 
-export const collections = { work, thinking, record, 'record-summaries': recordSummaries, talks };
+export const collections = { thinking, record, 'record-summaries': recordSummaries, talks };

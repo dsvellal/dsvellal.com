@@ -1,5 +1,7 @@
 ---
-import EraView from '../../components/record/EraView.astro';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/record/Breadcrumbs.astro';
+import EraSection from '../../components/cards/EraSection.astro';
 import { eras, type Era } from '../../lib/record';
 
 export async function getStaticPaths() {
@@ -11,4 +13,19 @@ export async function getStaticPaths() {
 const { era } = Astro.props as { era: Era };
 ---
 
-<EraView era={era} />
+<Base title={`${era.label}, ${era.years}`} description={`What I delivered at ${era.label}, ${era.years}: ${era.headline}.`}>
+  <div class="wrap crumbs">
+    <Breadcrumbs items={[{ label: 'Impact', href: '/impact' }, { label: era.label }]} />
+  </div>
+  <EraSection era={era} level={1} />
+</Base>
+
+<style>
+  .crumbs {
+    padding-top: clamp(2rem, 5vw, 4rem);
+  }
+
+  .crumbs + :global(.era .era-head) {
+    padding-top: 1.5rem;
+  }
+</style>

@@ -5,7 +5,7 @@
   "month": "08",
   "era": "amazon-india",
   "company": "Amazon",
-  "title": "Highest-scoring trainer after teaching about 90 people Scrum",
+  "title": "Highest-scoring trainer after coaching about 90 people in agile software development",
   "type": "Talk",
   "themes": [
     "teaching",
@@ -14,20 +14,20 @@
   "lane": "work",
   "total": 18,
   "tier": "public",
-  "summary": "My last Scrum workshop at Amazon scored 4.57 out of 5 and made me the program's highest-scoring trainer that month, after about 90 people across 3 Scrum workshops.",
+  "summary": "My last agile software development workshop at Amazon received a feedback score of 4.57 out of 5 and made me the program's highest-scoring trainer that month, after about 90 people across 3 workshops.",
   "what_would_have_happened": "Not applicable: a recognition event.",
-  "the_call": "Keep building Scrum skills in other teams alongside my delivery work.",
-  "what_i_did": "Taught about 90 people across 3 Scrum workshops, plus a product ownership workshop, as a volunteer trainer.",
+  "the_call": "Keep building agile software development skills in other teams alongside my delivery work.",
+  "what_i_did": "Taught about 90 people across 3 agile software development workshops, plus a product ownership workshop, as a volunteer trainer.",
   "what_changed": "Highest-scoring trainer in the monthly program update; a participant wrote that I made the group comfortable to engage and argue back.",
   "metrics": [
     {
       "value": "4.57 / 5",
-      "label": "presenter score, 20 Jul 2018",
+      "label": "feedback score, 20 Jul 2018",
       "context": ""
     },
     {
       "value": "~90",
-      "label": "people across 3 Scrum workshops",
+      "label": "people across 3 agile software development workshops",
       "context": ""
     }
   ],

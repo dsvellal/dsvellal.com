@@ -1,0 +1,279 @@
+---
+import Base from '../layouts/Base.astro';
+import Headshot from '../components/Headshot.astro';
+import { profile } from '../data/profile';
+import { claim } from '../data/claims';
+import { eraHref, eras } from '../lib/record';
+
+const work = (await eras()).filter((e) => e.lane === 'work');
+const years = claim('years-experience');
+const talksCount = claim('talks-count').value.replace('+', '');
+const bio =
+  `${profile.name} is ${profile.role.replace(/, Philips$/, ' at Philips')}, based in ${profile.location}. ` +
+  `He leads ${profile.focus}. Before Philips he worked at Amazon, Exeter and IBM, where he was granted a US patent. ` +
+  `Since 2010 he has given more than ${talksCount} talks, workshops and courses.`;
+
+const explore = [
+  { href: '/impact', title: 'Impact', body: 'What I delivered at each company, with the evidence.' },
+  { href: '/talks', title: 'Talks', body: 'Every talk, workshop and course, grouped by topic.' },
+  { href: '/endorsements', title: 'Endorsements', body: 'What managers, peers, reports and learners said.' },
+  { href: '/socials', title: 'Socials', body: 'Book drives, Toastmasters, yoga and more outside work.' },
+];
+---
+
+<Base title="About" description={`${profile.fullName}: ${profile.role}, ${profile.location}. ${profile.story}`} type="profile">
+  <header class="wrap grid head">
+    <div class="photo">
+      <Headshot />
+    </div>
+    <div class="intro">
+      <p class="label muted">{profile.role}. {profile.location}</p>
+      <h1>About me</h1>
+      <p class="lede">{profile.story}</p>
+      {profile.about.map((p) => <p class="body">{p}</p>)}
+    </div>
+  </header>
+
+  <section class="wrap grid block" aria-labelledby="facts-title">
+    <h2 id="facts-title" class="side">At a glance</h2>
+    <dl class="main facts">
+      <div>
+        <dt>Experience</dt>
+        <dd>{years.value} {years.label}, {years.short}.</dd>
+      </div>
+      {
+        profile.facts.map((f) => (
+          <div>
+            <dt>{f.label}</dt>
+            <dd>{f.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </section>
+
+  <section class="wrap grid block" aria-labelledby="path-title">
+    <h2 id="path-title" class="side">Where I have worked</h2>
+    <ol class="main path">
+      {
+        work.map((e) => (
+          <li>
+            <span class="label years">{e.years}</span>
+            <a href={eraHref(e)} class="era">
+              {e.label}
+            </a>
+            <span class="muted">{e.headline}</span>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section id="speaker-bio" class="wrap grid block" aria-labelledby="bio-title">
+    <h2 id="bio-title" class="side">Speaker bio</h2>
+    <div class="main">
+      <p class="muted">For event pages and introductions. Use it as written or shorten it.</p>
+      <blockquote class="bio">
+        <p>{bio}</p>
+      </blockquote>
+      <p class="actions">
+        <a href="/headshot.jpg" download="datta-vellal-headshot.jpg">Download my headshot</a>
+        <a href="/talks">See my talks</a>
+      </p>
+    </div>
+  </section>
+
+  <nav class="wrap explore" aria-labelledby="explore-title">
+    <h2 id="explore-title">Explore my work</h2>
+    <ul>
+      {
+        explore.map((x) => (
+          <li>
+            <a href={x.href}>{x.title}</a>
+            <p class="muted">{x.body}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</Base>
+
+<style>
+  .head {
+    row-gap: 2rem;
+    padding-top: clamp(2rem, 5vw, 4rem);
+    align-items: end;
+  }
+
+  .photo {
+    grid-column: 1 / -1;
+    max-width: 22rem;
+  }
+
+  .intro {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: var(--step-5);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+  }
+
+  .lede {
+    max-width: 38rem;
+    font-size: var(--step-1);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .body {
+    max-width: 38rem;
+    line-height: 1.5;
+  }
+
+  .block {
+    row-gap: 1rem;
+    margin-top: clamp(3rem, 7vw, 5rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--ink);
+  }
+
+  .side,
+  .main {
+    grid-column: 1 / -1;
+  }
+
+  .side {
+    font-size: var(--step-1);
+    font-weight: 800;
+  }
+
+  .facts {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  .facts div {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .facts dt {
+    font-weight: 700;
+  }
+
+  .facts dd {
+    max-width: 48rem;
+    margin: 0;
+  }
+
+  .path {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .path li {
+    display: grid;
+    gap: 0.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .path li:first-child {
+    padding-top: 0;
+  }
+
+  .years {
+    color: var(--accent);
+  }
+
+  .era {
+    font-size: var(--step-1);
+    font-weight: 800;
+  }
+
+  .bio {
+    max-width: 42rem;
+    margin: 1rem 0 0;
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid var(--accent);
+    background: #f2f2f2;
+  }
+
+  .bio p {
+    font-size: var(--step-1);
+    line-height: 1.45;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-top: 1.25rem;
+    font-weight: 700;
+  }
+
+  .explore {
+    margin-top: clamp(3rem, 7vw, 5rem);
+    padding-top: 1.5rem;
+    border-top: 4px solid var(--accent);
+  }
+
+  .explore h2 {
+    font-size: var(--step-2);
+    font-weight: 800;
+  }
+
+  .explore ul {
+    display: grid;
+    gap: 1.5rem var(--gutter);
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .explore a {
+    font-size: var(--step-1);
+    font-weight: 800;
+  }
+
+  .explore p {
+    max-width: 22rem;
+    margin-top: 0.35rem;
+  }
+
+  @media (min-width: 48rem) {
+    .photo {
+      grid-column: 1 / span 4;
+    }
+
+    .intro {
+      grid-column: 5 / -1;
+    }
+
+    .side {
+      grid-column: 1 / span 3;
+    }
+
+    .main {
+      grid-column: 4 / -1;
+    }
+
+    .path li {
+      grid-template-columns: 9rem minmax(0, 17rem) minmax(0, 1fr);
+      gap: var(--gutter);
+      align-items: baseline;
+    }
+
+    .explore ul {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+</style>

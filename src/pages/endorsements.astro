@@ -1,85 +1,267 @@
 ---
 import Base from '../layouts/Base.astro';
-import VouchMap from '../components/story/VouchMap.astro';
-import Signals from '../components/story/Signals.astro';
+import Avatar from '../components/Avatar.astro';
+import TrendCard from '../components/cards/TrendCard.astro';
+import VoiceCard from '../components/cards/VoiceCard.astro';
 import { profile } from '../data/profile';
-import { RELATIONSHIPS } from '../data/endorsements';
-import { voices } from '../lib/endorsements';
+import { EMPLOYERS, PRAISES, RELATIONSHIPS, citedBy, linkedinRecs, published, type PrintItem } from '../data/endorsements';
+import { empKey, printLinks, topVoices, voices, type Voice } from '../lib/endorsements';
+import { slotAt, type CardSpec } from '../lib/cards';
+import { monthShort } from '../lib/record';
 
+const CARDS_PER_THEME = 6;
 const all = await voices();
-const groups = RELATIONSHIPS.map((r) => ({ ...r, items: all.filter((v) => v.relationship === r.id) }));
+const themes = PRAISES.map((p) => {
+  const items = all.filter((v) => v.praise === p.id);
+  const top = topVoices(items, CARDS_PER_THEME);
+  return { ...p, items, top, rest: items.filter((v) => !top.includes(v)) };
+})
+  .filter((t) => t.items.length > 0)
+  .sort((a, b) => b.items.length - a.items.length);
+const max = Math.max(...themes.map((t) => t.items.length));
+const years = all.map((v) => Number(v.year)).filter(Boolean);
+const span = `${Math.min(...years)} to ${Math.max(...years)}`;
+const when = (d: string) => {
+  const [y, m] = d.split('-');
+  return m ? `${monthShort(m)} ${y}` : y;
+};
+const printCard = (p: PrintItem & { recordLink?: string }, i: number, ground: 'paper' | 'ink'): CardSpec => {
+  const slot = slotAt(p.date);
+  return {
+    id: `print-${ground}-${i}`,
+    slot: slot ?? 'beyond',
+    slots: slot ? [slot] : [],
+    where: p.kind,
+    date: p.date,
+    when: when(p.date),
+    ground,
+    head: p.publication,
+    viz: [{ type: 'story', rows: [{ k: 'By', v: p.issuer }, { k: 'What', v: p.what }] }],
+    href: p.href ?? p.recordLink ?? '',
+    go: p.href ? (p.hrefLabel ?? 'See the source') : p.recordLink ? 'See the record' : 'No public copy online',
+  };
+};
+const cited = (await Promise.all(citedBy.map(printLinks))).map((p, i) => printCard(p, i, 'paper'));
+const pubs = (await Promise.all(published.map(printLinks))).map((p, i) => printCard(p, i, 'ink'));
+const attrs = (v: Voice) => ({ 'data-voice': '', 'data-rel': v.relationship, 'data-emp': empKey(v.employer) });
 ---
 
 <Base
   title="What people said"
-  description="Every recorded voice about Datta Vellal's work since 2012, from managers, peers, people he led or hired, and learners, at IBM, Exeter, Amazon, Philips and beyond."
+  description={`${all.length} recorded voices about Datta Vellal's work, ${span}, grouped by what they praise, plus the college, company and press publications that cite him.`}
 >
   <header class="wrap head">
-    <h1>What people said</h1>
+    <div class="title-row">
+      <Avatar size="clamp(4.5rem, 12vw, 7rem)" />
+      <div>
+        <p class="label muted">About {profile.name}</p>
+        <h1>What people said</h1>
+      </div>
+    </div>
     <p class="lede">
-      Every recommendation, review line, message and survey comment I have kept, placed by where the person stood
-      relative to me. Quotes are verbatim; where a recommendation is not public, the record describes it instead.
+      {all.length} recommendations, review lines, messages and survey comments from {span}, sorted by what each one
+      praises. Quotes are verbatim; where a recommendation is not public, the record describes it instead.
     </p>
+    <ul class="facts" aria-label="In numbers">
+      <li><b class="figure">{all.length}</b> voices</li>
+      <li><b class="figure">{linkedinRecs.length}</b> LinkedIn recommendations</li>
+      <li><a href="#in-print"><b class="figure">{citedBy.length}</b> publications that cite me</a></li>
+    </ul>
   </header>
 
-  <section class="wrap map-section" aria-label="Voices by employer and relationship">
-    <VouchMap notes />
+  <section class="wrap praise" aria-labelledby="praise-title">
+    <h2 id="praise-title" class="label">What they praise</h2>
+    <ol class="bars">
+      {
+        themes.map((t) => (
+          <li>
+            <a href={`#praise-${t.id}`}>
+              <span class="bar-label">{t.label}</span>
+              <span class="bar-track" aria-hidden="true">
+                <span class:list={['bar', { ai: t.id === 'ai' }]} style={`width:${(t.items.length / max) * 100}%`} />
+              </span>
+              <span class="bar-n figure">{t.items.length}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ol>
   </section>
 
-  <section class="wrap called" aria-labelledby="called-title">
-    <hr class="rule rule--accent" />
-    <h2 id="called-title">Called out</h2>
-    <div class="called-body">
-      <Signals />
+  <section class="wrap voices-head" aria-labelledby="voices-title">
+    <hr class="rule" />
+    <h2 id="voices-title">In their words</h2>
+    <div class="filters" role="group" aria-label="Filter the voices">
+      <div class="filter-row">
+        <span class="label">Who</span>
+        <button type="button" data-group="rel" data-value="all" aria-pressed="true">Everyone</button>
+        {
+          RELATIONSHIPS.map((r) => (
+            <button type="button" data-group="rel" data-value={r.id} aria-pressed="false">
+              {r.label}
+            </button>
+          ))
+        }
+      </div>
+      <div class="filter-row">
+        <span class="label">Where</span>
+        <button type="button" data-group="emp" data-value="all" aria-pressed="true">Everywhere</button>
+        {
+          [...EMPLOYERS].reverse().map((e) => (
+            <button type="button" data-group="emp" data-value={empKey(e)} aria-pressed="false">
+              {e}
+            </button>
+          ))
+        }
+      </div>
+      <p class="shown muted" aria-live="polite" data-shown>{all.length} voices shown</p>
     </div>
   </section>
 
   {
-    groups.map((g) => (
-      <section class="wrap group" aria-labelledby={`g-${g.id}`}>
-        <hr class="rule" />
-        <h2 id={`g-${g.id}`}>
-          {g.label} <span class="count muted">{g.items.length}</span>
-        </h2>
-        <p class="muted note">{g.note}</p>
-        <ul class="voices">
-          {g.items.map((v) => (
-            <li id={v.id}>
-              {v.text ? (
-                <blockquote>
-                  <p>&ldquo;{v.text}&rdquo;</p>
-                </blockquote>
-              ) : (
-                <p class="summary">{v.summary}</p>
-              )}
-              <p class="who">
-                <span class="role">{v.who}</span>
-                <span class="muted">
-                  {v.company}, {v.year}
-                  {v.linkedin ? '. LinkedIn recommendation' : ''}
-                </span>
-                {v.recorded && (
-                  <a href={v.href}>
-                    {v.href.startsWith('/talks/') ? 'Session' : 'Record'}
-                    <span class="visually-hidden">: {v.who}, {v.year}</span>
-                  </a>
-                )}
-              </p>
+    themes.map((t) => (
+      <section id={`praise-${t.id}`} class="wrap theme" aria-labelledby={`t-${t.id}`} data-theme>
+        <h3 id={`t-${t.id}`}>
+          {t.label} <span class="count muted" data-count>{t.items.length}</span>
+        </h3>
+        <p class="muted note">{t.note}</p>
+        <ol class="vc-grid" aria-label={`${t.label}: strongest quotes`}>
+          {t.top.map((v, i) => (
+            <li>
+              <VoiceCard voice={v} ground={i === 0 ? (t.id === 'ai' ? 'accent' : 'ink') : 'paper'} />
             </li>
           ))}
-        </ul>
+        </ol>
+        {t.rest.length > 0 && (
+          <details class="all" data-all>
+            <summary>
+              Show the other {t.rest.length} {t.rest.length === 1 ? 'voice' : 'voices'}
+            </summary>
+            <ul class="voices">
+              {t.rest.map((v) => (
+                <li id={v.id} {...attrs(v)}>
+                  {v.text ? (
+                    <blockquote>
+                      <p>&ldquo;{v.text}&rdquo;</p>
+                    </blockquote>
+                  ) : (
+                    <p class="summary">{v.summary}</p>
+                  )}
+                  <p class="who">
+                    <span class="role">{v.who}</span>
+                    <span class="muted">
+                      {v.company}, {v.year}
+                      {v.linkedin ? '. LinkedIn recommendation' : ''}
+                    </span>
+                    {v.recorded && (
+                      <a href={v.href}>
+                        {v.href.startsWith('/talks/') ? 'Session' : 'Record'}
+                        <span class="visually-hidden">: {v.who}, {v.year}</span>
+                      </a>
+                    )}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </details>
+        )}
+        <p class="empty muted" data-empty hidden>
+          No voices in this theme match the filter.
+        </p>
       </section>
     ))
   }
+
+  <section id="in-print" class="wrap print" aria-labelledby="print-title">
+    <hr class="rule rule--accent" />
+    <h2 id="print-title">In print</h2>
+    {
+      [
+        { id: 'cited', title: 'Cited by', note: 'College, company and press publications that mention my work.', items: cited },
+        { id: 'published', title: 'Published', note: 'Papers, patents, articles and newsletters I wrote or edited.', items: pubs },
+      ].map((col) => (
+        <div class="print-group">
+          <h3 id={`print-${col.id}`}>
+            {col.title} <span class="count muted">{col.items.length}</span>
+          </h3>
+          <p class="muted note">{col.note}</p>
+          <ol class="vc-grid" aria-labelledby={`print-${col.id}`}>
+            {col.items.map((c) => (
+              <li>
+                <TrendCard card={c} />
+              </li>
+            ))}
+          </ol>
+        </div>
+      ))
+    }
+  </section>
 
   <section class="wrap more" aria-label="More">
     <p><a href={profile.linkedinRecommendations}>Read the recommendations on LinkedIn</a></p>
   </section>
 </Base>
 
+<script>
+  const state: Record<string, string> = { rel: 'all', emp: 'all' };
+  const buttons = [...document.querySelectorAll<HTMLButtonElement>('[data-group]')];
+  const voices = [...document.querySelectorAll<HTMLElement>('[data-voice]')];
+  const shown = document.querySelector<HTMLElement>('[data-shown]');
+
+  function update() {
+    for (const b of buttons) b.setAttribute('aria-pressed', String(state[b.dataset.group!] === b.dataset.value));
+    const filtered = state.rel !== 'all' || state.emp !== 'all';
+    let total = 0;
+    for (const v of voices) {
+      const ok =
+        (state.rel === 'all' || v.dataset.rel === state.rel) && (state.emp === 'all' || v.dataset.emp === state.emp);
+      v.closest('li')!.hidden = !ok;
+      if (ok) total++;
+    }
+    for (const s of document.querySelectorAll<HTMLElement>('[data-theme]')) {
+      const n = s.querySelectorAll('li:not([hidden]) > [data-voice], li[data-voice]:not([hidden])').length;
+      s.querySelector('[data-count]')!.textContent = String(n);
+      s.querySelector<HTMLElement>('[data-empty]')!.hidden = n > 0;
+      const more = s.querySelector<HTMLDetailsElement>('[data-all]');
+      if (more && filtered) more.open = true;
+    }
+    if (shown) shown.textContent = `${total} ${total === 1 ? 'voice' : 'voices'} shown`;
+  }
+
+  for (const b of buttons) {
+    b.addEventListener('click', () => {
+      state[b.dataset.group!] = b.dataset.value!;
+      update();
+    });
+  }
+
+  // Fade a card's quote where the card cuts it; the card links to the full words.
+  const markCuts = () => {
+    for (const q of document.querySelectorAll<HTMLElement>('[data-quote]')) {
+      q.classList.toggle('cut', q.scrollHeight > q.clientHeight + 1);
+    }
+  };
+  markCuts();
+  addEventListener('resize', markCuts);
+</script>
+
 <style>
   .head {
     padding-top: clamp(2rem, 5vw, 4rem);
+  }
+
+  .title-row {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 1.75rem);
+  }
+
+  .title-row .label {
+    margin-bottom: 0.35rem;
+  }
+
+  .facts a {
+    color: inherit;
   }
 
   h1 {
@@ -89,19 +271,27 @@ const groups = RELATIONSHIPS.map((r) => ({ ...r, items: all.filter((v) => v.rela
   }
 
   .lede {
-    max-width: 38rem;
+    max-width: 40rem;
     margin-top: 1.5rem;
     font-size: var(--step-1);
     line-height: 1.35;
   }
 
-  .map-section {
-    margin-top: clamp(3rem, 7vw, 5rem);
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
+    margin: 1.75rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: var(--step--1);
+    font-weight: 600;
   }
 
-  .called,
-  .group {
-    margin-top: clamp(3.5rem, 8vw, 6rem);
+  .facts b {
+    margin-right: 0.35rem;
+    font-size: var(--step-2);
+    color: var(--accent);
   }
 
   h2 {
@@ -115,19 +305,184 @@ const groups = RELATIONSHIPS.map((r) => ({ ...r, items: all.filter((v) => v.rela
     font-variant-numeric: tabular-nums;
   }
 
-  .called-body {
-    margin-top: 2rem;
+  .note {
+    max-width: 44rem;
+    margin-top: 0.5rem;
   }
 
-  .note {
-    max-width: 34rem;
-    margin-top: 0.75rem;
+  /* What they praise */
+  .praise {
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .praise h2 {
+    margin: 0;
+    font-size: var(--step--1);
+  }
+
+  .bars {
+    display: grid;
+    gap: 0.35rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+
+  .bars a {
+    display: grid;
+    grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) 2.5rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--rule);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .bars a:hover .bar-label {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+  }
+
+  .bar-label {
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .bar-track {
+    display: block;
+    height: 0.9rem;
+    background: var(--rule);
+  }
+
+  .bar {
+    display: block;
+    height: 100%;
+    background: var(--ink);
+  }
+
+  .bar.ai {
+    background: var(--accent);
+  }
+
+  .bar-n {
+    font-size: var(--step-1);
+    text-align: right;
+  }
+
+  @media (min-width: 48rem) {
+    .bars a {
+      grid-template-columns: 16rem minmax(0, 1fr) 3rem;
+    }
+  }
+
+  /* In print */
+  .print {
+    margin-top: clamp(3.5rem, 8vw, 6rem);
+    scroll-margin-top: 1.5rem;
+  }
+
+  .print-group {
+    margin-top: clamp(2rem, 5vw, 3rem);
+  }
+
+  .print-group h3 {
+    font-size: var(--step-2);
+    font-weight: 800;
+  }
+
+  .vc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+    gap: clamp(1rem, 2.4vw, 1.75rem);
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* Filters */
+  .voices-head {
+    margin-top: clamp(3.5rem, 8vw, 6rem);
+  }
+
+  .filters {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .filter-row .label {
+    min-width: 3.5rem;
+  }
+
+  .filters button {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--ink);
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    font-size: var(--step--1);
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .filters button[aria-pressed='true'] {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .filters button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .shown {
+    font-size: var(--step--1);
+  }
+
+  /* Themes */
+  .theme {
+    margin-top: clamp(3rem, 7vw, 5rem);
+    scroll-margin-top: 1.5rem;
+  }
+
+  .theme h3 {
+    padding-top: 1rem;
+    border-top: 4px solid var(--ink);
+    font-size: var(--step-3);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
+  .all {
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .all summary {
+    padding: 1rem 0;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .all .voices {
+    margin-top: 0;
   }
 
   .voices {
     display: grid;
     gap: 0 var(--gutter);
-    margin: 2rem 0 0;
+    margin: 1.5rem 0 0;
     padding: 0;
     list-style: none;
   }
@@ -139,16 +494,17 @@ const groups = RELATIONSHIPS.map((r) => ({ ...r, items: all.filter((v) => v.rela
   }
 
   .voices li:target {
-    border-top: 4px solid var(--accent);
+    outline: 4px solid var(--accent);
+    outline-offset: 4px;
   }
 
   blockquote {
     margin: 0;
   }
 
-  blockquote p,
-  .summary {
-    max-width: 34rem;
+  .voices blockquote p,
+  .voices .summary {
+    max-width: 40rem;
     font-size: var(--step-0);
     font-weight: 500;
     line-height: 1.4;
@@ -174,9 +530,17 @@ const groups = RELATIONSHIPS.map((r) => ({ ...r, items: all.filter((v) => v.rela
     font-weight: 700;
   }
 
+  .empty {
+    margin-top: 1rem;
+  }
+
   .more {
     margin-top: 3rem;
     font-weight: 700;
+  }
+
+  [hidden] {
+    display: none !important;
   }
 
   @media (min-width: 64rem) {

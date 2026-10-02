@@ -11,12 +11,16 @@ import {
   talkMonthHref,
   talks,
   talkYearHref,
+  topicGroups,
+  topicHref,
   type Talk,
+  type TopicGroup,
 } from '../../../lib/talks';
 
 export async function getStaticPaths() {
   const all = await talks();
   const eraList = await eras();
+  const groups = await topicGroups();
   return all.map((t) => {
     const siblings = all.filter((s) => s.era === t.era);
     const i = siblings.findIndex((s) => s.id === t.id);
@@ -27,12 +31,19 @@ export async function getStaticPaths() {
         eraLabel: eraList.find((e) => e.slug === t.era)?.label ?? t.company,
         newer: siblings[i - 1],
         older: siblings[i + 1],
+        topic: groups.find((g) => g.sessions.some((s) => s.id === t.id)),
       },
     };
   });
 }
 
-const { talk: t, eraLabel, newer, older } = Astro.props as { talk: Talk; eraLabel: string; newer?: Talk; older?: Talk };
+const { talk: t, eraLabel, newer, older, topic } = Astro.props as {
+  talk: Talk;
+  eraLabel: string;
+  newer?: Talk;
+  older?: Talk;
+  topic?: TopicGroup;
+};
 const record = t.record_capsule ? (await capsules()).find((c) => c.id === t.record_capsule) : undefined;
 const crumbs = [
   { label: 'Talks', href: '/talks' },
@@ -61,6 +72,13 @@ const range = (r: { low: number | null; high: number | null }) =>
       </p>
       <h1>{t.title}</h1>
       <p class="lede">{t.summary}</p>
+      {
+        topic && topic.sessions.length > 1 && (
+          <p class="topic">
+            One of {topic.sessions.length} sessions on <a href={topicHref(topic)}>{topic.title}</a>
+          </p>
+        )
+      }
     </header>
 
     {
@@ -194,6 +212,11 @@ const range = (r: { low: number | null; high: number | null }) =>
     line-height: 1.35;
   }
 
+  .topic {
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+
   .metrics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
@@ -239,9 +262,10 @@ const range = (r: { low: number | null; high: number | null }) =>
 
   p.main,
   .main > p {
-    max-width: 44rem;
+    max-width: 60rem;
     font-size: var(--step-1);
     line-height: 1.4;
+    text-wrap: balance;
   }
 
   .main > p + p {
@@ -329,11 +353,11 @@ const range = (r: { low: number | null; high: number | null }) =>
     }
 
     .pager {
-      grid-template-columns: 1fr 1fr;
-      gap: var(--gutter);
+      gap: 0.75rem;
     }
 
     .pager .next {
+      justify-self: end;
       text-align: right;
     }
   }

@@ -1,0 +1,224 @@
+---
+import TrendCard from './TrendCard.astro';
+import { capsuleOrListHref, capsules, monthShort, yearHref, type Era } from '../../lib/record';
+import { ERA_SLOT, cardFor, byNewest } from '../../lib/cards';
+import { talkEraHref, talks } from '../../lib/talks';
+import { profile } from '../../data/profile';
+
+interface Props {
+  era: Era;
+  /** h1 on the era's own page, h2 on the Impact page. */
+  level?: 1 | 2;
+}
+
+const { era, level = 2 } = Astro.props;
+const all = (await capsules()).filter((c) => c.era === era.slug);
+const cards = all.filter((c) => c.tier === 'public').map(cardFor).sort(byNewest);
+const lines = all.filter((c) => c.tier === 'line');
+const lineYears = [...new Set(lines.map((c) => c.year))].map((year) => ({ year, items: lines.filter((c) => c.year === year) }));
+const eraTalks = (await talks()).filter((t) => t.era === era.slug).length;
+const slot = ERA_SLOT[era.slug];
+const H = level === 1 ? 'h1' : 'h2';
+const headId = `${slot}-title`;
+---
+
+<section id={slot} class="era" aria-labelledby={headId}>
+  <header class="wrap era-head">
+    <p class="label years">{era.years}</p>
+    <H id={headId} class:list={['era-name', { page: level === 1 }]}>{era.label}</H>
+    <p class="era-line">{era.headline}</p>
+    {
+      slot === 'usa' && (
+        <p class="era-focus">
+          <b>{profile.aiMark}</b>
+          <span>My focus here is {profile.focus}.</span>
+        </p>
+      )
+    }
+    <p class="era-meta">
+      <span><b>{cards.length}</b> with evidence</span>
+      {lines.length > 0 && <span><b>{lines.length}</b> more, listed below</span>}
+      {
+        eraTalks > 0 && (
+          <a href={talkEraHref(era.slug)}>
+            <b>{eraTalks}</b> talks and sessions
+          </a>
+        )
+      }
+    </p>
+    <nav class="era-years" aria-label={`${era.label} by year`}>
+      {era.year_layers.map((y) => <a href={yearHref(era, y.year)}>{y.year}</a>)}
+    </nav>
+  </header>
+
+  <ol class="wrap tc-grid" aria-label={`${era.label}, newest first`}>
+    {
+      cards.map((c) => (
+        <li>
+          <TrendCard card={c} />
+        </li>
+      ))
+    }
+  </ol>
+
+  {
+    lines.length > 0 && (
+      <details class="wrap also">
+        <summary>
+          Also at {era.label}: {lines.length} more entries without a card
+        </summary>
+        {lineYears.map((y) => (
+          <div class="also-year">
+            <p class="figure">{y.year}</p>
+            <ul>
+              {y.items.map((c) => (
+                <li>
+                  <a href={capsuleOrListHref(c)}>
+                    <span class="label muted">{c.month ? monthShort(c.month) : 'Year'}</span>
+                    <span>{c.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </details>
+    )
+  }
+</section>
+
+<style>
+  .era {
+    scroll-margin-top: 4.5rem;
+  }
+
+  .era-head {
+    display: grid;
+    gap: 0.75rem;
+    padding-top: clamp(2.5rem, 6vw, 4.5rem);
+    padding-bottom: clamp(1.25rem, 3vw, 2rem);
+  }
+
+  .years {
+    color: var(--accent);
+  }
+
+  .era-name {
+    font-size: var(--step-4);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+  }
+
+  .era-name.page {
+    font-size: var(--step-5);
+  }
+
+  .era-line {
+    max-width: 58rem;
+    font-size: var(--step-1);
+    font-weight: 600;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+
+  .era-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    font-size: var(--step--1);
+  }
+
+  .era-focus {
+    display: grid;
+    justify-items: start;
+    gap: 0.5rem;
+    max-width: 40rem;
+    padding-left: 1rem;
+    border-left: 4px solid var(--accent);
+    line-height: 1.4;
+  }
+
+  .era-focus b {
+    padding: 0.15rem 0.5rem;
+    background: var(--accent);
+    font-size: var(--step--1);
+  }
+
+  .era-meta b {
+    font-size: var(--step-0);
+  }
+
+  .era-meta a {
+    font-weight: 600;
+  }
+
+  .era-years {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    font-size: var(--step--1);
+    font-weight: 700;
+  }
+
+  .tc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr));
+    gap: clamp(1rem, 2.4vw, 1.75rem);
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    list-style: none;
+  }
+
+  .also {
+    margin-top: clamp(1.5rem, 4vw, 2.5rem);
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .also summary {
+    padding: 1rem 0;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .also-year {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem 0 1.25rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .also-year .figure {
+    font-size: var(--step-1);
+    color: var(--accent);
+  }
+
+  .also ul {
+    display: grid;
+    gap: 0.25rem 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .also li a {
+    display: grid;
+    grid-template-columns: 2.75rem minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 0.4rem 0;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .also li a:hover span:last-child {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 56rem) {
+    .also ul {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

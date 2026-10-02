@@ -1,93 +1,8 @@
 // How the landing page tells the story. Every number here is a claim id from claims.ts.
 
-export const heroProof = ['traceability-adoption', 'ai-people-trained', 'techdebt-savings', 'years-experience'];
-
-export interface ArcStep {
-  era: string;
-  employer: string;
-  years: string;
-  /** Start and end as decimal years, used to size each column. */
-  start: number;
-  end: number;
-  scope: string;
-  milestone: string;
-  capsule: string;
-}
-
-// Each step is a wider scope of work than the one before. The height is an order, not a measurement.
-export const arc: ArcStep[] = [
-  {
-    era: 'ibm-india',
-    employer: 'IBM',
-    years: '2007 to 2013',
-    start: 2007.5,
-    end: 2013.2,
-    scope: 'A product component, worldwide',
-    milestone: 'Worldwide lead for an IBM product component',
-    capsule: '2010-12-promoted-worldwide-webcontainer-lead',
-  },
-  {
-    era: 'exeter-india',
-    employer: 'Exeter',
-    years: '2013 to 2015',
-    start: 2013.3,
-    end: 2015.9,
-    scope: 'Delivery teams on two continents',
-    milestone: 'Anchored a next-generation platform across three teams',
-    capsule: '2015-10-anchored-next-gen-platform',
-  },
-  {
-    era: 'amazon-india',
-    employer: 'Amazon',
-    years: '2016 to 2018',
-    start: 2016.1,
-    end: 2018.6,
-    scope: 'Payments fraud checks for a national launch',
-    milestone: 'Led the fraud check for the Amazon Pay India launch',
-    capsule: '2017-04-amazon-pay-one-account-check',
-  },
-  {
-    era: 'philips-india',
-    employer: 'Philips India',
-    years: '2018 to 2021',
-    start: 2018.7,
-    end: 2021.9,
-    scope: 'Engineering practice across business units',
-    milestone: 'Lead coach for a company-wide technical debt program',
-    capsule: '2021-tech-debt-savings-program',
-  },
-  {
-    era: 'philips-north-america',
-    employer: 'Philips North America',
-    years: '2021 to now',
-    start: 2021.9,
-    end: 2026.8,
-    scope: 'AI and engineering practice across businesses',
-    milestone: 'Conceived an AI traceability platform, now in production',
-    capsule: '2026-09-traceability-platform-14-businesses',
-  },
-];
-
-export const arcThemes = [
-  { id: 'quality', label: 'Quality' },
-  { id: 'delivery', label: 'Delivery' },
-  { id: 'leadership', label: 'Leadership' },
-  { id: 'ai', label: 'AI' },
-];
-
-export interface LedgerGroup {
-  group: string;
-  rows: string[];
-  /** How many rows the landing page shows; the Impact page shows them all. */
-  lead: number;
-}
-
-export const ledger: LedgerGroup[] = [
-  { group: 'Money', rows: ['techdebt-savings', 'techdebt-opportunity', 'infra-savings', 'ai-portfolio-potential'], lead: 2 },
-  { group: 'Time', rows: ['cycle-time', 'traceability-hours', 'scanner-setup', 'ai-issues-triaged'], lead: 2 },
-  { group: 'Quality', rows: ['quality-defects', 'craftsmanship-score', 'test-coverage', 'sprint-completion', 'candidate-nps', 'duplicate-lines'], lead: 2 },
-  { group: 'Adoption', rows: ['traceability-adoption', 'platform-nps', 'ai-people-trained', 'trainers-trained'], lead: 2 },
-];
+/** The one number under the headline, then a strip of three more. */
+export const heroLead = 'ai-people-trained';
+export const heroStrip = ['traceability-adoption', 'techdebt-savings', 'years-experience'];
 
 export interface LadderStep {
   step: string;
@@ -97,7 +12,7 @@ export interface LadderStep {
 
 export const adoptionLadder: LadderStep[] = [
   { step: 'Reached', note: 'People who saw the course', claims: ['copilot-reach'] },
-  { step: 'Trained', note: 'People in the room', claims: ['pu-learners', 'ai-people-trained'] },
+  { step: 'Coached', note: 'People in the room', claims: ['pu-learners', 'ai-people-trained'] },
   { step: 'Teaching others', note: 'People who now run their own sessions', claims: ['trainers-trained'] },
   { step: 'Using it at work', note: 'AI in regulated engineering work', claims: ['traceability-adoption', 'ai-issues-triaged'] },
 ];
@@ -124,7 +39,6 @@ export const signals: Signal[] = [
     text: 'Presented the AI traceability platform to the Philips Executive Committee',
     year: '2026',
     where: 'philips',
-    href: '/work/ai-in-regulated-software',
     seal: true,
   },
   {
@@ -150,7 +64,6 @@ export const signals: Signal[] = [
     text: 'The platform team was recognized as "Impact Makers" at a global town hall',
     year: '2026',
     where: 'philips',
-    href: '/work/ai-in-regulated-software',
   },
   {
     text: 'Named solution architect for the contextual intelligence layer in the 2027 resource model',
@@ -186,9 +99,9 @@ export const signals: Signal[] = [
 
 export const readingPaths = [
   {
-    href: '/work/ai-in-regulated-software',
+    href: '/impact#usa',
     title: 'Hiring for AI transformation',
-    body: 'Read the four case studies, starting with AI in regulated software.',
+    body: 'Start with the responsible use of AI in regulated medical software at Philips North America: the traceability platform, the coaching and the pilots.',
   },
   {
     href: '/impact/philips-north-america/2026',

@@ -1,0 +1,48 @@
+{
+  "id": "2026-09-traceability-platform-adoption",
+  "date": "2026-09",
+  "year": "2026",
+  "month": "09",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Took the traceability platform from a three-business pilot to a fourth business",
+  "type": "Project",
+  "themes": [
+    "ai",
+    "quality"
+  ],
+  "lane": "work",
+  "total": 21,
+  "tier": "public",
+  "summary": "I conceived the AI-assisted traceability platform and guided its team through a pilot in three businesses. A fourth business adopted it after the pilot, and two more plan to adopt it in 2026.",
+  "what_would_have_happened": "Trace work would stay manual and gaps would be found late, when they are expensive.",
+  "the_call": "Grow business by business, one validated release at a time.",
+  "what_i_did": "Set the design, secured funding and guided the team from the pilot to adoption.",
+  "what_changed": "A fourth business adopted the platform after the pilot, two more are planned for 2026, and a quality program manager called my vision inspiring.",
+  "metrics": [
+    {
+      "value": "3",
+      "label": "businesses in the pilot",
+      "context": ""
+    },
+    {
+      "value": "4",
+      "label": "businesses using it after the pilot",
+      "context": ""
+    },
+    {
+      "value": "2",
+      "label": "more businesses planned for 2026",
+      "context": "planned, not yet live"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Datta's communication and collaboration style is very positive and always looking for opportunities. It is simply lovely to collaborate with him. His vision is inspiring.",
+      "role": "Quality Program Manager",
+      "company": "Philips",
+      "date": "2026"
+    }
+  ],
+  "images": []
+}

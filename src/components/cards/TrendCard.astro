@@ -1,0 +1,110 @@
+---
+import '../../styles/cards.css';
+import CardViz from './CardViz.astro';
+import { RAIL, SLOT_LABEL, decimalYear, railX, type CardSpec } from '../../lib/cards';
+
+interface Props {
+  card: CardSpec;
+  /** Position in a deck, such as "3/16". */
+  index?: string;
+  /** Render as a plain block instead of a link, for use inside another link. */
+  static?: boolean;
+}
+
+const { card: c, index, static: plain = false } = Astro.props;
+const sizeClass = (v: string) => (v.length <= 3 ? 'l1' : v.length <= 7 ? 'l2' : v.length <= 12 ? 'l3' : 'l4');
+const toAt = c.value?.indexOf(' to ') ?? -1;
+const linked = !plain && Boolean(c.href);
+const Tag = linked ? 'a' : 'div';
+const label = [c.value, c.what ?? c.head].filter(Boolean).join(' ');
+const where = c.where ?? SLOT_LABEL[c.slot];
+const onSlots = c.slots ?? [c.slot];
+const go = c.go ?? 'See the evidence';
+---
+
+<Tag
+  class:list={['tc', `tc--${c.ground}`]}
+  href={linked ? c.href : undefined}
+  rel={linked && /^https?:/.test(c.href) ? 'external noopener' : undefined}
+  data-card={c.id}
+  aria-label={linked ? `${label}. ${c.when}, ${where}. ${go}.` : undefined}
+>
+  <div class="tc-in">
+    <p class="tc-dateline">{c.when}<span>{where}</span></p>
+    <div class="tc-rail" aria-hidden="true">
+      {RAIL.map((e) => <span class:list={['re', { on: onSlots.includes(e.slot) }]} style={`left:${railX(e.s)}%;width:${railX(e.e) - railX(e.s)}%`} />)}
+      {(c.pins ?? [c.date]).map((d) => <span class="pin" style={`left:${railX(decimalYear(d))}%`} />)}
+    </div>
+
+    {
+      c.value && (
+        <p class:list={['tc-value', sizeClass(c.value)]}>
+          {toAt > 0 ? (
+            <>
+              <span class="from">{c.value.slice(0, toAt)}</span> <span class="tw">to</span> {c.value.slice(toAt + 4)}
+            </>
+          ) : (
+            c.value
+          )}
+        </p>
+      )
+    }
+    {c.what && <p class="tc-what">{c.what}</p>}
+    {c.head && <p class:list={['tc-head', { long: c.head.length > 70 }]}>{c.head}</p>}
+
+    <div class="tc-low">
+    {
+      c.viz.length > 0 && (
+        <div class="tc-viz">
+          {c.viz.map((v) => (
+            <CardViz viz={v} />
+          ))}
+        </div>
+      )
+    }
+
+    {c.title && <p class="tc-title">{c.title}</p>}
+    {c.note && <p class="tc-note">{c.note}</p>}
+
+    {
+      c.img ? (
+        <div class="tc-base">
+          <img class="big" src={c.img.src} alt={c.img.alt} loading="lazy" decoding="async" style={c.img.pos ? `object-position:${c.img.pos}` : undefined} />
+          <ul class="tc-chips" aria-label="Evidence">
+            <li class="thumb" aria-hidden="true">
+              <img src={c.img.src} alt="" loading="lazy" decoding="async" style={c.img.pos ? `object-position:${c.img.pos}` : undefined} />
+            </li>
+            {c.mark && <li class="mark">{c.mark}</li>}
+            {c.chips?.map((ch) => (
+              <li>{ch}</li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        (c.mark || (c.chips && c.chips.length > 0)) && (
+          <ul class="tc-chips" aria-label="Evidence">
+            {c.mark && <li class="mark">{c.mark}</li>}
+            {c.chips?.map((ch) => (
+              <li>{ch}</li>
+            ))}
+          </ul>
+        )
+      )
+    }
+    </div>
+
+    <footer class="tc-foot">
+      <span class="go">
+        {plain ? 'Datta Vellal' : go}
+        {
+          linked && (
+            <svg viewBox="0 0 24 12" aria-hidden="true">
+              <path d="M0 6h22M17 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+          )
+        }
+      </span>
+      {index && <span class="meta">{index}</span>}
+    </footer>
+  </div>
+</Tag>

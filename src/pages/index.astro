@@ -1,35 +1,24 @@
 ---
-import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Headshot from '../components/Headshot.astro';
 import QuoteBlock from '../components/QuoteBlock.astro';
-import ProofStrip from '../components/story/ProofStrip.astro';
-import CareerArc from '../components/story/CareerArc.astro';
-import Shift from '../components/story/Shift.astro';
-import ValueLedger from '../components/story/ValueLedger.astro';
 import VouchMap from '../components/story/VouchMap.astro';
 import Signals from '../components/story/Signals.astro';
-import AdoptionLadder from '../components/story/AdoptionLadder.astro';
+import EraStrip from '../components/cards/EraStrip.astro';
 import { profile } from '../data/profile';
 import { claim } from '../data/claims';
-import { adoptionLadder, heroProof, readingPaths } from '../data/story';
+import { heroLead, heroStrip, readingPaths } from '../data/story';
 import { trio } from '../data/endorsements';
+import { capsules, claimHref } from '../lib/record';
 
-const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
 const years = claim('years-experience');
-const talksCount = claim('talks-count');
-
-// Each figure appears once on this page; earlier sections keep theirs.
-const shown = new Set<string>(heroProof);
-const caseShifts = work.map((entry) => {
-  const ids = entry.data.shifts.filter((id) => !shown.has(id)).slice(0, 2);
-  ids.forEach((id) => shown.add(id));
-  return ids;
-});
-const beforeLadder = [...shown];
-adoptionLadder.flatMap((s) => s.claims).forEach((id) => shown.add(id));
-const beforeLedger = [...shown];
-const shownCapsules = beforeLedger.map((id) => claim(id).capsule).filter((c): c is string => Boolean(c));
+const lead = { ...claim(heroLead), href: await claimHref(claim(heroLead)) };
+const strip = await Promise.all(heroStrip.map(async (id) => ({ ...claim(id), href: await claimHref(claim(id)) })));
+const withCards = (await capsules()).filter((c) => c.lane === 'work' && c.tier === 'public').length;
+const paths = [
+  { href: '/impact', title: 'See the Impact', body: `${withCards} achievements with their evidence, newest first, by company.` },
+  ...readingPaths,
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -46,7 +35,7 @@ const jsonLd = {
   award: ['CTO Outstanding Technical Achievement Award, Philips, 2021'],
   address: { '@type': 'PostalAddress', addressLocality: 'Rochester', addressRegion: 'MI', addressCountry: 'US' },
   knowsAbout: [
-    'AI transformation in regulated software',
+    'Responsible use of AI in regulated medical software development and delivery',
     'IEC 62304',
     'Engineering excellence',
     'DORA metrics',
@@ -63,92 +52,37 @@ const jsonLd = {
   jsonLd={jsonLd}
 >
   <section class="hero wrap grid" aria-labelledby="hero-title">
-    <div class="hero-copy">
-      <h1 id="hero-title">{profile.headline}</h1>
-      <p class="hero-sub">{profile.story}</p>
-      <div class="hero-proof">
-        <ProofStrip ids={heroProof} />
-      </div>
-      <div class="hero-seal">
-        <Signals seal />
-      </div>
-      <p class="hero-actions">
-        <a class="button" href="/impact">See the Impact</a>
-        <a href="#contact">Contact</a>
-      </p>
-    </div>
     <div class="hero-photo">
       <Headshot />
     </div>
-  </section>
-
-  <section class="wrap arc-section" aria-labelledby="arc-title">
-    <hr class="rule rule--accent" />
-    <h2 id="arc-title" class="section-title">One problem, a wider scope each time</h2>
-    <p class="section-lede">
-      From one product component at IBM to AI across medical-device businesses at Philips. Pick a company to see its
-      record year by year.
+    <p class="hero-id">
+      <span>{profile.role}</span>
+      <span class="muted">{profile.location}</span>
     </p>
-    <div class="section-body">
-      <CareerArc />
+    <div class="hero-copy">
+      <h1 id="hero-title">{profile.headline}</h1>
+      <a class="lead" href={lead.href}>
+        <span class="lead-n figure">{lead.value}</span>
+        <span class="lead-l">{lead.short ?? lead.label}</span>
+      </a>
+      <ul class="hero-strip" aria-label="More in numbers">
+        {
+          strip.map((c) => (
+            <li>
+              <a href={c.href}>
+                <b class="figure">{c.value}</b>
+                <span>{c.short ?? c.label}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </section>
 
-  <section id="work" class="wrap work" aria-labelledby="work-title">
-    <hr class="rule rule--accent" />
-    <h2 id="work-title" class="section-title">Problems I took on</h2>
-    <p class="section-lede">
-      Four problems that crossed teams and business units: what was going wrong, the call I made, and what changed.
-    </p>
-    <ol class="cases">
-      {
-        work.map((entry, i) => (
-          <li class="case grid">
-            <div class="case-main">
-              <h3>
-                <a href={`/work/${entry.id}`}>{entry.data.title}</a>
-              </h3>
-              <p class="case-meta muted">
-                {entry.data.pillar}. {entry.data.employer}, {entry.data.period}.
-              </p>
-              <dl class="case-steps">
-                <div>
-                  <dt>Before</dt>
-                  <dd>{entry.data.problem}</dd>
-                </div>
-                <div>
-                  <dt>The call</dt>
-                  <dd>{entry.data.decision}</dd>
-                </div>
-              </dl>
-            </div>
-            <div class="case-shifts">
-              {caseShifts[i].map((id) => (
-                <Shift id={id} />
-              ))}
-            </div>
-            {entry.data.quote && (
-              <div class="case-quote">
-                <QuoteBlock id={entry.data.quote} showContext={false} />
-              </div>
-            )}
-          </li>
-        ))
-      }
-    </ol>
-  </section>
-
-  <section class="wrap value" aria-labelledby="value-title">
-    <hr class="rule rule--accent" />
-    <h2 id="value-title" class="section-title">What it was worth</h2>
-    <p class="section-lede">
-      Money, time and quality, each with my part in it. Where a figure has an entry in the record, it links there.
-    </p>
-    <div class="section-body">
-      <ValueLedger exclude={beforeLedger} />
-    </div>
-    <p class="more"><a href="/impact#value">Every figure, with its context</a></p>
-  </section>
+  <div class="strip-wrap">
+    <EraStrip />
+  </div>
 
   <section class="wrap vouch" aria-labelledby="vouch-title">
     <hr class="rule rule--accent" />
@@ -167,24 +101,9 @@ const jsonLd = {
     </div>
     <div class="called-out">
       <h3 class="trio-title">Called out</h3>
-      <Signals hideSeal excludeCapsules={shownCapsules} />
+      <Signals />
     </div>
     <p class="more"><a href="/endorsements">Every recorded voice, grouped by who said it</a></p>
-  </section>
-
-  <section class="wrap adoption" aria-labelledby="adoption-title">
-    <hr class="rule rule--accent" />
-    <h2 id="adoption-title" class="section-title">Getting people to use AI at work</h2>
-    <p class="section-lede">
-      Changing how teams work is most of an AI transformation. This is how the numbers stack up from first contact to
-      daily use.
-    </p>
-    <div class="section-body">
-      <AdoptionLadder exclude={beforeLadder} />
-    </div>
-    <p class="more">
-      <a href="/talks">All {talksCount.value} talks and workshops since 2010, by company and year</a>
-    </p>
   </section>
 
   <nav class="wrap paths" aria-labelledby="paths-title">
@@ -192,7 +111,7 @@ const jsonLd = {
     <h2 id="paths-title" class="section-title">Where to go next</h2>
     <ul class="path-list">
       {
-        readingPaths.map((p) => (
+        paths.map((p) => (
           <li>
             <a href={p.href}>{p.title}</a>
             <p class="muted">{p.body}</p>
@@ -201,41 +120,12 @@ const jsonLd = {
       }
     </ul>
   </nav>
-
-  <section id="about" class="wrap about grid" aria-labelledby="about-title">
-    <div class="about-head">
-      <hr class="rule rule--accent" />
-      <h2 id="about-title" class="section-title">About me</h2>
-    </div>
-    <div class="about-body">
-      {profile.about.map((p) => <p>{p}</p>)}
-      <p><a href="/socials">Community work and the book drive</a></p>
-    </div>
-    <dl class="about-facts">
-      {
-        profile.facts.map((f) => (
-          <div>
-            <dt>{f.label}</dt>
-            <dd>{f.value}</dd>
-          </div>
-        ))
-      }
-    </dl>
-  </section>
-
-  <section id="contact" class="wrap contact" aria-labelledby="contact-title">
-    <hr class="rule" />
-    <h2 id="contact-title" class="invite">{profile.invite}</h2>
-    <ul class="contact-links">
-      <li><a href={`mailto:${profile.email}`}>{profile.email}</a></li>
-      <li><a href={profile.linkedin} rel="me">LinkedIn</a></li>
-    </ul>
-  </section>
 </Base>
 
 <style>
   section,
-  .paths {
+  .paths,
+  .strip-wrap {
     margin-top: clamp(4rem, 9vw, 7rem);
   }
 
@@ -243,14 +133,6 @@ const jsonLd = {
     margin-top: 1.5rem;
     font-size: var(--step-3);
     font-weight: 800;
-  }
-
-  .section-lede {
-    max-width: 38rem;
-    margin-top: 1rem;
-    font-size: var(--step-1);
-    line-height: 1.35;
-    color: var(--ink-2);
   }
 
   .section-body {
@@ -263,181 +145,140 @@ const jsonLd = {
     font-weight: 700;
   }
 
-  /* Hero */
+  /* Hero: face, headline, one number, a strip of three more, then actions. */
   .hero {
-    margin-top: clamp(2rem, 5vw, 4rem);
-    row-gap: 2.5rem;
-    align-items: start;
+    margin-top: clamp(1.25rem, 4vw, 3.5rem);
+    row-gap: 1.5rem;
+    align-items: end;
+  }
+
+  .hero-photo {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .hero-id {
+    display: grid;
+    gap: 0.25rem;
+    grid-column: 3 / span 2;
+    grid-row: 1;
+    align-self: end;
+    padding-bottom: 2.25rem;
+    font-size: var(--step--1);
+    font-weight: 700;
+    line-height: 1.3;
   }
 
   .hero-copy {
     grid-column: 1 / -1;
-  }
-
-  .hero-photo {
-    grid-column: 1 / span 3;
-    max-width: 14rem;
+    grid-row: 2;
   }
 
   h1 {
     margin-top: 0;
-    font-size: var(--step-4);
+    font-size: var(--step-3);
     font-weight: 800;
     letter-spacing: -0.04em;
     line-height: 0.98;
-    max-width: 16ch;
+    max-width: 20ch;
   }
 
-  .hero-sub {
-    max-width: 36rem;
-    margin-top: 1.25rem;
-    font-size: var(--step-1);
-    line-height: 1.35;
-  }
-
-  .hero-proof {
-    margin-top: 2rem;
-  }
-
-  .hero-seal {
+  .lead {
+    display: grid;
+    gap: 0.4rem;
     margin-top: 1.75rem;
+    padding-top: 1rem;
+    border-top: 4px solid var(--accent);
+    color: inherit;
+    text-decoration: none;
   }
 
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1rem 1.75rem;
-    margin-top: 2rem;
+  .lead-n {
+    font-size: clamp(4rem, 3rem + 7vw, 7.5rem);
+    color: var(--accent);
+  }
+
+  .lead-l {
+    max-width: 22rem;
+    font-size: var(--step-1);
     font-weight: 700;
+    line-height: 1.2;
   }
 
-  .button {
-    display: inline-block;
-    padding: 0.85rem 1.4rem;
+  .lead:hover .lead-l {
+    text-decoration: underline;
+  }
+
+  .hero-strip {
+    display: flex;
+    gap: 0.75rem;
+    margin: 1.5rem calc(var(--margin) * -1) 0;
+    padding: 0 var(--margin) 0.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--margin);
+    list-style: none;
+    scrollbar-width: none;
+  }
+
+  .hero-strip li {
+    flex: 0 0 min(62vw, 15rem);
+    scroll-snap-align: start;
+  }
+
+  .hero-strip a {
+    display: grid;
+    gap: 0.35rem;
+    height: 100%;
+    padding: 0.9rem 1rem 1rem;
     background: var(--ink);
     color: var(--paper);
     text-decoration: none;
-    white-space: nowrap;
-    transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out);
   }
 
-  .button:hover {
+  .hero-strip b {
+    font-size: var(--step-2);
+  }
+
+  .hero-strip span {
+    font-size: var(--step--1);
+    line-height: 1.3;
+  }
+
+  .hero-strip a:hover {
     background: var(--accent);
     color: var(--ink);
   }
 
-  .button:active {
-    transform: translateY(1px);
-  }
-
   @media (min-width: 48rem) {
+    .hero {
+      align-items: start;
+    }
+
     .hero-copy {
-      grid-column: 1 / span 9;
+      grid-column: 1 / span 8;
+      grid-row: 1 / span 2;
     }
 
     .hero-photo {
       grid-column: 10 / span 3;
-      max-width: none;
+      grid-row: 1;
       margin-top: 0.5rem;
     }
-  }
 
-  /* Problems */
-  .cases {
-    margin: clamp(2rem, 4vw, 3rem) 0 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .case {
-    row-gap: 1.75rem;
-    padding-block: 2.25rem;
-    border-top: 1px solid var(--ink);
-  }
-
-  .case-main,
-  .case-shifts,
-  .case-quote {
-    grid-column: 1 / -1;
-  }
-
-  .case h3 {
-    font-size: var(--step-2);
-  }
-
-  .case h3 a {
-    text-decoration-color: transparent;
-  }
-
-  .case h3 a:hover {
-    text-decoration-color: var(--accent);
-  }
-
-  .case-meta {
-    margin-top: 0.5rem;
-    font-size: var(--step--1);
-    font-weight: 600;
-  }
-
-  .case-steps {
-    display: grid;
-    gap: 1rem;
-    max-width: 34rem;
-    margin: 1.25rem 0 0;
-  }
-
-  .case-steps dt {
-    font-size: var(--step--1);
-    font-weight: 800;
-  }
-
-  .case-steps dd {
-    margin: 0.2rem 0 0;
-    line-height: 1.45;
-  }
-
-  .case-shifts {
-    display: grid;
-    gap: 1.75rem;
-    align-content: start;
-  }
-
-  .case-quote {
-    align-self: start;
-    padding-top: 1rem;
-    border-top: 4px solid var(--ink);
-  }
-
-  @media (min-width: 48rem) {
-    .case-main {
-      grid-column: 1 / span 6;
-    }
-
-    .case-shifts {
-      grid-column: 7 / span 6;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: var(--gutter);
-    }
-
-    .case-quote {
-      grid-column: 7 / span 6;
-    }
-  }
-
-  @media (min-width: 72rem) {
-    .case-main {
-      grid-column: 1 / span 5;
-    }
-
-    .case-shifts {
-      grid-column: 6 / span 4;
-      grid-template-columns: 1fr;
-      gap: 1.75rem;
-    }
-
-    .case-quote {
+    .hero-id {
       grid-column: 10 / span 3;
+      grid-row: 2;
+      align-self: start;
+      padding-bottom: 0;
+    }
+
+    .hero-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-inline: 0;
+      padding: 0;
+      overflow: visible;
     }
   }
 
@@ -483,6 +324,10 @@ const jsonLd = {
     border-top: 4px solid var(--ink);
   }
 
+  .path-list li:first-child {
+    border-top-color: var(--accent);
+  }
+
   .path-list a {
     font-size: var(--step-1);
     font-weight: 800;
@@ -497,83 +342,13 @@ const jsonLd = {
 
   @media (min-width: 48rem) {
     .path-list {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
-  /* About */
-  .about {
-    row-gap: 2rem;
-  }
-
-  .about-head,
-  .about-body,
-  .about-facts {
-    grid-column: 1 / -1;
-  }
-
-  .about-body {
-    max-width: 36rem;
-    font-size: var(--step-1);
-    line-height: 1.4;
-  }
-
-  .about-body p:last-child {
-    font-size: var(--step--1);
-    font-weight: 700;
-  }
-
-  .about-facts {
-    display: grid;
-    gap: 1rem;
-    margin: 0;
-    align-content: start;
-  }
-
-  .about-facts div {
-    padding-top: 0.75rem;
-    border-top: 1px solid var(--rule);
-  }
-
-  .about-facts dt {
-    font-size: var(--step--1);
-    font-weight: 800;
-  }
-
-  .about-facts dd {
-    margin: 0.25rem 0 0;
-    font-size: var(--step--1);
-    line-height: 1.4;
-  }
-
-  @media (min-width: 48rem) {
-    .about-body {
-      grid-column: 1 / span 7;
+  @media (min-width: 64rem) {
+    .path-list {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
-
-    .about-facts {
-      grid-column: 9 / span 4;
-    }
-  }
-
-  /* Contact */
-  .invite {
-    max-width: 20ch;
-    margin-top: 2rem;
-    font-size: var(--step-3);
-    font-weight: 800;
-    letter-spacing: -0.035em;
-  }
-
-  .contact-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem 2rem;
-    margin: 2rem 0 0;
-    padding: 0;
-    list-style: none;
-    font-size: var(--step-1);
-    font-weight: 700;
-    overflow-wrap: anywhere;
   }
 </style>

@@ -5,7 +5,7 @@
   "month": "12",
   "era": "amazon-india",
   "company": "Amazon",
-  "title": "Trained 31 more engineers in Scrum and lifted my score to 4.47/5",
+  "title": "Coached 31 more engineers in agile software development, received feedback score of 4.47/5",
   "type": "Talk",
   "themes": [
     "teaching",
@@ -15,11 +15,11 @@
   "lane": "work",
   "total": 16,
   "tier": "public",
-  "summary": "Three weeks after my first Scrum workshop, I used that cohort's feedback, taught 31 more engineers and saw my presenter score rise from 4.12 to 4.47.",
+  "summary": "Three weeks after my first agile software development workshop, I used that cohort's feedback, taught 31 more engineers and saw my feedback score rise from 4.12 to 4.47.",
   "what_would_have_happened": "Not applicable: this was a teaching session.",
   "the_call": "Treat the first cohort's feedback as the plan for the next class.",
   "what_i_did": "Taught the workshop to 31 engineers, with room for discussion and questions.",
-  "what_changed": "My presenter score rose to 4.47 out of 5, and participants wrote about the engagement and the pace.",
+  "what_changed": "My feedback score rose to 4.47 out of 5, and participants wrote about the engagement and the pace.",
   "metrics": [
     {
       "value": "31",
@@ -28,7 +28,7 @@
     },
     {
       "value": "4.47 / 5",
-      "label": "presenter score",
+      "label": "feedback score",
       "context": "up from 4.12 three weeks earlier"
     }
   ],
@@ -51,7 +51,7 @@
       "src": "/record/published/2016-12-scrum-workshop-4-47-1.webp",
       "kind": "document",
       "pending": false,
-      "alt": "Document: Trained 31 more engineers in Scrum and lifted my score to 4.47/5"
+      "alt": "Document: Coached 31 more engineers in agile software development, received feedback score of 4.47/5"
     }
   ]
 }

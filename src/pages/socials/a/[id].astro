@@ -1,0 +1,146 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/record/Breadcrumbs.astro';
+import TrendCard from '../../../components/cards/TrendCard.astro';
+import { capsuleHref, capsuleOrListHref, monthShort } from '../../../lib/record';
+import { activityCard, activityGroups, spanOfEntries, type ActivityGroup } from '../../../lib/socials';
+
+export async function getStaticPaths() {
+  return (await activityGroups()).map((a) => ({ params: { id: a.id }, props: { a } }));
+}
+
+const { a } = Astro.props as { a: ActivityGroup };
+const card = activityCard(a);
+const span = spanOfEntries(a.entries);
+const when = (date: string) => {
+  const [y, m] = date.replace(/^~/, '').split('-');
+  return m ? `${monthShort(m)} ${y}` : y;
+};
+---
+
+<Base title={a.title} description={`${a.title}, ${span}. ${a.note}`}>
+  <header class="wrap head">
+    <Breadcrumbs items={[{ label: 'Socials', href: '/socials' }, { label: a.title }]} />
+    <p class="meta label muted">{span}, outside work</p>
+    <h1>{a.title}</h1>
+    <p class="lede">{a.note}</p>
+  </header>
+
+  <div class="wrap top">
+    <div class="card">
+      <TrendCard card={card} static />
+    </div>
+    <section aria-labelledby="entries-title">
+      <h2 id="entries-title">
+        {a.entries.length === 1 ? 'The entry' : `All ${a.entries.length} entries`}, newest first
+      </h2>
+      <ol class="entries">
+        {
+          a.entries.map((c) => (
+            <li>
+              <p class="entry-meta label">
+                <span class="muted">{when(c.date)}</span>
+                {capsuleHref(c) && <span class="detail">With evidence</span>}
+              </p>
+              <a href={capsuleOrListHref(c)}>{c.title}</a>
+            </li>
+          ))
+        }
+      </ol>
+      {
+        a.id === 'colleges' && (
+          <p class="also">
+            <a href="/talks#students">Every college talk, with ratings, on the Talks page</a>
+          </p>
+        )
+      }
+    </section>
+  </div>
+
+  <p class="wrap back"><a href="/socials">All activities outside work</a></p>
+</Base>
+
+<style>
+  .head {
+    padding-top: clamp(2rem, 5vw, 4rem);
+  }
+
+  .meta {
+    margin-top: 2rem;
+  }
+
+  h1 {
+    margin-top: 0.75rem;
+    font-size: var(--step-4);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  .lede {
+    max-width: 40rem;
+    margin-top: 1.25rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .top {
+    display: grid;
+    gap: clamp(2rem, 5vw, 3.5rem);
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .card {
+    width: min(100%, 24rem);
+  }
+
+  h2 {
+    font-size: var(--step-1);
+    font-weight: 800;
+  }
+
+  .entries {
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+
+  .entries li {
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .entries a {
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+  }
+
+  .detail {
+    color: var(--accent);
+  }
+
+  .also,
+  .back {
+    margin-top: 2rem;
+    font-weight: 700;
+  }
+
+  .back {
+    margin-top: clamp(3rem, 7vw, 5rem);
+  }
+
+  @media (min-width: 48rem) {
+    .top {
+      grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+      align-items: start;
+    }
+  }
+</style>

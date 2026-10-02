@@ -1,0 +1,218 @@
+---
+import '../../styles/cards.css';
+import TrendCard from './TrendCard.astro';
+import CardViz from './CardViz.astro';
+import { ERA_SLOT, RAIL, introCards, railX, workCards } from '../../lib/cards';
+import { capsules, eras } from '../../lib/record';
+
+const cards = await introCards();
+const total = cards.length + 1;
+const all = await workCards();
+const lines = (await capsules()).filter((c) => c.lane === 'work' && c.tier === 'line').length;
+const SHORT: Record<string, [string, string?]> = { ibm: ['IBM'], exeter: ['Exeter'], amazon: ['Amazon'], india: ['Philips', 'India'], usa: ['Philips', 'USA'] };
+const perEra = (await eras())
+  .filter((e) => e.lane === 'work')
+  .sort((a, b) => a.order - b.order)
+  .map((e) => {
+    const slot = ERA_SLOT[e.slug];
+    return { x: SHORT[slot][0], sub: SHORT[slot][1], v: all.filter((c) => c.slot === slot).length };
+  });
+---
+
+<section class="intro" aria-labelledby="intro-title">
+  <header class="wrap intro-head">
+    <h2 id="intro-title">Highlights since 2007, newest first</h2>
+    <p class="intro-lede">Each card opens the evidence behind it: the record entry, what people said and the documents.</p>
+    <p class="cue" aria-hidden="true">
+      Swipe
+      <svg viewBox="0 0 24 12"><path d="M0 6h22M17 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"></path></svg>
+    </p>
+  </header>
+
+  <ol class="deck" aria-label="Highlights, newest first">
+    {
+      cards.map((c, i) => (
+        <li>
+          <TrendCard card={c} index={`${i + 1}/${total}`} />
+        </li>
+      ))
+    }
+    <li class="closing">
+      <a class="tc tc--accent" href="/impact" aria-label={`See all ${all.length} achievements on the Impact page`}>
+        <div class="tc-in">
+          <p class="tc-dateline">2007 to 2026<span>Five companies</span></p>
+          <div class="tc-rail" aria-hidden="true">
+            {RAIL.map((e) => <span class="re on" style={`left:${railX(e.s)}%;width:${railX(e.e) - railX(e.s)}%`} />)}
+          </div>
+          <p class="tc-value l2">{all.length}</p>
+          <p class="tc-what">achievements on cards like these, by company and newest first, plus {lines} more in a list</p>
+          <div class="tc-low">
+            <div class="tc-viz">
+              <CardViz viz={{ type: 'bars', h: 30, caption: 'Cards per company', items: perEra.map((p, i) => ({ ...p, t: String(p.v), hi: i === perEra.length - 1 })) }} />
+            </div>
+          </div>
+          <footer class="tc-foot">
+            <span class="go">
+              See the Impact page
+              <svg viewBox="0 0 24 12" aria-hidden="true"><path d="M0 6h22M17 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"></path></svg>
+            </span>
+            <span class="meta">{total}/{total}</span>
+          </footer>
+        </div>
+      </a>
+      <a class="band" href="/impact">
+        <div class="band-copy">
+          <p class="band-n figure">{all.length}</p>
+          <p class="band-what">achievements on cards like these, by company and newest first, plus {lines} more in a list</p>
+          <p class="band-go">
+            See the Impact page
+            <svg viewBox="0 0 24 12" aria-hidden="true"><path d="M0 6h22M17 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"></path></svg>
+          </p>
+        </div>
+        <div class="band-viz">
+          <CardViz viz={{ type: 'bars', h: 26, caption: 'Cards per company', items: perEra.map((p, i) => ({ ...p, t: String(p.v), hi: i === perEra.length - 1 })) }} />
+        </div>
+      </a>
+    </li>
+  </ol>
+</section>
+
+<style>
+  .intro-head {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  h2 {
+    font-size: var(--step-3);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1;
+  }
+
+  .intro-lede {
+    max-width: 34rem;
+    font-size: var(--step-0);
+    color: var(--ink-2);
+  }
+
+  .cue {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--step--1);
+    font-weight: 700;
+  }
+
+  .cue svg {
+    width: 1.5rem;
+  }
+
+  .deck {
+    display: flex;
+    gap: 0.875rem;
+    margin: 1.5rem 0 0;
+    padding: 0.5rem var(--margin) 1.5rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--margin);
+    list-style: none;
+    scrollbar-width: thin;
+  }
+
+  .deck > li {
+    flex: 0 0 min(84vw, 24rem);
+    scroll-snap-align: start;
+  }
+
+  @media (min-width: 48rem) {
+    .cue {
+      display: none;
+    }
+
+    .deck {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(1rem, 2.4vw, 1.75rem);
+      max-width: var(--max);
+      margin-inline: auto;
+      padding: 0.5rem var(--margin) 0;
+      overflow: visible;
+    }
+
+    .deck > li {
+      flex: none;
+    }
+  }
+
+  @media (min-width: 72rem) {
+    .deck {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* Fifteen cards fill five rows; the closing card becomes a band across the sixth. */
+    .closing {
+      grid-column: 1 / -1;
+    }
+
+    .closing .tc {
+      display: none;
+    }
+
+    .closing .band {
+      --dim: rgb(0 0 0 / 0.24);
+      --hi: var(--ink);
+      --fg: var(--ink);
+      --soft: rgb(0 0 0 / 0.78);
+      display: grid;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+      gap: 3rem;
+      align-items: end;
+      padding: 2.5rem 2.75rem 2.25rem;
+      background: var(--accent);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 0.08), 0 8px 24px rgb(0 0 0 / 0.07);
+    }
+
+    .band-n {
+      font-size: clamp(5rem, 8vw, 8rem);
+    }
+
+    .band-what {
+      max-width: 24ch;
+      margin-top: 1rem;
+      font-size: var(--step-1);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .band-go {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 1.5rem;
+      padding-top: 0.75rem;
+      border-top: 2px solid currentColor;
+      font-weight: 800;
+    }
+
+    .band-go svg {
+      width: 1.5rem;
+      transition: transform 200ms var(--ease-out);
+    }
+
+    .band:hover .band-go svg {
+      transform: translateX(0.3rem);
+    }
+
+    .band-viz {
+      container-type: inline-size;
+    }
+  }
+
+  .band {
+    display: none;
+  }
+</style>

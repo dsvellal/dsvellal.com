@@ -1,15 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Figure from '../../components/Figure.astro';
+import Headshot from '../../components/Headshot.astro';
 import QuoteBlock from '../../components/QuoteBlock.astro';
 import EraBand from '../../components/record/EraBand.astro';
-import TalkList from '../../components/talks/TalkList.astro';
+import TrendCard from '../../components/cards/TrendCard.astro';
 import AdoptionLadder from '../../components/story/AdoptionLadder.astro';
-import { topics } from '../../data/talks';
+import { SUBJECTS } from '../../data/talks';
 import { profile } from '../../data/profile';
 import { claim, sessionsByEra } from '../../data/claims';
 import { eras } from '../../lib/record';
-import { reachOf, talkEraHref, talks } from '../../lib/talks';
+import { reachOf, talkEraHref, talks, topicCard, topicGroups } from '../../lib/talks';
 
 const total = claim('talks-count');
 const people = claim('talks-attendees');
@@ -32,7 +33,11 @@ const bands = (await eras())
   })
   .filter((b) => b.count > 0);
 const max = Math.max(...bands.map((b) => b.count), 1);
-const recent = all.slice(0, 6);
+const groups = await topicGroups();
+const subjects = SUBJECTS.map((s) => {
+  const list = groups.filter((g) => g.subject === s.id).sort((a, b) => b.sessions[0].date.localeCompare(a.sessions[0].date));
+  return { ...s, cards: list.map(topicCard), sessions: list.reduce((n, g) => n + g.sessions.length, 0) };
+});
 ---
 
 <Base
@@ -53,8 +58,78 @@ const recent = all.slice(0, 6);
     <div><Figure id="talks-attendees" size="large" showContext /></div>
   </section>
 
-  <section class="wrap eras" aria-labelledby="eras-title">
+  <div class="by-topic">
+    <p class="wrap topic-note">
+      {all.length} sessions in {groups.length} topics. Each card covers every time I ran a topic. Open it for the dates,
+      ratings and participant comments.
+    </p>
+
+    <nav class="jump" aria-label="Jump to a subject">
+      <ol class="wrap">
+        {
+          subjects.map((s) => (
+            <li>
+              <a href={`#${s.id}`} data-jump={s.id}>
+                {s.title}
+                <span>{s.cards.length} topics</span>
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </nav>
+
+    {
+      subjects.map((s) => (
+        <section id={s.id} class="subject" aria-labelledby={`${s.id}-title`}>
+          <header class="wrap subject-head">
+            <h2 id={`${s.id}-title`}>{s.title}</h2>
+            <p class="subject-note">{s.note}</p>
+            {s.id === 'ai' && (
+              <p class="focus">
+                <b>{profile.aiMark}</b>
+                <span>At Philips North America my work centers on {profile.focus}.</span>
+              </p>
+            )}
+            <p class="subject-meta">
+              <span>
+                <b>{s.cards.length}</b> topics
+              </span>
+              <span>
+                <b>{s.sessions}</b> sessions
+              </span>
+            </p>
+          </header>
+          <ol class="wrap tc-grid" aria-label={`${s.title}, newest first`}>
+            {s.cards.map((c) => (
+              <li>
+                <TrendCard card={c} />
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))
+    }
+  </div>
+
+  <section class="wrap now" aria-labelledby="now-title">
     <hr class="rule rule--accent" />
+    <h2 id="now-title">Teaching AI now</h2>
+    <div class="now-ladder">
+      <AdoptionLadder />
+    </div>
+    <div class="grid now-figs">
+      <div><Figure id="ai-sessions-rating" size="medium" showContext /></div>
+      <div><Figure id="pu-program" size="medium" showContext /></div>
+      <div><Figure id="ai-confidence" size="medium" showContext /></div>
+    </div>
+    <div class="now-quote">
+      <QuoteBlock id="q-analytics" size="large" />
+    </div>
+  </section>
+
+  <section class="wrap eras" aria-labelledby="eras-title">
+    <hr class="rule" />
     <h2 id="eras-title">Across my career</h2>
     <p class="muted section-note">Every talk, workshop and judging role I have a record of. Pick a company to go year by year.</p>
     <div class="band-head label muted" aria-hidden="true">
@@ -79,54 +154,52 @@ const recent = all.slice(0, 6);
     </ol>
   </section>
 
-  <section class="wrap recent" aria-labelledby="recent-title">
-    <hr class="rule" />
-    <h2 id="recent-title">Most recent</h2>
-    <div class="recent-list">
-      <TalkList items={recent} label="Most recent sessions" />
+  <section class="wrap speaker" aria-labelledby="invite-title">
+    <div class="speaker-photo">
+      <Headshot />
     </div>
-  </section>
-
-  <section class="wrap now" aria-labelledby="now-title">
-    <hr class="rule" />
-    <h2 id="now-title">Teaching AI now</h2>
-    <div class="now-ladder">
-      <AdoptionLadder />
+    <div class="speaker-text">
+      <p class="label muted">For event organizers</p>
+      <h2 id="invite-title">Invite me to speak</h2>
+      <p class="speaker-bio">
+        {profile.name}, {profile.role}. More than {total.value.replace('+', '')} talks, workshops and courses since 2010, from
+        engineering colleges to Philips University and an international developer conference.
+      </p>
+      <p class="label">Topics</p>
+      <ul class="speaker-topics">
+        {subjects.filter((s) => s.id !== 'community').map((s) => <li><a href={`#${s.id}`}>{s.title}</a></li>)}
+      </ul>
+      <p class="speaker-actions">
+        <a class="primary" href={`mailto:${profile.email}?subject=Speaking%20invitation`}>Email me the audience, format and date</a>
+        <a href="/headshot.jpg" download="datta-vellal-headshot.jpg">Download headshot</a>
+        <a href="/about#speaker-bio">Speaker bio</a>
+      </p>
     </div>
-    <div class="grid now-figs">
-      <div><Figure id="ai-sessions-rating" size="medium" showContext /></div>
-      <div><Figure id="pu-program" size="medium" showContext /></div>
-      <div><Figure id="ai-confidence" size="medium" showContext /></div>
-    </div>
-    <div class="now-quote">
-      <QuoteBlock id="q-analytics" size="large" />
-    </div>
-  </section>
-
-  <section class="wrap topics" aria-labelledby="topics-title">
-    <hr class="rule rule--accent" />
-    <h2 id="topics-title">Topics</h2>
-    <dl class="topic-list">
-      {
-        topics.map((t) => (
-          <div>
-            <dt>{t.title}</dt>
-            <dd class="muted">{t.body}</dd>
-          </div>
-        ))
-      }
-    </dl>
-  </section>
-
-  <section class="wrap invite-block" aria-labelledby="invite-title">
-    <hr class="rule" />
-    <h2 id="invite-title">Organizing an event?</h2>
-    <p class="muted">
-      Write to <a href={`mailto:${profile.email}`}>{profile.email}</a> with the audience, format and date. A short bio and
-      headshot are available on request.
-    </p>
   </section>
 </Base>
+
+<script>
+  // Mark the subject in view in the jump bar.
+  const links = new Map([...document.querySelectorAll<HTMLAnchorElement>('[data-jump]')].map((a) => [a.dataset.jump, a]));
+  const seen = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        links.forEach((a) => a.removeAttribute('aria-current'));
+        const a = links.get(e.target.id);
+        if (!a) continue;
+        a.setAttribute('aria-current', 'location');
+        const bar = a.closest('ol');
+        if (bar && bar.scrollWidth > bar.clientWidth) bar.scrollLeft = a.offsetLeft - bar.offsetLeft - 16;
+      }
+    },
+    { rootMargin: '-45% 0px -50% 0px' },
+  );
+  links.forEach((_, id) => {
+    const section = id ? document.getElementById(id) : null;
+    if (section) seen.observe(section);
+  });
+</script>
 
 <style>
   section {
@@ -169,45 +242,213 @@ const recent = all.slice(0, 6);
     font-weight: 800;
   }
 
-  .topics h2 {
-    margin-top: 1.5rem;
+  .by-topic {
+    margin-top: clamp(3.5rem, 8vw, 6rem);
   }
 
-  .topic-list {
-    display: grid;
-    gap: 2rem var(--gutter);
-    margin: 2.5rem 0 0;
-  }
-
-  dt {
+  .topic-note {
+    max-width: 40rem;
     font-size: var(--step-1);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .jump {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    margin-top: clamp(1.25rem, 3vw, 2rem);
+    background: var(--paper);
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .jump ol {
+    display: flex;
+    gap: 0.25rem;
+    margin: 0 auto;
+    overflow-x: auto;
+    list-style: none;
+    scrollbar-width: none;
+  }
+
+  .jump li {
+    flex: none;
+  }
+
+  .jump a {
+    display: grid;
+    padding: 0.7rem 0.9rem 0.6rem;
+    border-bottom: 3px solid transparent;
+    font-size: var(--step--1);
+    font-weight: 800;
+    line-height: 1.15;
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .jump li:first-child a {
+    padding-left: 0;
+  }
+
+  .jump a span {
+    font-weight: 600;
+    color: var(--ink-2);
+  }
+
+  .jump a:hover,
+  .jump a[aria-current] {
+    border-bottom-color: var(--accent);
+  }
+
+  .subject {
+    margin-top: 0;
+    scroll-margin-top: 4.5rem;
+  }
+
+  .subject-head {
+    display: grid;
+    gap: 0.75rem;
+    padding-top: clamp(2.5rem, 6vw, 4.5rem);
+    padding-bottom: clamp(1.25rem, 3vw, 2rem);
+  }
+
+  .subject-head h2 {
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+
+  .subject-note {
+    max-width: 64rem;
+    font-size: var(--step-1);
+    font-weight: 600;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+
+  .subject-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    font-size: var(--step--1);
+  }
+
+  .focus {
+    display: grid;
+    justify-items: start;
+    gap: 0.5rem;
+    max-width: 40rem;
+    padding-left: 1rem;
+    border-left: 4px solid var(--accent);
+    line-height: 1.4;
+  }
+
+  .focus b {
+    padding: 0.15rem 0.5rem;
+    background: var(--accent);
+    font-size: var(--step--1);
+  }
+
+  .subject-meta b {
+    font-size: var(--step-0);
+  }
+
+  .tc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr));
+    gap: clamp(1rem, 2.4vw, 1.75rem);
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    list-style: none;
+  }
+
+  .speaker {
+    display: grid;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    padding-top: 1.5rem;
+    border-top: 4px solid var(--accent);
+  }
+
+  .speaker-photo {
+    max-width: 16rem;
+  }
+
+  .speaker-text {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+  }
+
+  .speaker-text h2 {
+    font-size: var(--step-3);
+  }
+
+  .speaker-bio {
+    max-width: 36rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .speaker-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .speaker-topics a {
+    display: block;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--ink);
+    font-size: var(--step--1);
     font-weight: 700;
-    letter-spacing: -0.015em;
+    text-decoration: none;
+    color: inherit;
   }
 
-  dd {
-    max-width: 30rem;
-    margin: 0.5rem 0 0;
+  .speaker-topics a:hover {
+    border-color: var(--accent);
+    box-shadow: inset 0 -3px 0 var(--accent);
   }
 
-  .invite-block h2 {
-    margin-top: 2rem;
-    font-size: var(--step-2);
+  .speaker-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.5rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
   }
 
-  .invite-block p {
-    max-width: 34rem;
-    margin-top: 1rem;
+  .speaker-actions .primary {
+    padding: 0.7rem 1.1rem;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+  }
+
+  .speaker-actions .primary:hover {
+    background: var(--accent);
+    color: var(--ink);
+  }
+
+  @media (min-width: 48rem) {
+    .speaker {
+      grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+    }
   }
 
   .eras h2,
-  .recent h2,
   .now h2 {
     margin-top: 1.5rem;
   }
 
   .section-note {
-    max-width: 34rem;
+    max-width: 48rem;
     margin-top: 1rem;
   }
 
@@ -224,10 +465,6 @@ const recent = all.slice(0, 6);
 
   .band-list > li {
     border-bottom: 1px solid var(--rule);
-  }
-
-  .recent-list {
-    margin-top: 2rem;
   }
 
   .now-ladder {
@@ -272,10 +509,6 @@ const recent = all.slice(0, 6);
 
     .figs > div {
       grid-column: span 6;
-    }
-
-    .topic-list {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 </style>

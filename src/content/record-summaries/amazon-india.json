@@ -105,7 +105,7 @@
     },
     {
       "year": "2016",
-      "narrative": "Joined Amazon in February as an individual contributor on the catalog ingestion team, made feed migration a self-service procedure that 29 providers moved onto without developer help, and owned the team's move of 57 hosts to Amazon Linux. Also backfilled about 2 billion catalog records, won the catalog org's global hackathon and started teaching Scrum to other engineers as a volunteer trainer.",
+      "narrative": "Joined Amazon in February as an individual contributor on the catalog ingestion team, made feed migration a self-service procedure that 29 providers moved onto without developer help, and owned the team's move of 57 hosts to Amazon Linux. Also backfilled about 2 billion catalog records, won the catalog org's global hackathon and started teaching agile software development to other engineers as a volunteer trainer.",
       "numbers": [
         "29 feed providers self-service",
         "~2B catalog records backfilled",
@@ -166,7 +166,7 @@
       "Set technical targets past the ask and tracked the results, such as sizing a fraud check for 1,150 TPS against a 20 TPS requirement and raising sprint task completion to 85% with a new process.",
       "Designed shared contracts and self-service procedures that other teams adopted with little developer help, including a risk contract used by 6 client teams and a feed migration procedure used for 29 providers.",
       "Took part in hiring for the fraud and risk org with 68 interviews and set up the standard question bank used in 14 weekend hiring events.",
-      "Built capability in others as a volunteer Scrum and product ownership trainer (about 90 people across 3 Scrum workshops), a mentor to interns and junior engineers, and a reviewer on 3 promotion documents.",
+      "Built capability in others as a volunteer trainer in agile software development and product ownership (about 90 people across 3 agile software development workshops), a mentor to interns and junior engineers, and a reviewer on 3 promotion documents.",
       "Took on cost and reliability work for fraud services around Prime Day, from JVM tuning and load-tested host sizing to tracing a faulty fraud rule."
     ],
     "signatures": [
@@ -189,7 +189,7 @@
     "numbers": [
       "68 interviews",
       "14 hiring events on my question bank",
-      "3 Scrum workshops (~90 people) plus a product ownership workshop",
+      "3 agile software development workshops (~90 people) plus a product ownership workshop",
       "Zeus and Spot awards",
       "570 code changes",
       "86 tickets",

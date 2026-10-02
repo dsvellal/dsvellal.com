@@ -1,9 +1,136 @@
 ---
-import EraView from '../../components/record/EraView.astro';
-import { eras } from '../../lib/record';
+import Base from '../../layouts/Base.astro';
+import TrendCard from '../../components/cards/TrendCard.astro';
+import { eras, yearHref } from '../../lib/record';
+import { activityCard, activityGroups } from '../../lib/socials';
 
 const era = (await eras()).find((e) => e.lane === 'beyond');
 if (!era) throw new Error('No social era summary');
+const groups = await activityGroups();
+const total = groups.reduce((n, g) => n + g.entries.length, 0);
 ---
 
-<EraView era={era} />
+<Base title="Socials" description={`Outside work, ${era.years}: ${era.headline}.`}>
+  <header class="wrap head">
+    <h1>Socials</h1>
+    <p class="lede">
+      Outside work, {era.years}: book drives for rural schools, Toastmasters, yoga, talks at colleges and more. {total} entries
+      in {groups.length} activities. Each card opens every entry in that activity.
+    </p>
+  </header>
+
+  <ol class="wrap tc-grid" aria-label="Activities outside work">
+    {
+      groups.map((g) => (
+        <li>
+          <TrendCard card={activityCard(g)} />
+        </li>
+      ))
+    }
+  </ol>
+
+  <section class="wrap grid years-block" aria-labelledby="years-title">
+    <h2 id="years-title" class="side">Year by year</h2>
+    <ol class="years main">
+      {
+        era.year_layers.map((y) => (
+          <li>
+            <a class="year figure" href={yearHref(era, y.year)}>
+              {y.year}
+            </a>
+            <div>
+              <p>{y.narrative}</p>
+              <p class="label muted">
+                {y.count} {y.count === 1 ? 'entry' : 'entries'}
+              </p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+</Base>
+
+<style>
+  .head {
+    padding-top: clamp(2rem, 5vw, 4rem);
+    padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  h1 {
+    font-size: var(--step-5);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+  }
+
+  .lede {
+    max-width: 40rem;
+    margin-top: 1.25rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .tc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr));
+    gap: clamp(1rem, 2.4vw, 1.75rem);
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    list-style: none;
+  }
+
+  .years-block {
+    row-gap: 1rem;
+    margin-top: clamp(3.5rem, 8vw, 6rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--ink);
+  }
+
+  .side,
+  .main {
+    grid-column: 1 / -1;
+  }
+
+  .side {
+    font-size: var(--step-1);
+    font-weight: 800;
+  }
+
+  .years {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .years li {
+    display: grid;
+    grid-template-columns: 5rem minmax(0, 1fr);
+    gap: var(--gutter);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .year {
+    font-size: var(--step-1);
+    color: var(--accent);
+  }
+
+  .years p {
+    max-width: 56rem;
+  }
+
+  .years .label {
+    margin-top: 0.35rem;
+  }
+
+  @media (min-width: 48rem) {
+    .side {
+      grid-column: 1 / span 3;
+    }
+
+    .main {
+      grid-column: 4 / -1;
+    }
+  }
+</style>

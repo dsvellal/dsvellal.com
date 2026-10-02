@@ -1,0 +1,252 @@
+---
+import type { Viz } from '../../data/cards';
+
+interface Props {
+  viz: Viz;
+}
+
+const { viz: v } = Astro.props;
+
+const unitSize = (total: number) => (total > 200 ? 's4' : total > 50 ? 's3' : total > 15 ? 's2' : 's1');
+const pct = (val: number, max: number) => `${Math.max(0.8, (val / max) * 100)}%`;
+const barMax = v.type === 'bars' ? Math.max(...v.items.map((i) => i.v)) : 1;
+
+let cumLine = '';
+if (v.type === 'cum') {
+  const max = Math.max(...v.values);
+  cumLine = v.values
+    .map((y, i) => `${i ? 'L' : 'M'}${((i / (v.values.length - 1)) * 100).toFixed(2)},${(40 - (y / max) * 40).toFixed(2)}`)
+    .join(' ');
+}
+
+const strokes: { w: number; indent: number }[] = [];
+if (v.type === 'strokes') {
+  let seed = 7;
+  for (let i = 0; i < v.n; i++) {
+    seed = (seed * 37 + 11) % 101;
+    strokes.push({ w: 32 + (seed % 60), indent: [0, 6, 12, 6][seed % 4] });
+  }
+}
+
+const meterSegments = v.type === 'meter' ? Array.from({ length: v.max }, (_, i) => Math.min(1, Math.max(0, v.v - i))) : [];
+const lolliPct = (val: number) => (v.type === 'lolli' ? ((val - v.min) / (v.max - v.min)) * 100 : 0);
+---
+
+{
+  v.type === 'units' &&
+    v.rows.map((r) => (
+      <div class="tc-u">
+        {r.label && <p class="tc-label">{r.label}</p>}
+        <div class:list={['tc-ugrid', unitSize(r.n + (r.o ?? 0))]} aria-hidden="true">
+          {Array.from({ length: r.n }, (_, i) => <i class:list={{ m: i < (r.m ?? r.n) }} />)}
+          {Array.from({ length: r.o ?? 0 }, () => <i class="o" />)}
+        </div>
+      </div>
+    ))
+}
+
+{
+  v.type === 'pairs' &&
+    v.sets.map((s) => (
+      <div class="tc-pset">
+        {s.title && <p class="tc-label">{s.title}</p>}
+        {s.rows.map((r) => (
+          <div class="tc-pr">
+            <span>{r.t}</span>
+            <span class="track">
+              <span class:list={['bar', { hi: r.hi, out: r.out }]} style={`width:${pct(r.v, s.max)}`} />
+            </span>
+          </div>
+        ))}
+      </div>
+    ))
+}
+
+{
+  v.type === 'meter' && (
+    <div>
+      <p class="tc-label">{v.label ?? `${v.v} out of ${v.max}`}</p>
+      <div class="tc-meter" style={`--n:${v.max}`} aria-hidden="true">
+        {meterSegments.map((f) => (
+          <span style={`--f:${f * 100}%`} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+{
+  v.type === 'bars' && (
+    <div>
+      {v.caption && <p class="tc-label">{v.caption}</p>}
+      <div class="tc-bars" style={`--h:${v.h ?? 30}cqi`} aria-hidden="true">
+        {v.items.map((i) => (
+          <div class="b">
+            <span class:list={['col', { hi: i.hi }]} style={`height:${Math.max(1.5, (i.v / barMax) * 100)}%`}>
+              {i.t && <span class="bv">{i.t}</span>}
+            </span>
+            <span class="tc-x">
+              {i.x}
+              {i.sub && <small>{i.sub}</small>}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+{
+  v.type === 'cum' && (
+    <div>
+      <p class="tc-label">{v.caption}</p>
+      <div class="tc-cum" aria-hidden="true">
+        <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+          <path class="area" d={`${cumLine} L100,40 L0,40 Z`} />
+          <path class="ln" d={cumLine} vector-effect="non-scaling-stroke" />
+        </svg>
+        <span class="end" />
+      </div>
+      <div class="tc-cx" aria-hidden="true">
+        {v.labels.map((l) => (
+          <span>{l}</span>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+{
+  v.type === 'ladder' && (
+    <ol class="tc-ladder">
+      {v.steps.map((s, i) => (
+        <li class:list={{ hi: s.hi }}>
+          <span class="stair" style={`width:${((v.steps.length - i) / v.steps.length) * 100}%`} />
+          <span class="lt">
+            <b>{s.w}</b>
+            {s.t}
+          </span>
+        </li>
+      ))}
+    </ol>
+  )
+}
+
+{
+  v.type === 'waffle' && (
+    <div class="tc-wf">
+      <div class="tc-waffle" aria-hidden="true">
+        {Array.from({ length: 100 }, (_, i) => (
+          <i class:list={{ m: i < v.marked }} />
+        ))}
+      </div>
+      <p class="tc-cap">{v.caption}</p>
+    </div>
+  )
+}
+
+{
+  v.type === 'grade' && (
+    <div class="tc-grade">
+      {v.scale.map((g) => (
+        <span class:list={{ from: g === v.from, to: g === v.to }}>
+          {g}
+          {g === v.from && <small>Before</small>}
+          {g === v.to && <small>After</small>}
+        </span>
+      ))}
+    </div>
+  )
+}
+
+{
+  v.type === 'lolli' && (
+    <div>
+      <div class="tc-lolli">
+        <div class="ly" aria-hidden="true">
+          <span>{v.max}</span>
+          <span>{v.min}</span>
+        </div>
+        <div class="lp">
+          {v.points.map((p) => (
+            <div class="lc">
+              <div class="stem">
+                <span class="line" style={`height:${lolliPct(p.v)}%`} />
+                <span class:list={['dot', { hi: p.hi }]} style={`bottom:${lolliPct(p.v)}%`}>
+                  <b>{p.v}</b>
+                </span>
+              </div>
+              <span class="tc-x">
+                {p.x}
+                {p.sub && <small>{p.sub}</small>}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <p class="tc-cap">
+        Scale from {v.min} to {v.max}
+      </p>
+    </div>
+  )
+}
+
+{
+  v.type === 'strokes' && (
+    <div>
+      <div class="tc-strokes" aria-hidden="true">
+        {strokes.map((s) => (
+          <span style={`width:${s.w}%;margin-left:${s.indent}%`} />
+        ))}
+      </div>
+      <p class="tc-cap">{v.caption}</p>
+    </div>
+  )
+}
+
+{
+  v.type === 'stats' && (
+    <ul class="tc-stats" style={`--n:${v.items.length}`}>
+      {v.items.map((i) => (
+        <li>
+          <b>{i.v}</b>
+          <span>{i.l}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+{
+  v.type === 'quote' && (
+    <figure class:list={['tc-quote', { short: v.text.length < 110 }]}>
+      <blockquote>
+        <p>{`\u201c${v.text}\u201d`}</p>
+      </blockquote>
+      <figcaption>{v.who}</figcaption>
+    </figure>
+  )
+}
+
+{
+  v.type === 'story' && (
+    <dl class="tc-story">
+      {v.rows.map((r) => (
+        <div>
+          <dt>{r.k}</dt>
+          <dd>{r.v}</dd>
+        </div>
+      ))}
+    </dl>
+  )
+}
+
+{
+  v.type === 'wall' && (
+    <div class="tc-wall">
+      {v.imgs.map((i) => (
+        <img src={i.src} alt={i.alt} loading="lazy" decoding="async" />
+      ))}
+    </div>
+  )
+}

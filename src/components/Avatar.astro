@@ -1,0 +1,63 @@
+---
+import { hasPublicAsset } from '../lib/assets';
+import { profile } from '../data/profile';
+
+interface Props {
+  /** CSS length for the circle's width. */
+  size?: string;
+  /** Empty when the name sits right beside the photo. */
+  alt?: string;
+}
+
+const { size = '4rem', alt = `Photo of ${profile.name}` } = Astro.props;
+const present = hasPublicAsset('headshot.jpg');
+const initials = profile.name
+  .split(' ')
+  .map((part) => part[0])
+  .join('');
+---
+
+<span class="avatar" style={`--size:${size}`}>
+  {
+    present ? (
+      <img src="/headshot.jpg" alt={alt} width="1000" height="1000" loading="lazy" decoding="async" />
+    ) : (
+      <span class="initials" role={alt ? 'img' : undefined} aria-label={alt || undefined}>
+        {initials}
+      </span>
+    )
+  }
+</span>
+
+<style>
+  .avatar {
+    position: relative;
+    display: block;
+    flex: none;
+    width: var(--size);
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    background: var(--ink);
+  }
+
+  /* The face sits at about 60% across and 39% down the square photo. */
+  img {
+    position: absolute;
+    top: -12.4%;
+    left: -46%;
+    width: 160%;
+    max-width: none;
+    height: 160%;
+    object-fit: cover;
+  }
+
+  .initials {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    color: var(--paper);
+    font-weight: 800;
+  }
+</style>

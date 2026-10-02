@@ -1,0 +1,142 @@
+---
+import { ERA_SLOT } from '../../lib/cards';
+import { capsules, eras } from '../../lib/record';
+
+const all = await capsules();
+const tiles = (await eras())
+  .filter((e) => e.lane === 'work')
+  .map((e) => {
+    const items = all.filter((c) => c.era === e.slug && c.tier === 'public');
+    return { era: e, slot: ERA_SLOT[e.slug], items, ai: items.filter((c) => c.themes.includes('ai')).length };
+  });
+---
+
+<section class="wrap strip" aria-labelledby="strip-title">
+  <h2 id="strip-title">Five companies, newest first</h2>
+  <p class="strip-lede">One square for each achievement with evidence. Orange squares involve AI.</p>
+  <ol class="tiles">
+    {
+      tiles.map((t) => (
+        <li>
+          <a class="tile" href={`/impact#${t.slot}`}>
+            <span class="label years">{t.era.years}</span>
+            <span class="name">{t.era.label}</span>
+            <span class="units" aria-hidden="true">
+              {t.items.map((c) => (
+                <i class:list={{ ai: c.themes.includes('ai') }} />
+              ))}
+            </span>
+            <span class="count">
+              <b>{t.items.length}</b> with evidence{t.ai > 0 && `, ${t.ai} with AI`}
+            </span>
+            <span class="headline">{t.era.headline}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</section>
+
+<style>
+  h2 {
+    font-size: var(--step-3);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1;
+  }
+
+  .strip-lede {
+    max-width: 40rem;
+    margin-top: 0.75rem;
+    color: var(--ink-2);
+  }
+
+  .tiles {
+    display: grid;
+    gap: 0;
+    margin: 1.75rem 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--ink);
+  }
+
+  .tile {
+    display: grid;
+    gap: 0.5rem;
+    height: 100%;
+    padding: 1.25rem 0 1.5rem;
+    border-bottom: 1px solid var(--rule);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .years {
+    color: var(--accent);
+  }
+
+  .name {
+    font-size: var(--step-2);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+
+  .tile:hover .name {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+  }
+
+  .units {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-top: 0.25rem;
+  }
+
+  .units i {
+    width: 10px;
+    height: 10px;
+    background: var(--ink);
+  }
+
+  .units i.ai {
+    background: var(--accent);
+  }
+
+  .count {
+    font-size: var(--step--1);
+  }
+
+  .count b {
+    font-size: var(--step-0);
+  }
+
+  .headline {
+    max-width: 30rem;
+    font-size: var(--step--1);
+    line-height: 1.35;
+    color: var(--ink-2);
+  }
+
+  @media (min-width: 56rem) {
+    .tiles {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: var(--gutter);
+      border-top: 0;
+    }
+
+    .tile {
+      align-content: start;
+      padding-top: 1rem;
+      border-top: 4px solid var(--ink);
+      border-bottom: 0;
+    }
+
+    /* Names take two lines everywhere, so the squares line up. */
+    .name {
+      min-height: 2lh;
+    }
+  }
+</style>

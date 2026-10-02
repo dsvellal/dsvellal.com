@@ -5,7 +5,7 @@
   "month": "10",
   "era": "amazon-india",
   "company": "Amazon",
-  "title": "Trained 21 engineers in Scrum at 4.6/5",
+  "title": "Coached 21 engineers in agile software development, received feedback score of 4.6/5",
   "type": "Talk",
   "themes": [
     "teaching",
@@ -15,11 +15,11 @@
   "lane": "work",
   "total": 16,
   "tier": "public",
-  "summary": "My third Scrum workshop for engineering teams scored 4.6 out of 5 for the presenter and 4.6 for an engaging presentation style.",
+  "summary": "My third agile software development workshop for engineering teams received a feedback score of 4.6 out of 5, and 4.6 for an engaging presentation style.",
   "what_would_have_happened": "Not applicable: this was a teaching session.",
-  "the_call": "Keep teaching Scrum to other teams alongside my delivery work and keep improving the workshop.",
+  "the_call": "Keep teaching agile software development to other teams alongside my delivery work and keep improving the workshop.",
   "what_i_did": "Taught the workshop to 21 engineers.",
-  "what_changed": "My highest presenter score so far.",
+  "what_changed": "My highest feedback score so far.",
   "metrics": [
     {
       "value": "21",
@@ -28,7 +28,7 @@
     },
     {
       "value": "4.6 / 5",
-      "label": "presenter score",
+      "label": "feedback score",
       "context": ""
     },
     {
@@ -43,7 +43,7 @@
       "src": "/record/published/2017-10-scrum-workshop-top-score-1.webp",
       "kind": "document",
       "pending": false,
-      "alt": "Document: Trained 21 engineers in Scrum at 4.6/5"
+      "alt": "Document: Coached 21 engineers in agile software development, received feedback score of 4.6/5"
     }
   ]
 }

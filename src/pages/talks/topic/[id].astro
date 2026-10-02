@@ -1,0 +1,218 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/record/Breadcrumbs.astro';
+import TrendCard from '../../../components/cards/TrendCard.astro';
+import TalkList from '../../../components/talks/TalkList.astro';
+import { SUBJECTS } from '../../../data/talks';
+import { capsuleOrListHref, capsules } from '../../../lib/record';
+import { fmtRating, slotsOf, spanOf, topicCard, topicGroups, topicStats, type TopicGroup } from '../../../lib/talks';
+
+export async function getStaticPaths() {
+  return (await topicGroups()).filter((g) => g.sessions.length > 1).map((g) => ({ params: { id: g.id }, props: { g } }));
+}
+
+const { g } = Astro.props as { g: TopicGroup };
+const st = topicStats(g);
+const subject = SUBJECTS.find((s) => s.id === g.subject)!;
+const card = topicCard(g);
+const span = spanOf(g);
+const { where } = slotsOf(g);
+const all = await capsules();
+const related = [...new Set(g.sessions.map((t) => t.record_capsule).filter((id): id is string => Boolean(id)))]
+  .map((id) => all.find((c) => c.id === id))
+  .filter((c) => c !== undefined);
+
+const lede = g.what ? `${g.value ?? st.count} ${g.what}, ${span}.` : `${st.count} sessions, ${span}, for ${g.who}.`;
+const metrics = [
+  { value: g.value ?? String(st.count), label: 'sessions' },
+  ...(st.people
+    ? [{ value: st.people.toLocaleString('en-US'), label: st.counted === st.count ? 'people in the room or online' : `people counted in ${st.counted} of the sessions` }]
+    : []),
+  ...(st.average !== null
+    ? [{ value: fmtRating(st.average), label: `average rating out of ${st.scale}, across ${st.points.length} rated sessions` }]
+    : []),
+  ...(st.responses ? [{ value: String(st.responses), label: 'feedback responses' }] : []),
+];
+---
+
+<Base title={g.title} description={lede}>
+  <article>
+    <header class="wrap head">
+      <Breadcrumbs items={[{ label: 'Talks', href: '/talks' }, { label: subject.title, href: `/talks#${subject.id}` }, { label: g.title }]} />
+      <p class="meta label muted">{span}, {where}</p>
+      <h1>{g.title}</h1>
+      <p class="lede">{lede}</p>
+    </header>
+
+    <div class="wrap top">
+      <div class="card">
+        <TrendCard card={card} static />
+      </div>
+      <dl class="metrics" aria-label="Key numbers">
+        {
+          metrics.map((m) => (
+            <div>
+              <dt class="figure">{m.value}</dt>
+              <dd>{m.label}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+
+    <section class="wrap part" aria-labelledby="sessions-title">
+      <h2 id="sessions-title">Every session</h2>
+      <TalkList items={g.sessions} label={`Sessions on ${g.title}, newest first`} showSummary />
+    </section>
+
+    {
+      st.quotes.length > 0 && (
+        <section class="wrap part" aria-labelledby="quotes-title">
+          <h2 id="quotes-title">What participants said</h2>
+          <div class="voices">
+            {st.quotes.map((q) => (
+              <figure>
+                <blockquote>
+                  <p>&ldquo;{q}&rdquo;</p>
+                </blockquote>
+                <figcaption class="label muted">Anonymous participant, feedback form</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    {
+      related.length > 0 && (
+        <section class="wrap part" aria-labelledby="related-title">
+          <h2 id="related-title">In the impact record</h2>
+          <ul class="related">
+            {related.map((c) => (
+              <li>
+                <a href={capsuleOrListHref(c)}>{c.title}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <p class="wrap back">
+      <a href={`/talks#${subject.id}`}>More on {subject.title.toLowerCase()}</a>
+    </p>
+  </article>
+</Base>
+
+<style>
+  .head {
+    padding-top: clamp(2rem, 5vw, 4rem);
+  }
+
+  .meta {
+    margin-top: 2rem;
+  }
+
+  h1 {
+    max-width: 56rem;
+    margin-top: 0.75rem;
+    font-size: var(--step-4);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  .lede {
+    max-width: 58rem;
+    margin-top: 1.5rem;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .top {
+    display: grid;
+    gap: clamp(2rem, 5vw, 3.5rem);
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .card {
+    width: min(100%, 24rem);
+  }
+
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr));
+    align-content: start;
+    gap: 2rem var(--gutter);
+    margin: 0;
+    padding-top: 1.5rem;
+    border-top: 4px solid var(--accent);
+  }
+
+  .metrics dt {
+    font-size: var(--step-3);
+    color: var(--accent);
+  }
+
+  .metrics dd {
+    max-width: 18rem;
+    margin: 0.75rem 0 0;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .part {
+    margin-top: clamp(3rem, 7vw, 5rem);
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: var(--step-2);
+    font-weight: 800;
+  }
+
+  .voices {
+    display: grid;
+    gap: 1.5rem var(--gutter);
+  }
+
+  .voices figure {
+    margin: 0;
+    padding-left: 1rem;
+    border-left: 4px solid var(--accent);
+  }
+
+  .voices p {
+    max-width: 40rem;
+    font-size: var(--step-1);
+    line-height: 1.4;
+  }
+
+  .voices figcaption {
+    margin-top: 0.5rem;
+  }
+
+  .related {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 600;
+  }
+
+  .back {
+    margin-top: clamp(3rem, 7vw, 5rem);
+    font-weight: 700;
+  }
+
+  @media (min-width: 48rem) {
+    .top {
+      grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+      align-items: start;
+    }
+
+    .voices {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>

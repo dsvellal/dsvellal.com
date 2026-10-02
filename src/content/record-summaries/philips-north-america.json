@@ -9,21 +9,21 @@
   "capsules": 100,
   "public": 63,
   "status": "live",
-  "headline": "Took the traceability platform to 14 businesses",
-  "headline_capsule": "2026-09-traceability-platform-14-businesses",
+  "headline": "Took the traceability platform from a three-business pilot to a fourth business",
+  "headline_capsule": "2026-09-traceability-platform-adoption",
   "year_layers": [
     {
       "year": "2026",
-      "narrative": "Guided the team behind the AI-assisted traceability platform from its first milestone in January to production in 14 businesses, with two businesses scoring it 10 out of 10. Won funding for an AI defect-triage project with Ultrasound and coordinated it through its first milestone, taught 27 AI sessions to 1,000+ people and co-wrote the proposal for a shared knowledge layer for AI agents. Was named solution architect for the contextual intelligence layer in the 2027 resource model.",
+      "narrative": "Guided the team behind the AI-assisted traceability platform from its first milestone in January through a pilot in three businesses to adoption by a fourth, with two more planned for 2026 and two businesses scoring it 10 out of 10. Won funding for an AI defect-triage project with Ultrasound and coordinated it through its first milestone, taught 27 AI sessions to 1,000+ people and co-wrote the proposal for a shared knowledge layer for AI agents. Was named solution architect for the contextual intelligence layer in the 2027 resource model.",
       "numbers": [
-        "14 businesses in production",
+        "3 businesses in the pilot, 4 using it after",
         "NPS 10 from two businesses",
         "~3,000 issues triaged",
         "27 AI sessions, 1,000+ people, 8.7/10"
       ],
       "top": [
         "2026-ai-sessions-27",
-        "2026-09-traceability-platform-14-businesses",
+        "2026-09-traceability-platform-adoption",
         "2026-06-analytics-community-series",
         "2026-05-nps-10-two-businesses",
         "2026-01-first-traceability-milestone"
@@ -33,7 +33,7 @@
         "role": "Quality Program Manager",
         "company": "Philips",
         "date": "2026",
-        "capsule": "2026-09-traceability-platform-14-businesses"
+        "capsule": "2026-09-traceability-platform-adoption"
       },
       "months": [
         "09",
@@ -79,7 +79,7 @@
     },
     {
       "year": "2025",
-      "narrative": "Owned a goal to lead the move from AI experiments to value, rated Exceeds. Led a 33-session Philips University program for 492 learners, built an AI agent that checks requirements against IEC 62304 and brought it onto the company AI platform, and trained trainers so teams could carry AI adoption themselves. One team's AI confidence rose from 4.5 to 7.6 in three days.",
+      "narrative": "Owned a goal to lead the move from AI experiments to value, rated Exceeds. Led a 33-session Philips University program for 492 learners, built an AI agent that checks requirements against IEC 62304 and brought it onto the company AI platform, and coached trainers so teams could carry AI adoption themselves. One team's AI confidence rose from 4.5 to 7.6 in three days.",
       "numbers": [
         "33 sessions and 492 learners",
         "23 taught personally",
@@ -314,14 +314,14 @@
       "Led InnerSource adoption with US and Latin American businesses, brought engineering teams into the Software Craftsmanship program through change champions, and ran software due diligence on acquired businesses against ISO 13485, ISO 14971 and IEC 62304.",
       "I have supervised software competency experts throughout my Philips career in India and North America, delegating work, setting timelines, recommending hires and conducting annual performance reviews. I also helped run a wider Software Center of Excellence team spanning 6 nationalities and 12 locations.",
       "Raised the hiring bar for US and Latin American teams by mentoring leaders and architects on interviewing and interviewing for senior roles, and built software competency frameworks delivered through Philips University.",
-      "As Software Competency Lead, led AI-enabled transformations for regulated engineering, including an AI-assisted traceability platform now in production in 14 businesses and a requirements agent that checks requirements against IEC 62304.",
+      "As Software Competency Lead, led AI-enabled transformations for regulated engineering, including an AI-assisted traceability platform piloted in three businesses and adopted by a fourth and a requirements agent that checks requirements against IEC 62304.",
       "Our Software Competency team became part of Innovation Engineering during a reorganization; my title, role and responsibilities remained unchanged.",
       "Built skills across the engineering organization with a 33-session Philips University program for 492 learners and 27 AI sessions for more than 1,000 people in 2026, and in Sep 2026 was named solution architect for the contextual intelligence layer."
     ],
     "signatures": [
       {
-        "title": "Took an AI-assisted traceability platform from pilot to production in 14 businesses",
-        "body": "Set the design, secured funding and guided the team from a first milestone on three teams' release data in January 2026 to production in 14 businesses; two businesses scored the work 10 out of 10.",
+        "title": "Took an AI-assisted traceability platform from a three-business pilot to a fourth business",
+        "body": "Set the design, secured funding and guided the team from a first milestone on three teams' release data in January 2026 to adoption by a fourth business after the pilot, with two more planned for 2026; two businesses scored the work 10 out of 10.",
         "capsule": "2026-01-first-traceability-milestone"
       },
       {
@@ -336,7 +336,7 @@
       }
     ],
     "numbers": [
-      "14 businesses in production",
+      "3 businesses in the pilot, 4 using it after",
       "33 Philips University sessions, 492 learners",
       "27 AI sessions, 1,000+ people",
       "138 projects analyzed",
@@ -358,7 +358,7 @@
         "capsule": "2025-02-linkedin-recommendation-former-manager"
       }
     ],
-    "took": "North America is where I learned to lead AI-enabled transformation in regulated software. Trust comes before tooling: listen to what a business needs, show a working result, then scale it, which is how the traceability platform went from one pilot to 14 businesses. In regulated work AI earns its place only when a person can see, check and own every decision it touches, so I surface the evidence for a person to judge before automating the judgment. Leading a global team taught me that my job is to make that standard easy for others to hold, not to hold it alone.",
+    "took": "North America is where I learned to lead AI-enabled transformation in regulated software. Trust comes before tooling: listen to what a business needs, show a working result, then scale it, which is how the traceability platform went from a pilot in three businesses to a fourth that chose to adopt it. In regulated work AI earns its place only when a person can see, check and own every decision it touches, so I surface the evidence for a person to judge before automating the judgment. Leading a global team taught me that my job is to make that standard easy for others to hold, not to hold it alone.",
     "took_draft": false
   }
 }
