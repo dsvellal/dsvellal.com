@@ -65,6 +65,13 @@ export const linkedinRecs: LinkedInRec[] = [
     year: '2025',
     quote: 'q-vieira-hired',
   },
+  {
+    record: '2026-10-linkedin-recommendation-engineer-mentored',
+    employer: 'Philips',
+    relationship: 'led',
+    year: '2026',
+    quote: 'q-rakesh-mentor',
+  },
 ];
 
 /** The three recommendations shown beside the map, one from each side of me. */

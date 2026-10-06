@@ -111,6 +111,7 @@ const talks = defineCollection({
     attendees: z.string().nullable(),
     responses: z.number().nullable(),
     reach_note: z.string().nullable(),
+    images: z.array(z.object({ src: z.string(), alt: z.string(), caption: z.string().optional() })).optional(),
     rating: z.object({ value: z.number(), scale: z.number() }).nullable(),
     feedback: z
       .object({

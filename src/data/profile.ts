@@ -26,6 +26,10 @@ export const profile = {
     { label: 'Patents', value: 'US 8,560,487 B2 (granted) and US 2015/0095117 A1 (published), from IBM.' },
     { label: 'Education', value: 'B.E. Computer Science, RV College of Engineering. M.Sc. Yoga, Annamalai University.' },
     { label: 'Speaking', value: 'Toastmasters awards for best speaker, best evaluator and table topics.' },
+    {
+      label: 'AI credentials',
+      value: 'Gen AI Ninja White Belt Foundation (Dec 17, 2025); Yellow Belt Assessment for Business Users (May 1, 2026); Yellow Belt Assessment for Technical Users (May 6, 2026), Philips.',
+    },
     { label: 'Based in', value: 'Rochester, Michigan.' },
   ],
 };

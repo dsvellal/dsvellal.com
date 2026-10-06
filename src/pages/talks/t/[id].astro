@@ -164,6 +164,22 @@ const range = (r: { low: number | null; high: number | null }) =>
       }
 
       {
+        t.images?.length ? (
+          <section class="grid part" aria-label="Evidence images">
+            <h2 class="side">Evidence</h2>
+            <div class="main evidence-images">
+              {t.images.map((image) => (
+                <figure>
+                  <img src={image.src} alt={image.alt} loading="lazy" />
+                  {image.caption && <figcaption class="label muted">{image.caption}</figcaption>}
+                </figure>
+              ))}
+            </div>
+          </section>
+        ) : null
+      }
+
+      {
         record && (
           <section class="grid part">
             <h2 class="side">Related</h2>
@@ -315,6 +331,23 @@ const range = (r: { low: number | null; high: number | null }) =>
   .voices {
     display: grid;
     gap: 2rem;
+  }
+
+  .evidence-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+    gap: 1.5rem;
+  }
+
+  .evidence-images figure {
+    min-width: 0;
+  }
+
+  .evidence-images img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--rule);
   }
 
   figure,

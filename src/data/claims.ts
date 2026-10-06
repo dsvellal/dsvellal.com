@@ -398,6 +398,15 @@ const quoteList: Quote[] = [
     capsule: '2025-05-linkedin-recommendation-engineer-hired',
   },
   {
+    id: 'q-rakesh-mentor',
+    text: 'I wholeheartedly recommend Datta as an exceptional leader, mentor, and an even better human being.',
+    role: 'Software Engineer, direct report',
+    company: 'Philips',
+    year: '2026',
+    context: 'Public LinkedIn recommendation.',
+    capsule: '2026-10-linkedin-recommendation-engineer-mentored',
+  },
+  {
     id: 'q-patient-safety-evp',
     text: 'Keep leading the way! Thank you for the collaboration!',
     role: 'Executive VP and Chief Patient Safety and Quality Officer',

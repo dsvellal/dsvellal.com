@@ -96,6 +96,13 @@ export const TOPICS: TopicDef[] = [
     match: /^GROW 3\.0|^AI sessions in IGT-AI day|^IT Connect|^AI Session for LATAM/,
   },
   {
+    id: 'mexico-ai-hackathon',
+    subject: 'ai',
+    title: 'AI prompting for hackathon teams',
+    who: 'AI hackathon participants in Mexico',
+    match: /^AI Hackathon Mexico: Winning Tips with AI/,
+  },
+  {
     id: 'tools-demo',
     subject: 'ai',
     title: 'Software tools demo, including GitHub Copilot',

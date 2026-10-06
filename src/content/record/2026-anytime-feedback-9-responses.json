@@ -1,11 +1,11 @@
 {
   "id": "2026-anytime-feedback-9-responses",
-  "date": "2026-09",
+  "date": "2026-10-04",
   "year": "2026",
-  "month": "09",
+  "month": "10",
   "era": "philips-north-america",
   "company": "Philips",
-  "title": "Nine pieces of feedback across six locations",
+  "title": "2026 Anytime Feedback Across Seven Locations",
   "type": "Recognition",
   "themes": [
     "people",
@@ -14,19 +14,48 @@
   "lane": "work",
   "total": 17,
   "tier": "public",
-  "summary": "Colleagues in six locations described how I kept projects aligned and executing, set an architecture vision others adopted, and made it safe to speak up.",
+  "summary": "Colleagues across seven locations described contributions to team execution, technical direction, safe collaboration, and AI learning. The latest comments praised practical learner examples and knowledge sharing, and suggested reusing training assets and reviewing backlog priorities regularly.",
   "what_would_have_happened": "Not applicable: a role or recognition event, not an intervention.",
   "the_call": "Bring stakeholders together, clarify priorities and clear roadblocks for the teams.",
   "what_i_did": "Coordinated the traceability and defect-triage teams across locations and brought IEC 62304 into the company's AI agent platform.",
-  "what_changed": "An engineer could not recall the team ever missing a deadline, and respondents urged me to take more credit.",
+  "what_changed": "Respondents described stronger alignment, learning engagement, and knowledge sharing. One respondent said they could not recall the team missing a deadline.",
   "metrics": [],
   "quotes": [
     {
       "text": "Making others feel safe is extremely important for progress, collaboration, and true innovation. His willingness to help is an example for all.",
       "role": "Quality Program Manager",
       "company": "Philips",
-      "date": "2026"
+      "date": "2026-09-11"
+    },
+    {
+      "text": "Continue bringing practical context and learner-focused examples into discussions and training sessions. This helps stakeholders translate concepts into action and strengthens learner engagement.",
+      "role": "Learning Product Portfolio Manager",
+      "company": "Philips",
+      "date": "2026-10-04"
+    },
+    {
+      "text": "Continue driving AI and technical knowledge-sharing sessions for a broader audience. Your expertise, guidance, and collaborative approach help teams grow and adopt best practices effectively.",
+      "role": "Test Automation Specialist",
+      "company": "Philips",
+      "date": "2026-09-30"
     }
   ],
-  "images": []
+  "images": [
+    {
+      "src": "/record/published/2026-anytime-feedback-9-responses-learning.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Anonymous Learning Product Portfolio Manager feedback recommending practical, learner-focused examples.",
+      "width": 398,
+      "height": 115
+    },
+    {
+      "src": "/record/published/2026-anytime-feedback-9-responses-knowledge-sharing.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Anonymous Test Automation Specialist feedback recommending wider AI and technical knowledge sharing.",
+      "width": 398,
+      "height": 120
+    }
+  ]
 }

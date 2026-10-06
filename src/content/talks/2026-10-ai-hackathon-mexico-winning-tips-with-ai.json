@@ -1,0 +1,64 @@
+{
+  "id": "2026-10-ai-hackathon-mexico-winning-tips-with-ai",
+  "session_no": 173,
+  "date": "2026-10-05",
+  "date_label": null,
+  "year": "2026",
+  "month": "10",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "role": "speaker",
+  "format": "Interactive session",
+  "confidence": "High",
+  "title": "AI Hackathon Mexico: Winning Tips with AI",
+  "audience": "AI hackathon participants in Mexico",
+  "summary": "An interactive session I delivered for AI hackathon participants in Mexico.",
+  "attendees": null,
+  "responses": 10,
+  "reach_note": null,
+  "rating": {
+    "value": 10.0,
+    "scale": 10
+  },
+  "images": [
+    {
+      "src": "/talks/evidence/2026-10-ai-hackathon-feedback.webp",
+      "alt": "Teams chat excerpt with participant identities and interface counts obscured.",
+      "caption": "Redacted post-session chat feedback."
+    },
+    {
+      "src": "/talks/evidence/2026-10-ai-hackathon-slide-07.webp",
+      "alt": "Presentation slide with a prompt for asking AI to interview the user before drafting a task brief.",
+      "caption": "An exercise in clarifying a task before asking AI to complete it."
+    }
+  ],
+  "feedback": {
+    "responses": 10,
+    "ratings": [
+      {
+        "label": "Likely to recommend",
+        "average": 10.0,
+        "scale": 10,
+        "low": 10.0,
+        "high": 10.0,
+        "count": 10
+      },
+      {
+        "label": "Satisfaction",
+        "average": 10.0,
+        "scale": 10,
+        "low": 10.0,
+        "high": 10.0,
+        "count": 10
+      }
+    ],
+    "themes": "Participants most often valued relevance to daily work and the presenter's delivery. Suggestions centered on more time or a follow-up session.",
+    "written_answers": 15,
+    "quotes": [
+      "Everything, excellent presentation, very clear, and it gave us very helpful tools. Thank you.",
+      "I didn't know about these techniques. They are really important for day-to-day work, and this will help us achieve better results. Basically, this teaches us how to ask questions correctly."
+    ],
+    "shared_form": false
+  },
+  "record_capsule": null
+}
