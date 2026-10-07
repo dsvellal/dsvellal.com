@@ -41,7 +41,7 @@ export const ACTIVITIES: Activity[] = [
         value: String(bars.reduce((n, b) => n + b.v, 0)),
         what: 'Toastmasters meeting awards in two years, then Leadership Advisor to a new club',
         viz: [{ type: 'bars', h: 22, items: bars.map((b) => ({ ...b, t: String(b.v), hi: b.x === 'Best evaluator' })) }],
-        img: { src: '/record/published/2013-11-toastmasters-leadership-advisor-1.webp', alt: 'Certificate: Toastmasters Leadership Advisor' },
+        img: { src: '/record/published/2013-11-toastmasters-leadership-advisor-1.webp', alt: 'Certificate: Toastmasters Leadership Advisor', w: 1600, h: 1131 },
       };
     },
   },

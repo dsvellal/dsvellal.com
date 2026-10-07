@@ -68,8 +68,8 @@ const claimList: Claim[] = [
   {
     id: 'traceability-adoption',
     value: '4',
-    label: 'businesses using the AI traceability platform, with two more planned for 2026',
-    short: 'businesses use the AI traceability platform I conceived',
+    label: 'businesses using the AI traceability platform for regulated software, with two more planned for 2026',
+    short: 'businesses adopted the AI traceability platform for regulated software',
     context: 'Piloted in three businesses in early 2026. A fourth adopted it after the pilot, and two more plan to in 2026.',
     year: '2026',
     role: 'Conceived and guided',

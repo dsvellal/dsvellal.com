@@ -45,6 +45,33 @@ a.tc:focus-visible {
   --bg: var(--accent);
 }
 
+@media (prefers-color-scheme: dark) {
+  .tc {
+    --dim: #44444a;
+    --soft: #a1a1aa;
+    --from: #71717a;
+    border: 1px solid var(--rule);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.5), 0 8px 24px rgb(0 0 0 / 0.4);
+  }
+
+  .tc--ink {
+    --bg: #141518;
+    --fg: #ffffff;
+    --dim: #52525b;
+    --soft: #a1a1aa;
+    --from: #71717a;
+    border: 1px solid #2e3035;
+  }
+
+  .tc--accent {
+    --bg: var(--accent);
+    --fg: #000000;
+    --hi: #000000;
+    --soft: rgb(0 0 0 / 0.8);
+    --dim: rgb(0 0 0 / 0.3);
+  }
+}
+
 .tc-in {
   position: absolute;
   inset: 0;

@@ -5,6 +5,7 @@ import Headshot from '../components/Headshot.astro';
 import QuoteBlock from '../components/QuoteBlock.astro';
 import VouchMap from '../components/story/VouchMap.astro';
 import Signals from '../components/story/Signals.astro';
+import ExecutiveSnapshot from '../components/story/ExecutiveSnapshot.astro';
 import EraStrip from '../components/cards/EraStrip.astro';
 import { profile } from '../data/profile';
 import { claim } from '../data/claims';
@@ -84,6 +85,10 @@ const jsonLd = {
 
   <div class="wrap seal-wrap">
     <Signals seal />
+  </div>
+
+  <div class="wrap">
+    <ExecutiveSnapshot />
   </div>
 
   <div class="strip-wrap">

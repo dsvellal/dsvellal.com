@@ -1,0 +1,201 @@
+---
+import { profile } from '../../data/profile';
+import { claim } from '../../data/claims';
+
+const years = claim('years-experience');
+const aiTrained = claim('ai-people-trained');
+const adoption = claim('traceability-adoption');
+---
+
+<aside class="snapshot" aria-labelledby="snapshot-heading">
+  <div class="snapshot-header">
+    <div class="badge-title">
+      <span class="tag">Executive Profile</span>
+      <h2 id="snapshot-heading">Snapshot for Hiring Leaders and Engineering Executives</h2>
+    </div>
+    <div class="quick-actions">
+      <a class="action-btn action-btn--primary" href={`mailto:${profile.email}?subject=Executive%20Conversation`}>
+        Email Datta
+      </a>
+      <a class="action-btn" href={profile.linkedin} rel="external noopener">
+        LinkedIn
+      </a>
+      <a class="action-btn" href="/impact">
+        Explore Impact
+      </a>
+    </div>
+  </div>
+
+  <div class="snapshot-grid">
+    <div class="cell">
+      <p class="cell-label">Current Scope</p>
+      <p class="cell-val"><strong>Software Competency Lead</strong>, Philips</p>
+      <p class="cell-sub">Leading AI-enabled engineering transformation for medical-device software development and delivery.</p>
+    </div>
+
+    <div class="cell">
+      <p class="cell-label">Career Arc</p>
+      <p class="cell-val"><strong>{years.value}</strong> of leadership</p>
+      <p class="cell-sub">Philips (2018 to now), Amazon (2016 to 2018), Exeter (2013 to 2015), IBM (2007 to 2013).</p>
+    </div>
+
+    <div class="cell">
+      <p class="cell-label">Regulated AI Delivery</p>
+      <p class="cell-val"><strong>{adoption.value} Businesses</strong> Adopted</p>
+      <p class="cell-sub">Conceived and guided AI-assisted traceability platform for audit-ready medical software.</p>
+    </div>
+
+    <div class="cell">
+      <p class="cell-label">Organization and Scale</p>
+      <p class="cell-val"><strong>{aiTrained.value}</strong> Upskilled in AI</p>
+      <p class="cell-sub">Engineers, managers, and analysts trained across global business units in 2026.</p>
+    </div>
+  </div>
+
+  <div class="snapshot-footer">
+    <div class="creds">
+      <span class="cred-item"><strong>Award:</strong> Philips CTO Outstanding Technical Achievement Award (1 of ~30 worldwide)</span>
+      <span class="cred-sep" aria-hidden="true">·</span>
+      <span class="cred-item"><strong>Patent:</strong> US 8,560,487 B2 (Granted, cited by 27 patents)</span>
+      <span class="cred-sep" aria-hidden="true">·</span>
+      <span class="cred-item"><strong>Standards:</strong> IEC 62304 · ISO 13485 · DORA</span>
+    </div>
+  </div>
+</aside>
+
+<style>
+  .snapshot {
+    margin: clamp(2rem, 5vw, 3.5rem) 0;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid var(--ink);
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  .snapshot-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    margin-bottom: 0.4rem;
+    background: var(--accent);
+    color: #ffffff;
+    font-size: 0.725rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: var(--step-1);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .action-btn {
+    display: inline-block;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--ink);
+    background: transparent;
+    color: var(--ink);
+    font-size: var(--step--1);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 120ms ease, color 120ms ease;
+  }
+
+  .action-btn:hover {
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+  }
+
+  .action-btn--primary {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .action-btn--primary:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+  }
+
+  .snapshot-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  @media (min-width: 48rem) {
+    .snapshot-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .snapshot-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .cell-label {
+    margin-bottom: 0.35rem;
+    font-size: var(--step--1);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-2);
+  }
+
+  .cell-val {
+    font-size: var(--step-0);
+    line-height: 1.25;
+    margin-bottom: 0.25rem;
+  }
+
+  .cell-sub {
+    font-size: var(--step--1);
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+
+  .snapshot-footer {
+    padding-top: 1rem;
+    font-size: var(--step--1);
+    line-height: 1.5;
+  }
+
+  .creds {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+    color: var(--ink-2);
+  }
+
+  .creds strong {
+    color: var(--ink);
+  }
+
+  .cred-sep {
+    color: var(--rule);
+  }
+</style>
