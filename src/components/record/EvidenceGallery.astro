@@ -1,0 +1,314 @@
+---
+interface EvidenceImage {
+  id: string;
+  src: string;
+  kind: string;
+  title: string;
+  alt: string;
+  section: string;
+  group: string;
+  year: string;
+  width: number;
+  height: number;
+  related: { title: string; href: string }[];
+}
+
+interface Props {
+  id: string;
+  title: string;
+  items: EvidenceImage[];
+}
+
+const { id, title, items } = Astro.props;
+const slug = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const groups = [...new Set(items.map((item) => item.group))].sort();
+const years = [...new Set(items.map((item) => item.year))].sort((a, b) => {
+  if (a === 'Undated') return 1;
+  if (b === 'Undated') return -1;
+  return b.localeCompare(a);
+});
+const sections = groups.map((group) => ({
+  group,
+  years: years
+    .filter((year) => items.some((item) => item.group === group && item.year === year))
+    .map((year) => ({ year, items: items.filter((item) => item.group === group && item.year === year) })),
+}));
+---
+
+<section class="wrap evidence-section" id={id} aria-labelledby={`${id}-title`} data-evidence-gallery>
+  <header class="section-head">
+    <hr class="rule rule--accent" />
+    <div class="section-title">
+      <h2 id={`${id}-title`}>{title}</h2>
+      <p class="muted" data-result-count aria-live="polite">{items.length} images</p>
+    </div>
+  </header>
+
+  <form class="filters" role="search" data-evidence-form>
+    <label class="search">
+      <span>Search images</span>
+      <input type="search" name="q" autocomplete="off" data-image-search aria-controls={`${id}-images`} />
+    </label>
+    {
+      groups.length > 1 && (
+        <label>
+          <span>Source area</span>
+          <select name="group" data-group-filter aria-controls={`${id}-images`}>
+            <option value="all">All areas</option>
+            {groups.map((group) => <option value={group}>{group}</option>)}
+          </select>
+        </label>
+      )
+    }
+    <label>
+      <span>Year</span>
+      <select name="year" data-year-filter aria-controls={`${id}-images`}>
+        <option value="all">All years</option>
+        {years.map((year) => <option value={year}>{year}</option>)}
+      </select>
+    </label>
+  </form>
+
+  <p class="empty muted" data-empty hidden>No images match these filters.</p>
+  <div id={`${id}-images`} class="groups">
+    {
+      sections.map((group) => (
+        <section class="source-group" data-source-group={group.group} aria-labelledby={`${id}-${slug(group.group)}`}>
+          <h3 id={`${id}-${slug(group.group)}`}>{group.group}</h3>
+          {
+            group.years.map(({ year, items: yearItems }) => (
+              <section
+                class="year-group"
+                data-year-group={year}
+                aria-labelledby={`${id}-${slug(group.group)}-${slug(year)}`}
+              >
+                <h4 id={`${id}-${slug(group.group)}-${slug(year)}`}>{year}</h4>
+                <ul class="image-grid">
+                  {yearItems.map((item) => (
+                    <li
+                      class="image-item"
+                      data-evidence-item
+                      data-source-area={item.group}
+                      data-image-year={item.year}
+                      data-search-text={`${item.title} ${item.group} ${item.year} ${item.kind}`.toLowerCase()}
+                    >
+                      <a class="image-link" href={item.src} target="_blank" rel="noreferrer" aria-label={`Open image: ${item.alt}`}>
+                        <img
+                          src={item.src}
+                          alt={item.alt}
+                          width={item.width}
+                          height={item.height}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </a>
+                      <div class="caption">
+                        <h5>{item.title}</h5>
+                        <p class="metadata muted">{item.kind}</p>
+                        {item.related.length > 0 && (
+                          <ul class="related" aria-label="Related records">
+                            {item.related.map((record) => (
+                              <li><a href={record.href}>{record.title}</a></li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))
+          }
+        </section>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  for (const gallery of document.querySelectorAll<HTMLElement>('[data-evidence-gallery]')) {
+    const form = gallery.querySelector<HTMLFormElement>('[data-evidence-form]');
+    const search = gallery.querySelector<HTMLInputElement>('[data-image-search]');
+    const groupFilter = gallery.querySelector<HTMLSelectElement>('[data-group-filter]');
+    const yearFilter = gallery.querySelector<HTMLSelectElement>('[data-year-filter]');
+    const items = [...gallery.querySelectorAll<HTMLElement>('[data-evidence-item]')];
+    const yearGroups = [...gallery.querySelectorAll<HTMLElement>('[data-year-group]')];
+    const sourceGroups = [...gallery.querySelectorAll<HTMLElement>('[data-source-group]')];
+    const count = gallery.querySelector<HTMLElement>('[data-result-count]');
+    const empty = gallery.querySelector<HTMLElement>('[data-empty]');
+
+    function filterImages() {
+      const query = search?.value.trim().toLowerCase() ?? '';
+      const group = groupFilter?.value ?? 'all';
+      const year = yearFilter?.value ?? 'all';
+      let visible = 0;
+
+      for (const item of items) {
+        const matches =
+          (group === 'all' || item.dataset.sourceArea === group) &&
+          (year === 'all' || item.dataset.imageYear === year) &&
+          (query === '' || item.dataset.searchText?.includes(query));
+        item.hidden = !matches;
+        visible += Number(matches);
+      }
+
+      for (const yearGroup of yearGroups) {
+        yearGroup.hidden = yearGroup.querySelectorAll('[data-evidence-item]:not([hidden])').length === 0;
+      }
+      for (const sourceGroup of sourceGroups) {
+        sourceGroup.hidden = sourceGroup.querySelectorAll('[data-year-group]:not([hidden])').length === 0;
+      }
+
+      if (count) count.textContent = `${visible} ${visible === 1 ? 'image' : 'images'}`;
+      if (empty) empty.hidden = visible > 0;
+    }
+
+    form?.addEventListener('submit', (event) => event.preventDefault());
+    search?.addEventListener('input', filterImages);
+    groupFilter?.addEventListener('change', filterImages);
+    yearFilter?.addEventListener('change', filterImages);
+  }
+</script>
+
+<style>
+  .evidence-section {
+    margin-top: clamp(3.5rem, 8vw, 6rem);
+  }
+
+  .section-head {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .section-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+  }
+
+  h2 {
+    font-size: var(--step-2);
+  }
+
+  h3 {
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: var(--step-1);
+  }
+
+  h4 {
+    margin-top: 1.25rem;
+    font-size: var(--step-0);
+  }
+
+  .section-title p {
+    font-size: var(--step--1);
+  }
+
+  .filters {
+    display: grid;
+    grid-template-columns: minmax(12rem, 2fr) repeat(2, minmax(10rem, 1fr));
+    align-items: end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-block: 1rem;
+    border-block: 1px solid var(--rule);
+  }
+
+  .filters label {
+    display: grid;
+    gap: 0.35rem;
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
+  input,
+  select {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid var(--ink-2);
+    border-radius: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem var(--gutter);
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .image-item {
+    min-width: 0;
+  }
+
+  .image-link {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #f2f2f2;
+  }
+
+  .image-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .caption {
+    display: grid;
+    gap: 0.3rem;
+    padding-top: 0.65rem;
+  }
+
+  h5 {
+    font-size: var(--step-0);
+    line-height: 1.3;
+  }
+
+  .metadata,
+  .related {
+    font-size: var(--step--1);
+  }
+
+  .related {
+    display: grid;
+    gap: 0.25rem;
+    margin: 0.1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .empty {
+    padding-block: 2rem;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  @media (max-width: 48rem) {
+    .filters {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .search {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (min-width: 48.001rem) {
+    .image-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+</style>

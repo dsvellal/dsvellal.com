@@ -4,7 +4,9 @@ import Figure from '../../components/Figure.astro';
 import QuoteBlock from '../../components/QuoteBlock.astro';
 import EraBand from '../../components/record/EraBand.astro';
 import TrendCard from '../../components/cards/TrendCard.astro';
+import EvidenceGallery from '../../components/record/EvidenceGallery.astro';
 import AdoptionLadder from '../../components/story/AdoptionLadder.astro';
+import sectionImages from '../../data/section-images.json';
 import { SUBJECTS } from '../../data/talks';
 import { profile } from '../../data/profile';
 import { claim, sessionsByEra } from '../../data/claims';
@@ -37,6 +39,7 @@ const subjects = SUBJECTS.map((s) => {
   const list = groups.filter((g) => g.subject === s.id).sort((a, b) => b.sessions[0].date.localeCompare(a.sessions[0].date));
   return { ...s, cards: list.map(topicCard), sessions: list.reduce((n, g) => n + g.sessions.length, 0) };
 });
+const evidence = sectionImages.items.filter((item) => item.section === 'talks');
 ---
 
 <Base
@@ -110,6 +113,8 @@ const subjects = SUBJECTS.map((s) => {
       ))
     }
   </div>
+
+  <EvidenceGallery id="talk-evidence" title="Talk and teaching evidence" items={evidence} />
 
   <section class="wrap now" aria-labelledby="now-title">
     <hr class="rule rule--accent" />

@@ -35,5 +35,14 @@
       "date": "2024-06"
     }
   ],
-  "images": []
+  "images": [
+    {
+      "src": "/record/published/2024-06-ultrasound-test-virtualization-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: Led a proof of concept to run ultrasound tests on virtual machines",
+      "width": 799,
+      "height": 768
+    }
+  ]
 }

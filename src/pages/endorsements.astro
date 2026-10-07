@@ -3,7 +3,9 @@ import Base from '../layouts/Base.astro';
 import Avatar from '../components/Avatar.astro';
 import TrendCard from '../components/cards/TrendCard.astro';
 import VoiceCard from '../components/cards/VoiceCard.astro';
+import EvidenceGallery from '../components/record/EvidenceGallery.astro';
 import { profile } from '../data/profile';
+import sectionImages from '../data/section-images.json';
 import { EMPLOYERS, PRAISES, RELATIONSHIPS, citedBy, linkedinRecs, published, type PrintItem } from '../data/endorsements';
 import { empKey, printLinks, topVoices, voices, type Voice } from '../lib/endorsements';
 import { slotAt, type CardSpec } from '../lib/cards';
@@ -45,6 +47,7 @@ const printCard = (p: PrintItem & { recordLink?: string }, i: number, ground: 'p
 };
 const cited = (await Promise.all(citedBy.map(printLinks))).map((p, i) => printCard(p, i, 'paper'));
 const pubs = (await Promise.all(published.map(printLinks))).map((p, i) => printCard(p, i, 'ink'));
+const evidence = sectionImages.items.filter((item) => item.section === 'endorsements');
 const attrs = (v: Voice) => ({ 'data-voice': '', 'data-rel': v.relationship, 'data-emp': empKey(v.employer) });
 ---
 
@@ -198,6 +201,8 @@ const attrs = (v: Voice) => ({ 'data-voice': '', 'data-rel': v.relationship, 'da
       ))
     }
   </section>
+
+  <EvidenceGallery id="career-evidence" title="Career evidence" items={evidence} />
 
   <section class="wrap more" aria-label="More">
     <p><a href={profile.linkedinRecommendations}>Read the recommendations on LinkedIn</a></p>

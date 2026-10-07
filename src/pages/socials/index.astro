@@ -1,6 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
 import TrendCard from '../../components/cards/TrendCard.astro';
+import EvidenceGallery from '../../components/record/EvidenceGallery.astro';
+import sectionImages from '../../data/section-images.json';
 import { eras, yearHref } from '../../lib/record';
 import { activityCard, activityGroups } from '../../lib/socials';
 
@@ -8,6 +10,7 @@ const era = (await eras()).find((e) => e.lane === 'beyond');
 if (!era) throw new Error('No social era summary');
 const groups = await activityGroups();
 const total = groups.reduce((n, g) => n + g.entries.length, 0);
+const evidence = sectionImages.items.filter((item) => item.section === 'socials');
 ---
 
 <Base title="Socials" description={`Outside work, ${era.years}: ${era.headline}.`}>
@@ -28,6 +31,8 @@ const total = groups.reduce((n, g) => n + g.entries.length, 0);
       ))
     }
   </ol>
+
+  <EvidenceGallery id="community-evidence" title="Community evidence" items={evidence} />
 
   <section class="wrap grid years-block" aria-labelledby="years-title">
     <h2 id="years-title" class="side">Year by year</h2>
