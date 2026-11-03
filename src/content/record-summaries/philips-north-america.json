@@ -5,9 +5,9 @@
   "years": "2021 to now",
   "order": 4,
   "lane": "work",
-  "events": 102,
-  "capsules": 102,
-  "public": 64,
+  "events": 103,
+  "capsules": 103,
+  "public": 65,
   "status": "live",
   "headline": "Took the traceability platform from a three-business pilot to a fourth business",
   "headline_capsule": "2026-09-traceability-platform-adoption",
@@ -22,9 +22,9 @@
         "27 AI sessions, 1,000+ people, 8.7/10"
       ],
       "top": [
+        "2026-11-impact-makers-project-elevate",
         "2026-ai-sessions-27",
         "2026-09-traceability-platform-adoption",
-        "2026-06-analytics-community-series",
         "2026-05-nps-10-two-businesses",
         "2026-01-first-traceability-milestone"
       ],
@@ -36,6 +36,7 @@
         "capsule": "2026-09-traceability-platform-adoption"
       },
       "months": [
+        "11",
         "10",
         "09",
         "08",
@@ -63,6 +64,7 @@
         "2026-06-triage-poc-3000-issues",
         "2026-06-knowledge-graph-proposal-approved",
         "2026-06-first-triage-sprint-demo",
+        "2026-06-analytics-community-series",
         "2026-05-first-deterministic-triage-output",
         "2026-05-defect-triage-project-kickoff",
         "2026-05-benefit-risk-poc",
@@ -78,7 +80,7 @@
         "2026-02-dora-cvd-course",
         "2026-02-expanded-oversubscribed-ai-sessions"
       ],
-      "count": 34
+      "count": 35
     },
     {
       "year": "2025",

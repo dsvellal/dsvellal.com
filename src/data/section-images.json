@@ -1,5 +1,5 @@
 {
-  "count": 154,
+  "count": 155,
   "items": [
     {
       "id": "evidence-7560600d384057a6",
@@ -619,6 +619,24 @@
         {
           "title": "Presented at Philips' first Innovation Engineering Impact Showcase",
           "href": "/impact/c/2026-10-engineering-impact-showcase"
+        }
+      ]
+    },
+    {
+      "id": "evidence-f09d99263e09b93b",
+      "src": "/record/published/impact-makers-project-elevate-2026-11-03-1.webp",
+      "kind": "document",
+      "title": "Recognized as an Impact Maker for Project Elevate",
+      "alt": "Document evidence, Philips North America, 2026",
+      "section": "endorsements",
+      "group": "Philips North America",
+      "year": "2026",
+      "width": 1600,
+      "height": 790,
+      "related": [
+        {
+          "title": "Recognized as an Impact Maker for Project Elevate",
+          "href": "/impact/c/2026-11-impact-makers-project-elevate"
         }
       ]
     },

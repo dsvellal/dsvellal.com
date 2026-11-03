@@ -1,0 +1,50 @@
+{
+  "id": "2026-11-impact-makers-project-elevate",
+  "date": "2026-11-03",
+  "year": "2026",
+  "month": "11",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "Recognized as an Impact Maker for Project Elevate",
+  "type": "Recognition",
+  "themes": [
+    "ai",
+    "strategy"
+  ],
+  "lane": "work",
+  "total": 21,
+  "tier": "public",
+  "summary": "Chad Malone presented the Impact Makers recognition during an IEN all-hands for colleagues in Europe and India. The slide credited AI-supported investment decisions and delivery, including a Codebeamer pilot with a development cycle up to 50% shorter and projected efficiency gains of up to 70% in AI test-automation pilots.",
+  "what_would_have_happened": "The value from AI investment and delivery work across business units would be harder to compare without shared reporting.",
+  "the_call": "Use AI to strengthen innovation investment decisions and delivery through Project Elevate.",
+  "what_i_did": "Applied AI through Project Elevate and demonstrated project savings across investment and delivery pilots.",
+  "what_changed": "Chad Malone recognized the work as an Impact Maker during the IEN all-hands. The award slide reported 13 of 14 business units engaged with Project Elevate, 11 using the Business Case AI Agent, and 9 using the Business Case Dashboard.",
+  "metrics": [
+    {
+      "value": "Up to 50%",
+      "label": "shorter development cycle in the Codebeamer pilot",
+      "context": "Reported for the AM&D pilot."
+    },
+    {
+      "value": "Up to 70%",
+      "label": "projected efficiency gains",
+      "context": "AI-powered test-automation pilots."
+    },
+    {
+      "value": "13 of 14",
+      "label": "business units engaged with Project Elevate",
+      "context": "The award slide also reported 11 business units using the Business Case AI Agent and 9 using the Business Case Dashboard."
+    }
+  ],
+  "quotes": [],
+  "images": [
+    {
+      "src": "/record/published/impact-makers-project-elevate-2026-11-03-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: Recognized as an Impact Maker for Project Elevate",
+      "width": 1600,
+      "height": 790
+    }
+  ]
+}
