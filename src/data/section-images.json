@@ -1,5 +1,5 @@
 {
-  "count": 155,
+  "count": 157,
   "items": [
     {
       "id": "evidence-7560600d384057a6",
@@ -637,6 +637,42 @@
         {
           "title": "Recognized as an Impact Maker for Project Elevate",
           "href": "/impact/c/2026-11-impact-makers-project-elevate"
+        }
+      ]
+    },
+    {
+      "id": "evidence-141747b8f962fc57",
+      "src": "/record/published/reqspec-igt-d-nps-feedback-1.webp",
+      "kind": "document",
+      "title": "ReqSpec analyzed 2,294 Spectra-wave requirements in under three minutes",
+      "alt": "Document evidence, Philips North America, 2026",
+      "section": "endorsements",
+      "group": "Philips North America",
+      "year": "2026",
+      "width": 1372,
+      "height": 736,
+      "related": [
+        {
+          "title": "ReqSpec analyzed 2,294 Spectra-wave requirements in under three minutes",
+          "href": "/impact/c/2026-10-reqspec-spectra-wave-igt-d"
+        }
+      ]
+    },
+    {
+      "id": "evidence-e775cce08ba95bd8",
+      "src": "/record/published/reqspec-igt-d-nps-overview-1.webp",
+      "kind": "document",
+      "title": "ReqSpec analyzed 2,294 Spectra-wave requirements in under three minutes",
+      "alt": "Document evidence, Philips North America, 2026",
+      "section": "endorsements",
+      "group": "Philips North America",
+      "year": "2026",
+      "width": 1387,
+      "height": 886,
+      "related": [
+        {
+          "title": "ReqSpec analyzed 2,294 Spectra-wave requirements in under three minutes",
+          "href": "/impact/c/2026-10-reqspec-spectra-wave-igt-d"
         }
       ]
     },

@@ -5,9 +5,9 @@
   "years": "2021 to now",
   "order": 4,
   "lane": "work",
-  "events": 103,
-  "capsules": 103,
-  "public": 65,
+  "events": 104,
+  "capsules": 104,
+  "public": 66,
   "status": "live",
   "headline": "Took the traceability platform from a three-business pilot to a fourth business",
   "headline_capsule": "2026-09-traceability-platform-adoption",
@@ -22,18 +22,18 @@
         "27 AI sessions, 1,000+ people, 8.7/10"
       ],
       "top": [
-        "2026-11-impact-makers-project-elevate",
+        "2026-10-reqspec-spectra-wave-igt-d",
         "2026-ai-sessions-27",
         "2026-09-traceability-platform-adoption",
         "2026-05-nps-10-two-businesses",
         "2026-01-first-traceability-milestone"
       ],
       "quote": {
-        "text": "Datta's communication and collaboration style is very positive and always looking for opportunities. It is simply lovely to collaborate with him. His vision is inspiring.",
-        "role": "Quality Program Manager",
+        "text": "The output highly and positively impacted the project.",
+        "role": "Customer respondent",
         "company": "Philips",
-        "date": "2026",
-        "capsule": "2026-09-traceability-platform-adoption"
+        "date": "2026-10-28",
+        "capsule": "2026-10-reqspec-spectra-wave-igt-d"
       },
       "months": [
         "11",
@@ -49,6 +49,7 @@
         "01"
       ],
       "also": [
+        "2026-11-impact-makers-project-elevate",
         "2026-10-linkedin-recommendation-engineer-mentored",
         "2026-anytime-feedback-9-responses",
         "2026-10-engineering-impact-showcase",
@@ -80,7 +81,7 @@
         "2026-02-dora-cvd-course",
         "2026-02-expanded-oversubscribed-ai-sessions"
       ],
-      "count": 35
+      "count": 36
     },
     {
       "year": "2025",

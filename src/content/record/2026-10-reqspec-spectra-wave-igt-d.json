@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-reqspec-spectra-wave-igt-d",
+  "date": "2026-10-29",
+  "year": "2026",
+  "month": "10",
+  "era": "philips-north-america",
+  "company": "Philips",
+  "title": "ReqSpec analyzed 2,294 Spectra-wave requirements in under three minutes",
+  "type": "Project",
+  "themes": [
+    "ai",
+    "quality",
+    "project-delivery"
+  ],
+  "lane": "work",
+  "total": 22,
+  "tier": "public",
+  "summary": "I developed ReqSpec during Project Elevate time-writing and worked with an IGT-D customer to use it on the Spectra-wave product. It analyzed 2,294 requirements in under three minutes and received a 10/10 customer NPS. The customer estimated 18 weeks of manual effort avoided; this was an estimate, not a measured labor reduction.",
+  "what_would_have_happened": "The customer estimated that manual review would take about 10 minutes per requirement and require at least three engineers plus added coordination for consistent results.",
+  "the_call": "Build a requirements analysis capability that applies standards-based rules consistently to a large requirements set.",
+  "what_i_did": "I developed ReqSpec using Project Elevate time-writing and worked with the customer to run it against the Spectra-wave requirements.",
+  "what_changed": "ReqSpec analyzed 2,294 requirements in under three minutes. The customer rated the engagement 10/10 and estimated 18 weeks of manual effort avoided.",
+  "metrics": [
+    {
+      "value": "2,294",
+      "label": "requirements analyzed",
+      "context": "For the Spectra-wave product in IGT-D."
+    },
+    {
+      "value": "Under 3 minutes",
+      "label": "analysis time",
+      "context": "The customer reported this time for 2,294 requirements."
+    },
+    {
+      "value": "10/10",
+      "label": "customer NPS",
+      "context": "The NPS overview also records 10/10 across four service ratings."
+    },
+    {
+      "value": "18 weeks",
+      "label": "estimated manual effort avoided",
+      "context": "Customer estimate, not a measured labor reduction."
+    }
+  ],
+  "quotes": [
+    {
+      "text": "The output highly and positively impacted the project.",
+      "role": "Customer respondent",
+      "company": "Philips",
+      "date": "2026-10-28"
+    },
+    {
+      "text": "These kinds of tools should be promoted more. I strongly believe that they can make the difference.",
+      "role": "Customer respondent",
+      "company": "Philips",
+      "date": "2026-10-28"
+    }
+  ],
+  "images": [
+    {
+      "src": "/record/published/reqspec-igt-d-nps-overview-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: ReqSpec analyzed 2,294 Spectra-wave requirements in under three minutes",
+      "width": 1387,
+      "height": 886
+    },
+    {
+      "src": "/record/published/reqspec-igt-d-nps-feedback-1.webp",
+      "kind": "document",
+      "pending": false,
+      "alt": "Document: ReqSpec analyzed 2,294 Spectra-wave requirements in under three minutes",
+      "width": 1372,
+      "height": 736
+    }
+  ]
+}
