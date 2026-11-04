@@ -1,0 +1,35 @@
+---
+import type { Basis } from '../data/claims';
+
+interface Props {
+  basis?: Basis;
+}
+
+const { basis } = Astro.props;
+const LABEL: Record<Basis, string> = { measured: 'Measured', estimated: 'Estimate', reported: 'Reported' };
+---
+
+{basis && <span class="basis" data-basis={basis}>{LABEL[basis]}</span>}
+
+<style>
+  .basis {
+    display: inline-block;
+    padding: 0 0.4rem;
+    border: 1px solid currentColor;
+    font-size: var(--step--1);
+    font-weight: 700;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+
+  /* Measured is solid, estimated is dashed, reported is a plain outline. */
+  .basis[data-basis='measured'] {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--paper);
+  }
+
+  .basis[data-basis='estimated'] {
+    border-style: dashed;
+  }
+</style>

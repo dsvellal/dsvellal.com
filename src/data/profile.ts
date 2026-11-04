@@ -2,7 +2,7 @@ export const profile = {
   name: 'Datta Vellal',
   fullName: 'Dattatreya Subramanya Vellal',
   logo: { src: '/logo.webp', width: 410, height: 80 },
-  headline: 'I lead digital transformation in regulated software and systems development, using AI responsibly from development to delivery and beyond.',
+  headline: 'I conceived and guided the AI traceability platform that four Philips businesses now use for regulated medical software.',
   /** Said in full wherever the AI work is introduced. */
   focus: 'digital transformation in regulated software and systems development, through the responsible use of AI',
   /** Short marker on each Philips AI card and entry page. */
@@ -14,7 +14,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/dattatreyavellal',
   linkedinRecommendations: 'https://www.linkedin.com/in/dattatreyavellal/details/recommendations/',
   invite:
-    "I'm interested in conversations about leading AI and engineering transformation where the stakes are high.",
+    "I'm interested in conversations about leading AI adoption in regulated engineering, where every change has to stand up to an audit.",
   story:
     'I have spent my career leading digital transformation in regulated software and systems: helping teams ship faster without letting quality slip, most recently through the responsible use of AI in medical-device engineering where every change has to stand up to an audit.',
   about: [

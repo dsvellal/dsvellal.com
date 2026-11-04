@@ -1,4 +1,5 @@
 ---
+import Basis from '../Basis.astro';
 import { claim } from '../../data/claims';
 import { adoptionLadder } from '../../data/story';
 import { claimHref } from '../../lib/record';
@@ -42,6 +43,7 @@ const steps = await Promise.all(
                     {c.value}
                   </a>
                   <span class="what">{c.label}</span>
+                  <Basis basis={c.basis} />
                   <span class="meta muted">{c.year}</span>
                 </li>
               ))}

@@ -7,6 +7,7 @@
   --soft: var(--ink-2);
   --from: #8a8a8a;
   --bg: var(--paper);
+  --edge: var(--ink);
   position: relative;
   display: block;
   container-type: inline-size;
@@ -15,13 +16,13 @@
   background: var(--bg);
   color: var(--fg);
   text-decoration: none;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.08), 0 8px 24px rgb(0 0 0 / 0.07);
-  transition: box-shadow 200ms var(--ease-out), transform 200ms var(--ease-out);
+  /* A hairline edge, drawn inside so the card keeps its size. Hover thickens it. */
+  box-shadow: inset 0 0 0 1px var(--edge);
+  transition: box-shadow 120ms var(--ease-out);
 }
 
 a.tc:hover {
-  box-shadow: 0 2px 4px rgb(0 0 0 / 0.1), 0 16px 36px rgb(0 0 0 / 0.14);
-  transform: translateY(-2px);
+  box-shadow: inset 0 0 0 3px var(--fg);
 }
 
 a.tc:focus-visible {
@@ -50,8 +51,7 @@ a.tc:focus-visible {
     --dim: #44444a;
     --soft: #a1a1aa;
     --from: #71717a;
-    border: 1px solid var(--rule);
-    box-shadow: 0 1px 2px rgb(0 0 0 / 0.5), 0 8px 24px rgb(0 0 0 / 0.4);
+    --edge: var(--rule);
   }
 
   .tc--ink {
@@ -60,7 +60,7 @@ a.tc:focus-visible {
     --dim: #52525b;
     --soft: #a1a1aa;
     --from: #71717a;
-    border: 1px solid #2e3035;
+    --edge: #2e3035;
   }
 
   .tc--accent {

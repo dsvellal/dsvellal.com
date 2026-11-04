@@ -1,8 +1,18 @@
 // How the landing page tells the story. Every number here is a claim id from claims.ts.
 
 /** The one number under the headline, then a strip of three more. */
-export const heroLead = 'traceability-adoption';
-export const heroStrip = ['techdebt-savings', 'ai-people-trained', 'years-experience'];
+export const heroLead = 'ai-people-trained';
+export const heroStrip = ['traceability-hours', 'techdebt-savings', 'years-experience'];
+
+/** Numbers listed with their basis on the landing page. Every id needs a basis in claims.ts. */
+export const provenanceIds = [
+  'traceability-adoption',
+  'traceability-hours',
+  'platform-nps',
+  'ai-confidence',
+  'ai-portfolio-potential',
+  'techdebt-opportunity',
+];
 
 export interface LadderStep {
   step: string;

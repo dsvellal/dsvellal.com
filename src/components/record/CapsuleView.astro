@@ -4,7 +4,7 @@ import Breadcrumbs from './Breadcrumbs.astro';
 import RecordQuote from './RecordQuote.astro';
 import { capsuleHref, formatDate, isBeyond, isResponsibleAi, monthShort, section, THEME_LABELS, type Capsule } from '../../lib/record';
 import { talkDate, talkHref, talksByRecord } from '../../lib/talks';
-import { profile } from '../../data/profile';
+import AiMark from '../AiMark.astro';
 
 interface Props {
   capsule: Capsule;
@@ -53,12 +53,7 @@ const linkedTalks = (await talksByRecord()).get(c.id) ?? [];
         )
       }
       {
-        isResponsibleAi(c) && (
-          <p class="rai">
-            <b>{profile.aiMark}</b>
-            <span>Part of my work on {profile.focus}.</span>
-          </p>
-        )
+        isResponsibleAi(c) && <AiMark />
       }
     </header>
 
@@ -184,23 +179,6 @@ const linkedTalks = (await talksByRecord()).get(c.id) ?? [];
   .themes li {
     padding: 0.2rem 0.6rem;
     border: 1px solid var(--ink);
-  }
-
-  .rai {
-    display: grid;
-    justify-items: start;
-    gap: 0.5rem;
-    max-width: 44rem;
-    margin-top: 1.25rem;
-    padding-left: 1rem;
-    border-left: 4px solid var(--accent);
-    line-height: 1.4;
-  }
-
-  .rai b {
-    padding: 0.15rem 0.5rem;
-    background: var(--accent);
-    font-size: var(--step--1);
   }
 
   .metrics {

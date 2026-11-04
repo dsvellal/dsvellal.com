@@ -3,7 +3,6 @@ import TrendCard from './TrendCard.astro';
 import { capsuleOrListHref, capsules, eraHref, monthShort, yearHref, type Era } from '../../lib/record';
 import { ERA_SLOT, cardFor, byNewest } from '../../lib/cards';
 import { talkEraHref, talks } from '../../lib/talks';
-import { profile } from '../../data/profile';
 
 interface Props {
   era: Era;
@@ -18,6 +17,7 @@ const all = (await capsules()).filter((c) => c.era === era.slug);
 const cards = all.filter((c) => c.tier === 'public').map(cardFor).sort(byNewest);
 const shown = limit ? cards.slice(0, limit) : cards;
 const hiddenCount = cards.length - shown.length;
+const aiCount = cards.filter((c) => c.mark).length;
 const lines = all.filter((c) => c.tier === 'line');
 const lineYears = [...new Set(lines.map((c) => c.year))].map((year) => ({ year, items: lines.filter((c) => c.year === year) }));
 const eraTalks = (await talks()).filter((t) => t.era === era.slug).length;
@@ -31,16 +31,19 @@ const headId = `${slot}-title`;
     <p class="label years">{era.years}</p>
     <H id={headId} class:list={['era-name', { page: level === 1 }]}>{era.label}</H>
     <p class="era-line">{era.headline}</p>
-    {
-      slot === 'usa' && (
-        <p class="era-focus">
-          <b>{profile.aiMark}</b>
-          <span>My focus here is {profile.focus}.</span>
-        </p>
-      )
-    }
     <p class="era-meta">
       <span><b>{cards.length}</b> with evidence</span>
+      {
+        aiCount > 0 && (limit ? (
+          <a href={`${eraHref(era)}?ai=1`}>
+            <b>{aiCount}</b> on Responsible AI
+          </a>
+        ) : (
+          <button type="button" class="ai-only" aria-pressed="false">
+            <b>{aiCount}</b> on Responsible AI only
+          </button>
+        ))
+      }
       {lines.length > 0 && <span><b>{lines.length}</b> more, listed below</span>}
       {
         eraTalks > 0 && (
@@ -58,7 +61,7 @@ const headId = `${slot}-title`;
   <ol class="wrap tc-grid" aria-label={`${era.label}, newest first`}>
     {
       shown.map((c) => (
-        <li>
+        <li data-ai={c.mark ? '' : undefined}>
           <TrendCard card={c} />
         </li>
       ))
@@ -98,6 +101,29 @@ const headId = `${slot}-title`;
     )
   }
 </section>
+
+<script>
+  // "Responsible AI only" hides entries without the mark. ?ai=1 opens the page already filtered.
+  document.querySelectorAll<HTMLButtonElement>('.ai-only').forEach((button) => {
+    const section = button.closest('section');
+    if (!section) return;
+    const apply = (on: boolean) => {
+      button.setAttribute('aria-pressed', String(on));
+      section.querySelectorAll<HTMLElement>('.tc-grid > li').forEach((li) => {
+        li.hidden = on && !li.hasAttribute('data-ai');
+      });
+    };
+    button.addEventListener('click', () => {
+      const on = button.getAttribute('aria-pressed') !== 'true';
+      apply(on);
+      const url = new URL(location.href);
+      if (on) url.searchParams.set('ai', '1');
+      else url.searchParams.delete('ai');
+      history.replaceState(null, '', url);
+    });
+    if (new URLSearchParams(location.search).get('ai') === '1') apply(true);
+  });
+</script>
 
 <style>
   .era {
@@ -141,28 +167,37 @@ const headId = `${slot}-title`;
     font-size: var(--step--1);
   }
 
-  .era-focus {
-    display: grid;
-    justify-items: start;
-    gap: 0.5rem;
-    max-width: 40rem;
-    padding-left: 1rem;
-    border-left: 4px solid var(--accent);
-    line-height: 1.4;
-  }
-
-  .era-focus b {
-    padding: 0.15rem 0.5rem;
-    background: var(--accent);
-    font-size: var(--step--1);
-  }
-
   .era-meta b {
     font-size: var(--step-0);
   }
 
   .era-meta a {
     font-weight: 600;
+  }
+
+  .ai-only {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+    cursor: pointer;
+  }
+
+  .ai-only[aria-pressed='true'] {
+    padding: 0 0.4rem;
+    background: var(--ink);
+    color: var(--paper);
+    text-decoration: none;
+  }
+
+  .ai-only:active {
+    transform: translateY(1px);
   }
 
   .era-years {

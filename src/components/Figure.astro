@@ -1,4 +1,5 @@
 ---
+import Basis from './Basis.astro';
 import { claim } from '../data/claims';
 
 interface Props {
@@ -14,6 +15,7 @@ const c = claim(id);
 <div class:list={['fig', size]}>
   <p class="figure value">{c.value}</p>
   <p class="text">{c.label}</p>
+  {c.basis && <p class="basis-row"><Basis basis={c.basis} /></p>}
   {showContext && <p class="context muted">{c.context}</p>}
 </div>
 
@@ -40,6 +42,10 @@ const c = claim(id);
     margin-top: 0.75rem;
     font-weight: 600;
     line-height: 1.3;
+  }
+
+  .basis-row {
+    margin-top: 0.5rem;
   }
 
   .context {

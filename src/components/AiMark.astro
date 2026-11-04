@@ -1,0 +1,31 @@
+---
+import { profile } from '../data/profile';
+---
+
+<p class="ai-mark">
+  <span class="sq" aria-hidden="true"></span>
+  <span>{profile.aiMark}</span>
+  <a href="/impact/philips-north-america?ai=1">All Responsible AI entries</a>
+</p>
+
+<style>
+  .ai-mark {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.75rem;
+    margin-top: 1.25rem;
+    font-size: var(--step--1);
+    font-weight: 700;
+  }
+
+  .sq {
+    width: 0.65rem;
+    height: 0.65rem;
+    background: var(--accent);
+  }
+
+  a {
+    font-weight: 600;
+  }
+</style>

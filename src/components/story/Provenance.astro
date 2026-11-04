@@ -1,0 +1,133 @@
+---
+import Basis from '../Basis.astro';
+import { claims } from '../../data/claims';
+import { claimHref } from '../../lib/record';
+
+interface Props {
+  /** Claim ids to list, in order. Each must have a basis. */
+  ids: string[];
+}
+
+const rows = await Promise.all(
+  Astro.props.ids.map(async (id) => {
+    const c = claims[id];
+    if (!c?.basis) throw new Error(`Provenance needs a claim with a basis: ${id}`);
+    return { c, href: await claimHref(c) };
+  }),
+);
+---
+
+<table class="prov">
+  <caption class="visually-hidden">Each headline number, my part in it, and how firm it is</caption>
+  <thead>
+    <tr>
+      <th scope="col">Number</th>
+      <th scope="col">My part</th>
+      <th scope="col">How firm</th>
+      <th scope="col">Where it comes from</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      rows.map(({ c, href }) => (
+        <tr>
+          <th scope="row">
+            <span class="figure v">{c.value}</span>
+            <span class="what">{c.short ?? c.label}</span>
+          </th>
+          <td data-label="My part">{c.role}</td>
+          <td data-label="How firm"><Basis basis={c.basis} /></td>
+          <td data-label="Source">
+            <span class="ctx">{c.context}</span>
+            <a href={href}>See the evidence</a>
+          </td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>
+
+<style>
+  .prov {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--step--1);
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    display: grid;
+    gap: 0.4rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  th[scope='row'] {
+    display: grid;
+    gap: 0.2rem;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .v {
+    font-size: var(--step-2);
+    font-weight: 800;
+  }
+
+  .what {
+    max-width: 24rem;
+    line-height: 1.3;
+  }
+
+  td {
+    display: block;
+  }
+
+  td::before {
+    content: attr(data-label) ': ';
+    font-weight: 700;
+  }
+
+  td:nth-child(3)::before {
+    content: '';
+  }
+
+  .ctx {
+    display: block;
+    max-width: 34rem;
+    margin-bottom: 0.25rem;
+    color: var(--ink-2);
+  }
+
+  @media (min-width: 48rem) {
+    thead {
+      display: table-header-group;
+    }
+
+    thead th {
+      padding: 0 1rem 0.6rem 0;
+      border-bottom: 1px solid var(--ink);
+      text-align: left;
+      font-weight: 700;
+    }
+
+    tr {
+      display: table-row;
+    }
+
+    th[scope='row'],
+    td {
+      display: table-cell;
+      padding: 1rem 1rem 1rem 0;
+      border-top: 1px solid var(--rule);
+      vertical-align: top;
+    }
+
+    td::before {
+      content: none !important;
+    }
+  }
+</style>

@@ -3,7 +3,6 @@ import Base from '../../layouts/Base.astro';
 import EraSection from '../../components/cards/EraSection.astro';
 import { ERA_SLOT } from '../../lib/cards';
 import { capsules, eras } from '../../lib/record';
-import { profile } from '../../data/profile';
 
 const work = (await eras()).filter((e) => e.lane === 'work' && e.status === 'live');
 const entries = (await capsules()).filter((c) => c.lane === 'work');
@@ -12,7 +11,7 @@ const withCards = entries.filter((c) => c.tier === 'public').length;
 
 <Base
   title="Impact"
-  description={`${withCards} achievements since 2007 at IBM, Exeter, Amazon and Philips, each with its evidence, including digital transformation in regulated software through the responsible use of AI. Newest first, by company.`}
+  description={`${withCards} achievements since 2007 at IBM, Exeter, Amazon and Philips, each with its evidence, from the AI traceability platform at Philips to the first hackathon win at Amazon. Newest first, by company.`}
 >
   <header class="wrap head">
     <h1>Impact</h1>
@@ -20,10 +19,6 @@ const withCards = entries.filter((c) => c.tier === 'public').length;
       {withCards} achievements since 2007, newest first, grouped by company. Each card opens its evidence: what was at
       stake, what I did, what changed, and what people said. {entries.length - withCards} smaller entries are listed under
       each company.
-    </p>
-    <p class="focus">
-      <b>{profile.aiMark}</b>
-      <span>At Philips North America my work centers on {profile.focus}. Those cards carry this marker.</span>
     </p>
   </header>
 
@@ -84,23 +79,6 @@ const withCards = entries.filter((c) => c.tier === 'public').length;
     margin-top: 1.25rem;
     font-size: var(--step-1);
     line-height: 1.35;
-  }
-
-  .focus {
-    display: grid;
-    justify-items: start;
-    gap: 0.5rem;
-    max-width: 40rem;
-    margin-top: 1.25rem;
-    padding-left: 1rem;
-    border-left: 4px solid var(--accent);
-    line-height: 1.4;
-  }
-
-  .focus b {
-    padding: 0.15rem 0.5rem;
-    background: var(--accent);
-    font-size: var(--step--1);
   }
 
   .jump {

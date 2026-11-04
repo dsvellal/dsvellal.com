@@ -1,6 +1,9 @@
 // Single source of truth for every number and quote on the site.
 // Review status and evidence for each id are kept in the private archive.
 
+/** measured: counted or observed. estimated: a forecast or a guess that was not checked. reported: stated by someone else or by a survey. */
+export type Basis = 'measured' | 'estimated' | 'reported';
+
 export interface Change {
   from: number;
   to: number;
@@ -23,6 +26,8 @@ export interface Claim {
   /** Where to read more when no record entry holds the evidence. */
   href?: string;
   change?: Change;
+  /** How firm the number is. Leave unset when the context line already says enough. */
+  basis?: Basis;
 }
 
 export interface Quote {
@@ -48,6 +53,7 @@ const claimList: Claim[] = [
   },
   {
     id: 'traceability-effort',
+    basis: 'estimated',
     value: '~75%',
     label: 'less traceability and validation work per release (estimated)',
     context: 'Systems engineers estimated at the first demo that it could cut about 40 hours to about 10. Not yet measured.',
@@ -57,8 +63,10 @@ const claimList: Claim[] = [
   },
   {
     id: 'traceability-hours',
+    basis: 'estimated',
     value: '40h to 10h',
     label: 'estimated validation effort per release',
+    short: 'validation effort per release',
     context: 'Estimate by systems engineers at the first demo, not a measured result.',
     year: '2026',
     role: 'Conceived and guided',
@@ -67,6 +75,7 @@ const claimList: Claim[] = [
   },
   {
     id: 'traceability-adoption',
+    basis: 'measured',
     value: '4',
     label: 'businesses using the AI traceability platform for regulated software, with two more planned for 2026',
     short: 'businesses adopted the AI traceability platform for regulated software',
@@ -77,6 +86,7 @@ const claimList: Claim[] = [
   },
   {
     id: 'platform-nps',
+    basis: 'reported',
     value: '10/10',
     label: 'NPS for the platform, from two businesses',
     context: 'Reported by the program leader, who called each score a bull\'s eye.',
@@ -140,6 +150,7 @@ const claimList: Claim[] = [
   },
   {
     id: 'ai-confidence',
+    basis: 'reported',
     value: '4.5 to 7.6',
     label: 'self-rated AI confidence out of 10, after a three-day workshop',
     context: 'One engineering team, surveyed before and after.',
@@ -150,6 +161,7 @@ const claimList: Claim[] = [
   },
   {
     id: 'ai-portfolio-potential',
+    basis: 'reported',
     value: '€3.5M a year',
     label: 'potential efficiencies across a portfolio of 8 AI initiatives, one of them mine',
     context: 'Reported by an internal innovation program as potential annual value. It is not realized savings, and not mine alone.',
@@ -240,6 +252,7 @@ const claimList: Claim[] = [
   },
   {
     id: 'techdebt-opportunity',
+    basis: 'estimated',
     value: '~€3.45M',
     label: 'further savings identified',
     context: 'Identified in 2021 as future savings, not realized.',
