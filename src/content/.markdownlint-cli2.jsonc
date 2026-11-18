@@ -1,0 +1,8 @@
+{
+  // Astro content collection: the frontmatter `title` is rendered as the page <h1>,
+  // so the body intentionally has no top-level heading.
+  "config": {
+    "MD025": { "front_matter_title": "^\\s*title\\s*[:=]" },
+    "MD041": { "front_matter_title": "^\\s*title\\s*[:=]" }
+  }
+}

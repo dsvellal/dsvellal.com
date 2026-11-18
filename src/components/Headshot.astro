@@ -2,7 +2,7 @@
 import { hasPublicAsset } from '../lib/assets';
 import { profile } from '../data/profile';
 
-const present = hasPublicAsset('headshot.jpg');
+const present = hasPublicAsset('Datta-Vellal-Profile-Picture.jpg');
 const initials = profile.name
   .split(' ')
   .map((part) => part[0])
@@ -14,8 +14,8 @@ const initials = profile.name
     {
       present ? (
         <>
-          <img class="mono" src="/headshot.jpg" alt={`Portrait of ${profile.name}`} width="1000" height="1000" loading="eager" decoding="async" />
-          <img class="colour" src="/headshot.jpg" alt="" aria-hidden="true" width="1000" height="1000" loading="eager" decoding="async" />
+          <img class="mono" src="/Datta-Vellal-Profile-Picture.jpg" alt={`Portrait of ${profile.name}`} width="1000" height="1000" loading="eager" decoding="async" />
+          <img class="colour" src="/Datta-Vellal-Profile-Picture.jpg" alt="" aria-hidden="true" width="1000" height="1000" loading="eager" decoding="async" />
         </>
       ) : (
         <div class="fallback" role="img" aria-label={`${profile.name}, portrait coming soon`}>
