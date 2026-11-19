@@ -2,7 +2,7 @@
 
 Source for [dsvellal.com](https://dsvellal.com), the personal site of Datta Vellal.
 
-The site is a finished static build in `live/`. Every push to `main` deploys that folder to GitHub Pages through `.github/workflows/deploy.yml`. Nothing is built here: the site is built, checked and staged by the private catalogue repository (`scripts/publish_impact.py`), so corrections go there. The earlier Astro source (`src/`, `public/`, `astro.config.mjs`) is kept for reference only and is not deployed.
+The site is a finished static build in `live/`. There are two branches. `main` holds everything reviewed and never deploys by itself. `site-deploy` is the only branch GitHub Pages deploys, through `.github/workflows/deploy.yml`; it is moved to `main` by `scripts/promote_site.sh` in the private repository. Nothing is built here: the site is built, checked and staged by the private catalogue repository (`scripts/publish_impact.py`), so corrections go there. The earlier Astro source (`src/`, `public/`, `astro.config.mjs`) is kept for reference only and is not deployed.
 
 ## Previewing it locally
 

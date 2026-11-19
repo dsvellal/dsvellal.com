@@ -1,8 +1,9 @@
 name: Deploy to GitHub Pages
 
+# main holds everything reviewed and never deploys by itself. Pushing to site-deploy is the deliberate step that publishes.
 on:
   push:
-    branches: [main]
+    branches: [site-deploy]
   workflow_dispatch:
 
 permissions:
