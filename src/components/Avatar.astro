@@ -10,7 +10,7 @@ interface Props {
 }
 
 const { size = '4rem', alt = `Photo of ${profile.name}` } = Astro.props;
-const present = hasPublicAsset('headshot.jpg');
+const present = hasPublicAsset('Datta-Vellal-Profile-Picture.jpg');
 const initials = profile.name
   .split(' ')
   .map((part) => part[0])
@@ -20,7 +20,7 @@ const initials = profile.name
 <span class="avatar" style={`--size:${size}`}>
   {
     present ? (
-      <img src="/headshot.jpg" alt={alt} width="1000" height="1000" loading="lazy" decoding="async" />
+      <img src="/Datta-Vellal-Profile-Picture.jpg" alt={alt} width="1000" height="1000" loading="lazy" decoding="async" />
     ) : (
       <span class="initials" role={alt ? 'img' : undefined} aria-label={alt || undefined}>
         {initials}
