@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI agents need a shared memory they are allowed to use · Datta Vellal</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta name="description" content="As engineering organizations adopt AI agents, each tool is quietly rebuilding its own copy of the same context. There is a better way."><link rel="canonical" href="https://dsvellal.com/thinking/shared-context-for-ai-agents"><link rel="stylesheet" href="/_astro/Base._9VXXeHh.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="site-head"><div class="wrap"><a class="brand" href="/">Datta Vellal</a><nav class="nav" aria-label="Main"><a href="/work">Work</a><a href="/year-of-impact">Year of Impact</a><a href="/talks">Talks</a><a href="/endorsements">Endorsements</a><a href="/thinking" aria-current="page">Thinking</a><a href="/about">About</a></nav></div></header><main id="main"><div class="wrap back-row"><a class="back" href="/thinking" data-back aria-label="Go back to the previous page"><span aria-hidden="true">←</span> Back</a></div><article class="wrap essay"><header class="pagehead-s"><h1>AI agents need a shared memory they are allowed to use</h1><p class="lede">As engineering organizations adopt AI agents, each tool is quietly rebuilding its own copy of the same context. There is a better way.</p></header><div class="prose"><p>Watch any large engineering organization adopt AI and you will see the same thing happen several times over. One team connects an assistant to requirements. Another connects one to test results. A third builds its own index of design documents. Each one re-collects the same engineering knowledge, with its own gaps and its own rules about who can see what.</p>
+<h2 id="a-context-layer-not-another-database">A context layer, not another database</h2>
+<p>What these agents need is a shared layer of engineering context: requirements, designs, risks, test evidence and configuration, with the relationships between them. It is not one giant knowledge graph or one central document store. It is closer to a set of agreed interfaces over the systems that already hold the truth.</p>
+<h2 id="four-properties-that-matter">Four properties that matter</h2>
+<p>For regulated work, that layer has to be:</p>
+<ul>
+<li><strong>Permission-aware</strong>, so an agent only sees what the person using it is allowed to see.</li>
+<li><strong>Version-aware</strong>, so an answer about release four is not built from release five.</li>
+<li><strong>Provenance-rich</strong>, so every answer can point back to its source.</li>
+<li><strong>Federated</strong>, so each system stays the owner of its own data.</li>
+</ul>
+<h2 id="why-it-matters-now">Why it matters now</h2>
+<p>Without it, every new AI tool adds a new copy of the truth that can drift. With it, AI adoption gets cheaper and safer the further it goes. This is the direction I am proposing, and I expect the details to change as more teams test it.</p>
+</div><nav class="pager" aria-label="Next essay"><span></span><a href="/thinking/validation-is-the-product">Next: Validation is the product</a></nav></article></main><footer class="site-foot"><div class="wrap"><span>© 2026 Dattatreya Subramanya Vellal. Rochester, Michigan.</span><span class="foot-links"><a href="mailto:dsvellal@gmail.com">Email</a><a href="https://www.linkedin.com/in/dattatreyavellal" rel="noopener">LinkedIn</a></span></div></footer><script>
+      document.querySelectorAll('[data-back]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          var cameFromHere = document.referrer && new URL(document.referrer).origin === location.origin && history.length > 1;
+          if (cameFromHere) { e.preventDefault(); history.back(); }   // otherwise the link goes to the parent section
+        });
+      });
+    </script></body></html>

@@ -2,18 +2,11 @@
 
 Source for [dsvellal.com](https://dsvellal.com), the personal site of Datta Vellal.
 
-The site is built with [Astro](https://astro.build). Every push to `main` builds it and deploys it to GitHub Pages through `.github/workflows/deploy.yml`.
+The site is a finished static build in `live/`. Every push to `main` deploys that folder to GitHub Pages through `.github/workflows/deploy.yml`. Nothing is built here: the site is built, checked and staged by the private catalogue repository (`scripts/publish_impact.py`), so corrections go there. The earlier Astro source (`src/`, `public/`, `astro.config.mjs`) is kept for reference only and is not deployed.
 
-## Running it locally
+## Previewing it locally
 
-You need Node 22.12 or later.
-
-```sh
-npm ci
-npm run dev
-```
-
-`npm run build` writes the static site to `dist/`.
+Open `live/index.html` through any static server, for example `npx serve live`.
 
 ## Where the content comes from
 
