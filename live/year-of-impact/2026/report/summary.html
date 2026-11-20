@@ -1,0 +1,997 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="canonical" href="https://dsvellal.com/year-of-impact/2026/report/summary.html"><meta name="description" content="Engineering, teaching and community work from Datta Vellal’s career at IBM, Exeter, Amazon and Philips."><link rel="icon" href="/favicon.svg"><title>Year in review · 2026 Year of Impact · Datta Vellal</title><link rel="stylesheet" href="/_astro/Shell.DMFluyxn.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="top"><div class="shell topline"><a class="brand signature" href="/" aria-label="Datta Vellal, home" data-astro-cid-6bctqxxv><span class="signature-mark" aria-hidden="true" data-astro-cid-6bctqxxv></span><span class="signature-name" data-astro-cid-6bctqxxv>Datta Vellal</span></a><nav aria-label="Main"><a href="/career">Career</a><a href="/community">Community</a><a href="/speaking">Speaking</a><a href="/writing">Writing</a><a href="/evidence">Evidence</a><a href="/year-of-impact" aria-current="location">Years</a></nav><a class="contact" href="mailto:dsvellal@gmail.com">Get in touch <svg class="arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(-45 12 12)"><path d="M4 12h15m-6-6 6 6-6 6"></path></g></svg></a></div></header><script type="module">function e(){let e=document.getElementById(location.hash.slice(1));if(!e)return;let t=!1;for(let n=e;n;n=n.parentElement)n instanceof HTMLDetailsElement&&!n.open&&(n.open=!0,t=!0);let n=e.matches(`[data-expand-target]`)&&e.querySelector(`details`);n&&!n.open&&(n.open=!0,t=!0),t&&e.scrollIntoView({block:`start`})}e(),window.addEventListener(`hashchange`,e),window.addEventListener(`pageshow`,e);</script><script type="module">document.addEventListener(`click`,e=>{if(e.defaultPrevented||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey||!(e.target instanceof Element))return;let t=e.target.closest(`a.archive-frame`);if(!t||typeof HTMLDialogElement>`u`)return;let n=t.querySelector(`img:not([hidden])`);if(!n)return;e.preventDefault();let r=document.createElement(`dialog`);r.className=`photo-viewer`;let i=document.createElement(`p`);i.id=`enlarged-photo-caption`,i.textContent=t.dataset.caption??t.closest(`figure`)?.querySelector(`figcaption`)?.textContent??n.alt,r.setAttribute(`aria-labelledby`,i.id);let a=new Image;a.src=t.href,a.alt=n.alt;let o=document.createElement(`button`);o.type=`button`,o.textContent=`Close image`,o.addEventListener(`click`,()=>r.close()),r.addEventListener(`click`,e=>{e.target===r&&r.close()}),r.addEventListener(`close`,()=>{r.remove(),t.focus({preventScroll:!0})},{once:!0}),r.append(o,a,i),document.body.append(r),r.showModal(),o.focus()});</script><main id="main"><article class="shell interior report-reader"><a class="back" href="/year-of-impact/2026"><svg class="arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(180 12 12)"><path d="M4 12h15m-6-6 6 6-6 6"></path></g></svg> 2026 Year of Impact</a><header class="page-intro"><h1>Year in review<em>.</em></h1></header><nav class="section-links" aria-label="Report chapters"><a href="/year-of-impact/2026/report/summary" aria-current="page">Year in review</a><a href="/year-of-impact/2026/report/leadership">Leadership</a><a href="/year-of-impact/2026/report/goals">Goals and delivery</a><a href="/year-of-impact/2026/report/feedback">Feedback</a><a href="/year-of-impact/2026/report/capacity">Time and capacity</a><a href="/year-of-impact/2026/report/projects">Projects</a></nav><p class="chapter-intro">A one-page account of the year: the figures that matter most (utilization, sessions with their NPS, Medallia, estimated time saved by AI defect-triage assistant, AI requirements checker at a business unit, the product quality review work), the actions behind the work, and what came of the main projects.</p><style>@scope (.report-exhibit) {
+:scope {
+  color-scheme: light;
+  --bg:oklch(0.955 0.004 95); --surface:oklch(0.995 0.002 95); --line:oklch(0.870 0.007 95); --grid:oklch(0.915 0.005 95); --soft:oklch(0.925 0.006 95);
+  --ink:oklch(0.150 0.004 95); --ink2:oklch(0.390 0.006 95); --ink3:oklch(0.405 0.006 95);
+  --s1:oklch(0.575 0.163 256);
+  --s2:oklch(0.671 0.175 41);
+  --s3:oklch(0.669 0.141 162);
+  --s4:oklch(0.764 0.161 75);
+  --s5:oklch(0.716 0.141 357);
+  --s6:oklch(0.529 0.180 142);
+  --s7:oklch(0.527 0.197 283);
+  --s8:oklch(0.623 0.191 25);
+  --s9:oklch(0.626 0.012 95);
+  --other:oklch(0.724 0.013 96);
+  --bad:oklch(0.503 0.179 28);
+  --good:oklch(0.510 0.123 155);
+  --h0:oklch(0.905 0.041 253);
+  --h1:oklch(0.812 0.079 253);
+  --h2:oklch(0.717 0.118 254);
+  --h3:oklch(0.622 0.161 255);
+  --h4:oklch(0.527 0.150 256);
+  --h5:oklch(0.433 0.128 257);
+  --h6:oklch(0.385 0.118 257);
+  --st-done:oklch(0.433 0.128 257);
+  --st-prog:oklch(0.622 0.161 255);
+  --st-open:oklch(0.812 0.079 253);
+  --ev-cited:oklch(0.433 0.128 257);
+  --ev-inf:oklch(0.717 0.118 254);
+  --ev-none:oklch(0.848 0.010 94);
+  --s1t:oklch(0.405 0.163 256);
+  --s2t:oklch(0.421 0.175 41);
+  --s3t:oklch(0.374 0.141 162);
+  --s4t:oklch(0.404 0.161 75);
+  --s5t:oklch(0.421 0.141 357);
+  --s7t:oklch(0.427 0.197 283);
+  --s8t:oklch(0.408 0.191 25);
+  --goodt:oklch(0.385 0.123 155);
+  --badt:oklch(0.423 0.179 28);
+}
+@media (prefers-color-scheme: dark) {
+  :scope {
+    color-scheme: dark;
+    --bg:oklch(0.170 0.004 95); --surface:oklch(0.215 0.004 95); --line:oklch(0.340 0.006 95); --grid:oklch(0.290 0.005 95); --soft:oklch(0.260 0.005 95);
+  --ink:oklch(0.960 0.004 95); --ink2:oklch(0.800 0.006 95); --ink3:oklch(0.760 0.006 95);
+  --s1:oklch(0.622 0.161 255);
+  --s2:oklch(0.622 0.173 40);
+  --s3:oklch(0.621 0.128 163);
+  --s4:oklch(0.670 0.143 73);
+  --s5:oklch(0.622 0.171 1);
+  --s6:oklch(0.529 0.180 142);
+  --s7:oklch(0.670 0.145 287);
+  --s8:oklch(0.669 0.159 22);
+  --s9:oklch(0.628 0.015 102);
+  --other:oklch(0.537 0.011 100);
+  --bad:oklch(0.759 0.144 26);
+  --good:oklch(0.753 0.137 159);
+  --h0:oklch(0.338 0.103 257);
+  --h1:oklch(0.385 0.118 257);
+  --h2:oklch(0.433 0.128 257);
+  --h3:oklch(0.527 0.150 256);
+  --h4:oklch(0.622 0.161 255);
+  --h5:oklch(0.717 0.118 254);
+  --h6:oklch(0.812 0.079 253);
+  --st-done:oklch(0.812 0.079 253);
+  --st-prog:oklch(0.622 0.161 255);
+  --st-open:oklch(0.433 0.128 257);
+  --ev-cited:oklch(0.812 0.079 253);
+  --ev-inf:oklch(0.622 0.161 255);
+  --ev-none:oklch(0.408 0.005 107);
+  --s1t:oklch(0.772 0.161 255);
+  --s2t:oklch(0.812 0.173 40);
+  --s3t:oklch(0.746 0.128 163);
+  --s4t:oklch(0.765 0.143 73);
+  --s5t:oklch(0.812 0.171 1);
+  --s7t:oklch(0.775 0.145 287);
+  --s8t:oklch(0.804 0.159 22);
+  --goodt:oklch(0.753 0.137 159);
+  --badt:oklch(0.789 0.144 26);
+  }
+}
+:scope.dark {
+  color-scheme: dark;
+  --bg:oklch(0.170 0.004 95); --surface:oklch(0.215 0.004 95); --line:oklch(0.340 0.006 95); --grid:oklch(0.290 0.005 95); --soft:oklch(0.260 0.005 95);
+  --ink:oklch(0.960 0.004 95); --ink2:oklch(0.800 0.006 95); --ink3:oklch(0.760 0.006 95);
+  --s1:oklch(0.622 0.161 255);
+  --s2:oklch(0.622 0.173 40);
+  --s3:oklch(0.621 0.128 163);
+  --s4:oklch(0.670 0.143 73);
+  --s5:oklch(0.622 0.171 1);
+  --s6:oklch(0.529 0.180 142);
+  --s7:oklch(0.670 0.145 287);
+  --s8:oklch(0.669 0.159 22);
+  --s9:oklch(0.628 0.015 102);
+  --other:oklch(0.537 0.011 100);
+  --bad:oklch(0.759 0.144 26);
+  --good:oklch(0.753 0.137 159);
+  --h0:oklch(0.338 0.103 257);
+  --h1:oklch(0.385 0.118 257);
+  --h2:oklch(0.433 0.128 257);
+  --h3:oklch(0.527 0.150 256);
+  --h4:oklch(0.622 0.161 255);
+  --h5:oklch(0.717 0.118 254);
+  --h6:oklch(0.812 0.079 253);
+  --st-done:oklch(0.812 0.079 253);
+  --st-prog:oklch(0.622 0.161 255);
+  --st-open:oklch(0.433 0.128 257);
+  --ev-cited:oklch(0.812 0.079 253);
+  --ev-inf:oklch(0.622 0.161 255);
+  --ev-none:oklch(0.408 0.005 107);
+  --s1t:oklch(0.772 0.161 255);
+  --s2t:oklch(0.812 0.173 40);
+  --s3t:oklch(0.746 0.128 163);
+  --s4t:oklch(0.765 0.143 73);
+  --s5t:oklch(0.812 0.171 1);
+  --s7t:oklch(0.775 0.145 287);
+  --s8t:oklch(0.804 0.159 22);
+  --goodt:oklch(0.753 0.137 159);
+  --badt:oklch(0.789 0.144 26);
+}
+:scope.light {
+  color-scheme: light;
+  --bg:oklch(0.955 0.004 95); --surface:oklch(0.995 0.002 95); --line:oklch(0.870 0.007 95); --grid:oklch(0.915 0.005 95); --soft:oklch(0.925 0.006 95);
+  --ink:oklch(0.150 0.004 95); --ink2:oklch(0.390 0.006 95); --ink3:oklch(0.405 0.006 95);
+  --s1:oklch(0.575 0.163 256);
+  --s2:oklch(0.671 0.175 41);
+  --s3:oklch(0.669 0.141 162);
+  --s4:oklch(0.764 0.161 75);
+  --s5:oklch(0.716 0.141 357);
+  --s6:oklch(0.529 0.180 142);
+  --s7:oklch(0.527 0.197 283);
+  --s8:oklch(0.623 0.191 25);
+  --s9:oklch(0.626 0.012 95);
+  --other:oklch(0.724 0.013 96);
+  --bad:oklch(0.503 0.179 28);
+  --good:oklch(0.510 0.123 155);
+  --h0:oklch(0.905 0.041 253);
+  --h1:oklch(0.812 0.079 253);
+  --h2:oklch(0.717 0.118 254);
+  --h3:oklch(0.622 0.161 255);
+  --h4:oklch(0.527 0.150 256);
+  --h5:oklch(0.433 0.128 257);
+  --h6:oklch(0.385 0.118 257);
+  --st-done:oklch(0.433 0.128 257);
+  --st-prog:oklch(0.622 0.161 255);
+  --st-open:oklch(0.812 0.079 253);
+  --ev-cited:oklch(0.433 0.128 257);
+  --ev-inf:oklch(0.717 0.118 254);
+  --ev-none:oklch(0.848 0.010 94);
+  --s1t:oklch(0.405 0.163 256);
+  --s2t:oklch(0.421 0.175 41);
+  --s3t:oklch(0.374 0.141 162);
+  --s4t:oklch(0.404 0.161 75);
+  --s5t:oklch(0.421 0.141 357);
+  --s7t:oklch(0.427 0.197 283);
+  --s8t:oklch(0.408 0.191 25);
+  --goodt:oklch(0.385 0.123 155);
+  --badt:oklch(0.423 0.179 28);
+}
+:scope { --surface-1:var(--surface); --surface-2:var(--soft); --border:var(--line); --text-primary:var(--ink); --text-secondary:var(--ink2); --text-muted:var(--ink3); }
+* { box-sizing:border-box; }
+html { -webkit-print-color-adjust:exact; print-color-adjust:exact; scroll-behavior:smooth; }
+:scope { margin:0; background:var(--bg); color:var(--ink); font:14px/1.5 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+main { max-width:1160px; margin:0 auto; padding:28px 20px 70px; }
+h1,h2,h3 { margin:0; }
+h2 { font-size:19px; letter-spacing:-.01em; }
+
+
+:scope { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; --mono:ui-monospace,Menlo,Consolas,monospace; --r:12px;
+  --c-sutra:var(--s1); --c-themis:var(--s7); --c-pqr:var(--s2); --c-learn:var(--s3); --c-kairos:var(--s5); --c-kl:var(--s4); --c-other:var(--s9); }
+:scope { font-feature-settings:"tnum" 1,"lnum" 1; }
+main { max-width:1440px; padding:0 22px 80px; }
+h1,h2,h3,h4 { margin:0; }
+a { color:var(--s1); }
+button { font:inherit; color:inherit; }
+.num { font-variant-numeric:tabular-nums; }
+.note { color:var(--ink3); font-size:12.5px; }
+.mut { color:var(--ink2); }
+svg { display:block; max-width:100%; height:auto; overflow:visible; }
+svg text { fill:var(--ink2); font-size:11px; font-family:inherit; }
+svg .lbl { fill:var(--ink); }
+svg .grid { stroke:var(--grid); stroke-width:1; }
+svg .axis { stroke:var(--line); stroke-width:1.2; }
+svg .dash { stroke:var(--ink3); stroke-width:1; stroke-dasharray:4 3; }
+.hide { display:none !important; }
+
+
+.top { position:sticky; top:0; z-index:15; background:color-mix(in srgb,var(--bg) 94%,transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); margin:0 -22px; padding:12px 22px 0; }
+.top-in { max-width:1440px; margin:0 auto; display:grid; grid-template-columns:1fr auto; column-gap:20px; align-items:center; }
+.brand { padding-bottom:6px; }
+.brand .k { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink2); font-weight:650; }
+.brand .t { font-family:var(--serif); font-size:21px; letter-spacing:-.02em; line-height:1.15; }
+.tabs { display:flex; gap:0; grid-column:1 / -1; grid-row:2; flex-wrap:wrap; margin-top:2px; }
+.tab { border:0; background:none; padding:7px 16px 9px; font-size:13.5px; color:var(--ink2); cursor:pointer; border-bottom:2px solid transparent; font-weight:550; white-space:nowrap; }
+.tab:hover { color:var(--ink); }
+.tab.on { color:var(--ink); border-bottom-color:var(--ink); }
+.ctl { display:flex; gap:12px; align-items:center; padding-bottom:6px; font-size:12.5px; color:var(--ink2); justify-self:end; flex-wrap:wrap; }
+.ctl label { display:flex; gap:6px; align-items:center; cursor:pointer; }
+.seg { display:inline-flex; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+.seg button { border:0; background:none; padding:4px 10px; font-size:12px; cursor:pointer; color:var(--ink2); }
+.seg button.on { background:var(--ink); color:var(--surface); }
+.btn { border:1px solid var(--line); background:var(--surface); border-radius:8px; padding:5px 12px; font-size:12.5px; cursor:pointer; text-decoration:none; color:var(--ink); }
+.btn:hover { background:var(--soft); }
+.btn.pri { background:var(--ink); color:var(--surface); border-color:var(--ink); }
+.view { display:none; padding-top:28px; }
+.view.on { display:block; }
+
+
+.sec { margin-top:44px; }
+.sec:first-child { margin-top:0; }
+.sech { display:flex; align-items:baseline; gap:14px; margin-bottom:6px; flex-wrap:wrap; }
+.sech h2 { font-size:21px; letter-spacing:-.015em; }
+.sech .k { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink3); font-weight:650; }
+.lead { color:var(--ink2); max-width:860px; margin:0 0 16px; font-size:14px; }
+.opening { font-family:var(--serif); font-size:30px; line-height:1.28; letter-spacing:-.02em; max-width:1000px; margin:0 0 6px; }
+.opening b { font-weight:700; border-bottom:3px solid color-mix(in srgb,var(--s1) 55%,transparent); }
+.card { background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:18px 20px; }
+.card h3 { font-size:15px; margin-bottom:2px; }
+.card .sub { color:var(--ink2); font-size:12.5px; margin:0 0 12px; }
+.g2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.g3 { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.g4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+.g65 { display:grid; grid-template-columns:1.6fr 1fr; gap:14px; }
+@media (max-width:1000px) { .g2,.g3,.g4,.g65 { grid-template-columns:1fr 1fr; } }
+@media (max-width:640px) { .g2,.g3,.g4,.g65 { grid-template-columns:1fr; } .tabs { margin-left:0; } }
+
+
+.tiles { display:grid; grid-template-columns:repeat(6,1fr); gap:0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.tile { padding:16px 18px 14px 0; margin-right:18px; border-right:1px solid var(--line); min-width:0; }
+.tile:last-child { border-right:0; margin-right:0; }
+.tile .v { font-size:38px; font-weight:700; letter-spacing:-.03em; line-height:1; font-variant-numeric:tabular-nums; }
+.tile .v small { font-size:14px; font-weight:500; color:var(--ink2); letter-spacing:0; margin-left:5px; }
+.tile .l { font-size:13px; margin-top:6px; line-height:1.35; }
+.tile .viz { margin-top:12px; min-height:34px; } .tile .legend { font-size:11px; gap:2px 10px; } .tile { padding-bottom:12px; }
+@media (max-width:1000px) { .tiles { grid-template-columns:repeat(3,1fr); } .tile { border-bottom:1px solid var(--line); } }
+@media (max-width:640px) { .tiles { grid-template-columns:repeat(2,1fr); } }
+.big { font-size:44px; font-weight:700; letter-spacing:-.03em; line-height:1; font-variant-numeric:tabular-nums; }
+.big small { font-size:15px; font-weight:500; color:var(--ink2); letter-spacing:0; margin-left:6px; }
+
+
+.chip { display:inline-block; font-size:10.5px; font-weight:650; letter-spacing:.03em; padding:1px 7px; border-radius:99px; border:1px solid var(--line); color:var(--ink2); vertical-align:middle; white-space:nowrap; text-transform:uppercase; }
+.chip.Recorded { border-color:var(--s3); } .chip.Estimate { border-color:var(--s4); } .chip.Target { border-color:var(--s9); border-style:dashed; }
+.gid { display:inline-block; font-size:11px; font-weight:700; padding:1px 7px; border-radius:6px; background:var(--gc); color:#fff; }
+.st { display:inline-block; font-size:11.5px; font-weight:600; padding:2px 9px; border-radius:99px; background:var(--soft); border:1px solid var(--line); white-space:nowrap; }
+.dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px; vertical-align:0; }
+.src { border:0; background:none; padding:0 0 0 4px; font-size:11px; color:var(--ink3); cursor:pointer; text-decoration:underline; text-decoration-style:dotted; text-underline-offset:2px; }
+.src:hover { color:var(--s1); }
+.legend { display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12px; color:var(--ink2); margin:8px 0 2px; }
+.legend i { display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:6px; vertical-align:-1px; }
+
+
+.q { font-family:var(--serif); font-size:17px; line-height:1.48; margin:0; }
+.q.xl { font-size:23px; line-height:1.4; letter-spacing:-.01em; }
+.qwho { font-size:12px; color:var(--ink2); margin-top:6px; }
+.qcard { border-left:3px solid var(--s1); padding:2px 0 2px 14px; }
+.qgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); gap:18px 26px; }
+
+
+.lst { list-style:none; margin:0; padding:0; }
+.lst li { padding:8px 0; border-top:1px solid var(--line); font-size:13.5px; display:flex; gap:10px; justify-content:space-between; align-items:flex-start; }
+.lst li:first-child { border-top:0; }
+.rows { width:100%; border-collapse:collapse; font-size:13px; }
+.rows td,.rows th { padding:7px 8px; border-top:1px solid var(--line); text-align:left; vertical-align:top; }
+.rows th { font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink2); border-top:0; font-weight:650; }
+.rows td.n,.rows th.n { text-align:right; font-variant-numeric:tabular-nums; }
+
+
+.gcard { background:var(--surface); border:1px solid var(--line); border-radius:var(--r); border-top:4px solid var(--gc); padding:18px 20px; display:grid; grid-template-columns:1.1fr 1.5fr; gap:20px 30px; margin-bottom:14px; }
+.gcard h3 { font-size:18px; line-height:1.25; letter-spacing:-.01em; margin:6px 0 4px; }
+.gcard .gm { display:flex; gap:22px; margin:12px 0; }
+.gcard .gm div { font-size:12px; color:var(--ink2); } .gcard .gm b { display:block; font-size:26px; color:var(--ink); letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+.meas { display:grid; grid-template-columns:44px 1fr 90px; gap:8px; align-items:center; padding:5px 0; font-size:12.5px; border-top:1px solid var(--line); }
+.meas:first-child { border-top:0; }
+.facts { list-style:none; margin:0; padding:0; font-size:13.5px; }
+.facts li { padding:7px 0 7px 16px; border-top:1px solid var(--line); position:relative; }
+.facts li:first-child { border-top:0; }
+.facts li::before { content:""; position:absolute; left:2px; top:14px; width:6px; height:6px; border-radius:50%; background:var(--gc,var(--s1)); }
+@media (max-width:900px) { .gcard { grid-template-columns:1fr; } }
+
+
+.pgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:14px; }
+.pcard { background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:16px 18px; display:flex; flex-direction:column; gap:8px; cursor:pointer; text-align:left; border-top:4px solid var(--pc,var(--s9)); }
+.pcard:hover { border-color:var(--ink3); border-top-color:var(--pc,var(--s9)); }
+.pcard h3 { font-size:17px; letter-spacing:-.01em; }
+.pcard .pn { display:flex; gap:20px; flex-wrap:wrap; }
+.pcard .pn b { display:block; font-size:24px; letter-spacing:-.02em; font-variant-numeric:tabular-nums; line-height:1.1; }
+.pcard .pn > div > span { font-size:11.5px; color:var(--ink2); max-width:150px; display:block; } .pcard .pn .chip { margin-top:3px; }
+.rail { display:grid; grid-template-columns:230px 1fr; gap:26px; align-items:start; }
+.rail nav { position:sticky; top:104px; display:flex; flex-direction:column; gap:2px; }
+.rail nav button { text-align:left; border:0; background:none; padding:8px 10px; border-radius:8px; cursor:pointer; font-size:13.5px; display:flex; gap:8px; align-items:center; color:var(--ink2); }
+.rail nav button:hover { background:var(--soft); }
+.rail nav button.on { background:var(--soft); color:var(--ink); font-weight:650; }
+@media (max-width:900px) { .rail { grid-template-columns:1fr; } .rail nav { position:static; flex-direction:row; flex-wrap:wrap; } }
+.vtile { border:1px solid var(--line); border-radius:10px; padding:12px 14px; background:var(--surface); display:flex; flex-direction:column; gap:3px; }
+.vtile b { font-size:22px; letter-spacing:-.02em; font-variant-numeric:tabular-nums; line-height:1.15; overflow-wrap:anywhere; }
+.vtile b small { font-size:12px; font-weight:500; color:var(--ink2); letter-spacing:0; margin-left:4px; }
+.vtile span { font-size:12.5px; color:var(--ink2); }
+.fcard { border:1px solid var(--line); border-radius:10px; padding:12px 14px; background:var(--surface); font-size:13px; }
+.fcard h4 { font-size:13.5px; margin-bottom:3px; }
+.fcard .fn { font-weight:650; font-size:12.5px; margin-top:6px; font-variant-numeric:tabular-nums; }
+
+
+.badge { display:flex; gap:12px; align-items:center; }
+.badge svg { flex:none; width:58px; height:58px; }
+.badge b { display:block; font-size:14px; line-height:1.25; }
+.badge span { font-size:12px; color:var(--ink2); }
+
+
+
+#pview { position:fixed; inset:0; background:var(--bg); z-index:30; display:none; flex-direction:column; }
+:scope.popen #pview { display:flex; }
+#phead { display:flex; gap:14px; align-items:center; padding:10px 18px; border-bottom:1px solid var(--line); background:var(--surface); }
+#phead #ptitle { font-weight:650; }
+#pframe { flex:1; border:0; width:100%; background:var(--bg); }
+
+#tip { position:fixed; pointer-events:none; background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:12px; box-shadow:0 4px 16px rgba(0,0,0,.18); display:none; z-index:40; max-width:340px; line-height:1.4; }
+#tip b { display:block; margin-bottom:2px; }
+.ev { font:inherit; font-size:12px; }
+
+
+@page { size:A4 landscape; margin:18mm 12mm 16mm;
+  
+  
+  
+  
+   }
+@media print {
+  html { font-size:12.5px; } :scope { background:#fff; } .top .tabs,.ctl,.noprint { display:none !important; } .top { position:static; border:0; }
+  .view { display:block !important; padding-top:10px; } .view + .view { break-before:page; }
+  .card,.tile,.gcard,.pcard,.fcard,.vtile,.qcard { break-inside:avoid; } #drawer,#veil,#pview { display:none !important; }
+}
+html.pdf .noprint { display:none !important; }
+#dbody div.facts { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0; }
+#dbody div.facts > span { background:var(--soft); border:1px solid var(--line); border-radius:8px; padding:4px 10px; font-size:12.5px; }
+
+.chips { display:flex; flex-wrap:wrap; gap:6px; }
+.chipt { border:1px solid var(--line); background:var(--surface); border-radius:99px; padding:4px 12px; font-size:12.5px; cursor:pointer; color:var(--ink2); }
+.chipt:hover { border-color:var(--ink3); } .chipt.on { background:var(--ink); color:var(--surface); border-color:var(--ink); }
+.msl { columns:3; column-gap:28px; margin:12px 0 4px; padding:0; list-style:none; font-size:12.5px; } .msl li { break-inside:avoid; padding:3px 0; } .msl b { display:inline-block; width:20px; height:20px; border-radius:50%; color:#fff; text-align:center; line-height:20px; font-size:11px; margin-right:9px; }
+@media (max-width:800px) { .msl { columns:1; } }
+@media print {
+  .tiles { grid-template-columns:repeat(6,1fr) !important; } .g3 { grid-template-columns:repeat(3,1fr) !important; } .g4 { grid-template-columns:repeat(4,1fr) !important; } .g2 { grid-template-columns:1fr 1fr !important; } .g65 { grid-template-columns:1.6fr 1fr !important; }
+  .sech { break-after:avoid; } .sec { margin-top:20px; } .opening { font-size:26px; } .tile .v { font-size:30px; } .gcard { grid-template-columns:1.1fr 1.5fr !important; } .rail { grid-template-columns:1fr !important; } .rail nav { display:none; }
+  .pgrid { grid-template-columns:repeat(3,1fr) !important; } .qgrid { grid-template-columns:repeat(2,1fr) !important; } .msl { columns:3; }
+}
+.st.done { border-color:var(--s3); color:var(--good); font-weight:650; }
+.spot { border:2px solid var(--s1); border-left-width:10px; border-radius:12px; padding:22px 28px; background:color-mix(in srgb, var(--s1) 8%, var(--card, transparent)); }
+.spot .spq { font-family:var(--serif); font-weight:800; font-size:34px; line-height:1.2; letter-spacing:-.02em; margin:8px 0 10px; max-width:980px; }
+.spot .spw { font-size:16px; }
+.spot .spa { margin-top:10px; font-size:15px; max-width:900px; }
+
+
+.vchip { display:inline-block; font-size:11px; font-weight:650; line-height:1.5; padding:0 8px; margin:0 4px 2px 0; border-radius:999px; border:1.5px solid var(--vc); background:color-mix(in srgb, var(--vc) 14%, transparent); color:var(--ink); cursor:pointer; white-space:nowrap; }
+.vchip.inf { border-style:dashed; background:transparent; }
+.vrow { display:flex; flex-wrap:wrap; gap:2px; align-items:center; margin:6px 0 0; }
+.vgrid { display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:10px; }
+.vtile2 { text-align:left; background:var(--surface); border:1px solid var(--line); border-top:4px solid var(--vc); border-radius:8px; padding:11px 12px 8px; cursor:pointer; font:inherit; color:var(--ink); display:flex; flex-direction:column; gap:3px; }
+.vtile2:hover { border-color:var(--vc); }
+.vtile2.on { background:color-mix(in srgb, var(--vc) 10%, var(--surface)); border-color:var(--vc); box-shadow:0 0 0 1px var(--vc); }
+.vtile2 .vn { font-size:16px; font-weight:700; }
+.vtile2 .vd { font-size:11.5px; color:var(--ink2); line-height:1.35; min-height:46px; }
+.vtile2 .vbig { font-size:28px; font-weight:700; letter-spacing:-.02em; line-height:1.1; font-variant-numeric:tabular-nums; }
+.vtile2 .vbig small { font-size:12px; font-weight:500; color:var(--ink2); letter-spacing:0; }
+.vtile2 .vsub { font-size:11px; color:var(--ink3); line-height:1.35; }
+.vtile2 .vspark { display:block; margin-top:2px; }
+.vdetail { border-top:4px solid var(--vc); }
+.vdh { display:flex; gap:12px; align-items:center; }
+.vbadge { width:14px; height:34px; border-radius:3px; flex:none; }
+.vtab { border-collapse:collapse; width:100%; font-size:13px; }
+.vtab td { padding:5px 8px 5px 0; border-top:1px solid var(--line); vertical-align:top; }
+.vtab td.num { font-weight:700; font-variant-numeric:tabular-nums; text-align:right; padding-right:12px; }
+.vh4 { margin:0 0 6px; font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink3); }
+.vex { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; }
+.vexi { border:1px solid var(--line); border-radius:8px; padding:9px 11px; background:var(--soft); font-size:13px; }
+@media (max-width:1100px) { .vgrid { grid-template-columns:repeat(2, minmax(0,1fr)); } .vex { grid-template-columns:1fr; } }
+@media print { .vgrid { grid-template-columns:repeat(5, minmax(0,1fr)); } .vtile2 { break-inside:avoid; } }
+
+.vstrip { display:grid; grid-template-columns:repeat(10, minmax(0,1fr)); gap:6px; }
+.vstrip-i { text-align:left; background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--vc); border-radius:6px; padding:6px 8px; cursor:pointer; font:inherit; color:var(--ink); display:flex; flex-direction:column; gap:1px; }
+.vstrip-i:hover { border-color:var(--vc); }
+.vstrip-i b { font-size:12.5px; }
+.vstrip-i span { font-size:10.5px; color:var(--ink3); line-height:1.3; }
+@media (max-width:1100px) { .vstrip { grid-template-columns:repeat(5, minmax(0,1fr)); } }
+
+
+.pt { font-size:13.5px; line-height:1.6; color:var(--ink2); margin:0; }
+.psum .card h3 { margin:0 0 6px; font-size:12px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink3); }
+.icards { display:grid; grid-template-columns:repeat(auto-fit, minmax(215px, 1fr)); gap:10px; }
+.icard { background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--s1); border-radius:8px; padding:11px 14px; }
+.icard .in { font-size:28px; font-weight:700; letter-spacing:-.02em; line-height:1.1; font-variant-numeric:tabular-nums; }
+.icard .it { font-size:13px; color:var(--ink2); line-height:1.45; margin-top:3px; }
+#b-k { text-transform:none !important; letter-spacing:.01em !important; }
+.parthead { display:flex; gap:14px; align-items:center; margin:44px 0 6px; padding:14px 0 12px; border-top:2px solid var(--ink); }
+.parthead .pn { font-size:34px; font-weight:700; color:var(--s1); line-height:1; }
+.parthead h2 { margin:0; font-family:var(--serif); font-size:26px; letter-spacing:-.02em; }
+.parthead p { margin:2px 0 0; color:var(--ink2); font-size:13px; }
+.hrole { display:grid; grid-template-columns:minmax(0,1.1fr) 80px minmax(0,2.4fr); gap:6px 16px; padding:9px 0; border-top:1px solid var(--line); font-size:13px; align-items:start; }
+.hst { display:inline-block; font-size:11px; font-weight:650; padding:0 8px; border-radius:999px; border:1.5px solid var(--hc,var(--s9)); background:color-mix(in srgb, var(--hc,var(--s9)) 14%, transparent); }
+@media print { .parthead { break-after:avoid; } }
+
+
+#v-leadership { --pg:var(--s7); } #v-summary { --pg:var(--s1); } #v-goals { --pg:var(--s3); }
+#v-feedback { --pg:var(--s5); } #v-capacity { --pg:var(--s2); } #v-projects { --pg:var(--s4); }
+:scope[data-page="leadership"] { --pgh:var(--s7); } :scope[data-page="summary"] { --pgh:var(--s1); } :scope[data-page="goals"] { --pgh:var(--s3); }
+:scope[data-page="feedback"] { --pgh:var(--s5); } :scope[data-page="capacity"] { --pgh:var(--s2); } :scope[data-page="projects"] { --pgh:var(--s4); }
+
+.top { border-bottom:0; padding-top:10px; padding-bottom:8px; }
+.brand { padding-bottom:6px; }
+.tabs { gap:4px 4px; padding:4px 0 0; margin-top:2px; }
+.tab { --tc:var(--ink3); display:inline-flex; align-items:center; gap:7px; padding:9px 9px 10px; font-size:13.8px; border:1px solid transparent; border-bottom:3px solid transparent; border-radius:9px 9px 0 0; }
+.tab::before { content:""; width:10px; height:10px; border-radius:50%; background:var(--tc); flex:none; }
+.tab[data-v="leadership"] { --tc:var(--s7); } .tab[data-v="summary"] { --tc:var(--s1); } .tab[data-v="goals"] { --tc:var(--s3); }
+.tab[data-v="feedback"] { --tc:var(--s5); } .tab[data-v="capacity"] { --tc:var(--s2); } .tab[data-v="projects"] { --tc:var(--s4); }
+.tab:hover { background:color-mix(in srgb, var(--tc) 9%, transparent); color:var(--ink); }
+.tab.on { background:color-mix(in srgb, var(--tc) 14%, transparent); border-bottom-color:var(--tc); color:var(--ink); font-weight:700; }
+.view { padding-top:24px; }
+
+.ptitle { display:flex; align-items:center; gap:16px; padding:2px 0 14px; border-bottom:4px solid var(--pg); margin-bottom:10px; }
+.ptitle .pdot { width:16px; height:46px; border-radius:4px; background:var(--pg); flex:none; }
+.ptitle h1 { margin:0; font-family:var(--serif); font-size:40px; letter-spacing:-.025em; line-height:1.1; }
+.sech { border-left:4px solid var(--pg); padding-left:12px; margin-bottom:10px; }
+.psum .card { border-top:3px solid var(--pg); }
+.icard { border-left-color:var(--pg); }
+.opening b { border-bottom-color:color-mix(in srgb, var(--pg) 65%, transparent); }
+.parthead { border-top-color:var(--pg); } .parthead .pn { color:var(--pg); }
+@media (max-width:760px) { .tab { padding:8px 12px 9px; font-size:13.5px; } .ptitle h1 { font-size:30px; } }
+
+
+.dtw { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.dt { width:100%; border-collapse:collapse; font-size:13px; }
+.dt th { text-align:left; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink3); font-weight:650; padding:6px 12px 6px 0; border-bottom:2px solid var(--line); white-space:nowrap; }
+.dt td { padding:9px 12px 9px 0; border-top:1px solid var(--line); vertical-align:top; }
+.dt tbody tr:first-child td { border-top:0; }
+.dt .num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; padding-right:16px; }
+.dt th.num { text-align:right; }
+.dt .nw { white-space:nowrap; }
+.dt .tags { display:flex; flex-wrap:wrap; gap:4px; align-items:center; }
+.dt tbody tr:hover td { background:var(--soft); }
+.dt .mut { color:var(--ink2); }
+@media print { .dtw { overflow:visible; } .dt { font-size:11px; } }
+
+.icard .in small { font-size:12px; font-weight:600; letter-spacing:0; color:var(--ink2); margin:0 14px 0 5px; }
+.icard .in small:last-child { margin-right:0; }
+
+.tiles5 { grid-template-columns:repeat(5,1fr); }
+@media (max-width:1100px) { .tiles5 { grid-template-columns:repeat(3,1fr); } }
+@media (max-width:640px) { .tiles5 { grid-template-columns:repeat(2,1fr); } }
+.tbtn { cursor:pointer; position:relative; transition:background .12s; }
+.tbtn:hover, .tbtn:focus-visible { background:var(--soft); outline:0; }
+.tbtn .more { font-size:11.5px; color:var(--pg, var(--s1)); font-weight:650; margin-top:8px; opacity:.85; }
+@media print { .tbtn .more { display:none; } }
+
+.tbtn .v { font-size:33px; }
+.tbtn .v small { font-size:13px; margin-left:3px; }
+.hl2 { display:block; font-size:19px; font-weight:700; letter-spacing:-.01em; color:var(--s7); margin-bottom:2px; }
+
+.spotpair { align-items:stretch; }
+.spot2 { padding:18px 22px; }
+.spot2 .spq { font-size:22px; }
+.spot2 .spw { font-size:14.5px; }
+.spot2 .spa { font-size:14px; }
+
+
+.tbltools { display:flex; align-items:center; gap:10px; margin:0 0 6px; font-family:inherit; }
+.tbltools input { font:inherit; font-size:12.5px; padding:5px 10px; min-width:200px; max-width:100%; border:1px solid var(--line, #d6dce5); border-radius:8px; background:var(--surface, #fff); color:var(--ink, #111827); }
+.tbltools input:focus { outline:2px solid var(--s1, #0b5ed7); outline-offset:1px; }
+.tbltools .tblcount { font-size:11.5px; color:var(--ink3, #6b7280); }
+th.tsort { cursor:pointer; user-select:none; }
+th.tsort:hover { color:var(--ink, #111827); }
+th.tsort:focus-visible { outline:2px solid var(--s1, #0b5ed7); outline-offset:-2px; }
+th.tsort::after { content:'\2195'; margin-left:5px; font-size:10px; opacity:.35; }
+th.tsort[aria-sort="ascending"]::after { content:'\2191'; opacity:1; }
+th.tsort[aria-sort="descending"]::after { content:'\2193'; opacity:1; }
+tr[data-tblhide] { display:none !important; }
+@media print { .tbltools { display:none !important; } th.tsort::after { content:none !important; } }
+
+#veil { position:fixed; inset:0; background:rgba(0,0,0,.4); display:none; z-index:20; }
+#drawer { position:fixed; top:0; right:0; bottom:0; width:min(720px,100vw); background:var(--surface); color:var(--ink); border-left:1px solid var(--line); box-shadow:-8px 0 30px rgba(0,0,0,.25); transform:translateX(100%); transition:transform .18s ease; z-index:21; display:flex; flex-direction:column; }
+:scope.dopen #drawer { transform:none; } :scope.dopen #veil { display:block; }
+#dhead { display:flex; gap:10px; align-items:center; padding:12px 16px; border-bottom:1px solid var(--line); }
+#dhead .dk { font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink2); font-weight:600; flex:1; }
+#dbody { padding:16px 18px 40px; overflow:auto; font-size:13.5px; flex:1; }
+#dbody h3 { font-size:17px; margin:0 0 4px; line-height:1.3; }
+#dbody .dmeta { color:var(--ink3); font-size:12.5px; margin-bottom:12px; }
+#dbody h4 { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink2); margin:16px 0 4px; }
+#dbody p { margin:0 0 8px; white-space:pre-wrap; }
+#dbody mark { background:color-mix(in srgb,var(--s4) 40%,transparent); color:inherit; padding:0 2px; border-radius:3px; }
+#dbody img { width:100%; height:auto; border:1px solid var(--line); border-radius:8px; }
+#dbody pre { white-space:pre-wrap; font:12.5px/1.5 ui-monospace,Menlo,monospace; background:var(--soft); border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin:6px 0; }
+#dbody .why2 { background:var(--soft); border-left:3px solid var(--s1); padding:8px 12px; border-radius:6px; margin:8px 0; font-size:13px; }
+.chipbtn { display:inline-block; margin:2px 6px 2px 0; padding:2px 10px; border:1px solid var(--line); border-radius:99px; background:var(--soft); font-size:12px; cursor:pointer; color:var(--ink); }
+.chipbtn:hover { border-color:var(--s1); }
+.chipbtn.inferred { border-style:dashed; }
+
+
+
+:scope {
+  --sans: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --serif: var(--sans);            
+  --mono: ui-monospace, Menlo, Consolas, monospace;
+  --r: 16px;                       
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.5, 0, 0.75, 0);
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-in: 200ms; --t-out: 160ms;   
+}
+:scope { font-family: var(--sans); line-height: 1.55; font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1, "lnum" 1; background: var(--bg); }
+main { padding-bottom: 96px; }
+
+
+*, *::before, *::after { letter-spacing: normal; }
+.brand .k, .sech .k, .rows th, .dt th, .vh4, .psum .card h3, #dbody h4, #dhead .dk, .chip, .parthead, .tile .l, .vstrip-i span, .qwho {
+  text-transform: none; }
+.brand .k { font-size: 13px; letter-spacing: 0; color: var(--ink2); font-weight: 600; }
+.sech .k { display: inline-block; font-size: 13.5px; letter-spacing: 0; color: var(--ink2); font-weight: 500; }
+.sech .k::first-letter { text-transform: uppercase; }
+.rows th, .dt th, .vh4, #dbody h4, #dhead .dk { font-size: 12.5px; letter-spacing: 0; color: var(--ink2); font-weight: 650; text-transform: none; }
+.chip { font-size: 12px; letter-spacing: 0; padding: 2px 9px; text-transform: none; }
+.brand .t { font-size: 22px; font-weight: 650; line-height: 1.2; }
+.opening { font-size: 30px; font-weight: 500; line-height: 1.25; max-width: 40em; }
+.opening b { font-weight: 700; border-bottom: 0; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 5px; text-decoration-color: color-mix(in oklch, var(--pg, var(--s1)) 60%, transparent); }
+h1, h2, h3, h4 { letter-spacing: 0; }
+.tile .v, .big, .icard .in, .vtile2 .vbig, .pcard .pn b, .gcard .gm b, .vtile b { letter-spacing: 0; }
+
+
+h1, h2, h3, h4, .opening, .spq, .tile .l, .icard .it, .sech { text-wrap: balance; }
+p, li, .q, .pt, .lead, .sub, .note, .it, .vd, .vsub { text-wrap: pretty; }
+h1, h2, h3, h4 { line-height: 1.2; }
+.ptitle h1 { font-size: 40px; font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; }
+.sech h2 { font-size: 21px; font-weight: 650; }
+.pt, .lead, .sub, .card > p, .spw, .spa, #dbody p, .q, .qwho { max-width: 68ch; }
+.pt { font-size: 15px; line-height: 1.6; color: var(--ink); }
+.lead { font-size: 14.5px; }
+.note { color: var(--ink2); font-size: 13px; }
+svg text { fill: var(--ink2); font-size: 12px; }
+svg .lbl { fill: var(--ink); }
+.q { font-size: 17px; line-height: 1.55; font-weight: 450; }
+.q.xl { font-size: 22px; line-height: 1.4; }
+.spot .spq { font-size: 32px; font-weight: 650; line-height: 1.2; max-width: 30em; letter-spacing: -0.01em; }
+
+
+.top { border-bottom: 0; background: color-mix(in oklch, var(--bg) 96%, transparent); box-shadow: 0 1px 0 color-mix(in oklch, var(--ink) 8%, transparent); }
+.ptitle { border-bottom: 0; padding: 4px 0 8px; margin-bottom: 4px; }
+.ptitle .pdot { display: none; }
+.sech { border-left: 0; padding-left: 0; margin-bottom: 14px; }
+.sec { margin-top: 56px; }
+.psum .card { border-top: 0; }
+.card, .gcard, .pcard, .fcard, .vtile, .vtile2, .vstrip-i, .vexi, .icard, .spot, .qcard-box {
+  border: 0; box-shadow: none; }
+.card, .gcard, .pcard { background: var(--surface); border-radius: var(--r); padding: 22px 24px; }
+.card .card { background: transparent; padding: 0; border-radius: 0; }
+.gcard { border-top: 0; box-shadow: inset 0 4px 0 var(--gc); }
+.pcard { border-top: 0; box-shadow: inset 0 4px 0 var(--pc, var(--s9)); transition: transform 150ms var(--ease-out); }
+.pcard:hover { box-shadow: inset 0 4px 0 var(--pc, var(--s9)), 0 0 0 2px color-mix(in oklch, var(--ink) 18%, transparent); }
+
+.vtile, .fcard, .vexi, #dbody div.facts > span { background: var(--soft); --pad: 12px; border-radius: max(0px, calc(var(--r) - var(--pad))); padding: var(--pad); }
+.vtile2, .vstrip-i { background: var(--soft); --pad: 12px; border-radius: max(0px, calc(var(--r) - var(--pad))); box-shadow: inset 0 3px 0 var(--vc); }
+.vtile2.on { background: color-mix(in oklch, var(--vc) 14%, var(--surface)); box-shadow: inset 0 3px 0 var(--vc), 0 0 0 2px var(--vc); }
+.vdetail { border-top: 0; }
+.icard { background: var(--surface); --pad: 14px; padding: var(--pad) 16px; border-radius: max(0px, calc(var(--r) - 0px)); box-shadow: inset 4px 0 0 var(--pg, var(--s1)); }
+.icard { border-radius: var(--r); }
+.spot { border: 0; border-radius: var(--r); background: color-mix(in srgb, var(--pg, var(--s1)) 9%, var(--surface)); padding: 28px 32px; box-shadow: inset 6px 0 0 var(--s1); }
+.qcard { border-left: 3px solid var(--s1); }
+.lst li, .facts li, .meas, .vtab td, .hrole, .rows td { border-top: 0; }
+.lst li { padding: 9px 0; }
+.facts li { padding: 9px 0 9px 18px; }
+.meas, .hrole, .vtab td { padding-top: 7px; padding-bottom: 7px; }
+.dt td { border-top: 0; padding: 10px 12px 10px 0; }
+.dt th { border-bottom: 1px solid var(--line); }
+.dt tbody tr:nth-child(even) td { background: color-mix(in oklch, var(--soft) 55%, transparent); }
+.dt tbody tr:hover td { background: var(--soft); }
+.parthead { border-top: 0; padding: 8px 0 0; margin-top: 56px; }
+.parthead .pn { display: none; }
+.parthead h2 { font-family: var(--sans); font-size: 26px; font-weight: 700; letter-spacing: 0; }
+
+.tiles { background: var(--surface); border: 0; border-radius: var(--r); padding: 8px; gap: 8px; }
+.tile { border-right: 0; margin-right: 0; padding: 16px 14px 14px; --pad: 8px; border-radius: max(0px, calc(var(--r) - var(--pad))); }
+@media (max-width: 1000px) { .tile { border-bottom: 0; } }
+.tile .v { font-size: 31px; font-weight: 700; white-space: nowrap; }
+.tile .v small { white-space: nowrap; }
+.tile .l { font-size: 14px; color: var(--ink); }
+.tbtn { transition: background 150ms var(--ease-out), transform 150ms var(--ease-out); }
+.tbtn .more { opacity: 1; color: var(--pgt, var(--s1t)); font-weight: 650; font-size: 13px; }
+
+#dhead { border-bottom: 0; background: var(--surface); }
+#dbody img { border: 0; border-radius: 8px; background: var(--soft); }
+#dbody pre { font: 13px/1.55 var(--sans); border: 0; background: var(--soft); border-radius: max(0px, calc(var(--r) - 12px)); }
+#dbody .why2 { background: var(--soft); border-left: 3px solid var(--s1); }
+.chipbtn, .chipt { border-color: color-mix(in oklch, var(--ink) 30%, transparent); }
+
+
+a, .src:hover { color: var(--s1t); }
+.src { color: var(--ink2); font-size: 12.5px; }
+.hl2 { color: var(--s7t); }
+.st.done, .good { color: var(--goodt); }
+.bad { color: var(--badt); }
+.parthead .pn { color: var(--pgt, var(--ink)); }
+.gid { background: color-mix(in oklch, var(--gc) 22%, var(--surface)); color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--gc); }
+.msl b { background: color-mix(in oklch, var(--c, var(--s1)) 25%, var(--surface)) !important; color: var(--ink) !important; box-shadow: inset 0 0 0 1.5px var(--c, var(--s1)); }
+.seg button.on { background: var(--ink); color: var(--surface); }
+.top .tab { color: var(--ink2); }
+#v-leadership { --pgt: var(--s7t); } #v-summary { --pgt: var(--s1t); } #v-goals, #v-learning { --pgt: var(--s3t); }
+#v-feedback { --pgt: var(--s5t); } #v-capacity { --pgt: var(--s2t); } #v-projects { --pgt: var(--s4t); }
+.vstrip-i span, .vtile2 .vsub, .vtile2 .vd { color: var(--ink2); font-size: 12.5px; }
+.vstrip-i b { font-size: 13px; }
+.legend { font-size: 12.5px; }
+.tile .legend { font-size: 12px; }
+.pcard .pn > div > span { font-size: 12.5px; color: var(--ink2); }
+.mark, mark { color: var(--ink); }
+
+
+.btn, .seg, .chipt, .chipbtn, .tab, .rail nav button, .vchip, .st, .seg button { --pad: 0px; }
+.btn { border: 1px solid color-mix(in oklch, var(--ink) 30%, transparent); border-radius: 10px; padding: 7px 14px; font-size: 13px; }
+.seg { border: 1px solid color-mix(in oklch, var(--ink) 30%, transparent); border-radius: 10px; }
+.seg button { padding: 6px 12px; font-size: 13px; color: var(--ink2); }
+.tab { font-size: 14px; padding: 10px 12px 11px; color: var(--ink2); }
+.tab.on { font-weight: 700; color: var(--ink); }
+.vchip { font-size: 12px; position: relative; }
+.vchip::after, .src::after { content: ""; position: absolute; inset: -10px -6px; }   
+.src { position: relative; }
+.ctl label { min-height: 32px; }
+@media (pointer: coarse) {
+  .tab, .btn, .seg button, .chipt, .chipbtn, .rail nav button, .ctl label, #dback, #dclose, #pback, .vstrip-i, .vtile2 { min-height: 44px; min-width: 44px; }
+  .tab { padding-left: 14px; padding-right: 14px; display: inline-flex; align-items: center; }
+  .ctl { gap: 10px; }
+  .vchip::after, .src::after { inset: -14px -10px; }
+}
+#dback, #dclose { border: 0; background: var(--soft); border-radius: 10px; padding: 8px 14px; cursor: pointer; font-size: 13.5px; }
+:focus-visible { outline: 2px solid var(--s1t); outline-offset: 2px; }
+
+
+button, .tbtn, .pcard, .vtile2, .vstrip-i, .tab, .chipt, .chipbtn, .vchip, .btn { transition: transform 150ms var(--ease-out), background-color 150ms var(--ease-out), box-shadow 150ms var(--ease-out), color 150ms var(--ease-out); }
+button:active, .tbtn:active, .pcard:active, .vtile2:active, .vstrip-i:active, .chipt:active, .chipbtn:active, .vchip:active, .btn:active, [data-ev]:not(svg *):active, [data-proj]:active { transform: scale(0.97); transition: none; }   
+@keyframes view-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.view.on > * { animation: view-in var(--t-in) var(--ease-out) both; animation-delay: calc(var(--i, 0) * 25ms); }   
+@keyframes pop-in { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: none; } }
+#tip { animation: pop-in 150ms var(--ease-out); border: 0; box-shadow: 0 6px 24px color-mix(in oklch, black 22%, transparent); border-radius: 10px; font-size: 13px; }
+
+#veil { display: block; opacity: 0; visibility: hidden; background: color-mix(in oklch, black 40%, transparent); transition: opacity var(--t-out) var(--ease-in), visibility 0s linear var(--t-out); }
+:scope.dopen #veil { opacity: 1; visibility: visible; transition: opacity var(--t-in) var(--ease-out), visibility 0s; }
+#drawer { transform: none; clip-path: circle(0px at var(--ox, 100%) var(--oy, 50%)); opacity: 0; visibility: hidden; border-left: 0;
+  transition: clip-path var(--t-out) var(--ease-in), opacity var(--t-out) var(--ease-in), visibility 0s linear var(--t-out); }
+:scope.dopen #drawer { clip-path: circle(var(--rad, 1600px) at var(--ox, 100%) var(--oy, 50%)); opacity: 1; visibility: visible;
+  transition: clip-path var(--t-in) var(--ease-out), opacity var(--t-in) var(--ease-out), visibility 0s; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important; transition-delay: 0ms !important; }
+}
+@media print { .view.on > * { animation: none; } #drawer, #veil { display: none !important; } }
+html.pdf .view.on > * { animation: none; }
+
+
+@media print {
+  .icard, .vtile2, .vstrip-i, .tile, .psum { break-inside: avoid; }
+  .sec { margin-top: 28px; } .ptitle h1 { font-size: 32px; } .ptitle { padding-bottom: 0; } .psum .pt { font-size: 13px; }
+  .sech { margin-bottom: 8px; } .parthead { margin-top: 28px; }
+}
+
+
+main { padding-left: 24px; padding-right: 24px; }
+.top { margin-left: -24px; margin-right: -24px; padding: 16px 24px 0; }
+.brand { display: flex; flex-direction: column-reverse; gap: 4px; padding-bottom: 14px; }   
+.brand .t { font-size: 26px; font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; }
+.brand .k { font-size: 13px; line-height: 1.3; font-weight: 500; color: var(--ink2); }
+.tabs { margin-left: -12px; }                                  
+.phero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 16px 64px; align-items: start; padding-top: 32px; }
+.phero .ptitle { padding: 4px 0 0; margin: 0; }
+.phero .ptitle h1 { font-size: 44px; font-weight: 750; line-height: 1.08; letter-spacing: -0.015em; margin: 0; }
+.phero .psum { margin: 0; padding-bottom: 4px; }
+.phero .psum .sech { margin-bottom: 6px; }
+.phero .psum .sech h2 { font-size: 20px; }
+.phero .psum .pt { font-size: 16px; line-height: 1.6; max-width: 62ch; margin: 0; }
+.phero + .sec, .phero + .opening { margin-top: 40px; }
+.sec { margin-top: 48px; }
+.sech { margin-bottom: 16px; }
+.opening { font-size: 26px; line-height: 1.35; max-width: 52em; text-wrap: pretty; margin: 0; }
+.sec > .opening { margin-bottom: 24px; }
+.icards { gap: 16px; }
+@media (max-width: 1000px) { .phero { grid-template-columns: 1fr; gap: 12px; } .phero .ptitle h1 { font-size: 36px; } }
+@media (max-width: 760px) {
+  main { padding-left: 16px; padding-right: 16px; } .top { margin-left: -16px; margin-right: -16px; padding-left: 16px; padding-right: 16px; }
+  .phero { padding-top: 20px; } .sec { margin-top: 32px; } .brand .t { font-size: 22px; } .opening { font-size: 22px; }
+}
+@media print { .phero { padding-top: 0; grid-template-columns: 1fr; } .tabs { margin-left: 0; } .phero .ptitle h1 { font-size: 30px; } .brand .t { font-size: 20px; } .opening { font-size: 22px; } }
+
+
+.cbar-sec { margin-top: 24px; }
+.cbar { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); grid-template-areas: "head head" "ladder ninja"; gap: 16px 40px; background: var(--surface); border-radius: var(--r); padding: 24px 28px; }
+.cb-head { grid-area: head; display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 20px; }
+.cb-head h2 { font-size: 20px; margin: 0; } .cb-head .note { margin: 0; max-width: 78ch; }
+.cb-ladder { grid-area: ladder; } .cb-ninja { grid-area: ninja; }
+.cb-lab { font-size: 13px; font-weight: 600; color: var(--ink2); margin-bottom: 10px; }
+.cb-steps { display: flex; align-items: center; gap: 10px; padding-top: 10px; }
+.cb-step { flex: 1 1 0; min-width: 0; min-height: 64px; display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 0; border-radius: 14px; text-align: left; cursor: pointer; color: var(--ink); background: color-mix(in oklch, var(--c) 14%, var(--surface)); box-shadow: inset 0 0 0 2px color-mix(in oklch, var(--c) 45%, transparent); position: relative; }
+.cb-step i { width: 30px; height: 30px; flex: none; border-radius: 50%; display: grid; place-items: center; font-style: normal; font-weight: 700; font-size: 14px; background: color-mix(in oklch, var(--c) 30%, var(--surface)); box-shadow: inset 0 0 0 2px var(--c); }
+.cb-t { display: grid; gap: 2px; min-width: 0; } .cb-t b { font-size: 15px; line-height: 1.2; } .cb-t small { font-size: 12.5px; color: var(--ink2); line-height: 1.3; }
+.cb-step:hover { background: color-mix(in oklch, var(--c) 24%, var(--surface)); }
+.cb-step.now { box-shadow: inset 0 0 0 3px var(--c); background: color-mix(in oklch, var(--c) 22%, var(--surface)); }
+.cb-step em { position: absolute; top: -11px; left: 14px; font-style: normal; font-size: 11.5px; font-weight: 650; padding: 1px 9px; border-radius: 99px; background: var(--surface); color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--c); }
+.cb-arrow { width: 14px; height: 2px; background: var(--ink2); opacity: .45; flex: none; }
+.cb-belts { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 10px; }
+.cb-belt { flex: 1 1 0; min-width: 150px; min-height: 64px; display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 0; border-radius: 14px; cursor: pointer; text-align: left; color: var(--ink); background: var(--bg); box-shadow: inset 0 0 0 1.5px color-mix(in oklch, var(--ink) 18%, transparent); }
+.cb-belt:hover { background: color-mix(in oklch, var(--ink) 6%, var(--bg)); }
+.cb-belt i { width: 26px; height: 26px; border-radius: 50%; flex: none; box-shadow: inset 0 0 0 2px color-mix(in oklch, var(--ink) 30%, transparent); }
+.cb-belt.white i { background: #fff; } .cb-belt.yellow i { background: var(--s4); }
+.spq.long { font-size: 19px; font-weight: 500; line-height: 1.5; max-width: none; text-wrap: pretty; }
+@media (max-width: 1100px) { .cbar { grid-template-columns: 1fr; grid-template-areas: "head" "ladder" "ninja"; } }
+@media (max-width: 640px) { .cb-steps { flex-direction: column; } .cb-arrow { display: none; } }
+@media print { .cbar { break-inside: avoid; } }
+
+.awh { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+.awp { text-align: right; flex: none; } .awp b { display: block; font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums; } .awp small { font-size: 12px; color: var(--ink2); }
+.awc .dt th:empty { display: none; } .awc .dt td:first-child { color: var(--ink2); white-space: nowrap; padding-right: 16px; width: 1%; font-weight: 600; }
+.awf { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+
+.cb-head .note { display: block; max-width: 86ch; } .cb-head .src { display: inline; text-align: left; font: inherit; padding: 0; min-height: 0; min-width: 0; }
+.cb-head { display: block; } .cb-head h2 { margin-bottom: 6px; } .cb-head .note { max-width: 110ch; }
+.spq.long.second { margin-top: 18px; padding-top: 16px; border-top: 1px solid color-mix(in oklch, var(--ink) 14%, transparent); font-weight: 650; }
+.cb-step .cb-t small { color: var(--ink); }
+
+
+button.icard { display: block; width: 100%; text-align: left; font: inherit; color: var(--ink); border: 0; cursor: pointer; }
+button.icard:hover { background: color-mix(in oklch, var(--pg, var(--s1)) 8%, var(--surface)); }
+.icard .ig { margin-top: 8px; font-size: 12.5px; font-weight: 600; color: var(--s1t); }
+.icard:hover .ig, .icard:focus-visible .ig { text-decoration: underline; }
+.sec, .phero { scroll-margin-top: 150px; }
+@media print { .icard .ig { display: none; } }
+button.icard { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; } button.icard .ig { margin-top: auto; padding-top: 8px; }
+
+
+.tbtn { background: color-mix(in srgb, var(--tc, var(--s1)) 14%, var(--surface)); }
+.tbtn:hover, .tbtn:focus-visible { background: color-mix(in srgb, var(--tc, var(--s1)) 24%, var(--surface)); box-shadow: inset 0 0 0 2px color-mix(in oklch, var(--tc, var(--s1)) 55%, transparent); }
+.tiles { background: transparent; padding: 0; gap: 10px; }
+.tbtn .more { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+
+.icard, .tbtn { background: color-mix(in srgb, var(--tc, var(--pg, var(--s1))) 14%, var(--surface)); box-shadow: inset 4px 0 0 var(--tc, var(--pg, var(--s1))); }
+button.icard:hover, .tbtn:hover, .tbtn:focus-visible { background: color-mix(in srgb, var(--tc, var(--pg, var(--s1))) 24%, var(--surface)); box-shadow: inset 4px 0 0 var(--tc, var(--pg, var(--s1))), inset 0 0 0 2px color-mix(in srgb, var(--tc, var(--pg, var(--s1))) 55%, transparent); }
+.tbtn { padding-left: 20px; }
+.icard .it, .icard .in small { color: var(--ink); }
+.icard .ig { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.keyline { font-size: 16px; max-width: none; margin: 0 0 16px; color: var(--ink); }
+
+
+.pt, .lead, .sub, .card > p, .spw, .spa, .q, .qwho, .opening, .note, .keyline, .phero .psum .pt, .cb-head .note, #dbody p { max-width: none; }
+.spotpair { align-items: start; }
+
+
+.gn { display: grid; grid-template-columns: repeat(var(--n, 4), minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 1000px) { .gn { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .gn { grid-template-columns: 1fr; } }
+main p, main li, main .note, main .sub, main .lead { max-width: none; }
+
+#pwarn { display: flex; gap: 16px; align-items: center; justify-content: space-between; padding: 12px 18px; background: color-mix(in srgb, var(--s4) 22%, var(--surface)); font-size: 14px; }
+#pwarn[hidden] { display: none; }
+
+#tsmount { flex: 1; overflow: auto; background: var(--bg); } #tsmount[hidden] { display: none; }
+@media print { :scope.tsprint main, :scope.tsprint #drawer, :scope.tsprint #veil, :scope.tsprint #phead, :scope.tsprint #pwarn { display: none !important; } :scope.tsprint #pview { display: block !important; position: static !important; } :scope.tsprint #tsmount { overflow: visible; } }
+
+.awc[data-ev], svg [data-ev] { cursor: pointer; } .awc[data-ev]:hover { border-color: var(--ink2); box-shadow: 0 2px 10px rgba(0,0,0,.08); } .awc[data-ev]:focus-visible, svg [data-ev]:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+.fulltx summary { cursor: pointer; font-weight: 600; } .fulltx mark { background: color-mix(in srgb, var(--s4) 35%, transparent); color: inherit; padding: 0 2px; border-radius: 3px; }
+
+.cb-belt.tr i { background: var(--s3); } .cb-belt.tr small { overflow-wrap: anywhere; }
+
+.spot.leader { position: relative; padding-top: 44px; } .lchip { position: absolute; top: 14px; left: 32px; font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 2px 10px; border-radius: 99px; background: var(--surface); color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--s1); }
+
+#yoi-viewer { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 0; padding: 10px 14px; background: var(--surface); color: var(--ink); border-bottom: 3px solid var(--s4); font-size: 14px; line-height: 1.45; }
+#yoi-viewer .yv-t { flex: 1 1 240px; } #yoi-viewer .yv-b { font: inherit; font-weight: 600; padding: 6px 14px; border-radius: 8px; border: 1.5px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; min-height: 36px; }
+@media print { #yoi-viewer { display: none !important; } }
+
+.legend svg.lgl { display: inline-block; vertical-align: -3px; margin-right: 6px; flex: none; }
+
+.mixrow { cursor: pointer; } .mixrow:hover rect:first-child { fill: color-mix(in srgb, var(--ink) 7%, transparent); } .mixrow:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; }
+.smd h3 { font-size: 20px; margin: 4px 0 8px; } .smd h4 { font-size: 15px; margin: 18px 0 6px; } .smd h5 { font-size: 13.5px; margin: 14px 0 4px; color: var(--ink2); } .smd p { margin: 6px 0; } .smd ol, .smd ul { margin: 6px 0 6px 20px; padding: 0; } .smd li { margin: 3px 0; line-height: 1.5; } .smd .dtw { margin: 8px 0; }
+
+
+@media screen and (min-width: 1231px) { .tiles { grid-template-columns: repeat(12, minmax(0, 1fr)); } .tiles > .tile { grid-column: span 3; } .tiles > .tile:nth-child(n+5) { grid-column: span 4; } }
+
+
+:scope { --vq-bg: oklch(0.945 0.075 88); --vq-bar: oklch(0.62 0.16 70); --vq-ink: oklch(0.22 0.02 80); }
+@media (prefers-color-scheme: dark) { :scope:not(.light) { --vq-bg: oklch(0.30 0.05 85); --vq-bar: oklch(0.80 0.14 85); --vq-ink: oklch(0.96 0.01 90); } }
+:scope.dark { --vq-bg: oklch(0.30 0.05 85); --vq-bar: oklch(0.80 0.14 85); --vq-ink: oklch(0.96 0.01 90); }
+:scope.light { --vq-bg: oklch(0.945 0.075 88); --vq-bar: oklch(0.62 0.16 70); --vq-ink: oklch(0.22 0.02 80); }
+.q, .qcard, .spq, q, .vq { background: var(--vq-bg); color: var(--vq-ink); }
+.q, .qcard, .spq { border-left: 4px solid var(--vq-bar); padding: 8px 14px; border-radius: 0 8px 8px 0; }
+.spot .spq { border-left-width: 5px; padding: 12px 18px; }
+q, .vq { padding: 1px 6px; border-radius: 4px; border-bottom: 2px solid var(--vq-bar); font-style: italic; font-weight: 500; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+q::before, q::after { content: none; }
+.qcard * , .q *, .spq * { color: inherit; }
+.qwho { font-style: normal; }
+@media print { .q, .qcard, .spq, q, .vq { background: var(--vq-bg) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+.g2 > *, .g3 > *, .g4 > *, .g65 > *, .gn > *, .tiles > *, .tiles5 > *, .pgrid > *, .spotpair > *, .vgrid > *, .icards > *, .cbar > *, .phero > * { min-width: 0; }
+.svgscroll { max-width: 100%; min-width: 0; }
+img, video, canvas { max-width: 100%; }
+:scope { overflow-wrap: break-word; }
+.svgscroll { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; padding-bottom: 4px; }
+.svgscroll > svg { display: block; max-width: none; }
+.svghint { display: none; font-size: 12.5px; color: var(--ink2); margin: 2px 0 8px; }
+@media print { .svgscroll { overflow: visible; } .svgscroll > svg { width: 100% !important; min-width: 0 !important; } .svghint { display: none !important; } }
+
+
+.rail { grid-template-columns: 230px minmax(0, 1fr); }
+@media screen and (max-width: 900px) { .rail { grid-template-columns: minmax(0, 1fr); } }
+@media screen and (max-width: 1000px) { [style*="display:grid"]:not([style*="grid-template-columns"]), [style*="display: grid"]:not([style*="grid-template-columns"]) { grid-template-columns: minmax(0, 1fr); } }
+.tiles { align-items: start; }   
+.qgrid { grid-template-columns: repeat(auto-fill, minmax(min(310px, 100%), 1fr)); }
+.pgrid { grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr)); }
+.card, .gcard, .sec, .view, .rail > div { min-width: 0; max-width: 100%; }
+
+@media screen and (min-width: 1800px) {
+  main, .top-in { max-width: 1640px; }
+  .pgrid { grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr)); }
+}
+
+
+@media screen and (max-width: 1230px) { .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } .tiles5 { grid-template-columns: repeat(3, minmax(0, 1fr)); } .tile .v { white-space: normal; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; } .tile .v small { white-space: normal; margin-left: 0; } }
+
+@media screen and (max-width: 1000px) {
+  .dt { font-size: 13px; }
+  .gcard { grid-template-columns: 1fr; }
+  .spotpair { grid-template-columns: 1fr; }
+  .cbar { padding: 20px 20px; }
+  .pgrid { grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); }
+}
+
+
+@media screen and (max-width: 700px) {
+  main { padding-left: 14px; padding-right: 14px; padding-bottom: 56px; }
+  .top { position: static; margin-left: -14px; margin-right: -14px; padding: 12px 14px 0; backdrop-filter: none; }
+  .top-in { grid-template-columns: 1fr; }
+  .brand { padding-bottom: 8px; } .brand .t { font-size: 21px; } .brand .k { font-size: 12.5px; }
+  .ctl { justify-self: start; padding-bottom: 8px; gap: 8px 12px; }
+  .tabs { flex-wrap: nowrap; overflow-x: auto; margin: 0 -14px; padding: 4px 14px 2px; gap: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: none; scroll-snap-type: x proximity; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { flex: none; scroll-snap-align: start; white-space: nowrap; padding: 10px 12px 11px; font-size: 14px; }
+  .sec, .phero { scroll-margin-top: 12px; }
+  .view { padding-top: 14px; }
+  .phero { padding-top: 14px; } .phero .ptitle h1 { font-size: 30px; } .ptitle h1 { font-size: 30px; }
+  .phero .psum .pt, .pt, .lead { font-size: 15.5px; line-height: 1.55; }
+  .sech { gap: 4px 10px; } .sech h2 { font-size: 19px; }
+  .sec { margin-top: 28px; }
+  .card, .gcard, .pcard { padding: 16px 16px; }
+  .opening { font-size: 20px; }
+  
+  .g2, .g3, .g4, .g65, .gn, .tiles, .tiles5, .vgrid, .icards, .pgrid, .spotpair { grid-template-columns: minmax(0, 1fr); }
+  .tile { padding: 14px 14px 12px; }
+  .tile .v { font-size: 28px; white-space: normal; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
+  .tile .v small { white-space: normal; margin-left: 0; }
+  .vstrip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .icard .in { font-size: 26px; }
+  .gcard .gm { flex-wrap: wrap; gap: 8px 18px; }
+  .spot { padding: 20px 18px; } .spot .spq { font-size: 22px; } .spq.long { font-size: 17px; }
+  .spot.leader { padding-top: 44px; } .lchip { left: 18px; }
+  .qcard .q.xl, .q.xl { font-size: 18px; line-height: 1.4; }
+  .cbar { padding: 18px 16px; gap: 14px; } .cb-steps { flex-direction: column; align-items: stretch; } .cb-step, .cb-belt { min-width: 0; width: 100%; flex: none; }
+  .cb-belts { flex-direction: column; }
+  
+  [style*="grid-template-columns:240px 90px"] { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns:110px minmax(0,1fr)"] { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns:minmax(0,1fr) 190px"] { grid-template-columns: minmax(0, 1fr) 70px !important; }
+  [style*="grid-template-columns:minmax(0,1fr) 190px"] > :nth-child(n+3) { display: none; }
+  .hrole { grid-template-columns: 1fr; gap: 2px; }
+  .meas { grid-template-columns: 36px 1fr; } .meas > :nth-child(3) { grid-column: 2; }
+  .vchip { white-space: normal; }
+  select, input, textarea { max-width: 100%; } label.note, .note label { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+  .qcard, .qcard * , .qwho { overflow-wrap: anywhere; min-width: 0; } button.src, .src { white-space: normal; text-align: left; }
+  .chart, svg.chart { max-width: none; }
+  .svghint { display: block; }
+  
+  .dtw { margin-left: -2px; margin-right: -2px; }
+  .dt th, .dt td { padding-left: 8px; padding-right: 8px; }
+  .dt .num { padding-right: 10px; }
+  
+  #drawer { width: 100vw; }
+  #dhead { padding: 10px 12px; } #dbody { padding: 12px 14px 40px; }
+  #phead { padding: 8px 10px; gap: 8px; flex-wrap: wrap; }
+  #ptitle { font-size: 14px; }
+  #tsmount { padding: 0; }
+  #yoi-viewer { font-size: 13.5px; }
+}
+@media screen and (max-width: 360px) {
+  .brand .t { font-size: 19px; } .tile .v { font-size: 25px; } .phero .ptitle h1, .ptitle h1 { font-size: 26px; }
+  .vstrip { grid-template-columns: 1fr; }
+}
+
+
+
+@font-face{font-family:'Bricolage Grotesque Variable';font-style:normal;font-display:swap;font-weight:200 800;font-stretch:75% 100%;src:url(/fonts/bricolage-grotesque-latin-wdth-normal.woff2) format('woff2-variations')}
+@font-face{font-family:'Literata Variable';font-style:normal;font-display:swap;font-weight:200 900;src:url(/fonts/literata-latin-opsz-normal.woff2) format('woff2-variations')}
+html:scope,html:scope.light,html:scope.dark{
+  color-scheme: light;
+  --bg:oklch(0.955 0.004 95); --surface:oklch(0.995 0.002 95); --line:oklch(0.870 0.007 95); --grid:oklch(0.915 0.005 95); --soft:oklch(0.925 0.006 95);
+  --ink:oklch(0.150 0.004 95); --ink2:oklch(0.390 0.006 95); --ink3:oklch(0.405 0.006 95);
+  --s1:oklch(0.575 0.163 256);
+  --s2:oklch(0.671 0.175 41);
+  --s3:oklch(0.669 0.141 162);
+  --s4:oklch(0.764 0.161 75);
+  --s5:oklch(0.716 0.141 357);
+  --s6:oklch(0.529 0.180 142);
+  --s7:oklch(0.527 0.197 283);
+  --s8:oklch(0.623 0.191 25);
+  --s9:oklch(0.626 0.012 95);
+  --other:oklch(0.724 0.013 96);
+  --bad:oklch(0.503 0.179 28);
+  --good:oklch(0.510 0.123 155);
+  --h0:oklch(0.905 0.041 253);
+  --h1:oklch(0.812 0.079 253);
+  --h2:oklch(0.717 0.118 254);
+  --h3:oklch(0.622 0.161 255);
+  --h4:oklch(0.527 0.150 256);
+  --h5:oklch(0.433 0.128 257);
+  --h6:oklch(0.385 0.118 257);
+  --st-done:oklch(0.433 0.128 257);
+  --st-prog:oklch(0.622 0.161 255);
+  --st-open:oklch(0.812 0.079 253);
+  --ev-cited:oklch(0.433 0.128 257);
+  --ev-inf:oklch(0.717 0.118 254);
+  --ev-none:oklch(0.848 0.010 94);
+  --s1t:oklch(0.405 0.163 256);
+  --s2t:oklch(0.421 0.175 41);
+  --s3t:oklch(0.374 0.141 162);
+  --s4t:oklch(0.404 0.161 75);
+  --s5t:oklch(0.421 0.141 357);
+  --s7t:oklch(0.427 0.197 283);
+  --s8t:oklch(0.408 0.191 25);
+  --goodt:oklch(0.385 0.123 155);
+  --badt:oklch(0.423 0.179 28);
+
+color-scheme:light;--bg:#eef1f5;--surface:#ffffff;--line:#cbd5df;--grid:#dde4eb;--soft:#e4e9f0;--ink:#16283a;--ink2:#3a4d5f;--ink3:#566878;
+--sans:'Bricolage Grotesque Variable','Avenir Next','Segoe UI',system-ui,sans-serif;--serif:'Bricolage Grotesque Variable','Avenir Next','Segoe UI',system-ui,sans-serif}
+html,:scope{background:var(--bg)!important;color:var(--ink)}
+a:not([class]){color:var(--ink);text-decoration-color:var(--line);text-underline-offset:.2em}
+:scope{font-family:var(--sans)}
+p,blockquote,.q,.lede,.opening,li{font-family:'Literata Variable',Georgia,serif}
+.top .brand,.top .ctl,#theme,#btn-pdf,#b-pdf,#yoi-viewer,a[href$=".pdf"]{display:none!important}
+[data-ev],[data-tile],[data-go],[data-proj],[data-jump],[data-verb],[data-report],[data-sm-dl],[data-act],a{cursor:default!important}
+a{color:inherit!important;text-decoration:none!important}
+#drawer,#veil,#pdsec,.icard .ig,.src[data-ev],.src[data-jump],[data-tile]>.more{display:none!important}
+.src[data-proj],.src[data-go]{background:none!important;border:0!important;padding:0!important;box-shadow:none!important;font:inherit!important;color:inherit!important;text-decoration:none!important;cursor:default!important}
+.tiles{align-items:stretch!important}
+label:has(#names){display:none!important}
+.rlabel:has(+ label #names){display:none!important}
+.top{position:static!important;background:var(--bg)!important;border-bottom:1px solid var(--line)!important;box-shadow:none!important}
+.top-in{padding-inline:0!important}
+
+@page {  
+       }
+body:not(.internal) [data-pubhide] { display: none !important; }
+body:not(.internal) #dbody img, body:not(.internal) [data-report="timesheet"], body:not(.internal) #btn-pdf, body:not(.internal) #pdl { display: none !important; }
+body:not(.internal) .pubnote { display: block; }
+.pubnote { display: none; }/* These tokens apply inside the original figures, independently of the report navigation. */
+:scope {
+  --bg: #f7f7f0; --surface: #fbfcf6; --soft: #e9ede3; --grid: #d6deda;
+  --ink: #172c36; --ink2: #344952; --ink3: #475b62; --line: #bdc8c5;
+  --s1: #27688a; --s2: #aa613f; --s3: #327f75; --s4: #987329;
+  --s5: #934e6c; --s6: #5a793d; --s7: #6a6399; --s8: #9f4b39; --s9: #627680;
+  --sans: Bricolage, Arial, sans-serif; --serif: Literata, Georgia, serif; --r: 2px;
+  font-family: var(--sans); color: var(--ink); background: var(--bg);
+}
+.sec .sech h2 { font: 650 clamp(26px,3.3vw,46px)/1.13 var(--sans); letter-spacing: -.04em; }
+.sec .lead { font: 400 clamp(16px,1.3vw,20px)/1.6 var(--serif); max-width: 70ch; }
+.sec .tiles .tile, .sec .icards .icard {
+  background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--tc,var(--s1)); border-radius: 2px;
+}
+.sec .tile .v, .sec .icard .in { color: var(--ink); font-family: var(--serif); font-weight: 550; }
+.sec .card, .sec .pcard { border-radius: 2px; }
+.sec .why2[hidden] { display: none !important; }
+#serSel { max-width: 100%; margin: .5rem 0 !important; padding: .45rem; color: var(--ink); }
+.sec .noprint:has(#serSel) { display: block !important; }
+}</style><section class="report-block"><div class="report-exhibit" data-page="summary"><div class="sec" style="--i: 1;"><div class="sech"><h2>Key insights</h2></div>
+    <p class="lead keyline">Work delivered against the five 2026 goals and three commitments. 16 colleagues wrote full reviews of it, and 76 people left feedback in chats.</p>
+    <div class="tiles"><div class="tile tbtn" style="--tc:var(--s3)" data-tile="1" aria-label="customer responses to me · average 9.8 / 10"><div class="v">6<small> Medallia</small> &#160;100<small> NPS</small></div><div class="l">customer responses to me · average <b>9.8</b> / 10</div><div class="viz"><svg data-time-axis="newest-first" aria-label="customer responses to me · average 9.8 / 10" viewBox="0 0 144 30" width="100%" role="img"><g transform="translate(144 0) scale(-1 1)"><g title="Judith, a business unit · 29 May 2026 · AI compliance platform AI traceability platform AI Powered V&V Compliance · Overall 10 / 10 · Understanding business needs 9 · On-time delivery 10 · Communication 10 · Meeting business needs 10 · “The collaboration and communication with Datta and Sundaresan was very good. Several feedbacks that I gave, which were originally not part of the plan, were…”"><circle cx="12" cy="15" r="10" style="fill:color-mix(in oklch, var(--s3) 30%, var(--surface));stroke:var(--s3);stroke-width:2" /><text transform=" translate(24 0) scale(-1 1)" x="12" y="19" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">10</text></g><g title="Manu, a business unit · 2 Jun 2026 · AI compliance platform AI traceability platform AI Powered V&V Compliance · Overall 10 / 10 · Understanding business needs 9 · On-time delivery 9 · Communication 9 · Meeting business needs 9 · “Extendable framework which can be customizable as per Project needs.”"><circle cx="36" cy="15" r="10" style="fill:color-mix(in oklch, var(--s3) 30%, var(--surface));stroke:var(--s3);stroke-width:2" /><text transform=" translate(72 0) scale(-1 1)" x="36" y="19" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">10</text></g><g title="Eby, a business unit · 11 Jun 2026 · the engineering group: AI skills at scale · Overall 9 / 10 · Understanding business needs 9 · On-time delivery 9 · Communication 9 · Meeting business needs 9 · “Hands-on, relevant, workshop type with good real time activities instead of just lectures. The use of AI tools for learning 62304 was also great.”"><circle cx="60" cy="15" r="10" style="fill:color-mix(in oklch, var(--s3) 30%, var(--surface));stroke:var(--s3);stroke-width:2" /><text transform=" translate(120 0) scale(-1 1)" x="60" y="19" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">9</text></g><g title="Claudia, North America Analytics · 27 Aug 2026 · AI upskilling programme: AI initiatives and software code modernization · Overall 10 / 10 · Understanding business needs 10 · On-time delivery 10 · Communication 10 · Meeting business needs 10 · “Datta Vellal has been a great partner with the North American Analytics Community. This is a series that is hosted for 120-150 analyst throughout North…”"><circle cx="84" cy="15" r="10" style="fill:color-mix(in oklch, var(--s3) 30%, var(--surface));stroke:var(--s3);stroke-width:2" /><text transform=" translate(168 0) scale(-1 1)" x="84" y="19" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">10</text></g><g title="Isaias, a business unit AI requirements checker · 28 Oct 2026 · AI requirements checker for the Spectra-wave product · Overall 10 / 10 · Understanding business needs 10 · On-time delivery 10 · Communication 10 · Meeting business needs 10 · “The output highly and positively impacted the project”"><circle cx="108" cy="15" r="10" style="fill:color-mix(in oklch, var(--s3) 30%, var(--surface));stroke:var(--s3);stroke-width:2" /><text transform=" translate(216 0) scale(-1 1)" x="108" y="19" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">10</text></g><g title="Feras, PD-US · 18 Nov 2026 · AI defect-triage assistant - Ultrasound Defect Triaging · Overall 10 / 10 · Understanding business needs 10 · On-time delivery 10 · Communication 10 · Meeting business needs 10 · “Overall, we have been extremely satisfied with the the engineering group team's support on AI defect-triage assistant. They demonstrated an excellent understanding of our needs,…”"><circle cx="132" cy="15" r="10" style="fill:color-mix(in oklch, var(--s3) 30%, var(--surface));stroke:var(--s3);stroke-width:2" /><text transform=" translate(264 0) scale(-1 1)" x="132" y="19" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">10</text></g></g></svg><div class="legend"><span><i style="background:var(--s3);"></i>Overall score 9 or 10, one dot per response</span></div></div></div><div class="tile tbtn" style="--tc:var(--s7)" data-tile="1" aria-label=" estimated by the AI defect-triage assistant KPI dashboard, to 19 November Estimate"><div class="v">505<small> h saved</small></div><div class="l"><span class="hl2"></span> estimated by the AI defect-triage assistant KPI dashboard, to 19 November <span class="chip Estimate" title="An approximate, stated or modelled figure">Estimate</span></div><div class="viz"><svg aria-label="estimated by the AI defect-triage assistant KPI dashboard, to 19 November Estimate" viewBox="0 0 240 70" width="100%" role="img"><circle title="Dashboard solution · 2,946 successful events" cx="60" cy="35" r="14.654808084720864" fill="var(--s7)" fill-opacity=".85" /><circle title="AI-Triage Agent · 12,204 recorded agent runs" cx="170" cy="35" r="29.82736327602559" fill="var(--s7)" fill-opacity=".3" stroke="var(--s7)" /></svg><div class="legend"><span><i style="background:var(--s7);border-radius:50%;opacity:.85"></i>Dashboard solution, 2,946 successful events</span><span><i style="background:color-mix(in srgb, var(--s7) 30%, transparent);border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--s7)"></i>AI-Triage Agent, 12,204 agent runs (outline)</span></div></div></div><div class="tile tbtn" style="--tc:var(--s5)" data-tile="1" aria-label="AI requirements checker checked 2,294 requirements at a business unit Estimate"><div class="v">18<small> weeks, adopter's estimate</small></div><div class="l">AI requirements checker checked 2,294 requirements at a business unit <span class="chip Estimate" title="An approximate, stated or modelled figure">Estimate</span></div><div class="viz"><svg aria-label="AI requirements checker checked 2,294 requirements at a business unit Estimate" viewBox="0 0 240 56" width="100%" role="img"><g title="One person, 10 minutes per requirement · 22,940 minutes · about 9.5 weeks"><rect x="0" y="4" width="126.66666666666667" height="18" fill="var(--s5)" fill-opacity=".45" /><text x="122.66666666666667" y="17" text-anchor="end" style="font-size:11px;font-weight:700">9.5</text></g><g title="Adopter's estimate · Several engineers plus extra time for consistent work · 18 weeks"><rect x="0" y="30" width="240" height="18" fill="var(--s5)" /><text x="236" y="43" text-anchor="end" style="font-size:11px;font-weight:700;fill:var(--ink)">18</text></g></svg><div class="legend"><span><i style="background:color-mix(in srgb, var(--s5) 45%, transparent);border-radius:50%;"></i>One person at 10 minutes each (faint)</span><span><i style="background:var(--s5);border-radius:50%;"></i>Adopter's estimate</span></div></div></div><div class="tile tbtn" style="--tc:var(--s6)" data-tile="1" aria-label="Agentic and rule-based evidence automation in the product quality review EstimateWidely used by-products: AI requirements checker, AI traceability platform, AI assessment tool. A deep-dive assessment: 2 months to 2 weeks.AI requirements checker and AI assessment tool made automation its own product quality review activity, budgeted for 2027.Sponsor and endorser: Steve, Chief Patient Quality &amp; Safety Officer. His AI requirements checker post reached 29,102 his post"><div class="v">60<small>% less SME effort</small></div><div class="l">Agentic and rule-based evidence automation in the product quality review <span class="chip Estimate" title="An approximate, stated or modelled figure">Estimate</span><br>Widely used by-products: <b>AI requirements checker, AI traceability platform, AI assessment tool</b>. A deep-dive assessment: <b>2 months to 2 weeks</b>.<br>AI requirements checker and AI assessment tool made <b>automation</b> its own product quality review activity, budgeted for 2027.<br>Sponsor and endorser: <b>Steve, Chief Patient Quality &amp; Safety Officer</b>. His AI requirements checker post reached 29,102 </div><div class="viz"><div class="note" style="margin-bottom:4px">1,011 h booked to product quality review, 52% of the year, by activity</div><svg aria-label="Agentic and rule-based evidence automation in the product quality review EstimateWidely used by-products: AI requirements checker, AI traceability platform, AI assessment tool. A deep-dive assessment: 2 months to 2 weeks.AI requirements checker and AI assessment tool made automation its own product quality review activity, budgeted for 2027.Sponsor and endorser: Steve, Chief Patient Quality & Safety Officer. His AI requirements checker post reached 29,102" viewBox="0 0 240 22" width="100%" role="img"><rect title="a business unit · 557 h · 55%" x="0.0" y="3" width="131.2" height="16" fill="var(--s6)" /><rect title="Ultrasound · 324 h · 32%" x="132.2" y="3" width="75.9" height="16" fill="color-mix(in srgb, var(--s6) 65%, transparent)" /><rect title="Automation · 126 h · 12%" x="209.1" y="3" width="28.9" height="16" fill="color-mix(in srgb, var(--s6) 40%, transparent)" /><rect title="a business unit · 4 h · 0%" x="239.1" y="3" width="0.0" height="16" fill="color-mix(in srgb, var(--s6) 22%, transparent)" /></svg><div class="legend"><span><i style="background:var(--s6);border-radius:50%;"></i>a business unit 557 h</span><span><i style="background:color-mix(in srgb, var(--s6) 65%, transparent);border-radius:50%;"></i>Ultrasound 324 h</span><span><i style="background:color-mix(in srgb, var(--s6) 40%, transparent);border-radius:50%;"></i>Automation 126 h</span><span><i style="background:color-mix(in srgb, var(--s6) 22%, transparent);border-radius:50%;"></i>a business unit 4 h</span></div></div></div><div class="tile tbtn" style="--tc:var(--s4)" data-tile="1" aria-label="funding, budget and business-paid work brought in" data-pubhide=""><div class="v">an undisclosed amount</div><div class="l">funding, budget and business-paid work brought in</div><div class="viz"><svg aria-label="funding, budget and business-paid work brought in" viewBox="0 0 120 22" width="100%" role="img"><rect title="AI traceability platform: approved AI compliance platform project budget · an undisclosed amount · 41%" x="0.0" y="3" width="48.6" height="16" fill="var(--s1)" /><rect title="AI defect-triage assistant: AI compliance platform funding · an undisclosed amount · 31%" x="49.6" y="3" width="35.8" height="16" fill="var(--s7)" /><rect title="Philips University: revised 2026 Software Excellence learning budget · an undisclosed amount · 14%" x="86.4" y="3" width="16.0" height="16" fill="var(--s3)" /><rect title="MR use-case exploration: engagement the business offered to pay for (about) · an undisclosed amount · 14%" x="103.5" y="3" width="15.5" height="16" fill="var(--s8)" /></svg><div class="legend"><span><i style="background:var(--s1);border-radius:50%;"></i>AI traceability platform</span><span><i style="background:var(--s7);border-radius:50%;"></i>AI defect-triage assistant</span><span><i style="background:var(--s3);border-radius:50%;"></i>Philips University</span><span><i style="background:var(--s8);border-radius:50%;"></i>MR use case (about)</span></div></div></div><div class="tile tbtn" style="--tc:var(--s1)" data-tile="1" aria-label=" of my time booked to project teams EstimateUtilization: 1,775 billed of 1,879 worked hours; 1,959 h booked in 47 weeks"><div class="v">94.5<small>%</small></div><div class="l"><span class="hl2"></span> of my time booked to project teams <span class="chip Estimate" title="An approximate, stated or modelled figure">Estimate</span><br>Utilization: 1,775 billed of 1,879 worked hours; 1,959 h booked in 47 weeks</div><div class="viz"><svg data-time-axis="newest-first" viewBox="0 0 120 34" width="100%" height="34" preserveAspectRatio="none" aria-hidden="true"><g transform="translate(120 0) scale(-1 1)"><rect x="0.00" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="2.57" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="5.15" y="19.33" width="1.57" height="14.67" fill="var(--s1)" /><rect x="7.72" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="10.30" y="26.67" width="1.57" height="7.33" fill="var(--s1)" /><rect x="12.87" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="15.45" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="18.02" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="20.60" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="23.17" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="25.74" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="28.32" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="30.89" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="33.47" y="14.29" width="1.57" height="19.71" fill="var(--s1)" /><rect x="36.04" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="38.62" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="41.19" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="43.77" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="46.34" y="26.67" width="1.57" height="7.33" fill="var(--s1)" /><rect x="48.91" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="51.49" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="54.06" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="56.64" y="19.33" width="1.57" height="14.67" fill="var(--s1)" /><rect x="59.21" y="13.83" width="1.57" height="20.17" fill="var(--s1)" /><rect x="61.79" y="10.63" width="1.57" height="23.38" fill="var(--s1)" /><rect x="64.36" y="9.25" width="1.57" height="24.75" fill="var(--s1)" /><rect x="66.94" y="15.21" width="1.57" height="18.79" fill="var(--s1)" /><rect x="69.51" y="7.88" width="1.57" height="26.13" fill="var(--s1)" /><rect x="72.09" y="26.67" width="1.57" height="7.33" fill="var(--s1)" /><rect x="74.66" y="17.04" width="1.57" height="16.96" fill="var(--s1)" /><rect x="77.23" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="79.81" y="11.54" width="1.57" height="22.46" fill="var(--s1)" /><rect x="82.38" y="11.08" width="1.57" height="22.92" fill="var(--s1)" /><rect x="84.96" y="19.33" width="1.57" height="14.67" fill="var(--s1)" /><rect x="87.53" y="11.54" width="1.57" height="22.46" fill="var(--s1)" /><rect x="90.11" y="11.54" width="1.57" height="22.46" fill="var(--s1)" /><rect x="92.68" y="1.00" width="1.57" height="33.00" fill="var(--s1)" /><rect x="95.26" y="1.00" width="1.57" height="33.00" fill="var(--s1)" /><rect x="97.83" y="11.54" width="1.57" height="22.46" fill="var(--s1)" /><rect x="100.40" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="102.98" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="105.55" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="108.13" y="13.83" width="1.57" height="20.17" fill="var(--s1)" /><rect x="110.70" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="113.28" y="26.67" width="1.57" height="7.33" fill="var(--s1)" /><rect x="115.85" y="15.67" width="1.57" height="18.33" fill="var(--s1)" /><rect x="118.43" y="19.33" width="1.57" height="14.67" fill="var(--s1)" /><rect title="Week of 1 Jan · 40 h booked · 6 impact entries" x="-0.50" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 8 Jan · 40 h booked · 6 impact entries" x="2.07" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 15 Jan · 32 h booked · 6 impact entries" x="4.65" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 22 Jan · 40 h booked · 8 impact entries" x="7.22" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 29 Jan · 16 h booked · 7 impact entries" x="9.80" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 1 Feb · 40 h booked · 11 impact entries" x="12.37" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 8 Feb · 40 h booked · 11 impact entries" x="14.95" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 15 Feb · 40 h booked · 10 impact entries" x="17.52" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 22 Feb · 40 h booked · 12 impact entries" x="20.10" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 1 Mar · 40 h booked · 10 impact entries" x="22.67" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 8 Mar · 40 h booked · 12 impact entries" x="25.24" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 15 Mar · 40 h booked · 11 impact entries" x="27.82" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 22 Mar · 40 h booked · 12 impact entries" x="30.39" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 29 Mar · 43 h booked · 11 impact entries" x="32.97" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 5 Apr · 40 h booked · 12 impact entries" x="35.54" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 12 Apr · 40 h booked · 13 impact entries" x="38.12" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 19 Apr · 40 h booked · 11 impact entries" x="40.69" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 22 Apr · 40 h booked · 6 impact entries" x="43.27" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 29 Apr · 16 h booked · 7 impact entries" x="45.84" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 1 May · 40 h booked · 7 impact entries" x="48.41" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 8 May · 40 h booked · 8 impact entries" x="50.99" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 15 May · 40 h booked · 8 impact entries" x="53.56" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 22 May · 32 h booked · 8 impact entries" x="56.14" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 29 May · 44 h booked · 9 impact entries" x="58.71" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 5 Jun · 51 h booked · 9 impact entries" x="61.29" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 8 Jun · 54 h booked · 5 impact entries" x="63.86" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 15 Jun · 41 h booked · 5 impact entries" x="66.44" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 22 Jun · 57 h booked · 5 impact entries" x="69.01" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 29 Jun · 16 h booked · 6 impact entries" x="71.59" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 1 Jul · 37 h booked · 6 impact entries" x="74.16" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 8 Jul · 40 h booked · 7 impact entries" x="76.73" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 15 Jul · 49 h booked · 7 impact entries" x="79.31" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 22 Jul · 50 h booked · 7 impact entries" x="81.88" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 29 Jul · 32 h booked · 8 impact entries" x="84.46" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 1 Aug · 49 h booked · 6 impact entries" x="87.03" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 8 Aug · 49 h booked · 7 impact entries" x="89.61" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 22 Aug · 72 h booked · 6 impact entries" x="92.18" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 22 Aug · 72 h booked · 7 impact entries" x="94.76" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 8 Sept · 49 h booked · 7 impact entries" x="97.33" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 15 Sept · 40 h booked · 7 impact entries" x="99.90" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 22 Sept · 40 h booked · 6 impact entries" x="102.48" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 29 Sept · 40 h booked · 7 impact entries" x="105.05" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 15 Oct · 44 h booked · 6 impact entries" x="107.63" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 22 Oct · 40 h booked · 5 impact entries" x="110.20" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 29 Oct · 16 h booked · 6 impact entries" x="112.78" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 1 Nov · 40 h booked · 6 impact entries" x="115.35" y="0" width="2.57" height="34" fill="transparent" /><rect title="Week of 8 Nov · 32 h booked · 8 impact entries" x="117.93" y="0" width="2.57" height="34" fill="transparent" /></g></svg><div class="legend"><span><i style="background:var(--s1);"></i>Hours booked, one bar per weekly report</span></div></div></div><div class="tile tbtn" style="--tc:var(--s2)" data-tile="1" aria-label="Delivered to 1,144 learners; 266 ratings, NPS 55."><div class="v">33<small> sessions</small> &#160;8.60<small> / 10</small></div><div class="l">Delivered to 1,144 learners; 266 ratings, NPS 55.</div><div class="viz"><svg aria-label="Delivered to 1,144 learners; 266 ratings, NPS 55." viewBox="0 0 156 36" width="100%" role="img" style="max-width:312px"><rect title="12 Nov 2026 · Office 365 Copilot · 63 participants · Satisfaction 8.42 · AI upskilling programme led" x="0" y="0" width="9" height="9" rx="2" fill="var(--s3)" /><rect title="4 Nov 2026 · 62304 Standard, why is it es · 58 participants · Satisfaction 7.7 · AI upskilling programme led" x="12" y="0" width="9" height="9" rx="2" fill="var(--s3)" /><rect title="7 Oct 2026 · Context engineering · 15 participants · Satisfaction 8.73 · AI upskilling programme led" x="24" y="0" width="9" height="9" rx="2" fill="var(--s3)" /><rect title="5 Oct 2026 · Office 365 Copilot · 32 participants · Satisfaction 10 · BU requested" x="36" y="0" width="9" height="9" rx="2" fill="var(--s4)" /><rect title="16 Sept 2026 · Office 365 Copilot · 28 participants · Satisfaction 8.38 · PU led" x="48" y="0" width="9" height="9" rx="2" fill="var(--s1)" /><rect title="9 Sept 2026 · 62304 Standard, why is it es · 29 participants · Satisfaction 8 · PU led" x="60" y="0" width="9" height="9" rx="2" fill="var(--s1)" /><rect title="3 Sept 2026 · a business unit series · 41 participants · Satisfaction 8 · AI upskilling programme led" x="72" y="0" width="9" height="9" rx="2" fill="var(--s3)" /><rect title="1 Sept 2026 · a business unit series · 45 participants · Satisfaction 8.17 · AI upskilling programme led" x="84" y="0" width="9" height="9" rx="2" fill="var(--s3)" /><rect title="27 Aug 2026 · a business unit series · 46 participants · Satisfaction 7.21 · BU requested" x="96" y="0" width="9" height="9" rx="2" fill="var(--s4)" /><rect title="27 Aug 2026 · North America Analytics call · 84 participants · Satisfaction 10 · AI upskilling programme led" x="108" y="0" width="9" height="9" rx="2" fill="var(--s3)" /><rect title="25 Aug 2026 · a business unit series · 50 participants · Satisfaction 8.15 · BU requested" x="120" y="0" width="9" height="9" rx="2" fill="var(--s4)" /><rect title="20 Aug 2026 · DORA · 27 participants · Satisfaction 9 · BU requested" x="132" y="0" width="9" height="9" rx="2" fill="var(--s4)" /><rect title="18 Aug 2026 · IT Connect · 56 participants · Satisfaction 10 · BU requested" x="144" y="0" width="9" height="9" rx="2" fill="var(--s4)" /><rect title="12 Aug 2026 · Context engineering · 27 participants · Satisfaction 8.71 · PU led" x="0" y="12" width="9" height="9" rx="2" fill="var(--s1)" /><rect title="5 Aug 2026 · Copilot coding and agents · 20 participants · Satisfaction 9.3 · BU requested" x="12" y="12" width="9" height="9" rx="2" fill="var(--s4)" /><rect title="22 Jul 2026 · Copilot coding and agents · 39 participants · Satisfaction 9.1 · BU requested" x="24" y="12" width="9" height="9" rx="2" fill="var(--s4)" /><rect title="26 Jun 2026 · AI traceability platform presented to the PSQ c · 0 participants · No form score · Event or community" x="36" y="12" width="9" height="9" rx="2" fill="var(--s5, var(--s9))" /><rect title="25 Jun 2026 · North America Analytics call · 101 participants · Satisfaction 9.46 · AI upskilling programme led" x="48" y="12" width="9" height="9" rx="2" fill="var(--s3)" /><rect title="25 Jun 2026 · IGT-AI Day: AI requirements checker, AI Harn · 95 participants · No form score · AI upskilling programme led" x="60" y="12" width="9" height="9" rx="2" fill="var(--s3)" /><rect title="11 Jun 2026 · Office 365 Copilot · 10 participants · Satisfaction 9.33 · PU led" x="72" y="12" width="9" height="9" rx="2" fill="var(--s1)" /><rect title="21 May 2026 · 62304 Standard, why is it es · 21 participants · Satisfaction 9.14 · PU led" x="84" y="12" width="9" height="9" rx="2" fill="var(--s1)" /><rect title="14 May 2026 · Context engineering · 10 participants · Satisfaction 9.33 · PU led" x="96" y="12" width="9" height="9" rx="2" fill="var(--s1)" /><rect title="23 Apr 2026 · Innovation Impact Week: Insi · 0 participants · No form score · Event or community" x="108" y="12" width="9" height="9" rx="2" fill="var(--s5, var(--s9))" /><rect title="22 Apr 2026 · DORA · 0 participants · No form score · Event or community" x="120" y="12" width="9" height="9" rx="2" fill="var(--s5, var(--s9))" /><rect title="20 Apr 2026 · Innovation Impact Week: From · 0 participants · No form score · Event or community" x="132" y="12" width="9" height="9" rx="2" fill="var(--s5, var(--s9))" /><rect title="26 Mar 2026 · North America Analytics call · 82 participants · Satisfaction 8.87 · AI upskilling programme led" x="144" y="12" width="9" height="9" rx="2" fill="var(--s3)" /><rect title="18 Mar 2026 · Office 365 Copilot · 16 participants · Satisfaction 9.17 · PU led" x="0" y="24" width="9" height="9" rx="2" fill="var(--s1)" /><rect title="11 Mar 2026 · 62304 Standard, why is it es · 18 participants · Satisfaction 8.91 · PU led" x="12" y="24" width="9" height="9" rx="2" fill="var(--s1)" /><rect title="4 Mar 2026 · Context engineering · 21 participants · Satisfaction 8.6 · PU led" x="24" y="24" width="9" height="9" rx="2" fill="var(--s1)" /><rect title="18 Feb 2026 · Golden traceability · 80 participants · No form score · PU led" x="36" y="24" width="9" height="9" rx="2" fill="var(--s1)" /><rect title="11 Feb 2026 · Tech debt with AI · 6 participants · Satisfaction 8.67 · PU led" x="48" y="24" width="9" height="9" rx="2" fill="var(--s1)" /><rect title="4 Feb 2026 · DORA · 9 participants · Satisfaction 8.9 · PU led" x="60" y="24" width="9" height="9" rx="2" fill="var(--s1)" /><rect title="28 Jan 2026 · Copilot coding and agents · 15 participants · Satisfaction 7.5 · PU led" x="72" y="24" width="9" height="9" rx="2" fill="var(--s1)" /></svg><div class="legend"><span><i style="background:var(--s1);"></i>PU led</span><span><i style="background:var(--s3);"></i>AI upskilling programme led</span><span><i style="background:var(--s4);"></i>BU requested</span><span><i style="background:var(--s5, var(--s9));"></i>Event or community</span></div><hr style="border:0;border-top:1px solid color-mix(in oklch, var(--ink) 12%, transparent);margin:12px 0 2px"><svg aria-label="Delivered to 1,144 learners; 266 ratings, NPS 55." viewBox="0 0 120 26" width="100%" role="img"><rect title="Promoters, rated 9 or 10 · 164 of 266 ratings · 61.7% · Across 23 sessions with a rating form" x="0.0" y="4" width="73.0" height="18" fill="var(--s7)" /><rect title="Passives, rated 7 or 8 · 85 of 266 ratings · 32.0% · Across 23 sessions with a rating form" x="74.0" y="4" width="37.3" height="18" fill="var(--s5)" /><rect title="Detractors, rated 6 or below · 17 of 266 ratings · 6.4% · Across 23 sessions with a rating form" x="112.3" y="4" width="6.7" height="18" fill="var(--s9)" /></svg><div class="legend"><span><i style="background:var(--s7);"></i>Promoters 164 (62%)</span><span><i style="background:var(--s5);"></i>Passives 85</span><span><i style="background:var(--s9);"></i>Detractors 17</span></div></div></div></div></div></div><details class="chart-notes"><summary>Read chart notes (101)</summary><ul><li>Feras, PD-US · 18 Nov 2026 · AI defect-triage assistant - Ultrasound Defect Triaging · Overall 10 / 10 · Understanding business needs 10 · On-time delivery 10 · Communication 10 · Meeting business needs 10 · “Overall, we have been extremely satisfied with the the engineering group team&#39;s support on AI defect-triage assistant. They demonstrated an excellent understanding of our needs,…”</li><li>12 Nov 2026 · Office 365 Copilot · 63 participants · Satisfaction 8.42 · AI upskilling programme led</li><li>Week of 8 Nov · 32 h booked · 8 impact entries</li><li>4 Nov 2026 · 62304 Standard, why is it es · 58 participants · Satisfaction 7.7 · AI upskilling programme led</li><li>Week of 1 Nov · 40 h booked · 6 impact entries</li><li>Week of 29 Oct · 16 h booked · 6 impact entries</li><li>Isaias, a business unit AI requirements checker · 28 Oct 2026 · AI requirements checker for the Spectra-wave product · Overall 10 / 10 · Understanding business needs 10 · On-time delivery 10 · Communication 10 · Meeting business needs 10 · “The output highly and positively impacted the project”</li><li>Week of 22 Oct · 40 h booked · 5 impact entries</li><li>Week of 15 Oct · 44 h booked · 6 impact entries</li><li>7 Oct 2026 · Context engineering · 15 participants · Satisfaction 8.73 · AI upskilling programme led</li><li>5 Oct 2026 · Office 365 Copilot · 32 participants · Satisfaction 10 · BU requested</li><li>Week of 29 Sept · 40 h booked · 7 impact entries</li><li>Week of 22 Sept · 40 h booked · 6 impact entries</li><li>16 Sept 2026 · Office 365 Copilot · 28 participants · Satisfaction 8.38 · PU led</li><li>Week of 15 Sept · 40 h booked · 7 impact entries</li><li>9 Sept 2026 · 62304 Standard, why is it es · 29 participants · Satisfaction 8 · PU led</li><li>Week of 8 Sept · 49 h booked · 7 impact entries</li><li>3 Sept 2026 · a business unit series · 41 participants · Satisfaction 8 · AI upskilling programme led</li><li>1 Sept 2026 · a business unit series · 45 participants · Satisfaction 8.17 · AI upskilling programme led</li><li>Claudia, North America Analytics · 27 Aug 2026 · AI upskilling programme: AI initiatives and software code modernization · Overall 10 / 10 · Understanding business needs 10 · On-time delivery 10 · Communication 10 · Meeting business needs 10 · “Datta Vellal has been a great partner with the North American Analytics Community. This is a series that is hosted for 120-150 analyst throughout North…”</li><li>27 Aug 2026 · a business unit series · 46 participants · Satisfaction 7.21 · BU requested</li><li>27 Aug 2026 · North America Analytics call · 84 participants · Satisfaction 10 · AI upskilling programme led</li><li>25 Aug 2026 · a business unit series · 50 participants · Satisfaction 8.15 · BU requested</li><li>Week of 22 Aug · 72 h booked · 6 impact entries</li><li>Week of 22 Aug · 72 h booked · 7 impact entries</li><li>20 Aug 2026 · DORA · 27 participants · Satisfaction 9 · BU requested</li><li>18 Aug 2026 · IT Connect · 56 participants · Satisfaction 10 · BU requested</li><li>12 Aug 2026 · Context engineering · 27 participants · Satisfaction 8.71 · PU led</li><li>Week of 8 Aug · 49 h booked · 7 impact entries</li><li>5 Aug 2026 · Copilot coding and agents · 20 participants · Satisfaction 9.3 · BU requested</li><li>Week of 1 Aug · 49 h booked · 6 impact entries</li><li>Week of 29 Jul · 32 h booked · 8 impact entries</li><li>Week of 22 Jul · 50 h booked · 7 impact entries</li><li>22 Jul 2026 · Copilot coding and agents · 39 participants · Satisfaction 9.1 · BU requested</li><li>Week of 15 Jul · 49 h booked · 7 impact entries</li><li>Week of 8 Jul · 40 h booked · 7 impact entries</li><li>Week of 1 Jul · 37 h booked · 6 impact entries</li><li>Week of 29 Jun · 16 h booked · 6 impact entries</li><li>26 Jun 2026 · AI traceability platform presented to the PSQ c · 0 participants · No form score · Event or community</li><li>25 Jun 2026 · North America Analytics call · 101 participants · Satisfaction 9.46 · AI upskilling programme led</li><li>25 Jun 2026 · IGT-AI Day: AI requirements checker, AI Harn · 95 participants · No form score · AI upskilling programme led</li><li>Week of 22 Jun · 57 h booked · 5 impact entries</li><li>Week of 15 Jun · 41 h booked · 5 impact entries</li><li>Eby, a business unit · 11 Jun 2026 · the engineering group: AI skills at scale · Overall 9 / 10 · Understanding business needs 9 · On-time delivery 9 · Communication 9 · Meeting business needs 9 · “Hands-on, relevant, workshop type with good real time activities instead of just lectures. The use of AI tools for learning 62304 was also great.”</li><li>11 Jun 2026 · Office 365 Copilot · 10 participants · Satisfaction 9.33 · PU led</li><li>Week of 8 Jun · 54 h booked · 5 impact entries</li><li>Week of 5 Jun · 51 h booked · 9 impact entries</li><li>Manu, a business unit · 2 Jun 2026 · AI compliance platform AI traceability platform AI Powered V&amp;V Compliance · Overall 10 / 10 · Understanding business needs 9 · On-time delivery 9 · Communication 9 · Meeting business needs 9 · “Extendable framework which can be customizable as per Project needs.”</li><li>Judith, a business unit · 29 May 2026 · AI compliance platform AI traceability platform AI Powered V&amp;V Compliance · Overall 10 / 10 · Understanding business needs 9 · On-time delivery 10 · Communication 10 · Meeting business needs 10 · “The collaboration and communication with Datta and Sundaresan was very good. Several feedbacks that I gave, which were originally not part of the plan, were…”</li><li>Week of 29 May · 44 h booked · 9 impact entries</li><li>Week of 22 May · 32 h booked · 8 impact entries</li><li>21 May 2026 · 62304 Standard, why is it es · 21 participants · Satisfaction 9.14 · PU led</li><li>Week of 15 May · 40 h booked · 8 impact entries</li><li>14 May 2026 · Context engineering · 10 participants · Satisfaction 9.33 · PU led</li><li>Week of 8 May · 40 h booked · 8 impact entries</li><li>Week of 1 May · 40 h booked · 7 impact entries</li><li>Week of 29 Apr · 16 h booked · 7 impact entries</li><li>23 Apr 2026 · Innovation Impact Week: Insi · 0 participants · No form score · Event or community</li><li>Week of 22 Apr · 40 h booked · 6 impact entries</li><li>22 Apr 2026 · DORA · 0 participants · No form score · Event or community</li><li>20 Apr 2026 · Innovation Impact Week: From · 0 participants · No form score · Event or community</li><li>Week of 19 Apr · 40 h booked · 11 impact entries</li><li>Week of 12 Apr · 40 h booked · 13 impact entries</li><li>Week of 5 Apr · 40 h booked · 12 impact entries</li><li>Week of 29 Mar · 43 h booked · 11 impact entries</li><li>26 Mar 2026 · North America Analytics call · 82 participants · Satisfaction 8.87 · AI upskilling programme led</li><li>Week of 22 Mar · 40 h booked · 12 impact entries</li><li>18 Mar 2026 · Office 365 Copilot · 16 participants · Satisfaction 9.17 · PU led</li><li>Week of 15 Mar · 40 h booked · 11 impact entries</li><li>11 Mar 2026 · 62304 Standard, why is it es · 18 participants · Satisfaction 8.91 · PU led</li><li>Week of 8 Mar · 40 h booked · 12 impact entries</li><li>4 Mar 2026 · Context engineering · 21 participants · Satisfaction 8.6 · PU led</li><li>Week of 1 Mar · 40 h booked · 10 impact entries</li><li>Week of 22 Feb · 40 h booked · 12 impact entries</li><li>18 Feb 2026 · Golden traceability · 80 participants · No form score · PU led</li><li>Week of 15 Feb · 40 h booked · 10 impact entries</li><li>11 Feb 2026 · Tech debt with AI · 6 participants · Satisfaction 8.67 · PU led</li><li>Week of 8 Feb · 40 h booked · 11 impact entries</li><li>4 Feb 2026 · DORA · 9 participants · Satisfaction 8.9 · PU led</li><li>Week of 1 Feb · 40 h booked · 11 impact entries</li><li>Week of 29 Jan · 16 h booked · 7 impact entries</li><li>28 Jan 2026 · Copilot coding and agents · 15 participants · Satisfaction 7.5 · PU led</li><li>Week of 22 Jan · 40 h booked · 8 impact entries</li><li>Week of 15 Jan · 32 h booked · 6 impact entries</li><li>Week of 8 Jan · 40 h booked · 6 impact entries</li><li>Week of 1 Jan · 40 h booked · 6 impact entries</li><li>Dashboard solution · 2,946 successful events</li><li>AI-Triage Agent · 12,204 recorded agent runs</li><li>One person, 10 minutes per requirement · 22,940 minutes · about 9.5 weeks</li><li>Adopter&#39;s estimate · Several engineers plus extra time for consistent work · 18 weeks</li><li>a business unit · 557 h · 55%</li><li>Ultrasound · 324 h · 32%</li><li>Automation · 126 h · 12%</li><li>a business unit · 4 h · 0%</li><li>AI traceability platform: approved AI compliance platform project budget · an undisclosed amount · 41%</li><li>AI defect-triage assistant: AI compliance platform funding · an undisclosed amount · 31%</li><li>Philips University: revised 2026 Software Excellence learning budget · an undisclosed amount · 14%</li><li>MR use-case exploration: engagement the business offered to pay for (about) · an undisclosed amount · 14%</li><li>Promoters, rated 9 or 10 · 164 of 266 ratings · 61.7% · Across 23 sessions with a rating form</li><li>Passives, rated 7 or 8 · 85 of 266 ratings · 32.0% · Across 23 sessions with a rating form</li><li>Detractors, rated 6 or below · 17 of 266 ratings · 6.4% · Across 23 sessions with a rating form</li></ul></details></section><section class="report-block"><div class="report-exhibit" data-page="summary"><div class="sec cbar-sec" style="--i: 2;"><div class="cbar"><div class="cb-head"><h2>AI certification</h2><p class="note"> The Gen AI Ninja belts are learning certifications.</p></div>
+    <div class="cb-ladder"><div class="cb-lab">AI competency</div><div class="cb-steps"><div style="--c:var(--s3)" class="cb-step"><i>1</i><span class="cb-t"><b>Foundation</b><small>2 claims</small></span></div><span class="cb-arrow" aria-hidden="true"></span><div style="--c:var(--s1)" class="cb-step"><i>2</i><span class="cb-t"><b>Practitioner</b><small>3 claims</small></span></div><span class="cb-arrow" aria-hidden="true"></span><div style="--c:var(--s7)" class="cb-step now"><i>3</i><span class="cb-t"><b>Expert</b><small>14 claims</small></span><em>Current level</em></div></div></div>
+    <div class="cb-ninja"><div class="cb-lab">Gen AI Ninja certifications</div><div class="cb-belts"><div class="cb-belt yellow"><i></i><span class="cb-t"><b>Yellow Belt, Business</b><small>1 May 2026</small></span></div><div class="cb-belt yellow"><i></i><span class="cb-t"><b>Yellow Belt, Technical</b><small>6 May 2026</small></span></div><div class="cb-belt white"><i></i><span class="cb-t"><b>White Belt, Foundation</b><small>17 Dec 2025</small></span></div></div></div></div></div></div></section><section class="report-block"><div class="report-exhibit" data-page="summary"><div class="sec cbar-sec" style="--i: 3;"><div class="cbar"><div class="cb-head"><h2>Training completed</h2><p class="note">Learning records dated 2026 in the learning management system history and on the first page of the Cornerstone transcript. </p></div>
+    <div class="cb-ladder"><div class="cb-lab">Learning management system history</div><div class="cb-belts"><div class="cb-belt tr"><i></i><span class="cb-t"><b>187 learning records</b><small>162 passed, 25 equivalent credit</small></span></div><div class="cb-belt tr"><i></i><span class="cb-t"><b>125 learning items</b><small>18 quizzes, on 34 days</small></span></div><div class="cb-belt tr"><i></i><span class="cb-t"><b>7 subjects</b><small>largest: design, development and release, 57</small></span></div></div></div>
+    <div class="cb-ninja"><div class="cb-lab">Cornerstone transcript</div><div class="cb-belts"><div class="cb-belt tr"><i></i><span class="cb-t"><b>13 completions in 2026</b><small>all 2026 rows; page 1 of 7 reaches back to 23 Jun 2025</small></span></div></div></div></div></div></div></section><section class="report-block"><div class="report-exhibit" data-page="summary"><div class="sec" style="--i: 4;"><div class="sech"><h2>In their words</h2><span class="k">word for word, with the source; tinted tiles are leadership, plain tiles are colleagues and customers</span></div>
+    <div class="g2 spotpair"><div style="display:grid;gap:14px;align-content:start"><div class="spot spot2 leader"><div class="lchip">Leadership</div><div class="note" style="font-weight:700">PATIENT SAFETY AND QUALITY TEAM POST ON VIVA ENGAGE, 15 APRIL 2026, SEEN 29,102 TIMES</div>
+    <p class="spq long">“Previously, reviewing software requirements was done manually. These are long documents that traditionally require multiple rounds of back and forth. Now a business unit and Innovation Engineering teams are using requirements-review programme, where Requirements and Software Quality engineers upload requirements and AI does the first heavy lift to inventory the requirements including checking them against INCOSE guidelines/IEC 62304 / FDA expectations and flagging gaps, ambiguities, and compliance risks. requirements-review programme completes this work in roughly half the time with more consistency and fewer surprises later. In other words, requirements-review programme is helping us shift left.”</p><div class="spw"><b>Steve</b>, Chief Patient Quality &amp; Safety Officer, Philips, on <b>requirements review with requirements-review programme</b>, calling out the AI requirements checker work </div>
+    <p class="spq long second">“If you review requirements and want to see how requirements-review programme could work for you, please contact Datta () who can help you create prompts and try requirements-review programme in your application.”</p><div class="spw">The same post, a few lines further on, names me and gives my address </div></div></div><div style="display:grid;gap:14px;align-content:start"><div class="spot spot2 leader"><div class="lchip">Leadership</div><div class="note" style="font-weight:700">AI compliance platform leadership showcase to the executive committee, 21 July 2026</div>
+    <p class="spq">“I liked it a lot. Are you including regulators in the development process?”</p><div class="spw"><b>Roy</b>, CEO, Philips, on <b>AI traceability platform: AI Powered V&amp;V Compliance</b>  </div>
+    <div class="spa"><span class="note">The answer given</span> By linking with Windchill, the rules can mimic regulators.</div></div><div class="qcard"><p class="q xl">“His domain expertise and structured approach transformed ambiguity into an actionable, transparent roadmap.”</p><div class="qwho">Feras, Systems Test Architect · Anytime Feedback </div></div></div></div></div></div></section><section class="report-block"><div class="report-exhibit" data-page="summary"><div class="sec" style="--i: 5;"><div class="sech"><h2>Ten leadership actions</h2><span class="k">entries and hours behind each</span></div><div class="vstrip"><div style="--vc:var(--s1)" class="vstrip-i"><b>Define</b><span>30 entries · 42 h</span></div><div style="--vc:var(--s2)" class="vstrip-i"><b>Assess</b><span>59 entries · 97 h</span></div><div style="--vc:var(--s3)" class="vstrip-i"><b>Align</b><span>42 entries · 56 h</span></div><div style="--vc:var(--s4)" class="vstrip-i"><b>Delegate</b><span>17 entries · 9 h</span></div><div style="--vc:var(--s5)" class="vstrip-i"><b>Oversee</b><span>57 entries · 199 h</span></div><div style="--vc:var(--s6)" class="vstrip-i"><b>Authorize</b><span>37 entries · 31 h</span></div><div style="--vc:var(--s7)" class="vstrip-i"><b>Mentor</b><span>29 entries · 162 h</span></div><div style="--vc:var(--s8)" class="vstrip-i"><b>Hire</b><span>6 entries · 16 h</span></div><div style="--vc:var(--s9)" class="vstrip-i"><b>Report</b><span>53 entries · 122 h</span></div><div style="--vc:var(--h4)" class="vstrip-i"><b>Evangelize</b><span>8 entries · 61 h</span></div></div></div></div><details class="chart-notes"><summary>Read chart notes (10)</summary><ul><li>Define · Sets the strategy, standards, frameworks and KPIs that other people execute against.</li><li>Assess · Studies the current state through assessments, discovery and analysis to find where change pays off.</li><li>Align · Secures buy-in, sponsorship and funding from business and senior leaders, and agrees scope and timelines with them.</li><li>Delegate · Hands execution to team members, vendors and champions, with clear ownership and a handover.</li><li>Oversee · Supervises delivery day to day: huddles, milestones, blockers, risks and corrective action.</li><li>Authorize · Reviews and approves solutions and holds the quality bar before work is accepted.</li><li>Mentor · Coaches and teaches people and communities so capability grows beyond the team.</li><li>Hire · Recruits, interviews and evaluates people, and recommends them for roles and progression.</li><li>Report · Measures results and reports progress, savings and outcomes to leaders, finance and stakeholders.</li><li>Evangelize · Builds a network of influence and communities and promotes adoption of practices and tools.</li></ul></details></section><section class="report-block"><div class="report-exhibit" data-page="summary"><div class="sec" style="--i: 6;"><div class="sech"><h2>The year</h2><span class="k">hours, entries, sessions, milestones and recognition on one axis</span></div>
+    <div class="card" style="padding:14px 16px 10px"><svg data-time-axis="newest-first" aria-hidden="true" viewBox="0 0 1200 372" width="100%"><g transform="translate(1200 0) scale(-1 1)"><line x1="100" x2="100" y1="24" y2="330" class="grid" /><text text-anchor="end" transform=" translate(206 0) scale(-1 1)" x="103" y="20">Jan</text><line x1="206.45283018867923" x2="206.45283018867923" y1="24" y2="330" class="grid" /><text text-anchor="end" transform=" translate(418.90566037735846 0) scale(-1 1)" x="209.45283018867923" y="20">Feb</text><line x1="302.60377358490564" x2="302.60377358490564" y1="24" y2="330" class="grid" /><text text-anchor="end" transform=" translate(611.2075471698113 0) scale(-1 1)" x="305.60377358490564" y="20">Mar</text><line x1="409.0566037735849" x2="409.0566037735849" y1="24" y2="330" class="grid" /><text text-anchor="end" transform=" translate(824.1132075471698 0) scale(-1 1)" x="412.0566037735849" y="20">Apr</text><line x1="512.0754716981132" x2="512.0754716981132" y1="24" y2="330" class="grid" /><text text-anchor="end" transform=" translate(1030.1509433962265 0) scale(-1 1)" x="515.0754716981132" y="20">May</text><line x1="618.5283018867924" x2="618.5283018867924" y1="24" y2="330" class="grid" /><text text-anchor="end" transform=" translate(1243.0566037735848 0) scale(-1 1)" x="621.5283018867924" y="20">Jun</text><line x1="721.5471698113207" x2="721.5471698113207" y1="24" y2="330" class="grid" /><text text-anchor="end" transform=" translate(1449.0943396226414 0) scale(-1 1)" x="724.5471698113207" y="20">Jul</text><line x1="828" x2="828" y1="24" y2="330" class="grid" /><text text-anchor="end" transform=" translate(1662 0) scale(-1 1)" x="831" y="20">Aug</text><line x1="934.4528301886793" x2="934.4528301886793" y1="24" y2="330" class="grid" /><text text-anchor="end" transform=" translate(1874.9056603773586 0) scale(-1 1)" x="937.4528301886793" y="20">Sep</text><line x1="1037.4716981132076" x2="1037.4716981132076" y1="24" y2="330" class="grid" /><text text-anchor="end" transform=" translate(2080.943396226415 0) scale(-1 1)" x="1040.4716981132076" y="20">Oct</text><line x1="1143.9245283018868" x2="1143.9245283018868" y1="24" y2="330" class="grid" /><text text-anchor="end" transform=" translate(2293.8490566037735 0) scale(-1 1)" x="1146.9245283018868" y="20">Nov</text><line x1="100" x2="1192" y1="120.8" y2="120.8" class="grid" /><text transform=" translate(188 0) scale(-1 1)" x="94" y="124.8" text-anchor="start">20</text><line x1="100" x2="1192" y1="85.6" y2="85.6" class="dash" /><text transform=" translate(188 0) scale(-1 1)" x="94" y="89.6" text-anchor="start">40</text><line x1="100" x2="1192" y1="50.400000000000006" y2="50.400000000000006" class="grid" /><text transform=" translate(188 0) scale(-1 1)" x="94" y="54.400000000000006" text-anchor="start">60</text><text transform=" translate(188 0) scale(-1 1)" x="94" y="160" text-anchor="start">0 h</text><rect title="Week of 29 Dec · Absence: 16 h · Week total 16 h" x="100.0" y="127.8" width="12.7" height="28.2" fill="var(--other)" opacity=".55" /><rect title="Week of 5 Jan · AI traceability platform: 20 h · Week total 40 h" x="113.7" y="120.8" width="23.0" height="35.2" fill="var(--s1)" /><rect title="Week of 5 Jan · AI learning and enablement: 20 h · Week total 40 h" x="113.7" y="85.6" width="23.0" height="35.2" fill="var(--s3)" /><rect title="Week of 12 Jan · AI traceability platform: 20 h · Week total 40 h" x="137.8" y="120.8" width="23.0" height="35.2" fill="var(--s1)" /><rect title="Week of 12 Jan · AI learning and enablement: 20 h · Week total 40 h" x="137.8" y="85.6" width="23.0" height="35.2" fill="var(--s3)" /><rect title="Week of 19 Jan · product quality review and Benefit-Risk AI: 16 h · Week total 32 h" x="161.8" y="127.8" width="23.0" height="28.2" fill="var(--s2)" /><rect title="Week of 19 Jan · AI traceability platform: 12 h · Week total 32 h" x="161.8" y="106.7" width="23.0" height="21.1" fill="var(--s1)" /><rect title="Week of 19 Jan · AI learning and enablement: 4 h · Week total 32 h" x="161.8" y="99.7" width="23.0" height="7.0" fill="var(--s3)" /><rect title="Week of 26 Jan · product quality review and Benefit-Risk AI: 24 h · Week total 40 h" x="185.8" y="113.8" width="23.0" height="42.2" fill="var(--s2)" /><rect title="Week of 26 Jan · AI traceability platform: 8 h · Week total 40 h" x="185.8" y="99.7" width="23.0" height="14.1" fill="var(--s1)" /><rect title="Week of 26 Jan · AI learning and enablement: 8 h · Week total 40 h" x="185.8" y="85.6" width="23.0" height="14.1" fill="var(--s3)" /><rect title="Week of 2 Feb · product quality review and Benefit-Risk AI: 13 h · Week total 40 h" x="209.9" y="133.1" width="23.0" height="22.9" fill="var(--s2)" /><rect title="Week of 2 Feb · AI traceability platform: 15 h · Week total 40 h" x="209.9" y="106.7" width="23.0" height="26.4" fill="var(--s1)" /><rect title="Week of 2 Feb · AI learning and enablement: 12 h · Week total 40 h" x="209.9" y="85.6" width="23.0" height="21.1" fill="var(--s3)" /><rect title="Week of 9 Feb · product quality review and Benefit-Risk AI: 17 h · Week total 40 h" x="233.9" y="126.1" width="23.0" height="29.9" fill="var(--s2)" /><rect title="Week of 9 Feb · AI traceability platform: 15 h · Week total 40 h" x="233.9" y="99.7" width="23.0" height="26.4" fill="var(--s1)" /><rect title="Week of 9 Feb · AI learning and enablement: 8 h · Week total 40 h" x="233.9" y="85.6" width="23.0" height="14.1" fill="var(--s3)" /><rect title="Week of 16 Feb · product quality review and Benefit-Risk AI: 25 h · Week total 40 h" x="258.0" y="112.0" width="23.0" height="44.0" fill="var(--s2)" /><rect title="Week of 16 Feb · AI traceability platform: 15 h · Week total 40 h" x="258.0" y="85.6" width="23.0" height="26.4" fill="var(--s1)" /><rect title="Week of 23 Feb · product quality review and Benefit-Risk AI: 5 h · Week total 40 h" x="282.0" y="147.2" width="23.0" height="8.8" fill="var(--s2)" /><rect title="Week of 23 Feb · AI traceability platform: 35 h · Week total 40 h" x="282.0" y="85.6" width="23.0" height="61.6" fill="var(--s1)" /><rect title="Week of 2 Mar · product quality review and Benefit-Risk AI: 25 h · Week total 40 h" x="306.0" y="112.0" width="23.0" height="44.0" fill="var(--s2)" /><rect title="Week of 2 Mar · AI traceability platform: 15 h · Week total 40 h" x="306.0" y="85.6" width="23.0" height="26.4" fill="var(--s1)" /><rect title="Week of 9 Mar · product quality review and Benefit-Risk AI: 7 h · Week total 40 h" x="330.1" y="143.7" width="23.0" height="12.3" fill="var(--s2)" /><rect title="Week of 9 Mar · AI traceability platform: 15 h · Week total 40 h" x="330.1" y="117.3" width="23.0" height="26.4" fill="var(--s1)" /><rect title="Week of 9 Mar · AI learning and enablement: 18 h · Week total 40 h" x="330.1" y="85.6" width="23.0" height="31.7" fill="var(--s3)" /><rect title="Week of 16 Mar · product quality review and Benefit-Risk AI: 13 h · Week total 40 h" x="354.1" y="133.1" width="23.0" height="22.9" fill="var(--s2)" /><rect title="Week of 16 Mar · AI traceability platform: 15 h · Week total 40 h" x="354.1" y="106.7" width="23.0" height="26.4" fill="var(--s1)" /><rect title="Week of 16 Mar · AI learning and enablement: 12 h · Week total 40 h" x="354.1" y="85.6" width="23.0" height="21.1" fill="var(--s3)" /><rect title="Week of 23 Mar · product quality review and Benefit-Risk AI: 17 h · Week total 40 h" x="378.2" y="126.1" width="23.0" height="29.9" fill="var(--s2)" /><rect title="Week of 23 Mar · AI traceability platform: 15 h · Week total 40 h" x="378.2" y="99.7" width="23.0" height="26.4" fill="var(--s1)" /><rect title="Week of 23 Mar · Absence: 8 h · Week total 40 h" x="378.2" y="85.6" width="23.0" height="14.1" fill="var(--other)" opacity=".55" /><rect title="Week of 30 Mar · product quality review and Benefit-Risk AI: 30 h · Week total 43 h" x="402.2" y="103.2" width="23.0" height="52.8" fill="var(--s2)" /><rect title="Week of 30 Mar · AI traceability platform: 13 h · Week total 43 h" x="402.2" y="80.3" width="23.0" height="22.9" fill="var(--s1)" /><rect title="Week of 6 Apr · product quality review and Benefit-Risk AI: 14 h · Week total 40 h" x="426.2" y="131.4" width="23.0" height="24.6" fill="var(--s2)" /><rect title="Week of 6 Apr · AI traceability platform: 26 h · Week total 40 h" x="426.2" y="85.6" width="23.0" height="45.8" fill="var(--s1)" /><rect title="Week of 13 Apr · product quality review and Benefit-Risk AI: 15 h · Week total 40 h" x="450.3" y="129.6" width="23.0" height="26.4" fill="var(--s2)" /><rect title="Week of 13 Apr · AI traceability platform: 25 h · Week total 40 h" x="450.3" y="85.6" width="23.0" height="44.0" fill="var(--s1)" /><rect title="Week of 20 Apr · product quality review and Benefit-Risk AI: 27 h · Week total 40 h" x="474.3" y="108.5" width="23.0" height="47.5" fill="var(--s2)" /><rect title="Week of 20 Apr · Internal time (meetings, training, idle): 5 h · Week total 40 h" x="474.3" y="99.7" width="23.0" height="8.8" fill="var(--s9)" /><rect title="Week of 20 Apr · Absence: 8 h · Week total 40 h" x="474.3" y="85.6" width="23.0" height="14.1" fill="var(--other)" opacity=".55" /><rect title="Week of 27 Apr · product quality review and Benefit-Risk AI: 32 h · Week total 40 h" x="498.3" y="99.7" width="23.0" height="56.3" fill="var(--s2)" /><rect title="Week of 27 Apr · Software Excellence operations: 4 h · Week total 40 h" x="498.3" y="92.6" width="23.0" height="7.0" fill="var(--s4)" /><rect title="Week of 27 Apr · Internal time (meetings, training, idle): 4 h · Week total 40 h" x="498.3" y="85.6" width="23.0" height="7.0" fill="var(--s9)" /><rect title="Week of 4 May · product quality review and Benefit-Risk AI: 25 h · Week total 40 h" x="522.4" y="112.0" width="23.0" height="44.0" fill="var(--s2)" /><rect title="Week of 4 May · Software Excellence operations: 15 h · Week total 40 h" x="522.4" y="85.6" width="23.0" height="26.4" fill="var(--s4)" /><rect title="Week of 11 May · product quality review and Benefit-Risk AI: 24 h · Week total 40 h" x="546.4" y="113.8" width="23.0" height="42.2" fill="var(--s2)" /><rect title="Week of 11 May · AI learning and enablement: 16 h · Week total 40 h" x="546.4" y="85.6" width="23.0" height="28.2" fill="var(--s3)" /><rect title="Week of 18 May · product quality review and Benefit-Risk AI: 30 h · Week total 40 h" x="570.5" y="103.2" width="23.0" height="52.8" fill="var(--s2)" /><rect title="Week of 18 May · AI learning and enablement: 10 h · Week total 40 h" x="570.5" y="85.6" width="23.0" height="17.6" fill="var(--s3)" /><rect title="Week of 25 May · product quality review and Benefit-Risk AI: 25 h · Week total 32 h" x="594.5" y="112.0" width="23.0" height="44.0" fill="var(--s2)" /><rect title="Week of 25 May · AI defect-triage assistant: 7 h · Week total 32 h" x="594.5" y="99.7" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 1 Jun · product quality review and Benefit-Risk AI: 35 h · Week total 44 h" x="618.5" y="94.4" width="23.0" height="61.6" fill="var(--s2)" /><rect title="Week of 1 Jun · AI defect-triage assistant: 7 h · Week total 44 h" x="618.5" y="82.1" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 1 Jun · AI learning and enablement: 2 h · Week total 44 h" x="618.5" y="78.6" width="23.0" height="3.5" fill="var(--s3)" /><rect title="Week of 8 Jun · product quality review and Benefit-Risk AI: 35 h · Week total 54 h" x="642.6" y="94.4" width="23.0" height="61.6" fill="var(--s2)" /><rect title="Week of 8 Jun · AI defect-triage assistant: 7 h · Week total 54 h" x="642.6" y="82.1" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 8 Jun · AI learning and enablement: 7 h · Week total 54 h" x="642.6" y="69.8" width="23.0" height="12.3" fill="var(--s3)" /><rect title="Week of 8 Jun · Software Excellence operations: 5 h · Week total 54 h" x="642.6" y="61.0" width="23.0" height="8.8" fill="var(--s4)" /><rect title="Week of 15 Jun · product quality review and Benefit-Risk AI: 28 h · Week total 41 h" x="666.6" y="106.7" width="23.0" height="49.3" fill="var(--s2)" /><rect title="Week of 15 Jun · AI defect-triage assistant: 7 h · Week total 41 h" x="666.6" y="94.4" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 15 Jun · AI learning and enablement: 2 h · Week total 41 h" x="666.6" y="90.9" width="23.0" height="3.5" fill="var(--s3)" /><rect title="Week of 15 Jun · Software Excellence operations: 4 h · Week total 41 h" x="666.6" y="83.8" width="23.0" height="7.0" fill="var(--s4)" /><rect title="Week of 22 Jun · product quality review and Benefit-Risk AI: 35 h · Week total 57 h" x="690.6" y="94.4" width="23.0" height="61.6" fill="var(--s2)" /><rect title="Week of 22 Jun · AI defect-triage assistant: 7 h · Week total 57 h" x="690.6" y="82.1" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 22 Jun · AI learning and enablement: 5 h · Week total 57 h" x="690.6" y="73.3" width="23.0" height="8.8" fill="var(--s3)" /><rect title="Week of 22 Jun · Software Excellence operations: 10 h · Week total 57 h" x="690.6" y="55.7" width="23.0" height="17.6" fill="var(--s4)" /><rect title="Week of 29 Jun · product quality review and Benefit-Risk AI: 14 h · Week total 35 h" x="714.7" y="131.4" width="23.0" height="24.6" fill="var(--s2)" /><rect title="Week of 29 Jun · AI defect-triage assistant: 9 h · Week total 35 h" x="714.7" y="115.5" width="23.0" height="15.8" fill="var(--s7)" /><rect title="Week of 29 Jun · AI learning and enablement: 12 h · Week total 35 h" x="714.7" y="94.4" width="23.0" height="21.1" fill="var(--s3)" /><rect title="Week of 6 Jul · product quality review and Benefit-Risk AI: 35 h · Week total 42 h" x="738.7" y="94.4" width="23.0" height="61.6" fill="var(--s2)" /><rect title="Week of 6 Jul · AI defect-triage assistant: 7 h · Week total 42 h" x="738.7" y="82.1" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 13 Jul · product quality review and Benefit-Risk AI: 14 h · Week total 45 h" x="762.8" y="131.4" width="23.0" height="24.6" fill="var(--s2)" /><rect title="Week of 13 Jul · AI defect-triage assistant: 7 h · Week total 45 h" x="762.8" y="119.0" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 13 Jul · Absence: 24 h · Week total 45 h" x="762.8" y="76.8" width="23.0" height="42.2" fill="var(--other)" opacity=".55" /><rect title="Week of 20 Jul · product quality review and Benefit-Risk AI: 35 h · Week total 48 h" x="786.8" y="94.4" width="23.0" height="61.6" fill="var(--s2)" /><rect title="Week of 20 Jul · AI defect-triage assistant: 7 h · Week total 48 h" x="786.8" y="82.1" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 20 Jul · AI learning and enablement: 6 h · Week total 48 h" x="786.8" y="71.5" width="23.0" height="10.6" fill="var(--s3)" /><rect title="Week of 27 Jul · product quality review and Benefit-Risk AI: 35 h · Week total 54 h" x="810.8" y="94.4" width="23.0" height="61.6" fill="var(--s2)" /><rect title="Week of 27 Jul · AI defect-triage assistant: 19 h · Week total 54 h" x="810.8" y="61.0" width="23.0" height="33.4" fill="var(--s7)" /><rect title="Week of 3 Aug · product quality review and Benefit-Risk AI: 28 h · Week total 49 h" x="834.9" y="106.7" width="23.0" height="49.3" fill="var(--s2)" /><rect title="Week of 3 Aug · AI defect-triage assistant: 7 h · Week total 49 h" x="834.9" y="94.4" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 3 Aug · AI learning and enablement: 6 h · Week total 49 h" x="834.9" y="83.8" width="23.0" height="10.6" fill="var(--s3)" /><rect title="Week of 3 Aug · Absence: 8 h · Week total 49 h" x="834.9" y="69.8" width="23.0" height="14.1" fill="var(--other)" opacity=".55" /><rect title="Week of 10 Aug · product quality review and Benefit-Risk AI: 28 h · Week total 49 h" x="858.9" y="106.7" width="23.0" height="49.3" fill="var(--s2)" /><rect title="Week of 10 Aug · AI defect-triage assistant: 7 h · Week total 49 h" x="858.9" y="94.4" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 10 Aug · AI learning and enablement: 6 h · Week total 49 h" x="858.9" y="83.8" width="23.0" height="10.6" fill="var(--s3)" /><rect title="Week of 10 Aug · Absence: 8 h · Week total 49 h" x="858.9" y="69.8" width="23.0" height="14.1" fill="var(--other)" opacity=".55" /><rect title="Week of 17 Aug · product quality review and Benefit-Risk AI: 35 h · Week total 67 h" x="882.9" y="94.4" width="23.0" height="61.6" fill="var(--s2)" /><rect title="Week of 17 Aug · AI defect-triage assistant: 7 h · Week total 67 h" x="882.9" y="82.1" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 17 Aug · AI learning and enablement: 25 h · Week total 67 h" x="882.9" y="38.1" width="23.0" height="44.0" fill="var(--s3)" /><rect title="Week of 24 Aug · product quality review and Benefit-Risk AI: 35 h · Week total 72 h" x="907.0" y="94.4" width="23.0" height="61.6" fill="var(--s2)" /><rect title="Week of 24 Aug · AI defect-triage assistant: 7 h · Week total 72 h" x="907.0" y="82.1" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 24 Aug · AI learning and enablement: 30 h · Week total 72 h" x="907.0" y="29.3" width="23.0" height="52.8" fill="var(--s3)" /><rect title="Week of 31 Aug · product quality review and Benefit-Risk AI: 25 h · Week total 59 h" x="931.0" y="112.0" width="23.0" height="44.0" fill="var(--s2)" /><rect title="Week of 31 Aug · AI defect-triage assistant: 8 h · Week total 59 h" x="931.0" y="97.9" width="23.0" height="14.1" fill="var(--s7)" /><rect title="Week of 31 Aug · AI learning and enablement: 18 h · Week total 59 h" x="931.0" y="66.2" width="23.0" height="31.7" fill="var(--s3)" /><rect title="Week of 31 Aug · Absence: 8 h · Week total 59 h" x="931.0" y="52.2" width="23.0" height="14.1" fill="var(--other)" opacity=".55" /><rect title="Week of 7 Sept · product quality review and Benefit-Risk AI: 24 h · Week total 41 h" x="955.1" y="113.8" width="23.0" height="42.2" fill="var(--s2)" /><rect title="Week of 7 Sept · AI defect-triage assistant: 7 h · Week total 41 h" x="955.1" y="101.4" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 7 Sept · AI learning and enablement: 10 h · Week total 41 h" x="955.1" y="83.8" width="23.0" height="17.6" fill="var(--s3)" /><rect title="Week of 14 Sept · product quality review and Benefit-Risk AI: 30 h · Week total 40 h" x="979.1" y="103.2" width="23.0" height="52.8" fill="var(--s2)" /><rect title="Week of 14 Sept · AI defect-triage assistant: 7 h · Week total 40 h" x="979.1" y="90.9" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 14 Sept · AI learning and enablement: 3 h · Week total 40 h" x="979.1" y="85.6" width="23.0" height="5.3" fill="var(--s3)" /><rect title="Week of 21 Sept · product quality review and Benefit-Risk AI: 10 h · Week total 40 h" x="1003.1" y="138.4" width="23.0" height="17.6" fill="var(--s2)" /><rect title="Week of 21 Sept · AI defect-triage assistant: 7 h · Week total 40 h" x="1003.1" y="126.1" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 21 Sept · Internal time (meetings, training, idle): 23 h · Week total 40 h" x="1003.1" y="85.6" width="23.0" height="40.5" fill="var(--s9)" /><rect title="Week of 28 Sept · product quality review and Benefit-Risk AI: 26 h · Week total 40 h" x="1027.2" y="110.2" width="23.0" height="45.8" fill="var(--s2)" /><rect title="Week of 28 Sept · AI defect-triage assistant: 7 h · Week total 40 h" x="1027.2" y="97.9" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 28 Sept · Internal time (meetings, training, idle): 7 h · Week total 40 h" x="1027.2" y="85.6" width="23.0" height="12.3" fill="var(--s9)" /><rect title="Week of 5 Oct · product quality review and Benefit-Risk AI: 16 h · Week total 40 h" x="1051.2" y="127.8" width="23.0" height="28.2" fill="var(--s2)" /><rect title="Week of 5 Oct · AI defect-triage assistant: 7 h · Week total 40 h" x="1051.2" y="115.5" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 5 Oct · AI learning and enablement: 13 h · Week total 40 h" x="1051.2" y="92.6" width="23.0" height="22.9" fill="var(--s3)" /><rect title="Week of 5 Oct · Internal time (meetings, training, idle): 4 h · Week total 40 h" x="1051.2" y="85.6" width="23.0" height="7.0" fill="var(--s9)" /><rect title="Week of 12 Oct · product quality review and Benefit-Risk AI: 18 h · Week total 44 h" x="1075.2" y="124.3" width="23.0" height="31.7" fill="var(--s2)" /><rect title="Week of 12 Oct · AI defect-triage assistant: 6 h · Week total 44 h" x="1075.2" y="113.8" width="23.0" height="10.6" fill="var(--s7)" /><rect title="Week of 12 Oct · Internal time (meetings, training, idle): 20 h · Week total 44 h" x="1075.2" y="78.6" width="23.0" height="35.2" fill="var(--s9)" /><rect title="Week of 19 Oct · product quality review and Benefit-Risk AI: 31 h · Week total 43 h" x="1099.3" y="101.4" width="23.0" height="54.6" fill="var(--s2)" /><rect title="Week of 19 Oct · AI defect-triage assistant: 7 h · Week total 43 h" x="1099.3" y="89.1" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 19 Oct · Internal time (meetings, training, idle): 5 h · Week total 43 h" x="1099.3" y="80.3" width="23.0" height="8.8" fill="var(--s9)" /><rect title="Week of 26 Oct · product quality review and Benefit-Risk AI: 30 h · Week total 40 h" x="1123.3" y="103.2" width="23.0" height="52.8" fill="var(--s2)" /><rect title="Week of 26 Oct · AI defect-triage assistant: 7 h · Week total 40 h" x="1123.3" y="90.9" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 26 Oct · Internal time (meetings, training, idle): 3 h · Week total 40 h" x="1123.3" y="85.6" width="23.0" height="5.3" fill="var(--s9)" /><rect title="Week of 2 Nov · product quality review and Benefit-Risk AI: 13 h · Week total 40 h" x="1147.4" y="133.1" width="23.0" height="22.9" fill="var(--s2)" /><rect title="Week of 2 Nov · AI defect-triage assistant: 7 h · Week total 40 h" x="1147.4" y="120.8" width="23.0" height="12.3" fill="var(--s7)" /><rect title="Week of 2 Nov · AI learning and enablement: 14 h · Week total 40 h" x="1147.4" y="96.2" width="23.0" height="24.6" fill="var(--s3)" /><rect title="Week of 2 Nov · Internal time (meetings, training, idle): 6 h · Week total 40 h" x="1147.4" y="85.6" width="23.0" height="10.6" fill="var(--s9)" /><rect title="Week of 9 Nov · product quality review and Benefit-Risk AI: 12 h · Week total 32 h" x="1171.4" y="134.9" width="19.6" height="21.1" fill="var(--s2)" /><rect title="Week of 9 Nov · AI learning and enablement: 12 h · Week total 32 h" x="1171.4" y="113.8" width="19.6" height="21.1" fill="var(--s3)" /><rect title="Week of 9 Nov · Internal time (meetings, training, idle): 8 h · Week total 32 h" x="1171.4" y="99.7" width="19.6" height="14.1" fill="var(--s9)" /><text transform=" translate(2384 0) scale(-1 1)" x="1192" y="81.6" text-anchor="start">40 h week</text><text transform=" translate(188 0) scale(-1 1)" x="94" y="183" text-anchor="start">Entries</text><rect title="Wk 1 · 6 impact entries in the weekly report" x="100.0" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.50" /><rect title="Wk 2 · 6 impact entries in the weekly report" x="124.0" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.50" /><rect title="Wk 3 · 6 impact entries in the weekly report" x="148.1" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.50" /><rect title="Wk 4 · 8 impact entries in the weekly report" x="172.1" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.64" /><rect title="Wk 5 · 7 impact entries in the weekly report" x="196.2" y="172" width="9.3" height="15" rx="2" fill="var(--ink)" opacity="0.57" /><rect title="Wk 6 · 11 impact entries in the weekly report" x="206.5" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.86" /><rect title="Wk 7 · 11 impact entries in the weekly report" x="230.5" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.86" /><rect title="Wk 8 · 10 impact entries in the weekly report" x="254.5" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.79" /><rect title="Wk 9 · 12 impact entries in the weekly report" x="278.6" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.93" /><rect title="Wk 10 · 10 impact entries in the weekly report" x="302.6" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.79" /><rect title="Wk 11 · 12 impact entries in the weekly report" x="326.6" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.93" /><rect title="Wk 12 · 11 impact entries in the weekly report" x="350.7" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.86" /><rect title="Wk 13 · 12 impact entries in the weekly report" x="374.7" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.93" /><rect title="Wk 14 · 11 impact entries in the weekly report" x="398.8" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.86" /><rect title="Wk 15 · 12 impact entries in the weekly report" x="422.8" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.93" /><rect title="Wk 16 · 13 impact entries in the weekly report" x="446.8" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="1.00" /><rect title="Wk 17 · 11 impact entries in the weekly report" x="470.9" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.86" /><rect title="Wk 18 · 6 impact entries in the weekly report" x="481.2" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.50" /><rect title="Wk 19 · 7 impact entries in the weekly report" x="505.2" y="172" width="5.9" height="15" rx="2" fill="var(--ink)" opacity="0.57" /><rect title="Wk 20 · 7 impact entries in the weekly report" x="512.1" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.57" /><rect title="Wk 21 · 8 impact entries in the weekly report" x="536.1" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.64" /><rect title="Wk 22 · 8 impact entries in the weekly report" x="560.2" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.64" /><rect title="Wk 23 · 8 impact entries in the weekly report" x="584.2" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.64" /><rect title="Wk 24 · 9 impact entries in the weekly report" x="608.2" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.71" /><rect title="Wk 25 · 9 impact entries in the weekly report" x="632.3" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.71" /><rect title="Wk 26 · 5 impact entries in the weekly report" x="642.6" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.43" /><rect title="Wk 27 · 5 impact entries in the weekly report" x="666.6" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.43" /><rect title="Wk 28 · 5 impact entries in the weekly report" x="690.6" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.43" /><rect title="Wk 29 · 6 impact entries in the weekly report" x="714.7" y="172" width="5.9" height="15" rx="2" fill="var(--ink)" opacity="0.50" /><rect title="Wk 30 · 6 impact entries in the weekly report" x="721.5" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.50" /><rect title="Wk 31 · 7 impact entries in the weekly report" x="745.6" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.57" /><rect title="Wk 32 · 7 impact entries in the weekly report" x="769.6" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.57" /><rect title="Wk 33 · 7 impact entries in the weekly report" x="793.7" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.57" /><rect title="Wk 34 · 8 impact entries in the weekly report" x="817.7" y="172" width="9.3" height="15" rx="2" fill="var(--ink)" opacity="0.64" /><rect title="Wk 35 · 6 impact entries in the weekly report" x="828.0" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.50" /><rect title="Wk 36 · 7 impact entries in the weekly report" x="852.0" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.57" /><rect title="Wk 37 · 6 impact entries in the weekly report" x="900.1" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.50" /><rect title="Wk 38 · 7 impact entries in the weekly report" x="900.1" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.57" /><rect title="Wk 39 · 7 impact entries in the weekly report" x="958.5" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.57" /><rect title="Wk 40 · 7 impact entries in the weekly report" x="982.5" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.57" /><rect title="Wk 41 · 6 impact entries in the weekly report" x="1006.6" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.50" /><rect title="Wk 42 · 7 impact entries in the weekly report" x="1030.6" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.57" /><rect title="Wk 43 · 6 impact entries in the weekly report" x="1085.5" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.50" /><rect title="Wk 44 · 5 impact entries in the weekly report" x="1109.6" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.43" /><rect title="Wk 45 · 6 impact entries in the weekly report" x="1133.6" y="172" width="9.3" height="15" rx="2" fill="var(--ink)" opacity="0.50" /><rect title="Wk 46 · 6 impact entries in the weekly report" x="1143.9" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.50" /><rect title="Wk 47 · 8 impact entries in the weekly report" x="1168.0" y="172" width="23.0" height="15" rx="2" fill="var(--ink)" opacity="0.64" /><text transform=" translate(188 0) scale(-1 1)" x="94" y="232" text-anchor="start">Sessions</text><line x1="100" x2="1192" y1="228" y2="228" class="grid" /><circle title="28 Jan 2026 · Copilot coding and agents · 15 participants · Satisfaction 7.5 · PU led" cx="192.7" cy="228.0" r="6.1" fill="var(--s1)" fill-opacity=".78" stroke="var(--s1)" /><circle title="4 Feb 2026 · DORA · 9 participants · Satisfaction 8.9 · PU led" cx="216.8" cy="228.0" r="5.3" fill="var(--s1)" fill-opacity=".78" stroke="var(--s1)" /><circle title="11 Feb 2026 · Tech debt with AI · 6 participants · Satisfaction 8.67 · PU led" cx="240.8" cy="228.0" r="4.8" fill="var(--s1)" fill-opacity=".78" stroke="var(--s1)" /><circle title="18 Feb 2026 · Golden traceability · 80 participants · PU led" cx="264.8" cy="228.0" r="10.6" fill="var(--s1)" fill-opacity=".78" stroke="var(--s1)" /><circle title="4 Mar 2026 · Context engineering · 21 participants · Satisfaction 8.6 · PU led" cx="312.9" cy="228.0" r="6.7" fill="var(--s1)" fill-opacity=".78" stroke="var(--s1)" /><circle title="11 Mar 2026 · 62304 Standard, why is it es · 18 participants · Satisfaction 8.91 · PU led" cx="336.9" cy="228.0" r="6.4" fill="var(--s1)" fill-opacity=".78" stroke="var(--s1)" /><circle title="18 Mar 2026 · Office 365 Copilot · 16 participants · Satisfaction 9.17 · PU led" cx="361.0" cy="228.0" r="6.2" fill="var(--s1)" fill-opacity=".78" stroke="var(--s1)" /><circle title="26 Mar 2026 · North America Analytics call · 82 participants · Satisfaction 8.87 · AI upskilling programme led" cx="388.5" cy="228.0" r="10.7" fill="var(--s3)" fill-opacity=".78" stroke="var(--s3)" /><circle title="20 Apr 2026 · Innovation Impact Week: From · 0 participants · Event or community" cx="474.3" cy="228.0" r="2.6" fill="var(--s5, var(--s9))" fill-opacity=".78" stroke="var(--s5, var(--s9))" /><circle title="22 Apr 2026 · DORA · 0 participants · Event or community" cx="481.2" cy="237.0" r="2.6" fill="var(--s5, var(--s9))" fill-opacity=".78" stroke="var(--s5, var(--s9))" /><circle title="23 Apr 2026 · Innovation Impact Week: Insi · 0 participants · Event or community" cx="484.6" cy="228.0" r="2.6" fill="var(--s5, var(--s9))" fill-opacity=".78" stroke="var(--s5, var(--s9))" /><circle title="14 May 2026 · Context engineering · 10 participants · Satisfaction 9.33 · PU led" cx="556.7" cy="228.0" r="5.4" fill="var(--s1)" fill-opacity=".78" stroke="var(--s1)" /><circle title="21 May 2026 · 62304 Standard, why is it es · 21 participants · Satisfaction 9.14 · PU led" cx="580.8" cy="228.0" r="6.7" fill="var(--s1)" fill-opacity=".78" stroke="var(--s1)" /><circle title="11 Jun 2026 · Office 365 Copilot · 10 participants · Satisfaction 9.33 · PU led" cx="652.9" cy="228.0" r="5.4" fill="var(--s1)" fill-opacity=".78" stroke="var(--s1)" /><circle title="25 Jun 2026 · North America Analytics call · 101 participants · Satisfaction 9.46 · AI upskilling programme led" cx="700.9" cy="228.0" r="11.6" fill="var(--s3)" fill-opacity=".78" stroke="var(--s3)" /><circle title="25 Jun 2026 · IGT-AI Day: AI requirements checker, AI Harn · 95 participants · AI upskilling programme led" cx="700.9" cy="237.0" r="11.4" fill="var(--s3)" fill-opacity=".78" stroke="var(--s3)" /><circle title="26 Jun 2026 · AI traceability platform presented to the PSQ c · 0 participants · Event or community" cx="704.4" cy="228.0" r="2.6" fill="var(--s5, var(--s9))" fill-opacity=".78" stroke="var(--s5, var(--s9))" /><circle title="22 Jul 2026 · Copilot coding and agents · 39 participants · Satisfaction 9.1 · BU requested" cx="793.7" cy="228.0" r="8.2" fill="var(--s4)" fill-opacity=".78" stroke="var(--s4)" /><circle title="5 Aug 2026 · Copilot coding and agents · 20 participants · Satisfaction 9.3 · BU requested" cx="841.7" cy="228.0" r="6.6" fill="var(--s4)" fill-opacity=".78" stroke="var(--s4)" /><circle title="12 Aug 2026 · Context engineering · 27 participants · Satisfaction 8.71 · PU led" cx="865.8" cy="228.0" r="7.3" fill="var(--s1)" fill-opacity=".78" stroke="var(--s1)" /><circle title="18 Aug 2026 · IT Connect · 56 participants · Satisfaction 10 · BU requested" cx="886.4" cy="228.0" r="9.3" fill="var(--s4)" fill-opacity=".78" stroke="var(--s4)" /><circle title="20 Aug 2026 · DORA · 27 participants · Satisfaction 9 · BU requested" cx="893.2" cy="237.0" r="7.3" fill="var(--s4)" fill-opacity=".78" stroke="var(--s4)" /><circle title="25 Aug 2026 · a business unit series · 50 participants · Satisfaction 8.15 · BU requested" cx="910.4" cy="228.0" r="9.0" fill="var(--s4)" fill-opacity=".78" stroke="var(--s4)" /><circle title="27 Aug 2026 · a business unit series · 46 participants · Satisfaction 7.21 · BU requested" cx="917.3" cy="237.0" r="8.7" fill="var(--s4)" fill-opacity=".78" stroke="var(--s4)" /><circle title="27 Aug 2026 · North America Analytics call · 84 participants · Satisfaction 10 · AI upskilling programme led" cx="917.3" cy="228.0" r="10.8" fill="var(--s3)" fill-opacity=".78" stroke="var(--s3)" /><circle title="1 Sept 2026 · a business unit series · 45 participants · Satisfaction 8.17 · AI upskilling programme led" cx="934.5" cy="228.0" r="8.6" fill="var(--s3)" fill-opacity=".78" stroke="var(--s3)" /><circle title="3 Sept 2026 · a business unit series · 41 participants · Satisfaction 8 · AI upskilling programme led" cx="941.3" cy="237.0" r="8.4" fill="var(--s3)" fill-opacity=".78" stroke="var(--s3)" /><circle title="9 Sept 2026 · 62304 Standard, why is it es · 29 participants · Satisfaction 8 · PU led" cx="961.9" cy="228.0" r="7.4" fill="var(--s1)" fill-opacity=".78" stroke="var(--s1)" /><circle title="16 Sept 2026 · Office 365 Copilot · 28 participants · Satisfaction 8.38 · PU led" cx="986.0" cy="228.0" r="7.4" fill="var(--s1)" fill-opacity=".78" stroke="var(--s1)" /><circle title="5 Oct 2026 · Office 365 Copilot · 32 participants · Satisfaction 10 · BU requested" cx="1051.2" cy="228.0" r="7.7" fill="var(--s4)" fill-opacity=".78" stroke="var(--s4)" /><circle title="7 Oct 2026 · Context engineering · 15 participants · Satisfaction 8.73 · AI upskilling programme led" cx="1058.1" cy="237.0" r="6.1" fill="var(--s3)" fill-opacity=".78" stroke="var(--s3)" /><circle title="4 Nov 2026 · 62304 Standard, why is it es · 58 participants · Satisfaction 7.7 · AI upskilling programme led" cx="1154.2" cy="228.0" r="9.5" fill="var(--s3)" fill-opacity=".78" stroke="var(--s3)" /><circle title="12 Nov 2026 · Office 365 Copilot · 63 participants · Satisfaction 8.42 · AI upskilling programme led" cx="1181.7" cy="228.0" r="9.7" fill="var(--s3)" fill-opacity=".78" stroke="var(--s3)" /><text transform=" translate(188 0) scale(-1 1)" x="94" y="274" text-anchor="start">Milestones</text><line x1="100" x2="1192" y1="270" y2="270" class="grid" /><g title="23 Jan 2026 · AI traceability platform first release, 3 businesses"><circle cx="175.54716981132077" cy="270" r="9.5" style="fill:color-mix(in oklch, var(--s1) 30%, var(--surface));stroke:var(--s1);stroke-width:2" /><text transform=" translate(351.09433962264154 0) scale(-1 1)" x="175.54716981132077" y="274" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">1</text></g><g title="23 Feb 2026 · Impact Assessment live"><circle cx="282" cy="270" r="9.5" style="fill:color-mix(in oklch, var(--s1) 30%, var(--surface));stroke:var(--s1);stroke-width:2" /><text transform=" translate(564 0) scale(-1 1)" x="282" y="274" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">2</text></g><g title="8 Mar 2026 · Test-scenario generation live"><circle cx="326.64150943396226" cy="270" r="9.5" style="fill:color-mix(in oklch, var(--s1) 30%, var(--surface));stroke:var(--s1);stroke-width:2" /><text transform=" translate(653.2830188679245 0) scale(-1 1)" x="326.64150943396226" y="274" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">3</text></g><g title="15 Apr 2026 · AI traceability platform graduates from AI compliance platform"><circle cx="457.1320754716981" cy="270" r="9.5" style="fill:color-mix(in oklch, var(--s1) 30%, var(--surface));stroke:var(--s1);stroke-width:2" /><text transform=" translate(914.2641509433962 0) scale(-1 1)" x="457.1320754716981" y="274" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">4</text></g><g title="28 Apr 2026 · AI defect-triage assistant funded, an undisclosed amount"><circle cx="501.77358490566036" cy="270" r="9.5" style="fill:color-mix(in oklch, var(--s7) 30%, var(--surface));stroke:var(--s7);stroke-width:2" /><text transform=" translate(1003.5471698113207 0) scale(-1 1)" x="501.77358490566036" y="274" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">5</text></g><g title="26 May 2026 · AI defect-triage assistant kickoff"><circle cx="597.9245283018868" cy="270" r="9.5" style="fill:color-mix(in oklch, var(--s7) 30%, var(--surface));stroke:var(--s7);stroke-width:2" /><text transform=" translate(1195.8490566037735 0) scale(-1 1)" x="597.9245283018868" y="274" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">6</text></g><g title="1 Oct 2026 · Impact Showcase"><circle cx="1037.4716981132076" cy="270" r="9.5" style="fill:color-mix(in oklch, var(--s1) 30%, var(--surface));stroke:var(--s1);stroke-width:2" /><text transform=" translate(2074.943396226415 0) scale(-1 1)" x="1037.4716981132076" y="274" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">7</text></g><g title="26 Oct 2026 · AI defect-triage assistant knowledge transfer"><circle cx="1123.3207547169811" cy="270" r="9.5" style="fill:color-mix(in oklch, var(--s7) 30%, var(--surface));stroke:var(--s7);stroke-width:2" /><text transform=" translate(2246.6415094339623 0) scale(-1 1)" x="1123.3207547169811" y="274" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">8</text></g><g title="4 Nov 2026 · AI traceability platform live in a business unit"><circle cx="1154.2264150943397" cy="270" r="9.5" style="fill:color-mix(in oklch, var(--s1) 30%, var(--surface));stroke:var(--s1);stroke-width:2" /><text transform=" translate(2308.4528301886794 0) scale(-1 1)" x="1154.2264150943397" y="274" text-anchor="middle" style="fill:var(--ink);font-size:11px;font-weight:700">9</text></g><text transform=" translate(188 0) scale(-1 1)" x="94" y="314" text-anchor="start">Recognised</text><line x1="100" x2="1192" y1="310" y2="310" class="grid" /><g role="group" title="30 Jun 2026 · Impact Makers · Team award" fill="var(--s4)" stroke="var(--ink)" stroke-width=".6" data-ev="1" aria-label="Open award: Impact Makers: AI traceability platform team"><polygon points="718.1,301.5 720.4,306.9 726.2,307.4 721.8,311.2 723.1,316.9 718.1,313.8 713.1,316.9 714.5,311.2 710.0,307.4 715.9,306.9 " /></g><g role="group" title="16 Jul 2026 · Learning & Collaboration · Individual award · 1,000 Recognition points" fill="var(--s4)" stroke="var(--ink)" stroke-width=".6" data-ev="1" aria-label="Open award: Recognition award: Learning & Collaboration"><polygon points="773.1,301.5 775.3,306.9 781.1,307.4 776.7,311.2 778.1,316.9 773.1,313.8 768.1,316.9 769.4,311.2 765.0,307.4 770.8,306.9 " /></g><g role="group" title="29 Jul 2026 · Execution & Performance · Individual award · 500 Recognition points" fill="var(--s4)" stroke="var(--ink)" stroke-width=".6" data-ev="1" aria-label="Open award: Recognition award: Execution & Performance"><polygon points="817.7,301.5 819.9,306.9 825.8,307.4 821.3,311.2 822.7,316.9 817.7,313.8 812.7,316.9 814.1,311.2 809.6,307.4 815.4,306.9 " /></g><g role="group" title="3 Nov 2026 · Impact Makers · Team award" fill="var(--s4)" stroke="var(--ink)" stroke-width=".6" data-ev="1" aria-label="Open award: Impact Makers: AI upskilling programme team"><polygon points="1150.8,301.5 1153.0,306.9 1158.9,307.4 1154.4,311.2 1155.8,316.9 1150.8,313.8 1145.8,316.9 1147.2,311.2 1142.7,307.4 1148.5,306.9 " /></g><rect title="1 May 2026 · Gen AI Ninja Yellow Belt Assessment for Business Users" x="507.07547169811323" y="305" width="10" height="10" transform="rotate(45 512.0754716981132 310)" fill="var(--s3)" data-ev="1" aria-label="Open certification: Gen AI Ninja Yellow Belt Assessment for Business Users" /><rect title="6 May 2026 · Gen AI Ninja Yellow Belt Assessment for Technical Users" x="524.2452830188679" y="305" width="10" height="10" transform="rotate(45 529.2452830188679 310)" fill="var(--s3)" data-ev="1" aria-label="Open certification: Gen AI Ninja Yellow Belt Assessment for Technical Users" /><path d="M718.1 322 V366 H724.1" fill="none" stroke="var(--ink2)" stroke-width="1" opacity=".7" /><text transform=" translate(1456.2264150943397 0) scale(-1 1)" x="728.1132075471698" y="370" text-anchor="end">Impact Makers, AI traceability platform</text><path d="M773.1 322 V349 H779.1" fill="none" stroke="var(--ink2)" stroke-width="1" opacity=".7" /><text transform=" translate(1566.1132075471698 0) scale(-1 1)" x="783.0566037735849" y="353" text-anchor="end">VP recognition, Learning &amp; Collaboration</text><path d="M817.7 322 V332 H823.7" fill="none" stroke="var(--ink2)" stroke-width="1" opacity=".7" /><text transform=" translate(1655.3962264150944 0) scale(-1 1)" x="827.6981132075472" y="336" text-anchor="end">SVP recognition, Execution &amp; Performance</text><path d="M1150.8 322 V366 H1144.8" fill="none" stroke="var(--ink2)" stroke-width="1" opacity=".7" /><text transform=" translate(2281.5849056603774 0) scale(-1 1)" x="1140.7924528301887" y="370" text-anchor="start">Impact Makers, AI upskilling programme</text><path d="M512.1 322 V349 H518.1" fill="none" stroke="var(--ink2)" stroke-width="1" opacity=".7" /><text transform=" translate(1044.1509433962265 0) scale(-1 1)" x="522.0754716981132" y="353" text-anchor="end">Yellow Belt, Business</text><path d="M529.2 322 V332 H535.2" fill="none" stroke="var(--ink2)" stroke-width="1" opacity=".7" /><text transform=" translate(1078.4905660377358 0) scale(-1 1)" x="539.2452830188679" y="336" text-anchor="end">Yellow Belt, Technical</text></g></svg><div class="legend"><span><i style="background:var(--s2)"></i>product quality review and Benefit-Risk AI</span><span><i style="background:var(--s1)"></i>AI traceability platform and AI compliance platform</span><span><i style="background:var(--s7)"></i>AI defect-triage assistant</span><span><i style="background:var(--s3)"></i>AI learning</span><span><i style="background:var(--s4)"></i>Software Excellence operations</span><span><i style="background:var(--other)"></i>Absence</span><span><i style="background:var(--s1);border-radius:50%;opacity:.78"></i>PU led session</span><span><i style="background:var(--s3);border-radius:50%;opacity:.78"></i>AI upskilling programme led session</span><span><i style="background:var(--s4);border-radius:50%;opacity:.78"></i>BU requested session</span><span><i style="background:var(--s5, var(--s9));border-radius:50%;opacity:.78"></i>Event or community session</span><span><svg class="lgl" width="15" height="15" viewBox="-8 -8 16 16" aria-hidden="true"><g fill="var(--s4)" stroke="var(--ink)" stroke-width=".8"><polygon points="0.0,-7.5 2.0,-2.7 7.1,-2.3 3.2,1.0 4.4,6.1 0.0,3.4 -4.4,6.1 -3.2,1.0 -7.1,-2.3 -2.0,-2.7 " /></g></svg>Award</span><span><svg class="lgl" width="15" height="15" viewBox="-8 -8 16 16" aria-hidden="true"><rect x="-4.5" y="-4.5" width="9" height="9" transform="rotate(45)" fill="var(--s3)" /></svg>Certification</span><span><i style="background:var(--ink);opacity:.5"></i>Impact entries per week (darker = more)</span><span><i style="background:var(--s1)"></i>Numbered milestone</span><span>Circle size = participants</span></div><ol class="msl"><li><b style="background:var(--s1)">9</b>4 Nov · AI traceability platform live in a business unit</li><li><b style="background:var(--s7)">8</b>26 Oct · AI defect-triage assistant knowledge transfer</li><li><b style="background:var(--s1)">7</b>1 Oct · Impact Showcase</li><li><b style="background:var(--s7)">6</b>26 May · AI defect-triage assistant kickoff</li><li><b style="background:var(--s7)">5</b>28 Apr · AI defect-triage assistant funded</li><li><b style="background:var(--s1)">4</b>15 Apr · AI traceability platform graduates from AI compliance platform</li><li><b style="background:var(--s1)">3</b>8 Mar · Test-scenario generation live</li><li><b style="background:var(--s1)">2</b>23 Feb · Impact Assessment live</li><li><b style="background:var(--s1)">1</b>23 Jan · AI traceability platform first release, 3 businesses</li></ol></div></div></div><details class="chart-notes"><summary>Read chart notes (225)</summary><ul><li>Week of 29 Dec · Absence: 16 h · Week total 16 h</li><li>Wk 47 · 8 impact entries in the weekly report</li><li>Wk 46 · 6 impact entries in the weekly report</li><li>12 Nov 2026 · Office 365 Copilot · 63 participants · Satisfaction 8.42 · AI upskilling programme led</li><li>Week of 9 Nov · product quality review and Benefit-Risk AI: 12 h · Week total 32 h</li><li>Week of 9 Nov · AI learning and enablement: 12 h · Week total 32 h</li><li>Week of 9 Nov · Internal time (meetings, training, idle): 8 h · Week total 32 h</li><li>Wk 45 · 6 impact entries in the weekly report</li><li>4 Nov 2026 · 62304 Standard, why is it es · 58 participants · Satisfaction 7.7 · AI upskilling programme led</li><li>4 Nov 2026 · AI traceability platform live in a business unit</li><li>3 Nov 2026 · Impact Makers · Team award</li><li>Week of 2 Nov · product quality review and Benefit-Risk AI: 13 h · Week total 40 h</li><li>Week of 2 Nov · AI defect-triage assistant: 7 h · Week total 40 h</li><li>Week of 2 Nov · AI learning and enablement: 14 h · Week total 40 h</li><li>Week of 2 Nov · Internal time (meetings, training, idle): 6 h · Week total 40 h</li><li>Wk 44 · 5 impact entries in the weekly report</li><li>Week of 26 Oct · product quality review and Benefit-Risk AI: 30 h · Week total 40 h</li><li>Week of 26 Oct · AI defect-triage assistant: 7 h · Week total 40 h</li><li>Week of 26 Oct · Internal time (meetings, training, idle): 3 h · Week total 40 h</li><li>26 Oct 2026 · AI defect-triage assistant knowledge transfer</li><li>Wk 43 · 6 impact entries in the weekly report</li><li>Week of 19 Oct · product quality review and Benefit-Risk AI: 31 h · Week total 43 h</li><li>Week of 19 Oct · AI defect-triage assistant: 7 h · Week total 43 h</li><li>Week of 19 Oct · Internal time (meetings, training, idle): 5 h · Week total 43 h</li><li>Wk 42 · 7 impact entries in the weekly report</li><li>Week of 12 Oct · product quality review and Benefit-Risk AI: 18 h · Week total 44 h</li><li>Week of 12 Oct · AI defect-triage assistant: 6 h · Week total 44 h</li><li>Week of 12 Oct · Internal time (meetings, training, idle): 20 h · Week total 44 h</li><li>Wk 41 · 6 impact entries in the weekly report</li><li>7 Oct 2026 · Context engineering · 15 participants · Satisfaction 8.73 · AI upskilling programme led</li><li>Week of 5 Oct · product quality review and Benefit-Risk AI: 16 h · Week total 40 h</li><li>Week of 5 Oct · AI defect-triage assistant: 7 h · Week total 40 h</li><li>Week of 5 Oct · AI learning and enablement: 13 h · Week total 40 h</li><li>Week of 5 Oct · Internal time (meetings, training, idle): 4 h · Week total 40 h</li><li>5 Oct 2026 · Office 365 Copilot · 32 participants · Satisfaction 10 · BU requested</li><li>Wk 40 · 7 impact entries in the weekly report</li><li>1 Oct 2026 · Impact Showcase</li><li>Week of 28 Sept · product quality review and Benefit-Risk AI: 26 h · Week total 40 h</li><li>Week of 28 Sept · AI defect-triage assistant: 7 h · Week total 40 h</li><li>Week of 28 Sept · Internal time (meetings, training, idle): 7 h · Week total 40 h</li><li>Wk 39 · 7 impact entries in the weekly report</li><li>Week of 21 Sept · product quality review and Benefit-Risk AI: 10 h · Week total 40 h</li><li>Week of 21 Sept · AI defect-triage assistant: 7 h · Week total 40 h</li><li>Week of 21 Sept · Internal time (meetings, training, idle): 23 h · Week total 40 h</li><li>Wk 38 · 7 impact entries in the weekly report</li><li>16 Sept 2026 · Office 365 Copilot · 28 participants · Satisfaction 8.38 · PU led</li><li>Week of 14 Sept · product quality review and Benefit-Risk AI: 30 h · Week total 40 h</li><li>Week of 14 Sept · AI defect-triage assistant: 7 h · Week total 40 h</li><li>Week of 14 Sept · AI learning and enablement: 3 h · Week total 40 h</li><li>Wk 37 · 6 impact entries in the weekly report</li><li>9 Sept 2026 · 62304 Standard, why is it es · 29 participants · Satisfaction 8 · PU led</li><li>Week of 7 Sept · product quality review and Benefit-Risk AI: 24 h · Week total 41 h</li><li>Week of 7 Sept · AI defect-triage assistant: 7 h · Week total 41 h</li><li>Week of 7 Sept · AI learning and enablement: 10 h · Week total 41 h</li><li>Wk 36 · 7 impact entries in the weekly report</li><li>3 Sept 2026 · a business unit series · 41 participants · Satisfaction 8 · AI upskilling programme led</li><li>1 Sept 2026 · a business unit series · 45 participants · Satisfaction 8.17 · AI upskilling programme led</li><li>Week of 31 Aug · product quality review and Benefit-Risk AI: 25 h · Week total 59 h</li><li>Week of 31 Aug · AI defect-triage assistant: 8 h · Week total 59 h</li><li>Week of 31 Aug · AI learning and enablement: 18 h · Week total 59 h</li><li>Week of 31 Aug · Absence: 8 h · Week total 59 h</li><li>Wk 35 · 6 impact entries in the weekly report</li><li>27 Aug 2026 · a business unit series · 46 participants · Satisfaction 7.21 · BU requested</li><li>27 Aug 2026 · North America Analytics call · 84 participants · Satisfaction 10 · AI upskilling programme led</li><li>25 Aug 2026 · a business unit series · 50 participants · Satisfaction 8.15 · BU requested</li><li>Week of 24 Aug · product quality review and Benefit-Risk AI: 35 h · Week total 72 h</li><li>Week of 24 Aug · AI defect-triage assistant: 7 h · Week total 72 h</li><li>Week of 24 Aug · AI learning and enablement: 30 h · Week total 72 h</li><li>Wk 34 · 8 impact entries in the weekly report</li><li>20 Aug 2026 · DORA · 27 participants · Satisfaction 9 · BU requested</li><li>18 Aug 2026 · IT Connect · 56 participants · Satisfaction 10 · BU requested</li><li>Week of 17 Aug · product quality review and Benefit-Risk AI: 35 h · Week total 67 h</li><li>Week of 17 Aug · AI defect-triage assistant: 7 h · Week total 67 h</li><li>Week of 17 Aug · AI learning and enablement: 25 h · Week total 67 h</li><li>Wk 33 · 7 impact entries in the weekly report</li><li>12 Aug 2026 · Context engineering · 27 participants · Satisfaction 8.71 · PU led</li><li>Week of 10 Aug · product quality review and Benefit-Risk AI: 28 h · Week total 49 h</li><li>Week of 10 Aug · AI defect-triage assistant: 7 h · Week total 49 h</li><li>Week of 10 Aug · AI learning and enablement: 6 h · Week total 49 h</li><li>Week of 10 Aug · Absence: 8 h · Week total 49 h</li><li>Wk 32 · 7 impact entries in the weekly report</li><li>5 Aug 2026 · Copilot coding and agents · 20 participants · Satisfaction 9.3 · BU requested</li><li>Week of 3 Aug · product quality review and Benefit-Risk AI: 28 h · Week total 49 h</li><li>Week of 3 Aug · AI defect-triage assistant: 7 h · Week total 49 h</li><li>Week of 3 Aug · AI learning and enablement: 6 h · Week total 49 h</li><li>Week of 3 Aug · Absence: 8 h · Week total 49 h</li><li>Wk 31 · 7 impact entries in the weekly report</li><li>29 Jul 2026 · Execution &amp; Performance · Individual award · 500 Recognition points</li><li>Week of 27 Jul · product quality review and Benefit-Risk AI: 35 h · Week total 54 h</li><li>Week of 27 Jul · AI defect-triage assistant: 19 h · Week total 54 h</li><li>Wk 30 · 6 impact entries in the weekly report</li><li>22 Jul 2026 · Copilot coding and agents · 39 participants · Satisfaction 9.1 · BU requested</li><li>Week of 20 Jul · product quality review and Benefit-Risk AI: 35 h · Week total 48 h</li><li>Week of 20 Jul · AI defect-triage assistant: 7 h · Week total 48 h</li><li>Week of 20 Jul · AI learning and enablement: 6 h · Week total 48 h</li><li>Wk 29 · 6 impact entries in the weekly report</li><li>16 Jul 2026 · Learning &amp; Collaboration · Individual award · 1,000 Recognition points</li><li>Week of 13 Jul · product quality review and Benefit-Risk AI: 14 h · Week total 45 h</li><li>Week of 13 Jul · AI defect-triage assistant: 7 h · Week total 45 h</li><li>Week of 13 Jul · Absence: 24 h · Week total 45 h</li><li>Wk 28 · 5 impact entries in the weekly report</li><li>Week of 6 Jul · product quality review and Benefit-Risk AI: 35 h · Week total 42 h</li><li>Week of 6 Jul · AI defect-triage assistant: 7 h · Week total 42 h</li><li>Wk 27 · 5 impact entries in the weekly report</li><li>30 Jun 2026 · Impact Makers · Team award</li><li>Week of 29 Jun · product quality review and Benefit-Risk AI: 14 h · Week total 35 h</li><li>Week of 29 Jun · AI defect-triage assistant: 9 h · Week total 35 h</li><li>Week of 29 Jun · AI learning and enablement: 12 h · Week total 35 h</li><li>26 Jun 2026 · AI traceability platform presented to the PSQ c · 0 participants · Event or community</li><li>Wk 26 · 5 impact entries in the weekly report</li><li>25 Jun 2026 · North America Analytics call · 101 participants · Satisfaction 9.46 · AI upskilling programme led</li><li>25 Jun 2026 · IGT-AI Day: AI requirements checker, AI Harn · 95 participants · AI upskilling programme led</li><li>Week of 22 Jun · product quality review and Benefit-Risk AI: 35 h · Week total 57 h</li><li>Week of 22 Jun · AI defect-triage assistant: 7 h · Week total 57 h</li><li>Week of 22 Jun · AI learning and enablement: 5 h · Week total 57 h</li><li>Week of 22 Jun · Software Excellence operations: 10 h · Week total 57 h</li><li>Wk 25 · 9 impact entries in the weekly report</li><li>Week of 15 Jun · product quality review and Benefit-Risk AI: 28 h · Week total 41 h</li><li>Week of 15 Jun · AI defect-triage assistant: 7 h · Week total 41 h</li><li>Week of 15 Jun · AI learning and enablement: 2 h · Week total 41 h</li><li>Week of 15 Jun · Software Excellence operations: 4 h · Week total 41 h</li><li>Wk 24 · 9 impact entries in the weekly report</li><li>11 Jun 2026 · Office 365 Copilot · 10 participants · Satisfaction 9.33 · PU led</li><li>Week of 8 Jun · product quality review and Benefit-Risk AI: 35 h · Week total 54 h</li><li>Week of 8 Jun · AI defect-triage assistant: 7 h · Week total 54 h</li><li>Week of 8 Jun · AI learning and enablement: 7 h · Week total 54 h</li><li>Week of 8 Jun · Software Excellence operations: 5 h · Week total 54 h</li><li>Wk 23 · 8 impact entries in the weekly report</li><li>Week of 1 Jun · product quality review and Benefit-Risk AI: 35 h · Week total 44 h</li><li>Week of 1 Jun · AI defect-triage assistant: 7 h · Week total 44 h</li><li>Week of 1 Jun · AI learning and enablement: 2 h · Week total 44 h</li><li>Wk 22 · 8 impact entries in the weekly report</li><li>26 May 2026 · AI defect-triage assistant kickoff</li><li>Week of 25 May · product quality review and Benefit-Risk AI: 25 h · Week total 32 h</li><li>Week of 25 May · AI defect-triage assistant: 7 h · Week total 32 h</li><li>Wk 21 · 8 impact entries in the weekly report</li><li>21 May 2026 · 62304 Standard, why is it es · 21 participants · Satisfaction 9.14 · PU led</li><li>Week of 18 May · product quality review and Benefit-Risk AI: 30 h · Week total 40 h</li><li>Week of 18 May · AI learning and enablement: 10 h · Week total 40 h</li><li>Wk 20 · 7 impact entries in the weekly report</li><li>14 May 2026 · Context engineering · 10 participants · Satisfaction 9.33 · PU led</li><li>Week of 11 May · product quality review and Benefit-Risk AI: 24 h · Week total 40 h</li><li>Week of 11 May · AI learning and enablement: 16 h · Week total 40 h</li><li>Wk 19 · 7 impact entries in the weekly report</li><li>6 May 2026 · Gen AI Ninja Yellow Belt Assessment for Technical Users</li><li>Week of 4 May · product quality review and Benefit-Risk AI: 25 h · Week total 40 h</li><li>Week of 4 May · Software Excellence operations: 15 h · Week total 40 h</li><li>1 May 2026 · Gen AI Ninja Yellow Belt Assessment for Business Users</li><li>Wk 18 · 6 impact entries in the weekly report</li><li>28 Apr 2026 · AI defect-triage assistant funded, an undisclosed amount</li><li>Week of 27 Apr · product quality review and Benefit-Risk AI: 32 h · Week total 40 h</li><li>Week of 27 Apr · Software Excellence operations: 4 h · Week total 40 h</li><li>Week of 27 Apr · Internal time (meetings, training, idle): 4 h · Week total 40 h</li><li>Wk 17 · 11 impact entries in the weekly report</li><li>23 Apr 2026 · Innovation Impact Week: Insi · 0 participants · Event or community</li><li>22 Apr 2026 · DORA · 0 participants · Event or community</li><li>Week of 20 Apr · product quality review and Benefit-Risk AI: 27 h · Week total 40 h</li><li>Week of 20 Apr · Internal time (meetings, training, idle): 5 h · Week total 40 h</li><li>Week of 20 Apr · Absence: 8 h · Week total 40 h</li><li>20 Apr 2026 · Innovation Impact Week: From · 0 participants · Event or community</li><li>Wk 16 · 13 impact entries in the weekly report</li><li>15 Apr 2026 · AI traceability platform graduates from AI compliance platform</li><li>Week of 13 Apr · product quality review and Benefit-Risk AI: 15 h · Week total 40 h</li><li>Week of 13 Apr · AI traceability platform: 25 h · Week total 40 h</li><li>Wk 15 · 12 impact entries in the weekly report</li><li>Week of 6 Apr · product quality review and Benefit-Risk AI: 14 h · Week total 40 h</li><li>Week of 6 Apr · AI traceability platform: 26 h · Week total 40 h</li><li>Wk 14 · 11 impact entries in the weekly report</li><li>Week of 30 Mar · product quality review and Benefit-Risk AI: 30 h · Week total 43 h</li><li>Week of 30 Mar · AI traceability platform: 13 h · Week total 43 h</li><li>Wk 13 · 12 impact entries in the weekly report</li><li>26 Mar 2026 · North America Analytics call · 82 participants · Satisfaction 8.87 · AI upskilling programme led</li><li>Week of 23 Mar · product quality review and Benefit-Risk AI: 17 h · Week total 40 h</li><li>Week of 23 Mar · AI traceability platform: 15 h · Week total 40 h</li><li>Week of 23 Mar · Absence: 8 h · Week total 40 h</li><li>Wk 12 · 11 impact entries in the weekly report</li><li>18 Mar 2026 · Office 365 Copilot · 16 participants · Satisfaction 9.17 · PU led</li><li>Week of 16 Mar · product quality review and Benefit-Risk AI: 13 h · Week total 40 h</li><li>Week of 16 Mar · AI traceability platform: 15 h · Week total 40 h</li><li>Week of 16 Mar · AI learning and enablement: 12 h · Week total 40 h</li><li>Wk 11 · 12 impact entries in the weekly report</li><li>11 Mar 2026 · 62304 Standard, why is it es · 18 participants · Satisfaction 8.91 · PU led</li><li>Week of 9 Mar · product quality review and Benefit-Risk AI: 7 h · Week total 40 h</li><li>Week of 9 Mar · AI traceability platform: 15 h · Week total 40 h</li><li>Week of 9 Mar · AI learning and enablement: 18 h · Week total 40 h</li><li>8 Mar 2026 · Test-scenario generation live</li><li>Wk 10 · 10 impact entries in the weekly report</li><li>4 Mar 2026 · Context engineering · 21 participants · Satisfaction 8.6 · PU led</li><li>Week of 2 Mar · product quality review and Benefit-Risk AI: 25 h · Week total 40 h</li><li>Week of 2 Mar · AI traceability platform: 15 h · Week total 40 h</li><li>Wk 9 · 12 impact entries in the weekly report</li><li>Week of 23 Feb · product quality review and Benefit-Risk AI: 5 h · Week total 40 h</li><li>Week of 23 Feb · AI traceability platform: 35 h · Week total 40 h</li><li>23 Feb 2026 · Impact Assessment live</li><li>Wk 8 · 10 impact entries in the weekly report</li><li>18 Feb 2026 · Golden traceability · 80 participants · PU led</li><li>Week of 16 Feb · product quality review and Benefit-Risk AI: 25 h · Week total 40 h</li><li>Week of 16 Feb · AI traceability platform: 15 h · Week total 40 h</li><li>Wk 7 · 11 impact entries in the weekly report</li><li>11 Feb 2026 · Tech debt with AI · 6 participants · Satisfaction 8.67 · PU led</li><li>Week of 9 Feb · product quality review and Benefit-Risk AI: 17 h · Week total 40 h</li><li>Week of 9 Feb · AI traceability platform: 15 h · Week total 40 h</li><li>Week of 9 Feb · AI learning and enablement: 8 h · Week total 40 h</li><li>Wk 6 · 11 impact entries in the weekly report</li><li>4 Feb 2026 · DORA · 9 participants · Satisfaction 8.9 · PU led</li><li>Week of 2 Feb · product quality review and Benefit-Risk AI: 13 h · Week total 40 h</li><li>Week of 2 Feb · AI traceability platform: 15 h · Week total 40 h</li><li>Week of 2 Feb · AI learning and enablement: 12 h · Week total 40 h</li><li>Wk 5 · 7 impact entries in the weekly report</li><li>28 Jan 2026 · Copilot coding and agents · 15 participants · Satisfaction 7.5 · PU led</li><li>Week of 26 Jan · product quality review and Benefit-Risk AI: 24 h · Week total 40 h</li><li>Week of 26 Jan · AI traceability platform: 8 h · Week total 40 h</li><li>Week of 26 Jan · AI learning and enablement: 8 h · Week total 40 h</li><li>23 Jan 2026 · AI traceability platform first release, 3 businesses</li><li>Wk 4 · 8 impact entries in the weekly report</li><li>Week of 19 Jan · product quality review and Benefit-Risk AI: 16 h · Week total 32 h</li><li>Week of 19 Jan · AI traceability platform: 12 h · Week total 32 h</li><li>Week of 19 Jan · AI learning and enablement: 4 h · Week total 32 h</li><li>Wk 3 · 6 impact entries in the weekly report</li><li>Week of 12 Jan · AI traceability platform: 20 h · Week total 40 h</li><li>Week of 12 Jan · AI learning and enablement: 20 h · Week total 40 h</li><li>Wk 2 · 6 impact entries in the weekly report</li><li>Week of 5 Jan · AI traceability platform: 20 h · Week total 40 h</li><li>Week of 5 Jan · AI learning and enablement: 20 h · Week total 40 h</li><li>Wk 1 · 6 impact entries in the weekly report</li></ul></details></section><section class="report-block"><div class="report-exhibit" data-page="summary"><div class="sec" style="--i: 7;"><div class="sech"><h2>What came of it</h2></div>
+    <div class="g3">
+      <div class="card"><h3>AI traceability platform, in use</h3><p class="sub">AI traceability and compliance evidence for software V&amp;V</p><div class="vrow"><span title="Assess · Studies the current state through assessments, discovery and analysis to find where change pays off." class="vchip" style="--vc:var(--s2)" data-verb="1">Assess</span></div>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;margin-bottom:12px"><div><div class="big">5</div><div class="note">business contexts</div></div><div><div class="big">10/10</div><div class="note">NPS, a business unit and a business unit</div></div><div><div class="big">4</div><div class="note">capabilities in 9 weeks</div></div></div>
+        <svg aria-label="AI traceability platform, in use" viewBox="0 0 300 64" width="100%" role="img"><g title="AI traceability platform in a business unit"><circle cx="30" cy="12" r="8" fill="var(--s1)" /><text x="30" y="38" text-anchor="middle"><tspan x="30" dy="0">a</tspan><tspan x="30" dy="12">business</tspan><tspan x="30" dy="12">unit</tspan></text></g><g title="AI traceability platform in a business unit"><circle cx="90" cy="12" r="8" fill="var(--s1)" /><text x="90" y="38" text-anchor="middle"><tspan x="90" dy="0">a</tspan><tspan x="90" dy="12">business</tspan><tspan x="90" dy="12">unit</tspan></text></g><g title="AI traceability platform in a business unit"><circle cx="150" cy="12" r="8" fill="var(--s1)" /><text x="150" y="38" text-anchor="middle"><tspan x="150" dy="0">a business unit</tspan></text></g><g title="AI traceability platform in SRC"><circle cx="210" cy="12" r="8" fill="var(--s1)" /><text x="210" y="38" text-anchor="middle"><tspan x="210" dy="0">SRC</tspan></text></g><g title="AI traceability platform in a business unit"><circle cx="270" cy="12" r="8" fill="var(--s1)" /><text x="270" y="38" text-anchor="middle"><tspan x="270" dy="0">a</tspan><tspan x="270" dy="12">business</tspan><tspan x="270" dy="12">unit</tspan></text></g><line x1="38" x2="262" y1="12" y2="12" stroke="var(--s1)" stroke-opacity=".35" stroke-width="2" /></svg><div class="legend"><span><i style="background:var(--s1);border-radius:50%;"></i>A business where AI traceability platform is in use</span></div>
+        <p class="note" style="margin: 8px 0px 0px; display: none;"></p></div>
+      <div class="card"><h3>Time returned</h3><p class="sub">Elapsed time before and after, in weeks</p><div class="vrow"><span title="Assess · Studies the current state through assessments, discovery and analysis to find where change pays off." class="vchip" style="--vc:var(--s2)" data-verb="1">Assess</span><span title="Report · Measures results and reports progress, savings and outcomes to leaders, finance and stakeholders." class="vchip" style="--vc:var(--s9)" data-verb="1">Report</span></div>
+        <svg aria-label="Time returned" viewBox="0 0 370 98" width="100%" role="img"><g title="product quality review deep-dive assessment · 2 months → 2 weeks"><text x="0" y="18" class="lbl" style="font-size:11.5px">product quality review deep-dive assessment</text><line x1="34.888888888888886" x2="115.55555555555556" y1="32" y2="32" stroke="var(--s2)" stroke-width="3" stroke-opacity=".35" /><circle cx="115.55555555555556" cy="32" r="5" fill="var(--s2)" fill-opacity=".4" stroke="var(--s2)" /><circle cx="34.888888888888886" cy="32" r="5.5" fill="var(--s2)" /><text x="124.55555555555556" y="36" style="font-size:11px">2 months → 2 weeks</text></g><g title="AI traceability platform compliance submission · 12 → 2 weeks"><text x="0" y="64" class="lbl" style="font-size:11.5px">AI traceability platform compliance submission</text><line x1="34.888888888888886" x2="169.33333333333334" y1="78" y2="78" stroke="var(--s1)" stroke-width="3" stroke-opacity=".35" /><circle cx="169.33333333333334" cy="78" r="5" fill="var(--s1)" fill-opacity=".4" stroke="var(--s1)" /><circle cx="34.888888888888886" cy="78" r="5.5" fill="var(--s1)" /><text x="178.33333333333334" y="82" style="font-size:11px">12 → 2 weeks</text></g></svg>
+        <div class="legend"><span><i style="background:var(--s2);border-radius:50%;"></i>Before (faint) and after (solid), in weeks</span></div><div style="display:flex;gap:18px;margin-top:10px"><div><div class="big" style="font-size:30px">~160<small>h</small></div><div class="note">log-analysis tool, 9 months <span class="chip Estimate" title="An approximate, stated or modelled figure">Estimate</span></div></div></div></div>
+      <div class="card"><h3>Taught</h3><p class="sub">Learners per quarter, bars coloured by who the session was for</p><div class="vrow"><span title="Mentor · Coaches and teaches people and communities so capability grows beyond the team." class="vchip" style="--vc:var(--s7)" data-verb="1">Mentor</span><span title="Evangelize · Builds a network of influence and communities and promotes adoption of practices and tools." class="vchip" style="--vc:var(--h4)" data-verb="1">Evangelize</span></div>
+        <svg data-time-axis="newest-first" aria-label="Taught" viewBox="0 0 330 182" width="100%" role="img"><g transform="translate(330 0) scale(-1 1)"><rect title="Q1 · PU led · 165 participants" x="12" y="99.7" width="52" height="50.3" fill="var(--s1)" /><rect title="Q1 · AI upskilling programme led · 82 participants" x="12" y="74.7" width="52" height="25.0" fill="var(--s3)" /><text transform=" translate(76 0) scale(-1 1)" x="38" y="69.6951219512195" text-anchor="middle" class="lbl" style="font-weight:700">247</text><text transform=" translate(76 0) scale(-1 1)" x="38" y="164" text-anchor="middle" class="lbl">Q1</text><text transform=" translate(76 0) scale(-1 1)" x="38" y="177" text-anchor="middle">8 sessions</text><rect title="Q2 · PU led · 41 participants" x="88" y="137.5" width="52" height="12.5" fill="var(--s1)" /><rect title="Q2 · AI upskilling programme led · 196 participants" x="88" y="77.7" width="52" height="59.8" fill="var(--s3)" /><text transform=" translate(228 0) scale(-1 1)" x="114" y="72.7439024390244" text-anchor="middle" class="lbl" style="font-weight:700">237</text><text transform=" translate(228 0) scale(-1 1)" x="114" y="164" text-anchor="middle" class="lbl">Q2</text><text transform=" translate(228 0) scale(-1 1)" x="114" y="177" text-anchor="middle">9 sessions</text><rect title="Q3 · PU led · 84 participants" x="164" y="124.4" width="52" height="25.6" fill="var(--s1)" /><rect title="Q3 · AI upskilling programme led · 170 participants" x="164" y="72.6" width="52" height="51.8" fill="var(--s3)" /><rect title="Q3 · BU requested · 238 participants" x="164" y="0.0" width="52" height="72.6" fill="var(--s4)" /><text transform=" translate(380 0) scale(-1 1)" x="190" y="-5" text-anchor="middle" class="lbl" style="font-weight:700">492</text><text transform=" translate(380 0) scale(-1 1)" x="190" y="164" text-anchor="middle" class="lbl">Q3</text><text transform=" translate(380 0) scale(-1 1)" x="190" y="177" text-anchor="middle">12 sessions</text><rect title="Q4 · AI upskilling programme led · 136 participants" x="240" y="108.5" width="52" height="41.5" fill="var(--s3)" /><rect title="Q4 · BU requested · 32 participants" x="240" y="98.8" width="52" height="9.8" fill="var(--s4)" /><text transform=" translate(532 0) scale(-1 1)" x="266" y="93.78048780487805" text-anchor="middle" class="lbl" style="font-weight:700">168</text><text transform=" translate(532 0) scale(-1 1)" x="266" y="164" text-anchor="middle" class="lbl">Q4</text><text transform=" translate(532 0) scale(-1 1)" x="266" y="177" text-anchor="middle">4 sessions</text></g></svg>
+        <div class="legend"><span><i style="background:var(--s1)"></i>PU led</span><span><i style="background:var(--s3)"></i>AI upskilling programme led</span><span><i style="background:var(--s4)"></i>BU requested</span><span><i style="background:var(--s5, var(--s9))"></i>Event or community</span></div></div>
+    </div></div></div><details class="chart-notes"><summary>Read chart notes (17)</summary><ul><li>Q4 · AI upskilling programme led · 136 participants</li><li>Q4 · BU requested · 32 participants</li><li>Q3 · PU led · 84 participants</li><li>Q3 · AI upskilling programme led · 170 participants</li><li>Q3 · BU requested · 238 participants</li><li>Q2 · PU led · 41 participants</li><li>Q2 · AI upskilling programme led · 196 participants</li><li>Q1 · PU led · 165 participants</li><li>Q1 · AI upskilling programme led · 82 participants</li><li>Assess · Studies the current state through assessments, discovery and analysis to find where change pays off.</li><li>AI traceability platform in a business unit</li><li>AI traceability platform in SRC</li><li>Report · Measures results and reports progress, savings and outcomes to leaders, finance and stakeholders.</li><li>product quality review deep-dive assessment · 2 months → 2 weeks</li><li>AI traceability platform compliance submission · 12 → 2 weeks</li><li>Mentor · Coaches and teaches people and communities so capability grows beyond the team.</li><li>Evangelize · Builds a network of influence and communities and promotes adoption of practices and tools.</li></ul></details></section><nav class="reader-pager" aria-label="Report navigation"><a href="/year-of-impact/2026"><svg class="arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(180 12 12)"><path d="M4 12h15m-6-6 6 6-6 6"></path></g></svg> Year overview</a><a href="/year-of-impact/2026/report/leadership">Leadership <svg class="arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><g><path d="M4 12h15m-6-6 6 6-6 6"></path></g></svg></a></nav></article></main><footer><div class="shell foot"><div><a class="brand signature" href="/" aria-label="Datta Vellal, home" data-astro-cid-6bctqxxv><span class="signature-mark" aria-hidden="true" data-astro-cid-6bctqxxv></span><span class="signature-name" data-astro-cid-6bctqxxv>Datta Vellal</span></a><p>Dattatreya Subramanya Vellal<br>Software Competency Lead, Philips · Rochester, Michigan</p></div><div><a href="mailto:dsvellal@gmail.com">Email Datta <svg class="arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(-45 12 12)"><path d="M4 12h15m-6-6 6 6-6 6"></path></g></svg></a><a href="https://www.linkedin.com/in/dattatreyavellal">LinkedIn <svg class="arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(-45 12 12)"><path d="M4 12h15m-6-6 6 6-6 6"></path></g></svg></a><a href="/about">About Datta <svg class="arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(-45 12 12)"><path d="M4 12h15m-6-6 6 6-6 6"></path></g></svg></a><a href="/endorsements">Recommendations <svg class="arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(-45 12 12)"><path d="M4 12h15m-6-6 6 6-6 6"></path></g></svg></a><a href="/recognition">Awards and recognition <svg class="arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(-45 12 12)"><path d="M4 12h15m-6-6 6 6-6 6"></path></g></svg></a><a href="/year-of-impact">Year of Impact <svg class="arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(-45 12 12)"><path d="M4 12h15m-6-6 6 6-6 6"></path></g></svg></a></div></div></footer></body></html><script type="module">var e=document.querySelector(`#serSel`),t=document.querySelector(`#serComments`);if(e&&t){let n=Array.from(t.querySelectorAll(`:scope > .why2`)),r=Array.from(e.options,e=>e.value).filter(Boolean).sort((e,t)=>t.length-e.length),i=n.map(e=>{let t=e.querySelector(`.note`)?.textContent?.trim()??``;return r.find(e=>t.startsWith(e+`,`)||t===e)??``}),a=document.createElement(`button`);a.type=`button`,a.className=`source-more`,a.textContent=`Show more comments`;let o=document.createElement(`p`);o.className=`comment-count`,o.setAttribute(`aria-live`,`polite`),t.before(o),t.after(a);let s=8;function c(){let t=0;n.forEach((n,r)=>{let a=!e.value||e.value===i[r];a&&t++,n.hidden=!a||t>s}),o.textContent=Math.min(s,t)+` of `+t+` comments`,a.hidden=s>=t}e.addEventListener(`change`,()=>{s=8,c()}),a.addEventListener(`click`,()=>{let e=n.filter(e=>!e.hidden).length;s+=16,c();let t=n.filter(e=>!e.hidden)[e];t&&(t.tabIndex=-1,t.focus())}),c()}</script>
