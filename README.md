@@ -1,15 +1,9 @@
 # dsvellal.com
 
-Source for [dsvellal.com](https://dsvellal.com), the personal site of Datta Vellal.
+Run `npm run dev` from this directory and open http://127.0.0.1:4322/. The preview requires Python 3 and serves the finished portfolio in `live/`, including its extensionless page addresses.
 
-The site is a finished static build in `live/`. There are two branches. `main` holds everything reviewed and never deploys by itself. `site-deploy` is the only branch GitHub Pages deploys, through `.github/workflows/deploy.yml`; it is moved to `main` by `scripts/promote_site.sh` in the private repository. Nothing is built here: the site is built, checked and staged by the private catalogue repository (`scripts/publish_impact.py`), so corrections go there. The earlier Astro source (`src/`, `public/`, `astro.config.mjs`) is kept for reference only and is not deployed.
+The editable Astro portfolio lives in the private catalogue under `site-impact/`. From the catalogue root, `python3 -I scripts/publish_impact.py` builds, checks and copies the public files here. This command only updates the local checkout. GitHub Pages deploys `live/` from the `site-deploy` branch.
 
-## Previewing it locally
-
-Open `live/index.html` through any static server, for example `npx serve live`.
-
-## Where the content comes from
-
-The Impact, Talks and Socials pages (`src/content/record/`, `src/content/record-summaries/` and `src/content/talks/`) are generated from a private archive of career records. A publishing script copies the whole tree here from a private repository, and each publish replaces everything, so changes made directly in this repository will be lost. Corrections go into the archive first.
+The earlier public records, claims, essays and media remain in `src/` and `public/`. Corrections belong in the private catalogue before generating the next public build.
 
 The writing and images are not licensed for reuse.
